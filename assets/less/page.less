@@ -172,12 +172,16 @@ body {
 #post,
 #page {
 	.entry-content {
-		margin: 40px 10px 20px 10px;
-		padding: 20px 30px;
+		margin: 40px 2px 20px 2px;
+		padding: 10px 15px;
 		background-color: @white;
 		box-shadow: 0 0 0 1px fade(@border-color,10), 0 6px 12px fade(@black,10);
 		.rounded(3px);
-		
+		@media @medium {
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 20px 30px;
+		}
 		@media @large {
 			max-width: 800px;
 			padding: 50px 80px;
