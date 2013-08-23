@@ -1,29 +1,29 @@
-title:            Site Title
-description:      Describe your website here.
+title:            HPSTR RDX
+description:      Just another responsive Jekyll theme from designer Michael Rose.
 disqus_shortname: 
 #Comment out url when working locally to resolve base urls correctly
-url:              http://your-website.com
+url:              http://mmistakes.github.io/hpstr-jekyl-theme/
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Michael Rose
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  bio:            "Just another boring, tattooed, time traveling designer hailing from Buffalo New York."
+  email:          michael@mademistakes.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
+  twitter:        mmistakes
   facebook:       
-  github:         
+  github:         mmistakes
   stackexchange:  
   linkedin:       
-  instagram:      
+  instagram:      mmistakes  
   flickr:         
-  tumblr:         
+  tumblr:         mmistakes
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:   
+  google_plus:    http://plus.google.com/118238196859537351707
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
+google_analytics:   UA-2011187-5
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
