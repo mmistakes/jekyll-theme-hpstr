@@ -1,0 +1,38 @@
+---
+layout: post-index
+permalink: /tags/index.html
+title: Tag Archive
+description: "An archive of posts sorted by tag."
+---
+
+<ul class="entry-meta inline-list">
+{% assign tags_list = site.tags %}  
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %} 
+    	<li><a href="#{{ tag }}" class="tag">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %} 
+    	<li><a href="#{{ tag[0] }}" class="tag">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+</ul>
+
+{% for tag in site.tags %} 
+	<article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
+		<ul>
+		{% assign pages_list = tag[1] %}  
+		{% for post in pages_list %}
+			{% if post.title != null %}
+			{% if group == null or group == post.group %}
+				<li class="entry-title" itemprop="name"><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></li>
+			{% endif %}
+			{% endif %}
+		{% endfor %}
+		{% assign pages_list = nil %}
+		{% assign group = nil %}
+		</ul>
+	</article><!-- /.hentry -->
+{% endfor %}

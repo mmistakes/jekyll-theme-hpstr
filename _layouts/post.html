@@ -1,0 +1,67 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include head.html %}
+</head>
+
+<body id="post" {% if page.image.feature %}class="feature"{% endif %} itemscope itemtype="http://schema.org/WebPage">
+
+{% include browser-upgrade.html %}
+{% include navigation.html %}
+
+{% if page.image.feature %}
+<div class="entry-header">
+  <div class="entry-image"><img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}" itemprop="image">
+    {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
+  </div><!-- /.entry-image -->
+</div><!-- /.entry-header -->
+{% endif %}
+
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        {% if page.link %}
+          <h1 class="entry-title" itemprop="name"><a href="{{ page.link }}">{{ page.title }}</a></h1>
+        {% else %}
+          <h1 class="entry-title" itemprop="name"><a href="{{ page.url }}" rel="bookmark" title="{{ page.title }}" itemprop="url">{{ page.title }}</a></h1>
+        {% endif %}
+        <h2>{{ page.date | date: "%B %d, %Y" }}</h2>
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content" itemprop="description">
+      {{ content }}
+      <footer class="entry-meta">
+        <span class="entry-tags">{% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" rel="tag" class="tag">{{ tag }}</a>{% unless forloop.last %}{% endunless %}{% endfor %}</span>
+        <span><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}" itemprop="url">{{ page.title }}</a></span>
+        <span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">was published on {{ page.date | date: "%B %d, %Y" }}</time></span>
+        {% if page.modified %}<span class="entry-date date modified"><time datetime="{{ page.modified }}" itemprop="dateModified">(revised: {{ page.modified | date: "%m/%d/%Y" }})</time></span>{% endif %}
+        <span class="author vcard fn" itemprop="author" itemtype="http://schema.org/Person">{{ site.owner.name }}</span>
+      </footer>
+    </div><!-- /.entry-content -->
+    {% if site.disqus_shortname and page.comments %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
+    {% if page.previous %}<div class="read-more">
+      <div class="read-more-header">
+        <a href="{{ site.url }}{{ page.previous.url }}" class="read-more-btn">Read More</a>
+      </div><!-- /.read-more-header -->
+      <div class="read-more-content">
+        <h3><a href="{{ site.url }}{{ page.previous.url }}" title="{{ page.previous.title }}">{{ page.previous.title }}</a></h2>
+        <p>{% if page.previous.description %}{{ page.previous.description }}{% else %}{{ page.previous.content | strip_html | strip_newlines | truncate: 120 }}{% endif %} <a href="{{ site.url }}{{ page.previous.url }}">Continue reading</a></p>
+      </div><!-- /.read-more-content -->
+    </div><!-- /.read-more -->{% endif %}
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    {% include footer.html %}
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+{% include scripts.html %}	        
+
+</body>
+</html>
