@@ -3402,13 +3402,21 @@ body {
 }
 #post .entry-content,
 #page .entry-content {
-  margin: 40px 10px 20px 10px;
-  padding: 20px 30px;
+  margin: 40px 2px 20px 2px;
+  padding: 10px 15px;
   background-color: #ffffff;
   box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}
+@media only screen and (min-width: 48em) {
+  #post .entry-content,
+  #page .entry-content {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px 30px;
+  }
 }
 @media only screen and (min-width: 62.5em) {
   #post .entry-content,
