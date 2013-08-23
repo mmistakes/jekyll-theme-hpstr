@@ -16,7 +16,7 @@ image:
     {% if post.link %}
       <h1 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" itemprop="url" title="{{ post.title }}"><i class="icon-double-angle-right"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
     {% else %}
-      <h1 class="entry-title" itemprop="name"><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
+      <h1 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
     {% endif %}
   </header>
   <div class="entry-content" itemprop="description">
@@ -30,7 +30,7 @@ image:
     {% if paginator.previous_page == 1 %}
       <a href="{{ site.url }}" class="btn">Previous</a>
     {% else %}
-      <a href="/page{{ paginator.previous_page }}" class="btn">Previous</a>
+      <a href="{{ site.url }}/page{{ paginator.previous_page }}" class="btn">Previous</a>
     {% endif %}
   {% else %}
     Previous
@@ -48,13 +48,13 @@ image:
         {% if count == paginator.page %}
           <span class="current-page">{{ count }}</span>
         {% else %}
-          <a href="/page{{ count }}">{{ count }}</a>
+          <a href="{{ site.url }}/page{{ count }}">{{ count }}</a>
         {% endif %}
       </li>
     {% endfor %}
   </ul>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="btn">Next</a>
+    <a href="{{ site.url }}/page{{ paginator.next_page }}" class="btn">Next</a>
   {% else %}
     Next
   {% endif %}
