@@ -2,7 +2,7 @@ title:            HPSTR RDX
 description:      Just another responsive Jekyll theme from designer Michael Rose.
 disqus_shortname: 
 #Comment out url when working locally to resolve base urls correctly
-url:              http://mmistakes.github.io/hpstr-jekyl-theme
+url:              http://mmistakes.github.io/hpstr-jekyll-theme
 
 # Owner/author information
 owner:
