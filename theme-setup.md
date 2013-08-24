@@ -37,7 +37,6 @@ General notes and suggestions for customizing **HPSTR RDX**.
 {% highlight yaml %}
 title:            Site Title
 description:      Describe your website here.
-logo:             site-logo.png
 disqus_shortname: shortname
 url:              http://your-website.com
 
@@ -104,8 +103,10 @@ hpstr-rdx-theme/
 ├── assets
 |    ├── css  # preprocessed less styles
 |    ├── js
-|    |   ├── main.js  # concatenated vendor scripts
-|    |   └── vendor  # 3rd party scripts
+|    |   ├── _main.js  # plugin options
+|    |   ├── scripts.min.js  # concatenated and minifed site scripts
+|    |   ├── plugins  # plugin scripts
+|    |   └── vendor  # jQuery and Modernizr scripts
 |    └── less 
 ├── images  # images for posts and pages
 ├── _config.yml  # Jekyll options
@@ -216,42 +217,23 @@ Link blog like a champ by adding `link: http://url-you-want-linked` to a post's 
 
 ---
 
-## Further Customization
+## Theme Development
 
-To make things easier I use LESS to build the theme's stylesheet. If you want to easily skin the colors and fonts, take a look at `variables.less` in `assets/less/`. Just compile `main.less` using your preprocessor of choice and off you go -- I like [CodeKit](http://incident57.com/codekit/) for OS X and [Prepros](http://alphapixels.com/prepros/) for Windows. [Grunt](http://gruntjs.com) and an assortment [Jekyll plugins](http://jekyllrb.com/docs/plugins/) are also an option for converting LESS files into CSS.
+If you want to easily skin the themes' colors and fonts, take a look at `variables.less` in `assets/less/` and make the necessary changes to the color and font variables. To make development easier I setup a Grunt build script to compile/minify the LESS files into `main.min.css` and lint/concatenate/minify all scripts into `scripts.min.js`. [Install Node.js](http://nodejs.org/), then [install Grunt](http://gruntjs.com/getting-started), and then install the dependencies for the theme contained in `package.json`:
 
-{% highlight css %}
-// Colors
-// --------------------------------------------------
-@base-font: 'Lato', Calibri, Arial, sans-serif;
-@heading-font: @base-font;
-@caption-font: @base-font;
-@code-font: monospace;
-@alt-font: serif;
-
-// Colors
-// --------------------------------------------------
-@base-color         : #222;
-@body-color         : #e8e8e8;
-@text-color         : #222;
-@comp-color         : spin(@base-color, 180); 
-@border-color       : lighten(@base-color,60);
-@white              : #fff;
-@black              : #000;
-@link-color         : #222;
-
-@primary            : @base-color;
-@success            : #5cb85c;
-@warning            : #dd8338;
-@danger             : #C64537;
-@info               : #308cbc;
+{% highlight bash %}
+npm install
 {% endhighlight %}
+
+From the theme's root, use `grunt` to rebuild the CSS, concatenate JavaScript files, and optimize .jpg, .png, and .svg files in the `images/` folder. You can also use `grunt watch` in combination with `jekyll build --watch` to watch for updates to your LESS and JS files that Grunt will then automatically re-build as you write your code which will in turn auto-generate your Jekyll site when developing locally.
+
+And if the command line isn't your thing (you're using Jekyll so it probably is), [CodeKit](http://incident57.com/codekit/) for OS X and [Prepros](http://alphapixels.com/prepros/) for Windows are great alternatives.
 
 ---
 
 ## Questions?
 
-Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/hpstr-rdx-theme/issues/new). And if you make something cool with this theme feel free to let me know.
+Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/hpstr-jekyll-theme/issues/new). And if you make something cool with this theme feel free to let me know.
 
 ---
 
