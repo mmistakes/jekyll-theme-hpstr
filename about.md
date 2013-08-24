@@ -24,6 +24,7 @@ They say three times the charm, so here is another free responsive Jekyll theme 
 * [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
 * Simple [custom 404 page]({{ site.url }}/404.html) to get you started.
 * Stylesheets for Pygments and Coderay [syntax highlighting]({{ site.url }}/code-highlighting-post/) to make your code examples look snazzy
+* Grunt build script for easy theme development
 
 <div markdown="0"><a href="{{ site.url }}/theme-setup" class="btn btn-info">Install the Theme</a></div>
 
