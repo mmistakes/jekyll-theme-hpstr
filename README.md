@@ -13,11 +13,11 @@ They say three times the charm, so here is another free responsive Jekyll theme 
 * Comments powered by [Disqus](http://disqus.com) if you choose to enable.
 * Simple and clear permalink structure.
 * [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* Simple [custom 404 page]({{ site.url }}/404.html) to get you started.
-* Stylesheets for Pygments and Coderay [syntax highlighting]({{ site.url }}/code-highlighting-post/) to make your code examples look snazzy
+* Simple [custom 404 page](http://mmistakes.github.io/hpstr-jekyll-theme/404.html) to get you started.
+* Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/) to make your code examples look snazzy
 * Grunt build script for easy theme development
 
-## [Theme Preview](http://mmistakes.github.io/hpstr-jekyll-theme)
+[Theme Preview](http://mmistakes.github.io/hpstr-jekyll-theme)
 
 ![HPSTR RDX Theme Preview screenshot](http://mmistakes.github.io/hpstr-jekyll-theme/images/hpstr-jekyll-theme-preview.jpg)
 
@@ -28,16 +28,15 @@ General notes and suggestions for customizing **HPSTR RDX**.
 ## Basic Setup for a new Jekyll site
 
 1. [Install Jekyll](http://jekyllrb.com) and read through the documentation if you haven't already.
-2. Fork the [HPSTR RDX repo](https://github.com/mmistakes/hpstr-rdx-theme/fork)
+2. Fork the [HPSTR Jekyll THeme repo](https://github.com/mmistakes/hpstr-jekyll-theme/fork)
 3. Clone the repo you just forked to your computer.
 4. Edit `_config.yml` to personalize your site.
 5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, tags, and other YAML data.
 6. Read the documentation below for further customization pointers and documentation.
 
-### [Download the Theme](https://github.com/mmistakes/hpstr-jekyll-theme)
+[Download the Theme](https://github.com/mmistakes/hpstr-jekyll-theme)
 
 **Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo that I'm guessing you don't want on your site.
-{:.notice}
 
 ---
 
@@ -98,7 +97,7 @@ paginate: 5
 
 ---
 
-## [More Theme Setup Goodness](http://mmistakes.github.io/hpstr-jekyll-theme/theme-setup/)
+## More Theme Setup Goodness
 
 To learn more about how to customize the theme, how feature images work, use the Grunt build script, and some other junk, [read up here](http://mmistakes.github.io/hpstr-jekyll-theme/theme-setup/).
 
