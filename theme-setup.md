@@ -15,7 +15,7 @@ General notes and suggestions for customizing **HPSTR RDX**.
 ## Basic Setup for a new Jekyll site
 
 1. [Install Jekyll](http://jekyllrb.com) and read through the documentation if you haven't already.
-2. Fork the [HPSTR RDX repo](https://github.com/mmistakes/hpstr-rdx-theme/fork)
+2. Fork the [HPSTR Jekyll Theme repo](https://github.com/mmistakes/hpstr-jekyll-theme/fork)
 3. Clone the repo you just forked to your computer.
 4. Edit `_config.yml` to personalize your site.
 5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, tags, and other YAML data.
@@ -88,7 +88,7 @@ paginate: 5
 ## Folder Structure
 
 {% highlight bash %}
-hpstr-rdx-theme/
+hpstr-jekyll-theme/
 ├── _includes
 |    ├── browser-upgrade.html  # prompt to upgrade browser on < IE8
 |    ├── footer.html  # site footer
@@ -243,6 +243,6 @@ This theme is free and open source software, distributed under the [GNU General 
 
 ---
 
-[^1]: Used to generate absolute urls in *sitemap.xml*, *feed.xml*, and for canonical urls in *head.html*. Don't include a trailing `/` in your base url ie: http://mademistakes.com. When developing locally remove or comment out this line so local CSS, JS, and image assets are used.
+[^1]: Used to generate absolute urls in `sitemap.xml`, `feed.xml`, and for canonical urls in `head.html`. Don't include a trailing `/` in your base url ie: http://mademistakes.com. When developing locally remove or comment out this line so local CSS, JS, and image assets are used.
 
 [^2]: If you're using GitHub Pages to host your site be aware that plugins are disabled. So you'll need to build your site locally and then manually deploy if you want to use this sweet plugin.
