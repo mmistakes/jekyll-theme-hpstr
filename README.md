@@ -1,8 +1,8 @@
-# HPSTR RDX Jekyll Theme
+# HPSTR Jekyll Theme
 
 They say three times the charm, so here is another free responsive Jekyll theme for you. I've learned a ton since open sourcing my first two themes [on Github](http://github.com/mmistakes), and wanted to try a few new things this time around. If you've used my previous themes most of this should be familiar territory...
 
-## What HPSTR RDX brings to the table:
+## What HPSTR brings to the table:
 
 * Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
 * Gracefully degrads in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
@@ -11,15 +11,16 @@ They say three times the charm, so here is another free responsive Jekyll theme 
 * Readable typography to make your words shine.
 * Support for large images to call out your favorite posts.
 * Comments powered by [Disqus](http://disqus.com) if you choose to enable.
+* Social Sharing links for Facebook, Twitter, and Google+ if you choose to enable.
 * Simple and clear permalink structure.
 * [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
 * Simple [custom 404 page](http://mmistakes.github.io/hpstr-jekyll-theme/404.html) to get you started.
 * Stylesheets for Pygments and Coderay [syntax highlighting](http://mmistakes.github.io/hpstr-jekyll-theme/code-highlighting-post/) to make your code examples look snazzy
-* Grunt build script for easy theme development
+* [Grunt](http://gruntjs.com) build script for easy theme development
 
 [Theme Preview](http://mmistakes.github.io/hpstr-jekyll-theme)
 
-![HPSTR RDX Theme Preview screenshot](http://mmistakes.github.io/hpstr-jekyll-theme/images/hpstr-jekyll-theme-preview.jpg)
+![HPSTR Theme Preview screenshot](http://mmistakes.github.io/hpstr-jekyll-theme/images/hpstr-jekyll-theme-preview.jpg)
 
 ---
 

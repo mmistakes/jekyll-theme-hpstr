@@ -91,12 +91,15 @@ figcaption {
 // Blockquotes
 // --------------------------------------------------
 blockquote {
-	margin-left: -28px;
-	padding-left: 20px;
-	border-left: 8px solid @border-color;
 	font-family: @alt-font;
 	font-style: italic;
-	.font-rem(24);
+	.font-rem(18);
+	@media @medium {
+		margin-left: -28px;
+		padding-left: 20px;
+		border-left: 8px solid @border-color;
+		.font-rem(24);
+	}
 }
 
 // Footnotes
@@ -129,4 +132,13 @@ pre {
 	.font-rem(12);
 	line-height: 1.5;
 	overflow-x: auto;
+	&::-webkit-scrollbar {
+		height: 12px;
+		background-color: #34362e;
+		border-radius: 0 0 4px 4px;
+	}
+	&::-webkit-scrollbar-thumb:horizontal {
+		background-color: #6a6d5d;
+		.rounded(4px);
+	}
 }

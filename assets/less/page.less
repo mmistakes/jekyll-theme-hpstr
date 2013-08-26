@@ -72,9 +72,10 @@ body {
 		}
 	}
 	h1 {
-		margin: 10px 60px;
+		margin: 10px;
 		font-weight: 700;
 		@media @medium {
+			margin: 10px 60px;
 			color: @white;
 			.font-rem(60);
 			text-shadow: 1px 1px 4px fade(@base-color,60);
@@ -184,8 +185,8 @@ body {
 		}
 		@media @large {
 			max-width: 800px;
-			padding: 50px 80px;
 			margin: 50px auto 30px auto;
+			padding: 50px 80px;
 			> p:first-child {
 				.font-size(20);
 			}
@@ -235,11 +236,15 @@ body {
 // Read More Module
 .read-more {
 	position: relative;
-	margin: 50px 10px 20px 10px;
-	padding: 50px 40px 25px;
+	margin: 40px 2px 20px 2px;
+	padding: 40px 15px 25px;
 	background-color: @white;
 	box-shadow: 0 0 0 1px fade(@border-color,10), 0 6px 12px fade(@black,10);
 	.rounded(3px);
+	@media @medium {
+		margin: 50px 10px 20px 10px;
+		padding: 50px 40px 25px;
+	}
 	@media @large {
 		max-width: 800px;
 		padding: 50px 80px;
@@ -307,9 +312,11 @@ body {
 // --------------------------------------------------
 #post-index {
 	#main {
-		margin-top: 40px;
-		margin-left: 20px;
-		margin-right: 20px;
+		margin: 40px 2px 20px 2px;
+		@media @medium {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
 		@media @large {
 			max-width: 800px;
 			margin-top: 50px;
@@ -322,7 +329,10 @@ body {
 		box-shadow: 0 0 0 1px fade(@base-color,10), 0 6px 12px fade(@base-color,10);
 		.rounded(3px);
 		margin-bottom: 20px;
-		padding: 25px 40px;
+		padding: 25px 15px;
+		@media @medium {
+			padding: 30px;
+		}
 		@media @large {
 			margin-bottom: 30px;
 			padding: 50px 80px;
@@ -342,8 +352,20 @@ body {
 	}
 }
 
-// Social Icons
+// Social Share
 // --------------------------------------------------
+.socialcount {
+	.font-rem(16);
+	font-weight: 700;
+	li { 
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	p > a,
+	li > a {
+		border-bottom-width: 0;
+	}
+}
 
 
 // Browser Upgrade
