@@ -279,6 +279,29 @@ body {
 		}
 	}
 }
+.read-more-list {
+	border-top: solid 1px lighten(@base-color,60);
+}
+.list-item {
+	width: 100%;
+	text-align: left;
+	h4 { 
+		.font-rem(18);
+		margin-bottom: 0; 
+	}
+	span { 
+		display: block;
+		.font-rem(14);
+		color: lighten(@base-color,50);
+	}
+	@media @medium {
+		width: 49%;
+		float: left;
+		&:nth-child(2) {
+			text-align: right;
+		}
+	}
+}
 
 // Post Index 
 // --------------------------------------------------
