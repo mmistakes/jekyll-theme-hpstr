@@ -1,16 +1,17 @@
 ---
 layout: page
-permalink: /theme-setup/index.html
+permalink: /theme-setup/
 title: Theme Setup
-description: "Instructions on how to install and customize the Jekyll theme HPSTR RDX."
+description: "Instructions on how to install and customize the modern Jekyll theme HPSTR."
 tags: [Jekyll, theme, install, setup]
 image:
   feature: abstract-11.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+share: true
 ---
 
-General notes and suggestions for customizing **HPSTR RDX**.
+General notes and suggestions for customizing **HPSTR**.
 
 ## Basic Setup for a new Jekyll site
 
@@ -130,6 +131,14 @@ Create a [Disqus](http://disqus.com) account and change `disqus_shortname` in `_
 
 {% highlight yaml %}
 comments: true
+{% endhighlight %}
+
+#### Social Share Links
+
+To enable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
+
+{% highlight yaml %}
+share: true
 {% endhighlight %}
 
 #### Owner/Author Information
