@@ -36,8 +36,7 @@
       {{ content }}
       <footer class="entry-meta">
         <span class="entry-tags">{% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" rel="tag" class="tag">{{ tag }}</a>{% unless forloop.last %}{% endunless %}{% endfor %}</span>
-        <span><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}" itemprop="url">{{ page.title }}</a></span>
-        was published on <span class="entry-date date published updated"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</span></time>
+        <span><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}" itemprop="url">{{ page.title }}</a> was published on <span class="entry-date date published updated"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</time></span></span>
         {% if page.modified %}(revised: <span class="entry-date date modified"><time datetime="{{ page.modified }}" itemprop="dateModified">{{ page.modified | date: "%m/%d/%Y" }}</time></span>){% endif %}
         <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="fn"><a href="{{ site.url }}/about" title="About {{ site.owner.name }}" itemprop="url">{{ site.owner.name }}</a></span></span>
         {% if page.share %}<div class="social-share">
