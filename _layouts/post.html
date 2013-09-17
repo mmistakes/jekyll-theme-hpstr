@@ -57,7 +57,7 @@
         </div><!-- /.read-more-header -->
         <div class="read-more-content">
           <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
-          <p>{% if post.description %}{{ post.description }}{% else %}{{ content | strip_html | strip_newlines | truncate: 140 }}&hellip;{% endif %} <a href="{{ site.url }}{{ post.url }}">Continue reading</a></p>
+          <p>{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 140 }}&hellip;{% endif %} <a href="{{ site.url }}{{ post.url }}">Continue reading</a></p>
         </div><!-- /.read-more-content -->
       {% endfor %}
       <div class="read-more-list">
