@@ -56,3 +56,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/apple-touch-icon-144x144-precomposed.png">
+
+{% if page.image.background or site.background %}
+<style type="text/css">body {background-image:url({{ site.url }}/images/{% if page.image.background %}{{ page.image.background }}{% else %}{{ site.background }}{% endif %});}</style>
+{% endif %}
