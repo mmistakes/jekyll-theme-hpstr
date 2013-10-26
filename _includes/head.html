@@ -57,10 +57,6 @@
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/apple-touch-icon-144x144-precomposed.png">
 
-<!-- Background -->
-{% if page.background %}
-    {% capture page_bgimg %}{% if page.background contains 'http' %}{{ page.background }}{% else %}{{ site.url }}{{ page.background }}{% endif %}{% endcapture %}
-{% elsif site.background %}
-    {% capture page_bgimg %}{% if site.background contains 'http' %}{{ site.background }}{% else %}{{ site.url }}{{ site.background }}{% endif %}{% endcapture %}
+{% if page.image.background or site.background %}
+<style type="text/css">body {background-image:url({{ site.url }}/images/{% if page.image.background %}{{ page.image.background }}{% else %}{{ site.background }}{% endif %});}</style>
 {% endif %}
-{% if page_bgimg %}<style type="text/css">body {background-image:url({{ page_bgimg }});}</style>{% endif %}
