@@ -2,7 +2,7 @@ title:            Site Title
 description:      Describe your website here.
 disqus_shortname: 
 #Comment out url when working locally to resolve base urls correctly
-url:              http://your-website.com
+url:              http://localhost:4000
 
 # Owner/author information
 owner:
@@ -21,6 +21,9 @@ owner:
   tumblr:         
   # For Google Authorship https://plus.google.com/authorship
   google_plus:   
+
+# Background image to be tiled on all pages
+background: ps_neutral.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
