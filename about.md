@@ -18,6 +18,7 @@ They say three times the charm, so here is another free responsive Jekyll theme 
 * Gracefully degrads in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
 * Modern and minimal design.
 * Sweet animated menu.
+* Background image support.
 * Readable typography to make your words shine.
 * Support for large images to call out your favorite posts.
 * Comments powered by [Disqus](http://disqus.com) if you choose to enable.
