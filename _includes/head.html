@@ -58,5 +58,7 @@
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/apple-touch-icon-144x144-precomposed.png">
 
 {% if page.image.background or site.background %}
-<style type="text/css">body {background-image:url({{ site.url }}/images/{% if page.image.background %}{{ page.image.background }}{% else %}{{ site.background }}{% endif %});}</style>
+{% capture background %}{% if page.image.background %}{{ page.image.background }}{% else %}{{ site.background }}{% endif %}{% endcapture %}
+{% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.url }}/images/{{ background }}{% endcapture %}{% endunless %}
+<style type="text/css">body {background-image:url({{ background }});}</style>
 {% endif %}
