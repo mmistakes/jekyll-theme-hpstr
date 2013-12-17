@@ -27,7 +27,7 @@
         {% if page.link %}
           <h1 class="entry-title" itemprop="name"><a href="{{ page.link }}">{{ page.title }}</a></h1>
         {% else %}
-          <h1 class="entry-title" itemprop="name"><a href="{{ page.url }}" rel="bookmark" title="{{ page.title }}" itemprop="url">{{ page.title }}</a></h1>
+          <h1 class="entry-title" itemprop="name"><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}" itemprop="url">{{ page.title }}</a></h1>
         {% endif %}
         <h2>{{ page.date | date: "%B %d, %Y" }}</h2>
       </div><!-- /.header-title-wrap -->
