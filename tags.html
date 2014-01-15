@@ -20,14 +20,14 @@ description: "An archive of posts sorted by tag."
 </ul>
 
 {% for tag in site.tags %} 
-	<article class="hentry" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<article class="hentry">
 	<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
 		<ul>
 		{% assign pages_list = tag[1] %}  
 		{% for post in pages_list %}
 			{% if post.title != null %}
 			{% if group == null or group == post.group %}
-				<li class="entry-title" itemprop="name"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></li>
+				<li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 			{% endif %}
 			{% endif %}
 		{% endfor %}

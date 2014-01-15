@@ -7,31 +7,31 @@
 {% include head.html %}
 </head>
 
-<body id="page" {% if page.image.feature %}class="feature"{% endif %} itemscope itemtype="http://schema.org/WebPage">
+<body id="page" {% if page.image.feature %}class="feature"{% endif %}>
 
 {% include browser-upgrade.html %}
 {% include navigation.html %}
 
 {% if page.image.feature %}
 <div class="entry-header">
-  <div class="entry-image"><img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}" itemprop="image">
+  <div class="entry-image"><img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
     {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
   </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
 {% endif %}
 
-<div id="main" role="main" itemprop="mainContentOfPage">
+<div id="main" role="main">
   <article class="entry">
     <header class="header-title">
       <div class="header-title-wrap">
-        <h1 class="entry-title" itemprop="name">{{ page.title }}</h1>
+        <h1 class="entry-title">{{ page.title }}</h1>
       </div><!-- /.header-title-wrap -->
     </header>
-    <div class="entry-content" itemprop="description">
+    <div class="entry-content">
       {{ content }}
       <footer class="entry-meta">
-        {% if page.modified %}{{ page.title }} was last modified on <span class="entry-date date modified"><time datetime="{{ page.modified }}" itemprop="dateModified">{{ page.modified }}</time></span>
-        <span class="author vcard fn" itemprop="author" itemtype="http://schema.org/Person">{{ site.owner.name }}</span>{% endif %}
+        {% if page.modified %}{{ page.title }} was last modified on <span class="entry-date date modified"><time datetime="{{ page.modified }}">{{ page.modified }}</time></span>
+        <span class="author vcard fn">{{ site.owner.name }}</span>{% endif %}
         {% if page.share %}<div class="social-share">
           <ul class="socialcount socialcount-small inline-list" data-url="{{ site.url }}{{ page.url }}" data-share-text="{{ page.title }}">
             <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook"><span class="count"><i class="icon-facebook-sign"></i> Like</span></a></li>
