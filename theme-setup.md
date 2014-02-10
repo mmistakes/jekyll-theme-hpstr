@@ -191,7 +191,19 @@ For the most part you can leave these as is since the author/owner details are p
 
 ### Adding Posts and Pages
 
-There are two main content layouts: `post.html` (for posts) and `page.html` (for pages). Both have support for large **feature images** that span the full-width of the screen, and both are meant for text heavy blog posts (or articles). 
+There are two main content layouts: `post.html` (for posts) and `page.html` (for pages). Both have support for large **feature images** that span the full-width of the screen, and both are meant for text heavy blog posts (or articles).
+
+There are two rake tasks that can be used to create a new post or page with all YAML Front Matter. Using either `rake new_post` or `rake new_page` will prompt you for a title and tags to classify them. Example below:
+
+{% highlight %}
+rake new_post
+
+Enter a title for your post: My Awesome Post
+Enter tags to classify your post (comma separated): web development, code
+Creating new post: _posts/2014-02-10-my-awesome-post.md
+{% endhighlight %}
+
+There are a few configuration variables that can be changed in `Rakefile.rb`. By default posts and pages will be created in MarkDown using the `.md` extension.
 
 #### Feature Images
 
