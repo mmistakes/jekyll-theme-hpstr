@@ -195,7 +195,7 @@ There are two main content layouts: `post.html` (for posts) and `page.html` (for
 
 There are two rake tasks that can be used to create a new post or page with all YAML Front Matter. Using either `rake new_post` or `rake new_page` will prompt you for a title and tags to classify them. Example below:
 
-{% highlight %}
+{% highlight bash %}
 rake new_post
 
 Enter a title for your post: My Awesome Post
