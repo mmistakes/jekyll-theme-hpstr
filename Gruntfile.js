@@ -24,6 +24,17 @@ module.exports = function(grunt) {
             'assets/less/main.less'
           ]
         }
+      },
+      dev: {
+        options: {
+          compile: true,
+          compress: false
+        },
+        files: {
+          'assets/css/main.css': [
+            'assets/less/main.less'
+          ]
+        }
       }
     },
     uglify: {
