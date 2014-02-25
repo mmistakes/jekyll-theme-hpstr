@@ -3836,7 +3836,6 @@ body {
 }
 
 .header-title {
-  padding: 0 20px;
   margin: 30px 0 0;
   text-align: center;
 }
@@ -3858,8 +3857,8 @@ body {
 
 @media only screen and (min-width: 62.5em) {
   .header-title h1 {
-    font-size: 80px;
-    font-size: 5rem;
+    font-size: 60px;
+    font-size: 3.75rem;
   }
 }
 
@@ -3873,67 +3872,51 @@ body {
 
 @media only screen and (min-width: 48em) {
   .header-title h2 {
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 
-@media only screen and (min-width: 48em) {
-  .feature .header-title {
-    position: absolute;
-    top: 0;
-    display: table;
-    width: 100%;
-    height: 440px;
-    margin-top: 0;
-    overflow: hidden;
-  }
-  .feature .header-title .header-title-wrap {
-    display: table-cell;
-    margin: 0 auto;
-    text-align: center;
-    vertical-align: middle;
-  }
+.feature .header-title {
+  position: absolute;
+  top: 0;
+  display: table;
+  width: 100%;
+  height: 440px;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.feature .header-title .header-title-wrap {
+  display: table-cell;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .feature .header-title h1 {
   margin: 10px;
+  margin: 10px 60px;
   font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
 }
 
-@media only screen and (min-width: 48em) {
-  .feature .header-title h1 {
-    margin: 10px 60px;
-    font-size: 60px;
-    font-size: 3.75rem;
-    color: #ffffff;
-    text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
-  }
-  .feature .header-title h1 a {
-    color: #ffffff;
-  }
+.feature .header-title h1 a {
+  color: #ffffff;
 }
 
 @media only screen and (min-width: 62.5em) {
-  .feature .header-title h1 {
-    font-size: 100px;
-    font-size: 6.25rem;
-  }
+  
 }
 
 .feature .header-title h2 {
   margin: 0;
-  font-size: 18px;
-  font-size: 1.125rem;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 @media only screen and (min-width: 48em) {
-  .feature .header-title h2 {
-    font-size: 30px;
-    font-size: 1.875rem;
-    color: #ffffff;
-  }
   .feature .header-title h2 a {
     color: #ffffff;
   }
@@ -3941,9 +3924,12 @@ body {
 
 .entry-image {
   position: relative;
-  width: auto;
-  height: 100%;
-  max-height: 440px;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  min-height: 440px;
+  overflow: hidden;
 }
 
 .entry-image:after {
@@ -3957,7 +3943,14 @@ body {
 }
 
 .entry-image img {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 50%;
+  min-height: 50%;
+  margin: auto;
 }
 
 .image-credit {
