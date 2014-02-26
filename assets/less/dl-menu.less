@@ -71,12 +71,12 @@
 		p {
 			margin: 0;
 			padding: 15px 20px;
-			.font-rem(12);
+			.font-rem(14);
 			color: fade(@white,80);
 			a {
 				display: inline;
 				padding: 0;
-				.font-rem(12);
+				.font-rem(14);
 			}
 		}
 		i {
@@ -125,6 +125,8 @@
 		position: absolute;
 		width: 100%;
 		max-width: 400px;
+		overflow-y: auto;
+		max-height: 600px;
 		opacity: 0;
 		pointer-events: none;
 		box-shadow: 0 12px 24px fade(@black,35);
@@ -136,7 +138,6 @@
 		backface-visibility: hidden;
 		@media @medium {
 			.border-radius(3px,3px,3px,3px);
-			overflow-y: auto;
 			max-height: 650px;
 		}
 	}
