@@ -23,7 +23,7 @@ owner:
   google_plus:    http://plus.google.com/118238196859537351707
 
 # Background image to be tiled on all pages
-background: ps_neutral.png
+background:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-2011187-5
