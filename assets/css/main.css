@@ -1494,16 +1494,16 @@ svg:not(:root) {
 .dl-menuwrapper li p {
   padding: 15px 20px;
   margin: 0;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .dl-menuwrapper li p a {
   display: inline;
   padding: 0;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .dl-menuwrapper li i {
@@ -1557,7 +1557,9 @@ svg:not(:root) {
   position: absolute;
   width: 100%;
   max-width: 400px;
+  max-height: 600px;
   margin: 0;
+  overflow-y: auto;
   pointer-events: none;
   opacity: 0;
   -webkit-transform: translateY(10px);
@@ -1572,7 +1574,6 @@ svg:not(:root) {
 @media only screen and (min-width: 48em) {
   .dl-menuwrapper .dl-menu {
     max-height: 650px;
-    overflow-y: auto;
     -webkit-border-top-right-radius: 3px;
             border-top-right-radius: 3px;
     -webkit-border-bottom-right-radius: 3px;
