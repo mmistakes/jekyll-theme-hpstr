@@ -32,7 +32,7 @@ General notes and suggestions for customizing **HPSTR**.
 ## Setup for an Existing Jekyll site
 
 1. Clone the following folders: `_includes`, `_layouts`, `assets`, and `images`.
-2. Clone the following files and personalize content as need: `about.md`, `archive.html`, `index.html`, `tags.html`, and `feed.xml`.
+2. Clone the following files and personalize content as need: `about.md`, `posts.html`, `index.html`, `tags.html`, and `feed.xml`.
 3. Set the following variables in your `config.yml` file:
 
 {% highlight yaml %}
@@ -115,8 +115,8 @@ hpstr-jekyll-theme/
 ├── images  # images for posts and pages
 ├── _config.yml  # Jekyll options
 ├── about.md  # about page
-├── archive.html  # all posts
 ├── index.html  # home page
+├── posts.html  # all posts
 └── tags.html  # all posts grouped by tag
 {% endhighlight %}
 
