@@ -28,6 +28,7 @@ body {
 .entry-header {
 	width: 100%;
 	overflow: hidden;
+	position: relative;
 }
 .header-title {
 	text-align: center;
@@ -60,7 +61,7 @@ body {
 	display: table;
 	margin-top: 0;
 	width: 100%;
-	height: 440px;
+	height: 400px;
 	overflow: hidden;
 	.header-title-wrap {
 		display: table-cell;
@@ -97,7 +98,7 @@ body {
 	left: -50%; 
 	width: 200%; 
 	height: 200%;
-	min-height: 440px;
+	min-height: 400px;
 	overflow: hidden;
 	&:after {
 		content: '';
@@ -119,17 +120,26 @@ body {
 		min-height: 50%;
 	}
 }
+// Feature Image Caption
 .image-credit {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	margin: 0 auto;
+	max-width: 440px;
 	padding: 10px 15px;
-	color: @white;
 	background-color: fade(@base-color,50);
+	color: @white;
 	.font-rem(12);
 	text-align: right;
 	.border-radius(3px,0,0,3px);
 	z-index: 10;
+	@media @medium {
+		max-width: 760px;
+	}
+	@media @large {
+		max-width: 960px;
+	}
 	a {
 		color: @white;
 		text-decoration: none;
