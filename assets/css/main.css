@@ -346,15 +346,15 @@ figcaption {
 }
 
 blockquote {
+  padding-left: 20px;
   font-family: serif;
   font-style: italic;
+  border-left: 8px solid #bbbbbb;
 }
 
 @media only screen and (min-width: 48em) {
   blockquote {
-    padding-left: 20px;
     margin-left: -28px;
-    border-left: 8px solid #bbbbbb;
   }
 }
 
