@@ -347,19 +347,13 @@ figcaption {
 
 blockquote {
   font-family: serif;
-  font-size: 18px;
-  font-size: 1.125rem;
   font-style: italic;
-  line-height: 1.4444;
 }
 
 @media only screen and (min-width: 48em) {
   blockquote {
     padding-left: 20px;
     margin-left: -28px;
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.0833;
     border-left: 8px solid #bbbbbb;
   }
 }
