@@ -4014,7 +4014,7 @@ body {
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
-  box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 0, 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (min-width: 48em) {
@@ -4269,7 +4269,7 @@ body {
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
-  box-shadow: 0 0 0 1px rgba(34, 34, 34, 0.1), 0 6px 12px rgba(34, 34, 34, 0.1);
+  box-shadow: 0 0 0 0, 0 6px 12px rgba(34, 34, 34, 0.1);
 }
 
 @media only screen and (min-width: 48em) {
