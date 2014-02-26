@@ -20,7 +20,7 @@ description: "An archive of posts sorted by tag."
 </ul>
 
 {% for tag in site.tags %} 
-	<article class="hentry">
+	<article>
 	<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
 		<ul>
 		{% assign pages_list = tag[1] %}  
