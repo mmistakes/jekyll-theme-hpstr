@@ -97,7 +97,10 @@
 
 				if( $submenu.length > 0 ) {
 
-					var $flyin = $submenu.clone().css( 'opacity', 0 ).insertAfter( self.$menu ),
+					var $flyin = $submenu.clone().css({
+						opacity: 0,
+						margin: 0
+					}).insertAfter( self.$menu ),
 						onAnimationEndFn = function() {
 							self.$menu.off( self.animEndEventName ).removeClass( self.options.animationClasses.classout ).addClass( 'dl-subview' );
 							$item.addClass( 'dl-subviewopen' ).parents( '.dl-subviewopen:first' ).removeClass( 'dl-subviewopen' ).addClass( 'dl-subview' );
