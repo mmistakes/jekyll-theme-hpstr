@@ -20,6 +20,9 @@ image:
     {% endif %}
   </header>
   <div class="entry-content">
+    {% if site.reading_time %}
+      <div class="entry-reading-time text-align-right"><i class="fa fa-clock-o"></i><i class="entry-reading-time-content"></i></div><!-- /.entry-reading-time -->
+    {% endif %}
     {{ post.content }}
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
