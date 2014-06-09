@@ -1836,6 +1836,15 @@ All this is done for any sub-level being entered.
   display: block;
 }
 
+.entry-reading-time > i{
+  color: #999999;
+  margin: 3px;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
 /*!
  *  Font Awesome 3.2.0
  *  the iconic font designed for Bootstrap
