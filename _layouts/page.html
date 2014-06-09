@@ -30,7 +30,12 @@
     </header>
     <div class="entry-content">
       {% if site.reading_time %}
-        <div class="entry-reading-time text-align-right"><i class="fa fa-clock-o"></i><i class="entry-reading-time-content"></i></div><!-- /.entry-reading-time -->
+        <div class="entry-reading-time text-align-right">
+          <i class="fa fa-clock-o"></i>
+          <i class="entry-reading-time-content">
+            {{ content | number_of_words | append: '.0' | divided_by: site.words_per_minute }}
+          </i>
+        </div><!-- /.entry-reading-time -->
       {% endif %}
       {{ content }}
       <footer class="entry-meta">
