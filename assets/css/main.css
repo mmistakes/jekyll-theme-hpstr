@@ -3969,6 +3969,10 @@ body {
   }
 }
 
+.header-title p {
+  color: #555555;
+}
+
 .feature .header-title {
   position: absolute;
   top: 0;
@@ -4012,6 +4016,10 @@ body {
   .feature .header-title h2 a {
     color: #ffffff;
   }
+}
+
+.feature .header-title p {
+  color: #ffffff;
 }
 
 .entry-image {
