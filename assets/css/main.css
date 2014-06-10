@@ -1836,15 +1836,6 @@ All this is done for any sub-level being entered.
   display: block;
 }
 
-.entry-reading-time > i{
-  color: #999999;
-  margin: 3px;
-}
-
-.text-align-right {
-  text-align: right;
-}
-
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3978,6 +3969,10 @@ body {
   }
 }
 
+.header-title p {
+  color: #555555;
+}
+
 .feature .header-title {
   position: absolute;
   top: 0;
@@ -4021,6 +4016,10 @@ body {
   .feature .header-title h2 a {
     color: #ffffff;
   }
+}
+
+.feature .header-title p {
+  color: #ffffff;
 }
 
 .entry-image {

@@ -30,13 +30,11 @@
     </header>
     <div class="entry-content">
       {% if site.reading_time %}
-        <div class="entry-reading-time text-align-right">
-          <i class="fa fa-clock-o"></i>
-          <i class="entry-reading-time-content">
-            {% assign readtime = content | number_of_words | divided_by:site.words_per_minute %}
-            Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
-          </i>
-        </div><!-- /.entry-reading-time -->
+      <p class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        {% assign readtime = content | number_of_words | divided_by:site.words_per_minute %}
+        Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
+      </p><!-- /.entry-reading-time -->
       {% endif %}
       {{ content }}
       <footer class="entry-meta">
