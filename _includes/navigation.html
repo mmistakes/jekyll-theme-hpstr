@@ -50,6 +50,6 @@
 				<li><a href="{{ site.url }}/tags/">All Tags</a></li>
 			</ul>
 		</li>
-		{% for link in site.links %}<li>{% if link.external %}<a href="{{ link.url }}">{{ link.title }}</a>{% else %}<a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>{% endif %}</li>{% endfor %}
+		{% for link in site.links %}<li>{% if link.external %}<a href="{{ link.url }}" target="_blank">{{ link.title }}</a>{% else %}<a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>{% endif %}</li>{% endfor %}
 	</ul><!-- /.dl-menu -->
 </nav><!-- /.dl-menuwrapper -->
