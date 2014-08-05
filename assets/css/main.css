@@ -817,6 +817,189 @@ ol.CodeRay li {
   color: #e6db74;
 }
 
+.gist .highlight {
+  color: #000;
+}
+
+.gist .render-container .render-viewer-error,
+.gist .render-container .render-viewer-fatal,
+.gist .render-container .octospinner {
+  display: none;
+}
+
+.gist .gist-render iframe {
+  width: 100%;
+}
+
+.gist .gist-file.gist-render .highlight {
+  border: none;
+}
+
+.gist .gist-file .gist-meta .highlight a {
+  font-weight: 700;
+  color: #666;
+  text-decoration: none;
+}
+
+.gist .highlight {
+  background: #fff;
+}
+
+.gist .highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.gist .highlight .cp {
+  font-weight: 700;
+  color: #999;
+}
+
+.gist .highlight .cs {
+  font-style: italic;
+  font-weight: 700;
+  color: #999;
+}
+
+.gist .highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+
+.gist .highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+
+.gist .highlight .ge {
+  font-style: italic;
+  color: #000;
+}
+
+.gist .highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+
+.gist .highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+
+.gist .highlight .go {
+  color: #888;
+}
+
+.gist .highlight .gs {
+  font-weight: 700;
+}
+
+.gist .highlight .gu {
+  color: #aaa;
+}
+
+.gist .highlight .nb {
+  color: #0086b3;
+}
+
+.gist .highlight .ni {
+  color: purple;
+}
+
+.gist .highlight .nt {
+  color: navy;
+}
+
+.gist .highlight .w {
+  color: #bbb;
+}
+
+.gist .highlight .sr {
+  color: #009926;
+}
+
+.gist .highlight .ss {
+  color: #990073;
+}
+
+.gist .highlight .c,
+.gist .highlight .cm,
+.gist .highlight .c1 {
+  font-style: italic;
+  color: #998;
+}
+
+.gist .highlight .k,
+.gist .highlight .o,
+.gist .highlight .kc,
+.gist .highlight .kd,
+.gist .highlight .kp,
+.gist .highlight .kr,
+.gist .highlight .ow,
+.gist .highlight .n,
+.gist .highlight .p {
+  font-weight: 700;
+  color: #000;
+}
+
+.gist .highlight .gr,
+.gist .highlight .gt {
+  color: #a00;
+}
+
+.gist .highlight .gh,
+.gist .highlight .bp {
+  color: #999;
+}
+
+.gist .highlight .gp,
+.gist .highlight .nn {
+  color: #555;
+}
+
+.gist .highlight .kt,
+.gist .highlight .nc {
+  font-weight: 700;
+  color: #458;
+}
+
+.gist .highlight .m,
+.gist .highlight .mf,
+.gist .highlight .mh,
+.gist .highlight .mi,
+.gist .highlight .mo,
+.gist .highlight .il {
+  color: #099;
+}
+
+.gist .highlight .s,
+.gist .highlight .sb,
+.gist .highlight .sc,
+.gist .highlight .sd,
+.gist .highlight .s2,
+.gist .highlight .se,
+.gist .highlight .sh,
+.gist .highlight .si,
+.gist .highlight .sx,
+.gist .highlight .s1 {
+  color: #d14;
+}
+
+.gist .highlight .na,
+.gist .highlight .no,
+.gist .highlight .nv,
+.gist .highlight .vc,
+.gist .highlight .vg,
+.gist .highlight .vi {
+  color: teal;
+}
+
+.gist .highlight .ne,
+.gist .highlight .nf {
+  font-weight: 700;
+  color: #900;
+}
+
 .clearfix {
   *zoom: 1;
 }
