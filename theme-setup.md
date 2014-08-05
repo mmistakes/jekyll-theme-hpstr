@@ -60,7 +60,8 @@ owner:
   flickr:         
   tumblr:         
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:    +yourid
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
