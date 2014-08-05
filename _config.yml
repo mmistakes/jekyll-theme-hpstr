@@ -22,7 +22,8 @@ owner:
   flickr:         
   tumblr:         
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    http://plus.google.com/118238196859537351707
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:    +MichaelRoseDesign
 
 # Background image to be tiled on all pages
 background:
