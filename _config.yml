@@ -3,7 +3,6 @@ description:      A responsive Jekyll theme with modern tendencies from designer
 disqus_shortname: hpstrtheme
 reading_time:     true
 words_per_minute: 200
-#Comment out url when working locally to resolve base urls correctly
 url:              http://mmistakes.github.io/hpstr-jekyll-theme
 
 # Owner/author information
