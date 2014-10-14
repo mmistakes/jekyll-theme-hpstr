@@ -1,12 +1,6 @@
 ---
 layout: post-index
-title: Latest Posts
-description: "Describe this nonsense."
-tags: [Jekyll, theme, themes, responsive, blog, modern]
-image:
-  feature: abstract-1.jpg
-  credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+description: "Home Page"
 ---
 
 {% for post in paginator.posts %}
@@ -29,7 +23,13 @@ image:
     {% endif %}
   </header>
   <div class="entry-content">
-    {{ post.content }}
+    <div class="post-content-truncate">
+    {% if post.content contains "<!--more-->" %}
+      {{ post.content | split:"<!--more-->" | first % }}
+    {% else %}
+      {{ post.content | strip_html | truncatewords:100 }}
+    {% endif %}
+    </div>
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {% endfor %}

@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
+gem 'jekyll_ghost_importer'
+gem 'jekyll-import'
+gem 'sequel'
+gem 'sqlite3'
 gem 'kramdown'
 gem 'coderay'
 gem 'rake'

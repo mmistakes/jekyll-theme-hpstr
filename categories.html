@@ -1,0 +1,23 @@
+---
+layout: post-index
+permalink: /categories/
+title: All Categories
+description: "An archive of categories."
+---
+
+{% for category in site.categories %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <article>
+    <h2 id="{{ category | first }}-ref">{{ category | first }}</h2>
+    <ul>
+    {% for posts in category %}
+      {% for post in posts %}
+        {% if post != posts  %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    </ul>
+    </article>
+  </li>
+{% endfor %}

@@ -1,32 +1,36 @@
-title:            Site Title
-description:      Describe your website here.
-disqus_shortname: 
-reading_time:     true
+title:            Domo Factor
+description:      Blog About Stuff
+disqus_shortname: domofactor
+reading_time:     false
 words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://localhost:4000
+url:              http://domofactor.com
+
+#Networking stuff
+port:    4000
+host:    127.0.0.1
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  name:           Terrell Bromer
+  avatar:         avatar2.jpg
+  bio:            "I go drifting, fix linux servers and visit japan!"
+  email:          terrell@domofactor.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
+  twitter:        domofactor
+  facebook:       pages/Domo-Factor/337082756302
+  github:         terrellb
   stackexchange:  
   linkedin:       
-  instagram:      
+  instagram:      domofactor
   flickr:         
   tumblr:         
   # For Google Authorship https://plus.google.com/authorship
   # google plus id, include the '+', eg +mmistakes
-  google_plus:    +yourid
+  google_plus:    #+yourid
 
 # Background image to be tiled on all pages
-background: 
+background: background2.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
@@ -37,20 +41,22 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Theme Setup
-    url: /theme-setup
-  - title: External Link
-    url: http://mademistakes.com
-    external: true
+   - title: Subscribe
+     url: /rss
+  #- title: Theme Setup
+  #  url: /theme-setup
+  #- title: External Link
+  #  url: http://mademistakes.com
+  #  external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    US/Pacific
 future:      true
 highlighter: pygments
 markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+permalink:   /:title/
 
 # Amount of post to show on home page
 paginate: 5
@@ -70,4 +76,4 @@ kramdown:
     coderay_css: class
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", ".ruby-version", ".ruby-gemset"]
