@@ -1,9 +1,7 @@
 ---
 layout: page
-permalink: /theme-setup/
 title: Theme Setup
 description: "Instructions on how to install and customize the modern Jekyll theme HPSTR."
-tags: [Jekyll, theme, install, setup]
 image:
   feature: abstract-11.jpg
   credit: dargadgetz
@@ -32,7 +30,7 @@ General notes and suggestions for customizing **HPSTR**.
 ## Setup for an Existing Jekyll site
 
 1. Clone the following folders: `_includes`, `_layouts`, '_sass', `assets`, and `images`.
-2. Clone the following files and personalize content as need: `about.md`, `posts.html`, `index.html`, `tags.html`, and `feed.xml`.
+2. Clone the following folders/files and personalize content as need: `about/`, `posts/`, `tags/`, `feed.xml`. and 'index.html'.
 3. Set the following variables in your `config.yml` file:
 
 {% highlight yaml %}
@@ -104,12 +102,11 @@ hpstr-jekyll-theme/
 |    |   ├── plugins                # plugin scripts
 |    └── └── vendor                 # jQuery and Modernizr scripts
 ├── images                          # images for posts and pages
-├── images                          # images for posts and pages
 ├── _config.yml                     # Jekyll options
-├── about.md                        # about page
-├── index.html                      # home page
-├── posts.html                      # all posts
-└── tags.html                       # all posts grouped by tag
+├── about/                          # about page
+├── posts/                          # all posts
+├── tags/                           # all posts grouped by tag
+└── index.html                      # home page with pagination
 {% endhighlight %}
 
 ---
@@ -158,22 +155,37 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. Use t
 
 ---
 
-#### Background Images
+## Adding New Content with Octopress
 
-To utilize this "feature" just add the following YAML to a post's front matter. ([View demo](http://mmistakes.github.io/hpstr-jekyll-theme/background-image/))
+While completely optional, I've included Octopress and some starter templates to automate the creation of new posts and pages. To take advantage of it start by installing the [Octopress](https://github.com/octopress/octopress) gem if it isn't already.
 
-{% highlight yaml %}
-image:
-  background: filename.png
+{% highlight bash %}
+$ gem install octopress --pre
 {% endhighlight %}
 
-This little bit of YAML makes the assumption that your background image asset is in the `/images` folder. If you place it somewhere else or are hot linking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.
+### New Post
 
-If you want to set a background image for the entire site just add `background: filename.png` to your `_config.yml` and BOOM --- background images on every page!
+Default command
 
-#### Other Stuff
+{% highlight bash %}
+$ octopress new post "Post Title"
+{% endhighlight %}
 
-The rest is just your average Jekyll config settings. Nothing too crazy here...
+Default works great if you want all your posts in one directory, but if you're like me and want to group them into subfolders like `/posts`, `/portfolio`, etc. Then this is the command for you. By specifying the DIR it will create a new post in that folder and populate the `categories:` YAML with the same value.
+
+{% highlight bash %}
+$ octopress new post "New Post Title" --dir posts
+{% endhighlight %}
+
+### New Page
+
+To create a new page use the following command.
+
+{% highlight bash %}
+$ octopress new page new-page/
+{% endhighlight %}
+
+---
 
 ### Jekyll _includes
 
@@ -183,23 +195,7 @@ For the most part you can leave these as is since the author/owner details are p
 
 On by default. To turn off remove `reading_time` from `_config.yml. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
 
-### Adding Posts and Pages
-
-There are two main content layouts: `post.html` (for posts) and `page.html` (for pages). Both have support for large **feature images** that span the full-width of the screen, and both are meant for text heavy blog posts (or articles).
-
-There are two rake tasks that can be used to create a new post or page with all YAML Front Matter. Using either `rake new_post` or `rake new_page` will prompt you for a title and tags to classify them. Example below:
-
-{% highlight bash %}
-rake new_post
-
-Enter a title for your post: My Awesome Post
-Enter tags to classify your post (comma separated): web development, code
-Creating new post: _posts/2014-02-10-my-awesome-post.md
-{% endhighlight %}
-
-There are a few configuration variables that can be changed in `Rakefile.rb`. By default posts and pages will be created in MarkDown using the `.md` extension.
-
-#### Feature Images
+### Feature Images
 
 A good rule of thumb is to keep feature images nice and wide so you don't push the body text too far down. An image cropped around around 1024 x 256 pixels will keep file size down with an acceptable resolution for most devices. If you want to serve these images responsively I'd suggest looking at the [Jekyll Picture Tag](https://github.com/scottjehl/picturefill)[^2] plugin.
 
@@ -228,7 +224,7 @@ Here's an example of what a tweet to your site could look like if you activate T
 
 ![Twitter Card summary large image screenshot]({{ site.url }}/images/twitter-card-summary-large-image.jpg)
 
-#### Videos
+### Videos
 
 Video embeds are responsive and scale with the width of the main content block with the help of [FitVids](http://fitvidsjs.com/).
 
@@ -238,11 +234,11 @@ Not sure if this only effects Kramdown or if it's an issue with Markdown in gene
 <iframe width="560" height="315" src="http://www.youtube.com/embed/PWf4WUoMXwg" frameborder="0"> </iframe>
 {% endhighlight %}
 
-#### Twitter Cards
+### Twitter Cards
 
 Twitter cards make it possible to attach images and post summaries to Tweets that link to your content. Summary Card meta tags have been added to `head.html` to support this, you just need to [validate and apply your domain](https://dev.twitter.com/docs/cards) to turn it on.
 
-#### Link Post Type
+### Link Post Type
 
 Link blog like a champ by adding `link: http://url-you-want-linked` to a post's YAML front matter. Arrow glyph links to the post's permalink and the the `post-title` links to the source URL. Here's an [example of a link post]({{ site.url }}/sample-link-post/) if you need a visual.
 
