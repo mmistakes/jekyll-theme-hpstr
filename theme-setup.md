@@ -31,7 +31,7 @@ General notes and suggestions for customizing **HPSTR**.
 
 ## Setup for an Existing Jekyll site
 
-1. Clone the following folders: `_includes`, `_layouts`, `assets`, and `images`.
+1. Clone the following folders: `_includes`, `_layouts`, '_sass', `assets`, and `images`.
 2. Clone the following files and personalize content as need: `about.md`, `posts.html`, `index.html`, `tags.html`, and `feed.xml`.
 3. Set the following variables in your `config.yml` file:
 
@@ -39,10 +39,9 @@ General notes and suggestions for customizing **HPSTR**.
 title:            Site Title
 description:      Describe your website here.
 disqus_shortname: shortname
-# Your site's domain goes here. When working locally use localhost server leave blank
-# PS. If you set this wrong stylesheets and scripts won't load and most links will break.
-# PPS. If you leave it blank for local testing home links won't work, they'll be fine for live domains though.
-url:              http://localhost:4000
+# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+url:              //mmistakes.github.io
 
 # Owner/author information
 owner:
@@ -68,15 +67,6 @@ google_analytics:
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
-
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: Theme Setup
-    url: /theme-setup
-  - title: External Link
-    url: http://mademistakes.com
-    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
