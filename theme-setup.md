@@ -126,11 +126,9 @@ hpstr-jekyll-theme/
 
 ## Customization
 
-### _config.yml
-
 Most of the variables found here are used in the .html files found in `_includes` if you need to add or remove anything. A good place to start would be to add the `title`, `description`, and `url` for your site. Links are absolute and prefixed with `{{ "{{ site.url " }}}}` in the various `_includes` and `_layouts`, so remember to properly set `url`[^1] to `http://localhost:4000` when developing locally.
 
-#### Disqus Comments
+### Disqus Comments
 
 Create a [Disqus](http://disqus.com) account and change `disqus_shortname` in `_config.yml` to the Disqus *shortname* you just setup. To enable commenting on a post, add the following to its front matter:
 
@@ -138,7 +136,7 @@ Create a [Disqus](http://disqus.com) account and change `disqus_shortname` in `_
 comments: true
 {% endhighlight %}
 
-#### Social Share Links
+### Social Share Links
 
 To enable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
 
@@ -146,29 +144,29 @@ To enable Facebook, Twitter, and Google+ share links on a post or page, add the 
 share: true
 {% endhighlight %}
 
-#### Owner/Author Information
+### Owner/Author Information
 
 Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `head.html` since it assumes it is located in `/images`.
 
 Including a link to your Google+ profile has the added benefit of displaying [Google Authorship](https://plus.google.com/authorship) in Google search results if you've went ahead and applied for it.
 
-#### Google Analytics and Webmaster Tools
+### Google Analytics and Webmaster Tools
 
 Your Google Analytics ID goes here along with meta tags for [Google Webmaster Tools](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35179) and [Bing Webmaster Tools](https://ssl.bing.com/webmaster/configure/verify/ownershi) site verification.
 
-#### Navigation Menu Links
+### Navigation Links
 
-Edit page/post titles and URLs to include in the site's navigation. For external links add `external: true`.
+To add additional links in the drop down menu edit `_data/navigation.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window.*
 
 {% highlight yaml %}
-# sample top navigation links
-links:
-  - title: Other Page
-    url: /other-page/
-  - title: External Link
-    url: http://mademistakes.com
-    external: true 
+- title: Portfolio
+  url: /portfolio/
+
+- title: Made Mistakes
+  url: http://mademistakes.com  
 {% endhighlight %}
+
+---
 
 #### Background Images
 
@@ -187,7 +185,7 @@ If you want to set a background image for the entire site just add `background: 
 
 The rest is just your average Jekyll config settings. Nothing too crazy here...
 
-### _includes
+### Jekyll _includes
 
 For the most part you can leave these as is since the author/owner details are pulled from `_config.yml`. That said you'll probably want to customize the copyright stuff in `footer.html` to your liking.
 
