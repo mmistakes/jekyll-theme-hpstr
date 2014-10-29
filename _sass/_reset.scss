@@ -49,7 +49,7 @@ html {
 }
 // Focus states
 a:focus {
-  .tab-focus();
+  @include tab-focus();
 }
 // Hover & Active
 a:hover,
@@ -137,7 +137,7 @@ input[type="checkbox"] {
     cursor: pointer; // Improves usability and consistency of cursor style between image-type `input` and others.
 }
 input[type="search"] { // Appearance in Safari/Chrome
-  .box-sizing(content-box);
+  @include box-sizing(content-box);
   -webkit-appearance: textfield;
 }
 input[type="search"]::-webkit-search-decoration,
