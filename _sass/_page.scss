@@ -2,21 +2,21 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	background-color: @body-color;
+	background-color: $body-color;
 }
 
 // Main
 // --------------------------------------------------
 .entry,
 .hentry {
-	.clearfix();
+	@include clearfix;
 }
 .entry-content {
-	.font-size(16);
+	@include font-size(16);
 	// Dotted line underlines for links
 	p > a,
 	li > a {
-		border-bottom: 1px dotted lighten(@link-color, 50);
+		border-bottom: 1px dotted lighten($link-color, 50);
 		&:hover {
 			border-bottom-style: solid;
 		}
@@ -36,26 +36,26 @@ body {
 	h1 {
 		margin: 10px 20px;
 		font-weight: 700;
-		.font-rem(28);
-		color: lighten(@base-color,20);
-		@media @medium {
-			.font-rem(48);
+		@include font-rem(28);
+		color: lighten($base-color,20);
+		@media #{$medium} {
+			@include font-rem(48);
 		}
-		@media @large {
-			.font-rem(60);
+		@media #{$large} {
+			@include font-rem(60);
 		}
 	}
 	h2 {
 		margin: 0;
-		.font-rem(18);
+		@include font-rem(18);
 		text-transform: uppercase;
-		color: lighten(@base-color,40);
-		@media @medium {
-			.font-rem(30);
+		color: lighten($base-color,40);
+		@media #{$medium} {
+			@include font-rem(30);
 		}
 	}
 	p {
-		color: lighten(@base-color,20);
+		color: lighten($base-color,20);
 	}
 }
 .feature .header-title {
@@ -76,26 +76,26 @@ body {
 		margin: 10px;
 		font-weight: 700;
 		margin: 10px 60px;
-		color: @white;
-		text-shadow: 1px 1px 4px fade(@base-color,60);
+		color: $white;
+		text-shadow: 1px 1px 4px rgba($base-color,0.6);
 		a {
-			color: @white;
+			color: $white;
 		}
-		@media @large {
+		@media #{$large} {
 		}
 	}
 	h2 {
 		margin: 0;
-		color: @white;
+		color: $white;
 		text-transform: uppercase;
-		@media @medium {
+		@media #{$medium} {
 			a {
-				color: @white;
+				color: $white;
 			}
 		}
 	}
 	p {
-		color: @white;
+		color: $white;
 	}
 }
 .entry-image {
@@ -113,7 +113,7 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: fade(@base-color,30);
+		background-color: rgba($base-color,0.3);
 	}
 	img {
 		position: absolute; 
@@ -134,20 +134,20 @@ body {
 	margin: 0 auto;
 	max-width: 440px;
 	padding: 10px 15px;
-	background-color: fade(@base-color,50);
-	color: @white;
-	.font-rem(12);
+	background-color: rgba($base-color,0.5);
+	color: $white;
+	@include font-rem(12);
 	text-align: right;
-	.border-radius(3px,0,0,3px);
+	@include border-radius(3px,0,0,3px);
 	z-index: 10;
-	@media @medium {
+	@media #{$medium} {
 		max-width: 760px;
 	}
-	@media @large {
+	@media #{$large} {
 		max-width: 960px;
 	}
 	a {
-		color: @white;
+		color: $white;
 		text-decoration: none;
 	}
 }
@@ -155,11 +155,11 @@ body {
 // Single Post and Page
 // --------------------------------------------------
 .entry-meta {
-	.font-rem(12);
+	@include font-rem(12);
 	text-transform: uppercase;
-	color: lighten(@base-color,60);
+	color: lighten($base-color,60);
 	a {
-		color: lighten(@base-color,60);
+		color: lighten($base-color,60);
 	}
 	.vcard {
 		&:before {
@@ -170,20 +170,20 @@ body {
 		display: inline-block;
 		margin: 4px;
 		padding: 2px 6px;
-		background-color: lighten(@base-color,60);
-		color: @white;
-		.rounded(3px);
-		color: @white;
+		background-color: lighten($base-color,60);
+		color: $white;
+		@include rounded(3px);
+		color: $white;
 		span {
 			vertical-align: super;
-			.font-rem(10);
+			@include font-rem(10);
 		}
 		&:hover {
-			background-color: lighten(@base-color,50);
+			background-color: lighten($base-color,50);
 		}
 		&:active {
-			.translate(0, 1px);
-	        .box-shadow(0 0 1px fade(@base-color, 20));
+			@include translate(0, 1px);
+	        @include box-shadow(0 0 1px rgba($base-color,0.2));
 		}
 	}
 }
@@ -192,35 +192,35 @@ body {
 	.entry-content {
 		margin: 40px 2px 20px 2px;
 		padding: 10px 15px;
-		background-color: @white;
-		box-shadow: 0 0 0 0, 0 6px 12px fade(@black,10);
-		.rounded(3px);
-		@media @medium {
+		background-color: $white;
+		box-shadow: 0 0 0 0, 0 6px 12px rgba($black,0.1);
+		@include rounded(3px);
+		@media #{$medium} {
 			margin-left: 10px;
 			margin-right: 10px;
 			padding: 20px 30px;
 		}
-		@media @large {
+		@media #{$large} {
 			max-width: 800px;
 			margin: 50px auto 30px auto;
 			padding: 50px 80px;
 			> p:first-child {
-				.font-size(20);
+				@include font-size(20);
 			}
 		}
 	}
 	#disqus_thread {
 		margin: 40px 2px 20px 2px;
 		padding: 10px 15px;
-		background-color: @white;
-		box-shadow: 0 0 0 1px fade(@border-color,10), 0 6px 12px fade(@black,10);
-		.rounded(3px);
-		@media @medium {
+		background-color: $white;
+		box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba($black,0.1);
+		@include rounded(3px);
+		@media #{$medium} {
 			margin-left: 10px;
 			margin-right: 10px;
 			padding: 20px 30px;
 		}
-		@media @large {
+		@media #{$large} {
 			max-width: 800px;
 			padding: 50px 80px;
 			margin: 0 auto 30px auto;
@@ -258,20 +258,20 @@ body {
 	position: relative;
 	margin: 40px 2px 20px 2px;
 	padding: 40px 15px 25px;
-	background-color: @white;
-	box-shadow: 0 0 0 1px fade(@border-color,10), 0 6px 12px fade(@black,10);
-	.rounded(3px);
-	@media @medium {
+	background-color: $white;
+	box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba($black,0.1);
+	@include rounded(3px);
+	@media #{$medium} {
 		margin: 50px 10px 20px 10px;
 		padding: 50px 40px 25px;
 	}
-	@media @large {
+	@media #{$large} {
 		max-width: 800px;
 		padding: 50px 80px;
 		margin: 60px auto;
 	}
 	text-align: center;
-	.clearfix();
+	@include clearfix;
 }
 .read-more-header {
 	position: absolute;
@@ -280,46 +280,46 @@ body {
 	right: 0;
 	height: 35px;
 	a {
-		.btn();
+		@extend .btn;
 	}
 }
 .read-more-content {
-	.font-size(16);
+	@include font-size(16);
 	// Dotted line underlines for links
 	p > a,
 	li > a {
-		border-bottom: 1px dotted lighten(@link-color, 50);
+		border-bottom: 1px dotted lighten($link-color, 50);
 		&:hover {
 			border-bottom-style: solid;
 		}
 	}
 	h3 {
 		margin: 0;
-		.font-rem(28);
+		@include font-rem(28);
 		a { 
-			color: @primary;
+			color: $primary;
 		}
-		@media @medium {
-			.font-rem(36);
+		@media #{$medium} {
+			@include font-rem(36);
 		}
 	}
 }
 .read-more-list {
-	border-top: solid 1px lighten(@base-color,60);
+	border-top: solid 1px lighten($base-color,60);
 }
 .list-item {
 	width: 100%;
 	text-align: left;
 	h4 { 
-		.font-rem(18);
+		@include font-rem(18);
 		margin-bottom: 0; 
 	}
 	span { 
 		display: block;
-		.font-rem(14);
-		color: lighten(@base-color,50);
+		@include font-rem(14);
+		color: lighten($base-color,50);
 	}
-	@media @medium {
+	@media #{$medium} {
 		width: 49%;
 		float: left;
 		&:nth-child(2) {
@@ -333,11 +333,11 @@ body {
 #post-index {
 	#main {
 		margin: 40px 2px 20px 2px;
-		@media @medium {
+		@media #{$medium} {
 			margin-left: 20px;
 			margin-right: 20px;
 		}
-		@media @large {
+		@media #{$large} {
 			max-width: 800px;
 			margin-top: 50px;
 			margin-left: auto;
@@ -345,15 +345,15 @@ body {
 		}
 	}
 	article {
-		background-color: @white;
-		box-shadow: 0 0 0 0, 0 6px 12px fade(@base-color,10);
-		.rounded(3px);
+		background-color: $white;
+		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.1);
+		@include rounded(3px);
 		margin-bottom: 20px;
 		padding: 25px 15px;
-		@media @medium {
+		@media #{$medium} {
 			padding: 30px;
 		}
-		@media @large {
+		@media #{$large} {
 			margin-bottom: 30px;
 			padding: 50px 80px;
 		}
@@ -363,19 +363,19 @@ body {
 // Footer
 // --------------------------------------------------
 .footer-wrapper {
-	.clearfix();
+	@include clearfix;
 	margin: 2em auto;
 	text-align: center;
-	color: lighten(@text-color,20);
+	color: lighten($text-color,20);
 	a {
-		color: lighten(@text-color,20);
+		color: lighten($text-color,20);
 	}
 }
 
 // Social Share
 // --------------------------------------------------
 .socialcount {
-	.font-rem(16);
+	@include font-rem(16);
 	font-weight: 700;
 	li { 
 		padding-left: 10px;
@@ -413,14 +413,14 @@ body {
 	margin-bottom: 20px;
 	padding: 8px 20px;
 	display: inline-block;
-	.font-rem(14);
-	background-color: @white;
-	color: @primary;
+	@include font-rem(14);
+	background-color: $white;
+	color: $primary;
 	border-width: 2px !important;
 	border-style: solid !important;
-	border-color: lighten(@primary,50);
-	.rounded(3px);
+	border-color: lighten($primary,50);
+	@include rounded(3px);
 }
 #goog-wm-sb {
-	.btn();
+	@extend .btn;
 }

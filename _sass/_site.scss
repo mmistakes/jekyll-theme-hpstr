@@ -1,13 +1,13 @@
 // Selection
 // --------------------------------------------------
 ::-moz-selection { 
-	background-color: lighten(@base-color, 65%); 
-	color: @base-color; 
+	background-color: lighten($base-color, 65%); 
+	color: $base-color; 
 	text-shadow: none; 
 }  	
 ::selection { 
-	background-color: lighten(@base-color, 65%); 
-	color: @base-color; 
+	background-color: lighten($base-color, 65%); 
+	color: $base-color; 
 	text-shadow: none; 
 }
 
@@ -46,5 +46,5 @@
 // Global Transition
 // ---------------------------------------------------
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a {
-	.transition(all .2s ease);
+	@include transition(all .2s ease);
 }

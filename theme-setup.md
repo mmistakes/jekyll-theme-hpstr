@@ -95,30 +95,31 @@ paginate: 5
 {% highlight bash %}
 hpstr-jekyll-theme/
 ├── _includes
-|    ├── browser-upgrade.html  # prompt to upgrade browser on < IE8
-|    ├── footer.html  # site footer
-|    ├── head.html  # site head
-|    ├── navigation.html # site navigation
-|    └── scripts.html  # jQuery, plugins, GA, etc
+|    ├── browser-upgrade.html       # prompt to upgrade browser on < IE8
+|    ├── footer.html                # site footer
+|    ├── head.html                  # site head
+|    ├── navigation.html            # site navigation
+|    └── scripts.html               # jQuery, plugins, GA, etc
 ├── _layouts
-|    ├── page.html  # page layout
-|    ├── page.html  # post-index layout used on home page
-|    └── post.html  # post layout
+|    ├── page.html                  # page layout
+|    ├── page.html                  # post-index layout used on home page
+|    └── post.html                  # post layout
 ├── _posts
+├── _sass                           # Sass partials
 ├── assets
-|    ├── css  # preprocessed less styles
+|    ├── css                        # compiled stylesheets
 |    ├── js
-|    |   ├── _main.js  # plugin options
-|    |   ├── scripts.min.js  # concatenated and minifed site scripts
-|    |   ├── plugins  # plugin scripts
-|    |   └── vendor  # jQuery and Modernizr scripts
-|    └── less 
-├── images  # images for posts and pages
-├── _config.yml  # Jekyll options
-├── about.md  # about page
-├── index.html  # home page
-├── posts.html  # all posts
-└── tags.html  # all posts grouped by tag
+|    |   ├── _main.js               # plugin options
+|    |   ├── scripts.min.js         # concatenated and minifed site scripts
+|    |   ├── plugins                # plugin scripts
+|    └── └── vendor                 # jQuery and Modernizr scripts
+├── images                          # images for posts and pages
+├── images                          # images for posts and pages
+├── _config.yml                     # Jekyll options
+├── about.md                        # about page
+├── index.html                      # home page
+├── posts.html                      # all posts
+└── tags.html                       # all posts grouped by tag
 {% endhighlight %}
 
 ---
@@ -259,17 +260,19 @@ Link blog like a champ by adding `link: http://url-you-want-linked` to a post's 
 
 ---
 
-## Theme Development
+## Further Customization
 
-If you want to easily skin the themes' colors and fonts, take a look at `variables.less` in `assets/less/` and make the necessary changes to the color and font variables. To make development easier I setup a Grunt build script to compile/minify the LESS files into `main.min.css` and lint/concatenate/minify all scripts into `scripts.min.js`. [Install Node.js](http://nodejs.org/), then [install Grunt](http://gruntjs.com/getting-started), and then install the dependencies for the theme contained in `package.json`:
+Jekyll 2.x added support for Sass files making it much easier to modify a theme's fonts and colors. By editing values found in `_sass/variables.scss` you can fine tune the site's colors and typography.
+
+For example if you wanted a red background instead of white you'd change `$bodycolor: #fff;` to `$bodycolor: $cc0033;`.
+
+To modify the site's JavaScript files I setup a Grunt build script to lint/concatenate/minify all scripts into `scripts.min.js`. [Install Node.js](http://nodejs.org/), then [install Grunt](http://gruntjs.com/getting-started), and then finally install the dependencies for the theme contained in `package.json`:
 
 {% highlight bash %}
 npm install
 {% endhighlight %}
 
-From the theme's root, use `grunt` to rebuild the CSS, concatenate JavaScript files, and optimize .jpg, .png, and .svg files in the `images/` folder. You can also use `grunt watch` in combination with `jekyll build --watch` to watch for updates to your LESS and JS files that Grunt will then automatically re-build as you write your code which will in turn auto-generate your Jekyll site when developing locally.
-
-And if the command line isn't your thing (you're using Jekyll so it probably is), [CodeKit](http://incident57.com/codekit/) for OS X and [Prepros](http://alphapixels.com/prepros/) for Windows are great alternatives.
+From the theme's root, use `grunt` concatenate JavaScript files, and optimize .jpg, .png, and .svg files in the `images/` folder. You can also use `grunt dev` in combination with `jekyll build --watch` to watch for updates JS files that Grunt will then automatically re-build as you write your code which will in turn auto-generate your Jekyll site when developing locally.
 
 ---
 
