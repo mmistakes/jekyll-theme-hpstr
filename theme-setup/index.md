@@ -117,10 +117,10 @@ Most of the variables found here are used in the .html files found in `_includes
 
 ### Disqus Comments
 
-Create a [Disqus](http://disqus.com) account and change `disqus_shortname` in `_config.yml` to the Disqus *shortname* you just setup. To enable commenting on a post, add the following to its front matter:
+Create a [Disqus](http://disqus.com) account and change `disqus_shortname` in `_config.yml` to the Disqus *shortname* you just setup. By default comments appear on all post and pages if you assigned a shortname. To disable commenting on a post or page, add the following to its YAML Front Matter:
 
 {% highlight yaml %}
-comments: true
+comments: false
 {% endhighlight %}
 
 ### Social Share Links
@@ -128,7 +128,7 @@ comments: true
 To enable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
 
 {% highlight yaml %}
-share: true
+share: false
 {% endhighlight %}
 
 ### Owner/Author Information
@@ -272,6 +272,6 @@ This theme is free and open source software, distributed under the [MIT License]
 
 ---
 
-[^1]: Used to generate absolute urls in `sitemap.xml`, `feed.xml`, and for canonical urls in `head.html`. Don't include a trailing `/` in your base url ie: http://mademistakes.com. When developing locally I suggest using http://localhost:4000 or whatever localhost you're using to properly load all theme stylesheets, scripts, and image assets. If you leave this variable blank all links will resolve correctly except those pointing to home.
+[^1]: Used to generate absolute URLs in `feed.xml`, and for canonical URLs in `head.html`. Don't include a trailing `/` in your base url ie: http://mademistakes.com. When developing locally I suggest using http://localhost:4000 or whatever localhost you're using to properly load all theme stylesheets, scripts, and image assets. If you leave this variable blank all links will resolve correctly except those pointing to home.
 
 [^2]: If you're using GitHub Pages to host your site be aware that plugins are disabled. So you'll need to build your site locally and then manually deploy if you want to use this sweet plugin.
