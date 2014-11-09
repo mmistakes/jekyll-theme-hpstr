@@ -38,6 +38,7 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.2.1)
       sass (~> 3.2)
+    jekyll-sitemap (0.6.2)
     jekyll-watch (1.1.1)
       listen (~> 2.7)
     kramdown (1.5.0)
@@ -91,5 +92,6 @@ PLATFORMS
 DEPENDENCIES
   coderay
   jekyll
+  jekyll-sitemap
   octopress (~> 3.0.0.rc.12)
   sass (= 3.4.5)
