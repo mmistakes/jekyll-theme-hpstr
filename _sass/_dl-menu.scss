@@ -319,6 +319,12 @@ All this is done for any sub-level being entered.
 	.dl-trigger {
 		display: none;
 	}
+	.dl-menuwrapper {
+		position: initial;
+		@media #{$medium} {
+			position: absolute;
+		}
+	}
 	.dl-menuwrapper .dl-menu {
 		position: relative;
 		opacity: 1;
@@ -338,6 +344,12 @@ All this is done for any sub-level being entered.
 	}
 	.dl-menuwrapper li > a:not(:only-child):after {
 		content: '';
+	}
+	.dl-menu {
+		max-height: 100%;
+	}
+	.dl-menu li {
+		display: block;
 	}
 }
 // Menu Color
