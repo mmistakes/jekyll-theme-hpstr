@@ -14,6 +14,9 @@
 				{% if site.owner.email %}<li>
 					<a href="mailto:{{ site.owner.email }}"><i class="fa fa-envelope"></i> Email</a>
 				</li>{% endif %}
+				{% if site.owner.academia %}<li>
+					<a href="{{ site.owner.academia }}"><i class="fa fa-graduation-cap"></i> Academia.edu</a>
+				</li>{% endif %}
 				{% if site.owner.twitter %}<li>
 					<a href="http://twitter.com/{{ site.owner.twitter }}"><i class="fa fa-twitter"></i> Twitter</a>
 				</li>{% endif %}
