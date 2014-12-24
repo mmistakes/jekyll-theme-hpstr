@@ -80,6 +80,18 @@ svg:not(:root) {
     color: $primary;
   }
 }
+.btn-inverse {
+  background-color: $white;
+  color: $primary;
+  border-color: $white;
+  &:visited {
+    color: $primary;
+  }
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+}
 .btn-success {
   background-color: $success;
   color: $white;
