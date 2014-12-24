@@ -11,7 +11,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font;
 }
 h1 {
-	@include font-rem(32);
+	@include font-rem(28);
+	@media #{$medium} {
+		@include font-rem(32);
+	}
 }
 
 // Links
@@ -72,6 +75,12 @@ blockquote {
 	@media #{$medium} {
 		margin-left: -28px;
 	}
+}
+
+// List items
+// --------------------------------------------------
+.entry-content li {
+	margin-bottom: 7px;
 }
 
 // Footnotes
