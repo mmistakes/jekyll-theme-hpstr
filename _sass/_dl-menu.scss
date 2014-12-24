@@ -81,8 +81,7 @@
 			}
 		}
 		i {
-			display: inline-block;
-			width: 2em;
+			// display: inline-block;
 		}
 		a {
 			display: block;
@@ -157,6 +156,9 @@
 	.dl-submenu {
 		@include rounded(3px);
 		box-shadow: 0 12px 24px rgba($black,0.4);
+		.btn {
+			margin-bottom: 0;
+		}
 	}
 	/* Hide the inner submenus */
 	li .dl-submenu {
