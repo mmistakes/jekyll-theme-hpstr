@@ -73,6 +73,7 @@
 			padding: 15px 20px;
 			@include font-rem(14);
 			color: rgba($white,0.8);
+			font-weight: 300;
 			a {
 				display: inline;
 				padding: 0;
@@ -89,7 +90,7 @@
 			padding: 15px 20px;
 			@include font-rem(14);
 			line-height: 20px;
-			font-weight: 300;
+			font-weight: 400;
 			color: $white;
 			outline: none;
 		}
