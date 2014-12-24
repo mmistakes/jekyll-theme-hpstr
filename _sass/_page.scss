@@ -172,21 +172,23 @@ body {
 	.tag {
 		display: inline-block;
 		margin: 4px;
-		padding: 2px 6px;
-		background-color: lighten($base-color,60);
 		color: $white;
 		@include rounded(3px);
 		color: $white;
 		span {
-			vertical-align: super;
-			@include font-rem(10);
+			float: left;
+			padding: 2px 6px;
+		}
+		.term {
+			background-color: lighten($base-color,60);
+			@include border-radius(0,0,3px,3px);
+		}
+		.count {
+			background-color: lighten($base-color,40);
+			@include border-radius(3px,3px,0,0);
 		}
 		&:hover {
 			background-color: lighten($base-color,50);
-		}
-		&:active {
-			@include translate(0, 1px);
-	        @include box-shadow(0 0 1px rgba($base-color,0.2));
 		}
 	}
 	.entry-reading-time {
