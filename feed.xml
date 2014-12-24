@@ -12,7 +12,7 @@ layout: null
 <author>
   <name>{{ site.owner.name }}</name>
   <uri>{{ site.url }}/</uri>
-  <email>{{ site.owner.email }}</email>
+  {% if site.owner.email %}<email>{{ site.owner.email }}</email>{% endif %}
 </author>
 {% for post in site.posts limit:20 %}
 
