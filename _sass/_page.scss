@@ -309,7 +309,7 @@ header .entry-meta {
 		margin: 0;
 		@include font-rem(28);
 		a { 
-			color: $primary;
+			color: $text-color;
 		}
 		@media #{$medium} {
 			@include font-rem(36);
@@ -317,7 +317,7 @@ header .entry-meta {
 	}
 }
 .read-more-list {
-	border-top: solid 1px lighten($base-color,60);
+	border-top: solid 2px lighten($base-color,80);
 }
 .list-item {
 	width: 100%;
@@ -447,7 +447,7 @@ header .entry-meta {
 	display: inline-block;
 	@include font-rem(14);
 	background-color: $white;
-	color: $primary;
+	color: $text-color;
 	border-width: 2px !important;
 	border-style: solid !important;
 	border-color: lighten($primary,50);
