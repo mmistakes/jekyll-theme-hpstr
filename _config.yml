@@ -25,6 +25,8 @@ owner:
   # For Google Authorship https://plus.google.com/authorship
   # google plus id, include the '+', eg +mmistakes
   google_plus:    +yourid
+  # add feedburner url by feeds.feedburner.com/shortcut
+  rss:            
 
 # Background image to be tiled on all pages
 background: 
