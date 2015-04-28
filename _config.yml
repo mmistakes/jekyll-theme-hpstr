@@ -1,6 +1,6 @@
-title:            Site Title
-description:      Describe your website here.
-disqus_shortname: hpstrtheme
+title:            Hezby Personal Blog
+description:      Web Developer Site.
+disqus_shortname: hezby
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
@@ -9,21 +9,21 @@ url:
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Muhammad Hezby
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  email:          mail@hezby.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:       
-  instagram:      
+  twitter:        https://twitter.com/muhammadhezby
+  facebook:       https://www.facebook.com/muhammad.hezby
+  github:         https://github.com/hezbymuhammad
+  stackexchange:  http://stackexchange.com/users/2365495/helloworld
+  linkedin:       https://id.linkedin.com/in/hezby
+  instagram:      https://instagram.com/bukanhezz/
   flickr:         
-  tumblr:         
+  tumblr:         http://tumblr.hezby.com/
   # google plus id, include the '+', eg +mmistakes
-  google_plus:    +yourid
+  google_plus:    +hezbymuhammad
 
 # Background image to be tiled on all pages
 background: 
@@ -35,7 +35,7 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Asia/Jakarta
 future:      true
 highlighter: pygments
 markdown:    kramdown
