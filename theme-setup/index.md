@@ -97,6 +97,9 @@ bundle exec jekyll serve
 
 {% highlight bash %}
 hpstr-jekyll-theme/
+├── _data
+|    ├── authors.yml                # post authors
+|    └── navigation.yml             # menu navigation links
 ├── _includes
 |    ├── browser-upgrade.html       # prompt to upgrade browser on < IE8
 |    ├── footer.html                # site footer

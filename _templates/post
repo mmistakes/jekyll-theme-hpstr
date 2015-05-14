@@ -1,6 +1,7 @@
 ---
 layout: {{ layout }}
 title: {{ title }}
+author:
 modified:
 categories: {{ dir }}
 description:

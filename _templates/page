@@ -1,6 +1,7 @@
 ---
 layout: {{ layout }}
 title: {{ title }}
+author:
 date: {{ date }}
 modified:
 description:
