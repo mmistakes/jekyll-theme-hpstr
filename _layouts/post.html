@@ -6,12 +6,11 @@
 
 {% if page.author %}
   {% assign author = site.data.authors[page.author] %}
-{% endif %}
-
-{% if author == null %}
+  {% capture authorID %}{{ page.author }}{% endcapture %}
+{% else %}
   {% assign author = site.owner %}
+  {% capture authorID %}owner{% endcapture %}
 {% endif %}
-
 
 <head>
 {% include head.html %}
