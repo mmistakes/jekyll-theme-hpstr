@@ -8,13 +8,26 @@ comments: false
 {% capture site_authors %}{% for author in site.data.authors %}{{ author | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign authors_list = site_authors | split:',' | sort %}
 
-<!-- TODO Count number of posts by each author -->
+<!-- Count number of posts by owner -->
+{% assign nb_posts = 0 %}
+{% for post in site.posts %}
+  {% if post.author == null %}
+    {% assign nb_posts = nb_posts | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
 <ul class="entry-meta inline-list">
-  	<li><a href="#owner" class="tag"><span class="term">{{ site.owner.name }}</span></a></li>
+  	<li><a href="#owner" class="tag"><span class="term">{{ site.owner.name }}</span> <span class="count">{{ nb_posts }}</span></a></li>
   {% for item in (0..site.data.authors.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ authors_list[item] | strip_newlines }}{% endcapture %}
-  	<li><a href="#{{ this_word }}" class="tag"><span class="term">{{ site.data.authors[this_word].name }}</span></a></li>
+    <!-- Count number of posts by this author -->
+    {% assign nb_posts = 0 %}
+    {% for post in site.posts %}
+    {% if post.author == authors_list[item] %}
+        {% assign nb_posts = nb_posts | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  	<li><a href="#{{ this_word }}" class="tag"><span class="term">{{ site.data.authors[this_word].name }}</span> <span class="count">{{ nb_posts }}</span></a></li>
   {% endunless %}{% endfor %}
 </ul>
 
