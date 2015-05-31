@@ -91,3 +91,6 @@ DEPENDENCIES
   jekyll-sitemap
   octopress (~> 3.0.0.rc.12)
   sass
+
+BUNDLED WITH
+   1.10.2
