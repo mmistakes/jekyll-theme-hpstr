@@ -210,4 +210,4 @@ serve(wsgi.application, unix_socket='/tmp/nginx.socket')
 
 ### Finally
 
-Well that's it. You can of course leave out either one of the buildpacks according to your own needs. I just wanted to write down all the required steps so you don't have to struggle as much as I did with the outdated guides. I've been running these configurations in our staging environments and I'll let them cook there for a while to see if I can discover any problems. If so I'll incorporate any findings into this blog, otherwise I'll promote some these setups to production by the end of the week.
+Well that's it. You can of course leave out either one of the buildpacks according to your own needs. I just wanted to write down all the required steps so you don't have to struggle as much as I did with the outdated guides. I've been running these configurations in our staging environments and I'll let them cook there for a while to see if I can discover any problems. If so I'll incorporate any findings into this blog, otherwise I'll promote some of these setups to production by the end of the week.
