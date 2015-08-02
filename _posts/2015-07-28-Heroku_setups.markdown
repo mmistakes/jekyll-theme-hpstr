@@ -3,7 +3,7 @@ layout: post
 title: Heroku, Django, Nginx and PgBouncer
 modified:
 categories:
-description: My struggle to get Heroku to work with Nginx and PgBouncer
+description: My struggle to get Heroku to work with Nginx and PgBouncer for Gunicorn, uWSGI and Waitress
 tags: [heroku, django, nginx, pgbouncer, django q, uwsgi, gunicorn, waitress, python]
 image:
   feature: sunset_2.jpg
@@ -14,22 +14,22 @@ share: true
 date: 2015-08-02T11:33:41+02:00
 ---
 
-I've been struggling all weekend to get our [Heroku](https://www.heroku.com) servers set up with [Nginx](http://nginx.org/) and [PgBouncer](https://pgbouncer.github.io/). The simple part was finding out about Heroku buildpacks, with which you can add extra software to your dynos. The hard part, for me, was that most information on the Internet about using buildpacks seems to be outdated. Time to blog about it.
+I've been struggling all weekend to get our [Heroku](https://www.heroku.com) servers set up with [Nginx](http://nginx.org/) and [PgBouncer](https://pgbouncer.github.io/). The simple part was finding out about Heroku buildpacks, with which you can add extra software to your dynos. The hard part was that most information on the Internet about using buildpacks seems to be outdated. Time to blog about it.
 
-I'm going to assume you already have a basic understanding of running Django on Heroku and that you're using the new Cedar-14 stack.
-First of all , let's introduce the players:
+I'm going to assume you already have a basic understanding of running Django on Heroku, but you might not be familiar with Nginx or PgBouncer.
+So let's have a look at them first:
 
 ###Nginx
 
 Nginx is a web server, but most widely used as a reverse proxy.
 I'm using the [https://github.com/beanieboi/nginx-buildpack.git](https://github.com/beanieboi/nginx-buildpack.git) buildpack cause it uses the newer 1.8.0 stable version of nginx, but you can use the original [buildpack](https://github.com/ryandotsmith/nginx-buildpack) by @ryandotsmith.
-Why do I use it on Heroku? I've been testing our applications for quite some by flooding them using tools like [Blitz](https://www.blitz.io/). We use [Gunicorn](http://gunicorn.org/), [uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/) and [Waitress](http://waitress.readthedocs.org/en/latest/) as our wsgi servers and all of them fail if fed with enough long running queries and almost never recover. With Nginx guarding the gates, things will still shut down, but the webservers usually recover after the flood stops.
+Why use Nginx on Heroku? I've been testing our application servers for quite some by flooding them using tools like [Blitz](https://www.blitz.io/). We use [Gunicorn](http://gunicorn.org/), [uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/) and [Waitress](http://waitress.readthedocs.org/en/latest/) as our wsgi servers and all of them fail if fed with enough long running queries and almost never recover. With Nginx guarding the gates, things will still shut down, but the webservers usually recover after the flood stops. All other effects are, in my case, added bonuses.
 
 ###PgBouncer
-With Django resetting database connections on every request, you quickly run out of precious connections. Add to that a couple of async task queue workers and that connection count goes up fast. PgBouncer is a standalone connection pool for PostgreSQL. Your processes connect to PgBouncer and it, in turn, connects to your database server. Instead of breaking that connection, it's kept around for the next request. You're bound to see some performance improvements, since your project will spend less time setting up connections to your database.
-You actually pay for the maximum connections your PostgreSQL server can handle on Heroku, so there is an economical aspect to using this buildpack asswell.
+With Django resetting database connections on every request, you quickly run out of precious connections. Add to that a couple of async task queue workers and that connection count goes up fast. PgBouncer is a standalone connection pool for PostgreSQL. Your processes connect to PgBouncer and it, in turn, connects to your database server. Instead of breaking that connection, it's kept around for the next request. Think of it as a connection switchboard or hub. You're bound to see some performance improvements, since your project will spend less time setting up connections to your database. Especially in a cloud environment , creating database connections can be quite a performance killer.
+You pay for the maximum clients your PostgreSQL server can handle on Heroku, so there is an economical aspect to using this buildpack as well.
 
-I used the [https://github.com/heroku/heroku-buildpack-pgbouncer](https://github.com/heroku/heroku-buildpack-pgbouncer) buildpack by @gregburek, although it's a slightly older version of pgbouncer, it is actively maintained and has the added benefit of using [stunnel](https://www.stunnel.org/index.html) to securely connect to your database over SSL.
+I used the [https://github.com/heroku/heroku-buildpack-pgbouncer](https://github.com/heroku/heroku-buildpack-pgbouncer) buildpack by @gregburek, although it's a slightly older version of pgbouncer, it is actively maintained and has the added benefit of using [stunnel](https://www.stunnel.org/index.html) to securely connect to your database over SSL. Now you can tell your users that your whole stack is encrypted and not just your web connection.
 
 ###Heroku
 My favorite PaaS. You will hear people complain about how they can do it cheaper and easier with their own stacks, but the fact is that it's been a time and money saver for us.
@@ -41,7 +41,7 @@ You'll need the [Heroku Toolbelt](https://toolbelt.heroku.com/) to configure the
 
 Originally Heroku only supported a single buildpack for you dynos which had to be set through the `BUILDPACK_URL` configuration setting.
 Then came @ddollar with his multipack, that allowed for extra buildpacks to be loaded through a `.buildpacks` file which you had to add to your project.
-Heroku seems to have extended the `buildpacks` command so it's no longer neccesary to hack it like that:
+Heroku seems to have extended the `buildpacks` command so it's no longer necessary to hack it like that:
 
 {% highlight bash %}
 Usage: heroku buildpacks
@@ -61,6 +61,9 @@ Additional commands, type "heroku help COMMAND" for more details:
   buildpacks:set BUILDPACK_URL       #  set new app buildpack, overwriting into list of buildpacks if neccessary
 
 {% endhighlight %}
+
+Before we start, let's make sure the `BUILDPACK_URL` is not set, cause this will nullify any buildpacks we're going to add.
+Run ``heroku config`` to list your environment variables. If it has a `BUILDPACK_URL`, remove it with `heroku config:remove BUILDPACK_URL`.
 
 Let's go ahead and add the Nginx buildpack. Make sure you are in your projects root directory when executing the `heroku` command, so it knows which application to target.
 Otherwise append the `-a APPNAME` option after each command, to point it in the right direction.
@@ -114,7 +117,8 @@ The most useful is probably the `PGBOUNCER_MAX_CLIENT_CONN` setting, which I'm s
 heroku config:set PGBOUNCER_MAX_CLIENT_CONN=120
 {% endhighlight %}
 You can check out all the other options at the [repository](https://github.com/heroku/heroku-buildpack-pgbouncer).
-For it to work with your webserver and database, the buildpack uses these concepts:
+
+For it to work with your web server and database, the PgBouncer buildpack uses these concepts:
 
 * It starts with a shell script `bin/start-pgbouncer-stunnel`
 * It will use the database connection set in your Heroku's `DATABASE_URL`
@@ -124,14 +128,15 @@ This means you don't have to change your Django database configuration as long a
 I did run in some small problems with the url initialization though. Since it only does the old switcheroo once, any web workers that start before that will not have the new connection to PgBouncer. The same problem comes up when your web workers spawn from an environment other than the one that had its configuration updated.
 
 ### Procfile
-Now it's time to put everything in a Procfile and get it running on Heroku. Since we use three different wsgi servers, I had to do this for each one seperately.
-As you will see each server has it's unique way of doing this. All our setups contain a `web` entry which will be the wsgi server, behind Nginx, using PgBoucer for database connections.
-The 'worker' entry will be our task queue worker for handling asynchronous and scheduled tasks. We use [Django Q](https://django-q.readthedocs.org), but it should also work with [Celery](http://www.celeryproject.org/) or any other worker of your choice that's going to be using lots of database connections.
+Now it's time to put everything in a Procfile and get it running on Heroku. Since we use three different wsgi servers, I had to do this for each one separately.
+As you will see each server has it's unique way of doing this.
+All our setups contain a `web` entry which will be the wsgi server, behind Nginx, using PgBoucer for database connections.
+The `worker` entry will be our task queue worker for handling asynchronous and scheduled tasks. We use [Django Q](https://django-q.readthedocs.org), but it should also work with [Celery](http://www.celeryproject.org/) or any other worker of your choice that's going to be using lots of database connections.
 
 
 #### Gunicorn
 This is fairly straightforward. We use `start-nginx` to start `start-pgbouncer-stunnel`, which in turn should start gunicorn.
-If anyone knows how to set the wsgi module in the configuration file, please leave a comment. I really don't like these long lines.
+By the way; if anyone knows how to set the wsgi module in the configuration file, please leave a comment.
 
 {% highlight bash %}
 # Heroku with nginx, pgbouncer, gunicorn and django-q
@@ -155,12 +160,13 @@ workers = 4
 That's really all there is to it. Now you can deploy and enjoy it.
 
 ### uWSGI
-The same deal as with gunicorn. We chain the buildpack start commands and have uWSGI report to the Nginx socket.
+The same deal as with gunicorn; we chain the buildpack start commands and have uWSGI report to the Nginx socket.
 Here I'm using the `hook-accepting1` hook, which is called when the first uWSGI worker is accepting connections.
-Also two thumbs up for uWSGI for making it easy to execute `touch` or any other external command. The number of options uWSGI provides are mind boggling and this is both its appeal and its achilles heal. This is a basic configuration I know works well with Django and Heroku:  
+Two thumbs up for uWSGI for making it easy to execute `touch` or any other external command. The number of options uWSGI provides are mind boggling. This is both its appeal and its achilles heal, cause it can be daunting for first time users.
+Here is a basic configuration I know works well with Django and Heroku:  
 
 {% highlight bash %}
-# Heroku with nginx, pgbouncer, waitress and django-q
+# Heroku with nginx, pgbouncer, uWSGI and django-q
 web: bin/start-nginx bin/start-pgbouncer-stunnel uwsgi uwsgi.ini
 worker: bin/start-pgbouncer-stunnel python manage.py qcluster
 {% endhighlight %}
@@ -181,9 +187,9 @@ module = MyProject.wsgi:application
 
 ### Waitress
 We've been using [Waitress](http://docs.pylonsproject.org/projects/waitress/en/latest/) more and more for Django projects.
-Orignally conceived for the Pylons project, this pure Python webserver uses multi-threading and is very well suited for the kind of long running queries you tend to get with large ORM databases. Even though it has its own request and response buffering, it can still benefit from Nginx's request handeling.
+Originally conceived for the [Pylons](http://www.pylonsproject.org/) project, this pure Python webserver uses multi-threading and is very well suited for the kind of long running queries you tend to get with large ORM databases. Even though it has its own request and response buffering, it can still benefit from Nginx's improved request handling.
 
-Waitress has no hooks, as far as I know. It is a Python module however so to get it to start Nginx, I wrote a little start script for it:
+Waitress has no hooks, as far as I know. It is a Python module however so I wrote a little start script to get it to initialize Nginx:
 
 {% highlight bash %}
 # Heroku with nginx, pgbouncer, waitress and django-q
@@ -201,3 +207,7 @@ open('/tmp/app-initialized', 'w').close()
 # start waitress
 serve(wsgi.application, unix_socket='/tmp/nginx.socket')
 {% endhighlight %}
+
+### Finally
+
+Well that's it. I've been running these configurations in our staging environments and I'll let them cook for a while to see if I can discover any problems. If so I'll incorporate any findings into this blog, otherwise I'll promote these setups to production by the end of the week.
