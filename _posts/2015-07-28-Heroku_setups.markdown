@@ -159,7 +159,7 @@ workers = 4
 
 That's really all there is to it. Now you can deploy and enjoy it.
 
-### uWSGI
+#### uWSGI
 The same deal as with gunicorn; we chain the buildpack start commands and have uWSGI report to the Nginx socket.
 Here I'm using the `hook-accepting1` hook, which is called when the first uWSGI worker is accepting connections.
 Two thumbs up for uWSGI for making it easy to execute `touch` or any other external command. uWSGI'a many configuration options can be a bit daunting for the first time user, but it can be a great tool to tune your application server for a specific task.
@@ -185,7 +185,7 @@ env = DJANGO_SETTINGS_MODULE=MyProject.settings
 module = MyProject.wsgi:application
 {% endhighlight %}
 
-### Waitress
+#### Waitress
 We've been using [Waitress](http://docs.pylonsproject.org/projects/waitress/en/latest/) more and more for Django projects.
 Originally conceived for the [Pylons](http://www.pylonsproject.org/) project, this pure Python webserver uses multi-threading and is very well suited for the kind of long running queries you tend to get with large ORM databases. Even though it has its own request and response buffering, it can still benefit from Nginx's improved request handling.
 
