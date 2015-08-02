@@ -102,8 +102,8 @@ That's it for the buildpacks. Now let's have a look at how they work and configu
 
 ### Buildpack concepts
 The Nginx buildpack's authors have already taken care of the configuration of Nginx so you won't have to do it.
-You change things around using the Ruby instructions in the [repository](https://github.com/beanieboi/nginx-buildpack),
-but I've found the default configuration to be working fine as is. You could set the `NGINX_WORKERS` environment variable, but it defaults to 4 which is about right for a regular Heroku dyno.
+You can change things around using the Ruby instructions in the [repository](https://github.com/beanieboi/nginx-buildpack),
+but I've found the default configuration to be working just fine as is. You could probably set the `NGINX_WORKERS` environment variable, but it defaults to 4 which is about right for a regular Heroku dyno.
 
 The pack uses three basic concepts:
 
