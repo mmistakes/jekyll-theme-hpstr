@@ -73,6 +73,7 @@
 			padding: 15px 20px;
 			@include font-rem(14);
 			color: rgba($white,0.8);
+			font-weight: 300;
 			a {
 				display: inline;
 				padding: 0;
@@ -80,8 +81,7 @@
 			}
 		}
 		i {
-			display: inline-block;
-			width: 2em;
+			// display: inline-block;
 		}
 		a {
 			display: block;
@@ -89,7 +89,7 @@
 			padding: 15px 20px;
 			@include font-rem(14);
 			line-height: 20px;
-			font-weight: 300;
+			font-weight: 400;
 			color: $white;
 			outline: none;
 		}
@@ -156,6 +156,9 @@
 	.dl-submenu {
 		@include rounded(3px);
 		box-shadow: 0 12px 24px rgba($black,0.4);
+		.btn {
+			margin-bottom: 0;
+		}
 	}
 	/* Hide the inner submenus */
 	li .dl-submenu {
@@ -319,6 +322,12 @@ All this is done for any sub-level being entered.
 	.dl-trigger {
 		display: none;
 	}
+	.dl-menuwrapper {
+		position: initial;
+		@media #{$medium} {
+			position: absolute;
+		}
+	}
 	.dl-menuwrapper .dl-menu {
 		position: relative;
 		opacity: 1;
@@ -338,6 +347,12 @@ All this is done for any sub-level being entered.
 	}
 	.dl-menuwrapper li > a:not(:only-child):after {
 		content: '';
+	}
+	.dl-menu {
+		max-height: 100%;
+	}
+	.dl-menu li {
+		display: block;
 	}
 }
 // Menu Color

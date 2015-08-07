@@ -10,6 +10,9 @@ body {
 .entry,
 .hentry {
 	@include clearfix;
+	h1, h2, h3, h4, h5, h6, p, li {
+		word-wrap: break-word;
+	}
 }
 .entry-content {
 	@include font-size(16);
@@ -36,7 +39,7 @@ body {
 	h1 {
 		margin: 10px 20px;
 		font-weight: 700;
-		@include font-rem(28);
+		@include font-rem(32);
 		color: lighten($base-color,20);
 		@media #{$medium} {
 			@include font-rem(48);
@@ -51,7 +54,7 @@ body {
 		text-transform: uppercase;
 		color: lighten($base-color,40);
 		@media #{$medium} {
-			@include font-rem(30);
+			@include font-rem(24);
 		}
 	}
 	p {
@@ -123,7 +126,7 @@ body {
 		bottom: 0; 
 		margin: auto; 
 		min-width: 50%;
-		min-height: 50%;
+		min-height: 400px; // match .entry-image min-height
 	}
 }
 // Feature Image Caption
@@ -169,22 +172,29 @@ body {
 	.tag {
 		display: inline-block;
 		margin: 4px;
-		padding: 2px 6px;
-		background-color: lighten($base-color,60);
 		color: $white;
 		@include rounded(3px);
-		color: $white;
+		background-color: lighten($base-color,50);
 		span {
-			vertical-align: super;
-			@include font-rem(10);
+			float: left;
+			padding: 2px 6px;
+		}
+		.count {
+			background-color: lighten($base-color,40);
+			@include border-radius(3px,3px,0,0);
 		}
 		&:hover {
-			background-color: lighten($base-color,50);
+			background-color: lighten($base-color,40);
 		}
-		&:active {
-			@include translate(0, 1px);
-	        @include box-shadow(0 0 1px rgba($base-color,0.2));
-		}
+	}
+	.entry-reading-time {
+		float: right;
+	}
+}
+header .entry-meta {
+	display: none; // hide header meta on small screens
+	@media #{$medium} {
+		display: block;
 	}
 }
 #post,
@@ -234,6 +244,14 @@ body {
 .entry-tags {
 	display: block;
 	margin-bottom: 6px;
+}
+.tag-heading,
+.year-heading {
+	margin-top: 0;
+}
+// Permalink icon for link post
+.permalink {
+	margin-right: 7px;
 }
 // Post Pagination Module
 .pagination {
@@ -297,7 +315,7 @@ body {
 		margin: 0;
 		@include font-rem(28);
 		a { 
-			color: $primary;
+			color: $text-color;
 		}
 		@media #{$medium} {
 			@include font-rem(36);
@@ -305,7 +323,7 @@ body {
 	}
 }
 .read-more-list {
-	border-top: solid 1px lighten($base-color,60);
+	border-top: solid 2px lighten($base-color,80);
 }
 .list-item {
 	width: 100%;
@@ -359,6 +377,27 @@ body {
 		}
 	}
 }
+.entry-image-index {
+	margin-top: -25px;
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: 10px;
+	@media #{$medium} {
+		margin-top: -30px;
+		margin-left: -30px;
+		margin-right: -30px;
+		margin-bottom: 15px;
+	}
+	@media #{$large} {
+		margin-top: -50px;
+		margin-left: -80px;
+		margin-right: -80px;
+		margin-bottom: 20px;
+	}
+	img {
+		@include border-radius(3px,0,0,3px); // round image corners
+	}
+}
 
 // Footer
 // --------------------------------------------------
@@ -376,7 +415,6 @@ body {
 // --------------------------------------------------
 .socialcount {
 	@include font-rem(16);
-	font-weight: 700;
 	li { 
 		padding-left: 10px;
 		padding-right: 10px;
@@ -415,7 +453,7 @@ body {
 	display: inline-block;
 	@include font-rem(14);
 	background-color: $white;
-	color: $primary;
+	color: $text-color;
 	border-width: 2px !important;
 	border-style: solid !important;
 	border-color: lighten($primary,50);
