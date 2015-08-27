@@ -1,4 +1,4 @@
-title:            Site Title
+title:            Lankovskiii
 description:      Describe your website here.
 disqus_shortname: hpstrtheme
 reading_time:     true
@@ -9,10 +9,10 @@ url:
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  name:           Lankovski
+  avatar:         avatar1.jpg
+  bio:            "Coding 4 fun."
+  email:          lankovski.674@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
@@ -35,7 +35,7 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Asia/Shanghai
 future:      true
 highlighter: pygments
 markdown:    kramdown
