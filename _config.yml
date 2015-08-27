@@ -10,8 +10,8 @@ url:
 # Owner/author information
 owner:
   name:           Lankovski
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
+  avatar:         avatar1.jpg
+  bio:            "Coding 4 fun."
   email:          lankovski.674@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
@@ -67,3 +67,4 @@ kramdown:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+\ No newline at end of file
