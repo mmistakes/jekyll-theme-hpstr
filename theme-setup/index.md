@@ -11,6 +11,8 @@ share: true
 
 General notes and suggestions for customizing **HPSTR**.
 
+HPSTR now requires [Jekyll](http://jekyllrb.com/) 3.0. Make sure to run `bundle update` if you aren't on the latest version to update all gem dependencies.
+
 ## Basic Setup for a new Jekyll site
 
 1. [Install Bundler](http://bundler.io) `gem install bundler` and then install [Jekyll](http://jekyllrb.com) and all dependencies `bundle install`.
@@ -31,55 +33,13 @@ General notes and suggestions for customizing **HPSTR**.
 
 1. Clone the following folders: `_includes`, `_layouts`, `_sass`, `assets`, and `images`.
 2. Clone the following folders/files and personalize content as need: `about/`, `posts/`, `tags/`, `feed.xml` and `index.html`.
-3. Set the following variables in your `config.yml` file:
-
-{% highlight yaml %}
-title:            Site Title
-description:      Describe your website here.
-disqus_shortname: shortname
-# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-# When testing locally leave blank or use http://localhost:4000
-url:              //mmistakes.github.io
-
-# Owner/author information
-owner:
-  name:           Your Name
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:    +yourid
-
-# Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      true
-pygments:    true
-markdown:    kramdown
-
-# Amount of posts to show on home page
-paginate: 5
-{% endhighlight %}
+3. Edit `_config.yml` to personalize your site.
 
 ---
 
 ## Running Jekyll
 
-If `jekyll build` and `jekyll serve` throw errors you may have to run Jekyll with `bundle exec` instead.
+The preferred method for running Jekyll is with `bundle exec`, but if you're willing to deal gem conflicts feel free to go cowboy with a `jekyll build` or `jekyll serve`.
 
 > In some cases, running executables without bundle exec may work, if the executable happens to be installed in your system and does not pull in any gems that conflict with your bundle.
 >

@@ -2,7 +2,7 @@
 layout: post
 title: Syntax Highlighting Post
 description: "Demo post displaying the various ways of highlighting code in Markdown."
-modified: 2014-12-23
+modified: 2016-02-01
 tags: [sample post, code, highlighting]
 image:
   feature: abstract-10.jpg
@@ -14,9 +14,9 @@ Syntax highlighting is a feature that displays source code, in different colors 
 
 [^1]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
 
-### Pygments Code Blocks
+### Highlighted Code Blocks
 
-To modify styling and highlight colors edit `/_sass/_pygments.scss`.
+To modify styling and highlight colors edit `/_sass/_syntax.scss`.
 
 {% highlight css %}
 #container {
@@ -116,9 +116,3 @@ module Jekyll
   end
 end
 ~~~
-
-### GitHub Gist Embed
-
-An example of a Gist embed below.
-
-{% gist mmistakes/6589546 %}
