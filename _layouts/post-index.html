@@ -10,7 +10,6 @@
 <body id="post-index" {% if page.image.feature %}class="feature"{% endif %}>
 
 {% include browser-upgrade.html %}
-{% include navigation.html %}
 
 <div class="entry-header">
   {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
@@ -37,6 +36,7 @@
   </footer>
 </div><!-- /.footer-wrapper -->
 
+{% include navigation.html %}
 {% include scripts.html %}          
 
 </body>
