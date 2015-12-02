@@ -1,0 +1,36 @@
+# Author details.
+
+author_one:
+  name:           Author One
+  avatar:         avatar.jpg
+  bio:            "This is Author One's bio."
+  email:          author@one.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:    +yourid
+
+author_two:
+  name:           Author Two
+  avatar:         avatar.jpg
+  bio:            "This is Author Two's bio."
+  email:          author@two.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        
+  facebook:       
+  github:         
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:    +yourid
+
