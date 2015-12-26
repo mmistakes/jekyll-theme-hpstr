@@ -1,4 +1,5 @@
 $feature-image-height: 400px; // min 150px recommended
+$front-page-feature-image-height: 400px; // min 150px recommended
 
 body {
 	margin: 0;
@@ -129,6 +130,18 @@ body {
 		margin: auto; 
 		min-width: 50%;
 		min-height: $feature-image-height; // match .entry-image min-height
+	}
+}
+// Feature Image height on Front Page
+#post-index {
+	&.feature .header-title {
+		height: $front-page-feature-image-height;
+	}
+	.entry-image {
+		min-height: $front-page-feature-image-height;
+		img {
+			min-height: $front-page-feature-image-height;
+		}
 	}
 }
 // Feature Image Caption
