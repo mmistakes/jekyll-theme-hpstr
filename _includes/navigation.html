@@ -6,7 +6,7 @@
 			<a href="#">About</a>
 			<ul class="dl-submenu">
 				<li>
-					<img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo">
+					<img src="{% include image_path image=site.owner.avatar }}" alt="{{ site.owner.name %} photo" class="author-photo">
 					<h4>{{ site.owner.name }}</h4>
 					<p>{{ site.owner.bio }}</p>
 				</li>
