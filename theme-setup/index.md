@@ -229,6 +229,13 @@ image:
   creditlink: http://mademistakes.com #url to their site or licensing
 {% endhighlight %}
 
+By default the `<div>` containing feature images is set to have a minimum height of 400px with CSS. Anything taller is hidden with an `overflow: hidden` declaration. You can customize the height of the homepage feature image and those appearing on posts/pages by modifying the following variables in `/_sass/_variables.scss`.
+
+{% highlight sass %}
+$feature-image-height: 400px; // min 150px recommended
+$front-page-feature-image-height: 400px; // min 150px recommended
+{% endhighlight %}
+
 #### Post/Page Thumbnails for OG and Twitter Cards
 
 Post and page thumbnails work the same way. These are used by [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) meta tags found in `head.html`. If you don't assign a thumbnail the image you assigned to `site.owner.avatar` in `_config.yml` will be used.
