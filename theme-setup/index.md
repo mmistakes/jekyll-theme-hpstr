@@ -108,7 +108,7 @@ share: false
 
 ### Owner/Author Information
 
-Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `head.html` since it assumes it is located in `/images`.
+Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `navigation.html` since it assumes it is located in `/images`.
 
 ### Google Analytics and Webmaster Tools
 
