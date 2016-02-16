@@ -100,7 +100,7 @@ comments: false
 
 ### Social Share Links
 
-To enable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
+To disable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
 
 {% highlight yaml %}
 share: false
