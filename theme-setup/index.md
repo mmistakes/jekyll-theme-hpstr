@@ -166,7 +166,7 @@ For the most part you can leave these as is since the author/owner details are p
 
 ### Reading Time
 
-On by default. To turn off remove `reading_time` from `_config.yml. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
+On by default. To turn off remove `reading_time` from `_config.yml`. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
 
 ### Feature Images
 
