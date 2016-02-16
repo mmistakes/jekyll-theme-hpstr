@@ -25,6 +25,10 @@ owner:
   # google plus id, include the '+', eg +mmistakes
   google_plus:
 
+# Twitter account associated with the site if different from owner/author twitter account.
+# Used in Twitter cards.
+twitter: 
+
 # Background image to be tiled on all pages
 background: 
 
@@ -36,6 +40,7 @@ bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
+locale:      en_US
 future:      true
 highlighter: rouge
 markdown:    kramdown
