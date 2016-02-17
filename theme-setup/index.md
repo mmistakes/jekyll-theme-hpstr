@@ -100,7 +100,7 @@ comments: false
 
 ### Social Share Links
 
-To enable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
+To disable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
 
 {% highlight yaml %}
 share: false
@@ -108,7 +108,7 @@ share: false
 
 ### Owner/Author Information
 
-Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `head.html` since it assumes it is located in `/images`.
+Change your name, and avatar photo (200x200 pixels or larger), email, and social networking URLs. If you want to link to an external image on Gravatar or something similar you'll need to edit the path in `navigation.html` since it assumes it is located in `/images`.
 
 ### Google Analytics and Webmaster Tools
 
@@ -166,7 +166,7 @@ For the most part you can leave these as is since the author/owner details are p
 
 ### Reading Time
 
-On by default. To turn off remove `reading_time` from `_config.yml. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
+On by default. To turn off remove `reading_time` from `_config.yml`. Default words per minute is set at 200 and can changed by updating `words_per_minute` in `_config.yml`.
 
 ### Feature Images
 
@@ -236,7 +236,9 @@ To modify the site's JavaScript files I setup a Grunt build script to lint/conca
 npm install
 {% endhighlight %}
 
-From the theme's root, use `grunt` concatenate JavaScript files, and optimize .jpg, .png, and .svg files in the `images/` folder. You can also use `grunt dev` in combination with `jekyll build --watch` to watch for updates JS files that Grunt will then automatically re-build as you write your code which will in turn auto-generate your Jekyll site when developing locally.
+From the theme's root, use `grunt` to concatenate JavaScript files and optimize `.jpg`, `.png` and `.svg` files in the `images/` folder.
+
+You can also use `grunt dev` in combination with `bundle exec jekyll serve` to watch for updates in JS files that Grunt will then automatically re-build as you write your code, which will in turn auto-generate your Jekyll site when developing locally.
 
 ---
 
