@@ -53,6 +53,31 @@ bundle exec jekyll serve
 
 ---
 
+## Running into a Docker container
+
+*Replace `username` with your GitHub account.*
+
+1. Build container:
+
+    ```
+    docker build -t username/username.github.io --no-cache .
+    ```
+
+2. Run container:
+
+    ```
+    docker run --rm -v $PWD:/site -p 4000:4000 username/username.github.io -H 0.0.0.0 --draft
+    ```
+
+3. Retrieve IP adress:
+
+  ```
+  docker inspect -f '{{ .NetworkSettings.IPAddress }}' $(docker ps -f ancestor=username/username.github.io -q)
+  ```
+
+4. Visit `http://<retrieveIpAdress>:4000`
+
+
 ## Folder Structure
 
 {% highlight bash %}
