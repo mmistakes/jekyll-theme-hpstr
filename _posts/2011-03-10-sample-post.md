@@ -70,15 +70,15 @@ HTML and <abbr title="cascading stylesheets">CSS<abbr> are our tools. Mauris a a
 
 ## Code Snippets
 
-Syntax highlighting via Pygments
+Syntax highlighting via Rouge
 
-{% highlight css %}
+```css
 #container {
   float: left;
   margin: 0 -240px 0 0;
   width: 100%;
 }
-{% endhighlight %}
+```
 
 Non Pygments code example
 
@@ -90,9 +90,9 @@ Non Pygments code example
 
 Make any link standout more when applying the `.btn` class.
 
-{% highlight html %}
+```html
 <a href="#" class="btn btn-success">Success Button</a>
-{% endhighlight %}
+```
 
 <div markdown="0"><a href="#" class="btn">Primary Button</a></div>
 <div markdown="0"><a href="#" class="btn btn-success">Success Button</a></div>
