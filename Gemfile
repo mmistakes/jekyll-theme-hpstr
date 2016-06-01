@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
 gem "json"
-gem "jekyll", "~> 3.0"
+gem "jekyll"
 gem "jekyll-sitemap"
-gem "octopress"
+gem "jekyll-feed"
 gem "jekyll-paginate"
 gem "jekyll-gist"
