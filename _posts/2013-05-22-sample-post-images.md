@@ -20,13 +20,13 @@ Here are some examples of what a post with images might look like. If you want t
 
 Apply the `half` class like so to display two images side by side that share the same caption.
 
-{% highlight html %}
+```html
 <figure class="half">
 	<img src="/images/image-filename-1.jpg" alt="">
 	<img src="/images/image-filename-2.jpg" alt="">
 	<figcaption>Caption describing these two images.</figcaption>
 </figure>
-{% endhighlight %}
+```
 
 And you'll get something that looks like this:
 
@@ -42,14 +42,14 @@ And you'll get something that looks like this:
 
 Apply the `third` class like so to display three images side by side that share the same caption.
 
-{% highlight html %}
+```html
 <figure class="third">
 	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
 	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
 	<a href="http://placehold.it/1200x600.jpg"><img src="http://placehold.it/600x300.jpg" alt=""></a>
 	<figcaption>Caption describing these three images.</figcaption>
 </figure>
-{% endhighlight %}
+```
 
 And you'll get something that looks like this:
 
@@ -71,16 +71,14 @@ and fill the block with any number of links to images. You can mix relative and 
 
 Here is the block you might want to use:
 
-{% highlight jinja %}
-{% raw %}
-{% capture images %}
+```liquid
+{% raw %}{% capture images %}
 	/images/abstract-10.jpg
 	/images/abstract-11.jpg
 	http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png
 {% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}
-{% endraw %}
-{% endhighlight %}
+{% include gallery images=images caption="Test images" cols=3 %}{% endraw %}
+```
 
 Parameters:
 
