@@ -7,6 +7,7 @@ image:
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 share: true
+modified: 2016-06-01T15:14:43-04:00
 ---
 
 General notes and suggestions for customizing **HPSTR**.
@@ -128,35 +129,11 @@ To add additional links in the drop down menu edit `_data/navigation.yml`. Use t
 
 ---
 
-## Adding New Content with Octopress
+## Adding New Content
 
-While completely optional, I've included Octopress and some starter templates to automate the creation of new posts and pages. To take advantage of it start by installing the [Octopress](https://github.com/octopress/octopress) gem if it isn't already.
+Posts are stored in the `_posts` directory and named according to the `YEAR-MONTH-DAY-title.MARKUP` format as per [the usual](https://jekyllrb.com/docs/posts/).
 
-{% highlight bash %}
-$ gem install octopress
-{% endhighlight %}
-
-### New Post
-
-Default command
-
-{% highlight bash %}
-$ octopress new post "Post Title"
-{% endhighlight %}
-
-Default works great if you want all your posts in one directory, but if you're like me and want to group them into subfolders like `/posts`, `/portfolio`, etc. Then this is the command for you. By specifying the DIR it will create a new post in that folder and populate the `categories:` YAML with the same value.
-
-{% highlight bash %}
-$ octopress new post "New Portfolio Post Title" --dir portfolio
-{% endhighlight %}
-
-### New Page
-
-To create a new page use the following command.
-
-{% highlight bash %}
-$ octopress new page new-page/
-{% endhighlight %}
+To streamline the creation of posts and pages, [Jekyll::Compose](https://github.com/jekyll/jekyll-compose) and [Octopress](https://github.com/octopress/octopress) are great plugins you can install to automate this process.
 
 ---
 
