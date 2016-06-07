@@ -98,7 +98,7 @@ tt, code, kbd, samp, pre {
 }
 p,
 li { 
-	code {
+	code:not([data-lang]) {
 		@include font-rem(12);
 		line-height: 1.5;
 		white-space: nowrap;
