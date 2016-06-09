@@ -37,7 +37,7 @@
     <div class="entry-content">
       {{ content }}
       <footer class="entry-meta">
-        {% if page.modified %}<span>Обновлено <span class="entry-date date published updated"><time datetime="{{ page.modified }}">{{ page.modified | date: "%d-%m-%Y" }}</time></span></span>
+        {% if page.modified %}<span>Обновлено <span class="entry-date date published updated"><time datetime="{{ page.modified }}">{% include date.html date=page.modified %}</time></span></span>
         <span class="author vcard"><span class="fn">{{ site.owner.name }}</span></span>{% endif %}
         {% if page.share != false %}{% include social-share.html %}{% endif %}
       </footer>
