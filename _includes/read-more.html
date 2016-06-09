@@ -12,7 +12,7 @@
     {% for post in site.related_posts limit:2 offset:1 %}
       <div class="list-item">
         <h4><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h4>
-        <span>Опубликовано {{ post.date | date: "%d-%m-%Y" }}</span>
+        <span>Опубликовано {% include date.html date=post.date %}</span>
       </div><!-- /.list-item -->
     {% endfor %}
   </div><!-- /.read-more-list -->
