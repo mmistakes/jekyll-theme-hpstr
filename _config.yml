@@ -14,7 +14,7 @@ owner:
   bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
   email:          analytics.kzn@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        twitter
+  twitter:        
   facebook:       facebook
   github:         github
   stackexchange:  
@@ -23,7 +23,7 @@ owner:
   flickr:         
   tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  google_plus: +АркадийШараповМаркетолог
+  google_plus: 
 
 # Background image to be tiled on all pages
 background: 
