@@ -1,16 +1,16 @@
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   <ul class="inline-list">
-    {% comment %} Link for previous page {% endcomment %}
+    {% comment %} Ссылка на предыдущую страницу {% endcomment %}
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <li><a href="{{ site.url }}" class="btn">Previous</a></li>
+        <li><a href="{{ site.url }}" class="btn">Предыдущая</a></li>
       {% else %}
-        <li><a href="{{ site.url }}/page{{ paginator.previous_page }}/" class="btn">Previous</a></li>
+        <li><a href="{{ site.url }}/page{{ paginator.previous_page }}/" class="btn">Предыдущая</a></li>
       {% endif %}
     {% endif %}
 
-    {% comment %} First page {% endcomment %}
+    {% comment %} Первая страница {% endcomment %}
     {% if paginator.page == 1 %}
       <li><strong class="current-page">1</strong></li>
     {% else %}
@@ -20,7 +20,7 @@
     {% assign page_start = 2 %}
     {% if paginator.page > 4 %}
       {% assign page_start = paginator.page | minus: 2 %}
-      {% comment %} Ellipsis for truncated links {% endcomment %}
+      {% comment %} Многоточие для укороченных ссылок {% endcomment %}
       <li>…</li>
     {% endif %}
 
@@ -34,17 +34,17 @@
       {% if index == paginator.page %}
         <li><strong class="current-page">{{index}}</strong></li>
       {% else %}
-        {% comment %} Distance from current page and this link {% endcomment %}
+        {% comment %} Расстояние от текущей страницы до этой ссылки {% endcomment %}
         {% assign dist = paginator.page | minus: index %}
         {% if dist < 0 %}
-          {% comment %} Distance must be a positive value {% endcomment %}
+          {% comment %} Расстояние должно быть положительным значением {% endcomment %}
           {% assign dist = 0 | minus: dist %}
         {% endif %}
         <li><a href="{{ site.url }}/page{{ index }}/">{{index}}</a></li>
       {% endif %}
     {% endfor %}
 
-    {% comment %} Ellipsis for truncated links {% endcomment %}
+    {% comment %} Многоточие для укороченных ссылок {% endcomment %}
     {% if pages_to_end > 3 %}
       <li>…</li>
     {% endif %}
@@ -56,10 +56,10 @@
     {% endif %}
 
     {% comment %}
-      Link next page
+      Ссылка на следующую страницу
     {% endcomment %}
     {% if paginator.next_page %}
-      <li><a href="{{ site.url }}/page{{ paginator.next_page }}/" class="btn">Next</a></li>
+      <li><a href="{{ site.url }}/page{{ paginator.next_page }}/" class="btn">Следующая</a></li>
     {% endif %}
   </ul>
 </div>
