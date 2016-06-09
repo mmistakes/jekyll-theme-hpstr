@@ -4,7 +4,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for post in site.posts %}
     <url>
-        <loc>http://blog.dside.ru{{ post.url | remove: 'index.html' }}</loc>
+        <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
 		<lastmod>{{ post.date | date:"%F" }}</lastmod>
     </url>
     {% endfor %}
@@ -13,7 +13,7 @@
     {% if page.layout != nil %}
     {% if page.layout != 'feed' %}
     <url>
-        <loc>http://blog.dside.ru{{ page.url | remove: 'index.html' }}</loc>
+        <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
     </url>
     {% endif %}
     {% endif %}
