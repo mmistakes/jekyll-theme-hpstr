@@ -10,20 +10,20 @@ url: http://firecat1987.github.io
 # Owner/author information
 owner:
   name:           Шарапов Аркадий
-  avatar:         avatar.jpg
+  avatar:         firecat1987.github.io/images/ns06h-pBiIc.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
   email:          analytics.kzn@gmail.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
+  twitter:        twitter
+  facebook:       facebook
+  github:         github
   stackexchange:  
   linkedin:       
-  instagram:      
+  instagram:      instagram
   flickr:         
   tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  google_plus:
+  google_plus: +АркадийШараповМаркетолог
 
 # Background image to be tiled on all pages
 background: 
@@ -35,7 +35,7 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Europe/Moscow
 future:      true
 highlighter: rouge
 markdown:    kramdown
