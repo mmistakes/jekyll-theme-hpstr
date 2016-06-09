@@ -1,16 +1,16 @@
 <nav id="dl-menu" class="dl-menuwrapper" role="navigation">
-	<button class="dl-trigger">Open Menu</button>
+	<button class="dl-trigger">Меню</button>
 	<ul class="dl-menu">
-		<li><a href="{{ site.url }}/">Home</a></li>
+		<li><a href="{{ site.url }}/">Главная</a></li>
 		<li>
-			<a href="#">About</a>
+			<a href="#">О себе</a>
 			<ul class="dl-submenu">
 				<li>
 					<img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo">
 					<h4>{{ site.owner.name }}</h4>
 					<p>{{ site.owner.bio }}</p>
 				</li>
-				<li><a href="{{ site.url }}/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				<li><a href="{{ site.url }}/about/"><span class="btn btn-inverse">Подробнее</span></a></li>
 				{% if site.owner.email %}<li>
 					<a href="mailto:{{ site.owner.email }}"><i class="fa fa-fw fa-envelope"></i> Email</a>
 				</li>{% endif %}
@@ -44,10 +44,10 @@
 			</ul><!-- /.dl-submenu -->
 		</li>
 		<li>
-			<a href="#">Posts</a>
+			<a href="#">Посты</a>
 			<ul class="dl-submenu">
-				<li><a href="{{ site.url }}/posts/">All Posts</a></li>
-				<li><a href="{{ site.url }}/tags/">All Tags</a></li>
+				<li><a href="{{ site.url }}/posts/">Все посты</a></li>
+				<li><a href="{{ site.url }}/tags/">Все тэги</a></li>
 			</ul>
 		</li>
 		{% for link in site.data.navigation %}
