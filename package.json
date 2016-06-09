@@ -1,13 +1,13 @@
 {
-  "name": "hpstr-theme",
-  "author": "Michael Rose <michael@mademistakes.com>",
-  "homepage": "http://mmistakes.github.io/hpstr-jekyll-theme/",
+  "name": "GitBlog",
+  "author": "Sharapov_AV <analytics.kzn@gmail.com>",
+  "homepage": "http://firecat1987.github.io/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/hpstr-jekyll-theme.git"
+    "url": "git://github.com/FireCat1987/firecat1987.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/mmistakes/hpstr-jekyll-theme/issues"
+    "url": "https://github.com/FireCat1987/firecat1987.github.io/issues"
   },
   "engines": {
     "node": ">= 0.10.0"
