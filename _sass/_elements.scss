@@ -29,14 +29,12 @@ figure {
   a { 
 
     img {
-      @include translate(0, 0);
-      -webkit-transition-duration: 0.25s;
-      -moz-transition-duration: 0.25s;
-      -o-transition-duration: 0.25s;
+      transform: translate(0, 0);
+      transition-duration: 0.25s;
 
       &:hover {
-        @include translate(0, -5px);
-        @include box-shadow(0 0 10px fade($base-color, 20));
+        transform: translate(0, -5px);
+        box-shadow: 0 0 10px rgba($base-color, 0.2);
       }
     }
   }
@@ -92,7 +90,7 @@ svg:not(:root) {
   border-width: 2px !important;
   border-style: solid !important;
   border-color: $primary;
-  @include rounded(3px);
+  border-radius: 3px;
 
   &:visited {
     color: #fff;
@@ -186,5 +184,5 @@ svg:not(:root) {
 .well {
   padding: 20px;
   border: 1px solid $comp-color;
-  @include rounded(4px);
+  border-radius: 4px;
 }

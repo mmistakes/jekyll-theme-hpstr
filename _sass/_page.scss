@@ -195,7 +195,7 @@ body {
 	color: #fff;
 	@include font-rem(12);
 	text-align: right;
-	@include border-radius(3px,0,0,3px);
+	border-radius: 3px 0 0 0;
 	z-index: 10;
 
 	@media #{$medium} {
@@ -236,7 +236,7 @@ body {
 		display: inline-block;
 		margin: 4px;
 		color: #fff;
-		@include rounded(3px);
+		border-radius: 3px;
 		background-color: lighten($base-color,50);
 
 		span {
@@ -246,7 +246,7 @@ body {
 
 		.count {
 			background-color: lighten($base-color,40);
-			@include border-radius(3px,3px,0,0);
+			border-radius: 0 3px 3px 0;
 		}
 
 		&:hover {
@@ -275,7 +275,7 @@ header .entry-meta {
 		padding: 10px 15px;
 		background-color: #fff;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba(#000,0.1);
-		@include rounded(3px);
+		border-radius: 3px;
 
 		@media #{$medium} {
 			margin-left: 10px;
@@ -299,7 +299,7 @@ header .entry-meta {
 		padding: 10px 15px;
 		background-color: #fff;
 		box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba(#000,0.1);
-		@include rounded(3px);
+		border-radius: 3px;
 
 		@media #{$medium} {
 			margin-left: 10px;
@@ -363,7 +363,7 @@ header .entry-meta {
 	padding: 40px 15px 25px;
 	background-color: #fff;
 	box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba(#000,0.1);
-	@include rounded(3px);
+	border-radius: 3px;
 
 	@media #{$medium} {
 		margin: 50px 10px 20px 10px;
@@ -472,7 +472,7 @@ header .entry-meta {
 	article {
 		background-color: #fff;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.1);
-		@include rounded(3px);
+		border-radius: 3px;
 		margin-bottom: 20px;
 		padding: 25px 15px;
 
@@ -508,7 +508,7 @@ header .entry-meta {
 	}
 
 	img {
-		@include border-radius(3px,0,0,3px); // round image corners
+		border-radius: 3px 3px 0 0; // round image corners
 	}
 }
 
@@ -584,7 +584,7 @@ header .entry-meta {
 	border-width: 2px !important;
 	border-style: solid !important;
 	border-color: lighten($primary,50);
-	@include rounded(3px);
+	border-radius: 3px;
 }
 
 #goog-wm-sb {
