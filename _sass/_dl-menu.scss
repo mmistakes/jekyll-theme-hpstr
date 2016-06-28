@@ -30,6 +30,7 @@
 		outline: none;
 		@include border-radius(0,3px,0,0);
 		opacity: 0.6;
+		box-shadow: 0 12px 24px rgba($black,0.4);
 		@media #{$medium} {
 			@include border-radius(3px,3px,3px,3px);
 		}
