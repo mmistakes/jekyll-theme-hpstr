@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
 // Defining number of columns in the grid.
 // Common Values would be 12, 16 or 24
 $width: 100%;
@@ -23,14 +27,17 @@ $margin: 0;
 @mixin prefix($grid:$def_grid,$cols:''){
   margin-left:(100%/$grid * $cols);
 }
+
 // Allows for padding after element
 @mixin suffix($grid:$def_grid,$cols:''){  
   margin-right:(100%/$grid * $cols);    
 }
+
 // Removes left margin
 @mixin first(){
   margin-left:0;
 }
+
 // Removes right margin
 @mixin last(){
   margin-right:0;

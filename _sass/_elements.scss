@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Base Elements and Components
+   ========================================================================== */
+
 hr { 
     display: block; 
     margin: 1em 0; 
@@ -8,143 +12,177 @@ hr {
     border-bottom: 1px solid #fff; 
 }
 
-// Figures and images
-// --------------------------------------------------
+/* 
+   Figures and images
+   ========================================================================== */
+
 figure {
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
   @include clearfix();
+
   img {
     margin-bottom: 10px;
   }
+
   a { 
+
     img {
-      @include translate(0, 0);
-      -webkit-transition-duration: 0.25s;
-      -moz-transition-duration: 0.25s;
-      -o-transition-duration: 0.25s;
+      transform: translate(0, 0);
+      transition-duration: 0.25s;
+
       &:hover {
-        @include translate(0, -5px);
-        @include box-shadow(0 0 10px fade($base-color, 20));
+        transform: translate(0, -5px);
+        box-shadow: 0 0 10px rgba($base-color, 0.2);
       }
     }
   }
+
+  /* 2 columns */
   &.half {
     @media #{$large} {
+
       img {
         width: 310px;
         float: left;
         margin-right: 10px;
       }
+
       figcaption {
         clear: left;
       }
     }
   }
+
+  /* 3 columns */
   &.third {
     @media #{$large} {
+
       img {
         width: 200px;
         float: left;
         margin-right: 10px;
       }
+
       figcaption {
         clear: left;
       }
     }
   }
 }
+
 svg:not(:root) {
   overflow: hidden; 
 }
 
-// Buttons
-// --------------------------------------------------
+/* 
+   Buttons
+   ========================================================================== */
+
 .btn {
   display: inline-block;
   margin-bottom: 20px;
   padding: 8px 20px;
   @include font-rem(14);
   background-color: $primary;
-  color: $white;
+  color: #fff;
   border-width: 2px !important;
   border-style: solid !important;
   border-color: $primary;
-  @include rounded(3px);
+  border-radius: 3px;
+
   &:visited {
-    color: $white;
+    color: #fff;
   }
+
   &:hover {
-    background-color: $white;
+    background-color: #fff;
     color: $primary;
   }
 }
+
 .btn-inverse {
-  background-color: $white;
+  background-color: #fff;
   color: $primary;
-  border-color: $white;
+  border-color: #fff;
+
   &:visited {
     color: $primary;
   }
+
   &:hover {
     background-color: $primary;
-    color: $white;
+    color: #fff;
   }
 }
+
 .btn-success {
   background-color: $success;
-  color: $white;
+  color: #fff;
   border-color: $success;
+
   &:visited {
-    color: $white;
+    color: #fff;
   }
+
   &:hover {
-    background-color: $white;
+    background-color: #fff;
     color: $success;
   }
 }
+
 .btn-warning {
   background-color: $warning;
-  color: $white;
+  color: #fff;
   border-color: $warning;
+
   &:visited {
-    color: $white;
+    color: #fff;
   }
+
   &:hover {
-    background-color: $white;
+    background-color: #fff;
     color: $warning;
   }
 }
+
 .btn-danger {
   background-color: $danger;
-  color: $white;
+  color: #fff;
   border-color: $danger;
+
   &:visited {
-    color: $white;
+    color: #fff;
   }
+
   &:hover {
-    background-color: $white;
+    background-color: #fff;
     color: $danger;
   }
 }
+
 .btn-info {
   background-color: $info;
-  color: $white;
+  color: #fff;
   border-color: $info;
+
   &:visited {
-    color: $white;
+    color: #fff;
   }
+
   &:hover {
-    background-color: $white;
+    background-color: #fff;
     color: $info;
   }
 }
 
-// Well
-// --------------------------------------------------
+/* 
+   Wells
+   ========================================================================== */
+
 .well {
   padding: 20px;
   border: 1px solid $comp-color;
-  @include rounded(4px);
+  border-radius: 4px;
 }

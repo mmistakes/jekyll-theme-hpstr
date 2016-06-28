@@ -1,37 +1,53 @@
-// Body
-// --------------------------------------------------
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/* 
+   Body
+   ========================================================================== */
+
 body {
 	font-family: $base-font;
 	color: $text-color;
 }
 
-// Headings
-// --------------------------------------------------
+/* 
+   Headings
+   ========================================================================== */
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font;
 }
+
 h1 {
 	@include font-rem(28);
+
 	@media #{$medium} {
 		@include font-rem(32);
 	}
 }
 
-// Links
-// --------------------------------------------------
+/* 
+   Links
+   ========================================================================== */
+
 a { 
 	text-decoration: none;
 	color: $link-color; 
+
 	&:visited { 
 		color: lighten($link-color, 20); 
 	}
+
 	&:hover { 
 		color: darken($link-color, 20); 
 	}
+
 	&:focus { 
 		outline: thin dotted; 
 		color: darken($link-color, 20);
 	}
+
 	&:hover, 
 	&:active { 
 		outline: 0; 
@@ -44,8 +60,10 @@ a {
 	font-style: normal;
 }
 
-// Figures
-// --------------------------------------------------
+/* 
+   Captions
+   ========================================================================== */
+
 figcaption {
 	padding-top: 10px;
 	@include font(14);
@@ -53,8 +71,10 @@ figcaption {
 	color: lighten($text-color, 10);
 }
 
-// Note text
-// --------------------------------------------------
+/* 
+   Notices
+   ========================================================================== */
+
 .notice {
 	margin-top: 1.5em;
 	padding: .5em 1em;
@@ -62,64 +82,61 @@ figcaption {
 	@include font-rem(14);
 	background-color: $body-color;
 	border: 1px solid darken($body-color,20);
-	@include rounded(3px);
+	border-radius: 3px;
 }
 
-// Blockquotes
-// --------------------------------------------------
+/* 
+   Blockquotes
+   ========================================================================== */
+
 blockquote {
 	font-family: $alt-font;
 	font-style: italic;
 	border-left: 8px solid $border-color;
 	padding-left: 20px;
+
 	@media #{$medium} {
 		margin-left: -28px;
 	}
 }
 
-// List items
-// --------------------------------------------------
-.entry-content li {
-	margin-bottom: 7px;
-}
+/* 
+   Code
+   ========================================================================== */
 
-// Footnotes
-// --------------------------------------------------
-.entry-content .footnotes {
-	ol, li, p {
-		@include font-size(14);
-	}
-}
-
-// Code
-// --------------------------------------------------
 tt, code, kbd, samp, pre {
 	font-family: $code-font;
 }
+
 p,
 li { 
+
 	code {
 		@include font-rem(12);
 		line-height: 1.5;
 		white-space: nowrap;
 		margin: 0 2px;
 		padding: 0 5px;
-		border: 1px solid lighten($black, 90);
-		background-color: lighten($black, 95);
-		@include rounded(3px);
+		border: 1px solid lighten(#000, 90);
+		background-color: lighten(#000, 95);
+		border-radius: 3px;
 	}
 }
+
 pre {
+
 	@include font-rem(12);
 	line-height: 1.5;
 	overflow-x: auto;
+
 	&::-webkit-scrollbar {
 		height: 12px;
 		background-color: #34362e;
 		border-radius: 0 0 4px 4px;
 	}
+
 	&::-webkit-scrollbar-thumb:horizontal {
 		background-color: #6a6d5d;
-		@include rounded(4px);
+		border-radius: 4px;
 	}
 }
