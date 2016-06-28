@@ -1,8 +1,12 @@
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
 .animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}
 
-
-// Fade in
-// --------------------------------------------------
+/* 
+   Fade in
+   ========================================================================== */
 
 @-webkit-keyframes fadeIn {
   0% {opacity: 0;}  
@@ -20,6 +24,7 @@
   0% {opacity: 0;}  
   100% {opacity: 1;}
 }
+
 .fadeIn {
   -webkit-animation-name: fadeIn;
   -moz-animation-name: fadeIn;
@@ -67,6 +72,7 @@
     transform: translateY(0);
   }
 }
+
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
@@ -114,6 +120,7 @@
     transform: translateY(0);
   }
 }
+
 .fadeInDownBig {
   -webkit-animation-name: fadeInDownBig;
   -moz-animation-name: fadeInDownBig;
@@ -121,9 +128,9 @@
   animation-name: fadeInDownBig;
 }
 
-
-// Bounce
-// --------------------------------------------------
+/* 
+   Bounce
+   ========================================================================== */
 
 @-webkit-keyframes bounceIn {
   0% {
@@ -189,12 +196,14 @@
     transform: scale(1);
   }
 }
+
 .bounceIn {
   -webkit-animation-name: bounceIn;
   -moz-animation-name: bounceIn;
   -o-animation-name: bounceIn;
   animation-name: bounceIn;
 }
+
 @-webkit-keyframes bounceInDown {
   0% {
     opacity: 0;
@@ -282,9 +291,9 @@
   animation-name: bounceInDown;
 }
 
-
-// Drop
-// --------------------------------------------------
+/* 
+   Drop
+   ========================================================================== */
 
 @-webkit-keyframes drop {
   0% {
@@ -324,4 +333,120 @@
   -moz-animation-name: drop;
   -o-animation-name: drop;
   animation-name: drop;
+}
+
+/* 
+   DL Menu In/Out
+   ========================================================================== */
+
+@-webkit-keyframes MenuAnimOut {
+  100% {
+    -webkit-transform: translateZ(300px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes MenuAnimOut {
+  100% {
+    -moz-transform: translateZ(300px);
+    opacity: 0;
+  }
+}
+@keyframes MenuAnimOut {
+  100% {
+    transform: translateZ(300px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes MenuAnimIn {
+  0% {
+    -webkit-transform: translateZ(300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes MenuAnimIn {
+  0% {
+    -moz-transform: translateZ(300px);
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+@keyframes MenuAnimIn {
+  0% {
+    transform: translateZ(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes SubMenuAnimIn {
+  0% {
+    -webkit-transform: translateZ(-300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes SubMenuAnimIn {
+  0% {
+    -moz-transform: translateZ(-300px);
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+@keyframes SubMenuAnimIn {
+  0% {
+    transform: translateZ(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes SubMenuAnimOut {
+  0% {
+    -webkit-transform: translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(-300px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes SubMenuAnimOut {
+  0% {
+    -moz-transform: translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translateZ(-300px);
+    opacity: 0;
+  }
+}
+@keyframes SubMenuAnimOut {
+  0% {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(-300px);
+    opacity: 0;
+  }
 }
