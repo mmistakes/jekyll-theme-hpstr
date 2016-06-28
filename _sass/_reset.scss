@@ -1,7 +1,7 @@
-//
-// Reset CSS
-// Adapted from http://github.com/necolas/normalize.css
-// --------------------------------------------------
+/* ==========================================================================
+   Reset CSS
+   Adapted from http://github.com/necolas/normalize.css
+   ========================================================================== */
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -143,7 +143,7 @@ input[type="checkbox"] {
     cursor: pointer; // Improves usability and consistency of cursor style between image-type `input` and others.
 }
 input[type="search"] { // Appearance in Safari/Chrome
-  @include box-sizing(content-box);
+  box-sizing: content-box;
   -webkit-appearance: textfield;
 }
 input[type="search"]::-webkit-search-decoration,

@@ -1,56 +1,80 @@
-// Selection
-// --------------------------------------------------
+/* ==========================================================================
+   Site utilities
+   ========================================================================== */
+
+/* 
+   Selection
+   ========================================================================== */
+
 ::-moz-selection { 
 	background-color: lighten($base-color, 65%); 
 	color: $base-color; 
 	text-shadow: none; 
-}  	
+}
+
 ::selection { 
 	background-color: lighten($base-color, 65%); 
 	color: $base-color; 
 	text-shadow: none; 
 }
 
-// Global Classes
-// --------------------------------------------------
+/* 
+   Global classes
+   ========================================================================== */
+
+/* wrapper */
 .wrap {
 	margin: 0 auto;
 }
+
+/* capitalize */
 .all-caps {
 	text-transform: uppercase;
 }
+
+/* float image to the left */
 .image-left {
 	float: none;
 	@media #{$medium} {
 		float: left;
 	}
 }
+
+/* float image to the right */
 .image-right {
 	float: none;
 	@media #{$medium} {
 		float: right;
 	}
 }
+
+/* remove styling from a list element */
 .unstyled-list {
 	list-style: none;
 	margin-left: 0;
 	padding-left: 0;
+
 	li {
 		list-style-type: none;
 	}
 }
+
+/* inline a list */
 .inline-list {
 	list-style: none;
 	margin-left: 0;
 	padding-left: 0;
+
 	li {
 		list-style-type: none;
 		display: inline;
 	}
 }
 
-// Global Transition
-// ---------------------------------------------------
+/* 
+   Global transition
+   ========================================================================== */
+
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a {
-	@include transition(all .2s ease);
+	transition: all 0.2s ease;
 }
