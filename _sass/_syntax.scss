@@ -13,7 +13,7 @@ pre.highlight {
 	color: #d0d0d0;
 	border: 1px solid darken($body-color, 5);
 	background-color: #272822;
-	@include rounded(3px);
+	border-radius: 3px;
 
 	pre {
 		position: relative;

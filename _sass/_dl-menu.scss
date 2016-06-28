@@ -35,12 +35,12 @@
 		position: relative;
 		cursor: pointer;
 		outline: none;
-		@include border-radius(0,3px,0,0);
+		border-radius: 0 0 3px 0;
 		opacity: 0.6;
 		box-shadow: 0 12px 24px rgba(#000,0.4);
 
 		@media #{$medium} {
-			@include border-radius(3px,3px,3px,3px);
+			border-radius: 3px;
 		}
 	}
 
@@ -159,7 +159,7 @@
 		z-index: inherit;
 
 		@media #{$medium} {
-			@include border-radius(3px,3px,3px,3px);
+			border-radius: 3px;
 		}
 	}
 
@@ -178,7 +178,7 @@
 	}
 
 	.dl-submenu {
-		@include rounded(3px);
+		border-radius: 3px;
 		box-shadow: 0 12px 24px rgba(#000,0.4);
 
 		.btn {
