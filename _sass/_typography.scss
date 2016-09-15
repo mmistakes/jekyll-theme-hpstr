@@ -108,19 +108,18 @@ tt, code, kbd, samp, pre {
 	font-family: $code-font;
 }
 
-p,
-li { 
-
-	code {
-		@include font-rem(12);
-		line-height: 1.5;
-		white-space: nowrap;
-		margin: 0 2px;
-		padding: 0 5px;
-		border: 1px solid lighten(#000, 90);
-		background-color: lighten(#000, 95);
-		border-radius: 3px;
-	}
+p > code,
+a > code,
+li > code,
+figcaption > code,
+td > code {
+  margin: 0 2px;
+	padding: 0 5px;
+  @include font-rem(12);
+	line-height: 1.5;
+  border: 1px solid lighten(#000, 90);
+	background-color: lighten(#000, 95);
+	border-radius: 3px;
 }
 
 pre {

@@ -2,24 +2,51 @@
    Syntax Highlighting
    ========================================================================== */
 
-pre.highlight {
-	padding: 1em;
+div.highlighter-rouge,
+figure.highlight {
+  position: relative;
+  margin-bottom: 1.5em;
+  color: #d0d0d0;
+  @include font-rem(12);
+  line-height: 1.5;
+  border: 1px solid darken($body-color, 5);
+  border-radius: 3px;
+  background-color: #272822;
+
+  .highlight {
+    margin: 0;
+    padding: 1em;
+  }
 }
 
-.highlight {
-	margin-bottom: 1.5em;
-	@include font-rem(12);
-	line-height: 1.5;
-	color: #d0d0d0;
-	border: 1px solid darken($body-color, 5);
-	background-color: #272822;
-	border-radius: 3px;
+figure.highlight {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 
-	pre {
-		position: relative;
-		margin: 0;
-		padding: 1em;
-	}
+.highlight table {
+  font-size: 1em;
+  border: 0;
+
+  td {
+    padding: 5px;
+    border: 0;
+
+    // line numbers
+    &.gutter {
+      padding-right: 1em;
+      color: #ccc;
+    }
+  }
+
+  pre {
+    margin: 0;
+  }
+}
+
+.highlight pre { width: 100%; }
+
+.highlight {	
 
 	.lineno { padding-right: 24px; color: #8f908a;}
 	.hll { background-color: #49483e }
