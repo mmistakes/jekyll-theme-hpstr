@@ -6,4 +6,4 @@ What they say about Open Source Projects are true, It's a vast ocean, full of pr
 
 I discovered zulip about three weeks ago, and this being my first OSS, boy, I admit it is pretty darn difficult to get started. But they have put as much of work in maintaining their documentation as they have done in building zulip. So I started reading through their documentation doing small tests and getting familiarised with the codebase. Since I'd like to think myself as a ameteur Django'ist and also since they need some more coverage on their Django tests, I think with a little bit of polishing I'd be of their assistance.
 
-So to start working on the main tests, I'd have to start small. I started looking into implementing Integrations in zulip and slowly getting into their tests. So that in time I may do testing for the main database. 
+So to start working on the main tests, I'd have to start small. I started looking into implementing Integrations in zulip and slowly getting into their tests. So that in time I may do testing for the main database.
