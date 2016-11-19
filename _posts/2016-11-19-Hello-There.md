@@ -15,4 +15,4 @@ Uggh. No.
 
 The problem was actually with the browser serving me the wrong DNS. Not anything to with the site itself. It was resolved when I used incognito. Oh, what I'd do without you incongnito! Well, we're back using Jekyll.
 
-Cheers.
+Cheers. :D
