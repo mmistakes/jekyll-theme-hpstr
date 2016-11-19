@@ -1,5 +1,5 @@
-title:            Site Title
-description:      Describe your website here.
+title:            You've been Ished!
+description:      Just a blog I created to document my journey on a path I'm travelling alone.
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
@@ -9,14 +9,14 @@ url:
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
-  email:          you@email.com
+  name:           Adarsh S
+  avatar:         https://avatars3.githubusercontent.com/u/20072816?v=3&u=a41c343c5e85b252a6305b9855d11323ddaf2303&s=400
+  bio:            A ruby in an emerald pool. A stubborn self-obsesed ameteur Django-ist's blog. Now, trying to get into the world of Open Source. 
+  email:          4darshofficial@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
-  facebook:       
-  github:         
+  facebook:       awesomatic.in
+  github:         isht3
   stackexchange:  
   linkedin:       
   instagram:      
