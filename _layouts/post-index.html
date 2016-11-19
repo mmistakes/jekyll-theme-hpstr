@@ -13,12 +13,13 @@
 {% include navigation.html %}
 
 <div class="entry-header">
-  {% if not page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
+  {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
   {% if page.image.feature %}
     <div class="entry-image">
       <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
     </div><!-- /.entry-image -->
   {% endif %}
+  
   <div class="header-title">
     <div class="header-title-wrap">
       <h1>{{ site.title }}</h1>
