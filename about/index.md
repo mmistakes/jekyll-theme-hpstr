@@ -8,7 +8,7 @@ modified: 2016-02-01
 What about me? I'm a just a guy with an open mind looking foward to learning new things. Since this blog is new. Ill update everything that comes to my mind, about me, here, later.
   
 ## My Projects.
-<img src = 'images/colesk.jpg'>
+<img src = '/images/colesk.jpg'>
 
 ### Colesk 
 
