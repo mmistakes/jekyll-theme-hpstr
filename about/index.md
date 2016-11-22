@@ -9,6 +9,7 @@ What about me? I'm a just a guy with an open mind looking foward to learning new
   
 ## My Projects.
 <img src = 'images/colesk.jpg'>
+
 ### Colesk 
 Well, as of today there is a considerable distance between colleges in the world. Colesk acts as a medium for colleges to interact, collaborate and to bring them together. It is a Social Network for making the life of a college student more productive. Colesk is completely transparent and the only thing you can decide your privacy on is your own profile. 
 
