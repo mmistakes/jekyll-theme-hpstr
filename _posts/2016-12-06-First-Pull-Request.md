@@ -13,4 +13,4 @@ Most of the times, the road to your first pull request is often a hard one. You'
 
 The only thing stopping you from doing your first pull request is yourself. If you're here for redemption and are having thoughts of quitting, let me remind you. I've been where you are right now, and let me remind you. Don't you ever quit. You might feel that you are too dumb or not made for this but no. Keep pushing yourself, you're not "that" dumb. Anyone with half a brain can do it. So trust me, go on and do that first pull request.
 
-cheers.
+Cheers.
