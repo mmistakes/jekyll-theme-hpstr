@@ -1,0 +1,317 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Software Design Reviews – Lessons Learned and Best Practices &#8211; Virtual Travelog</title>
+<meta name="description" content="Software Design Reviews – Lessons Learned and Best Practices">
+<meta name="keywords" content="system design, process, review">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Software Design Reviews – Lessons Learned and Best Practices">
+<meta name="twitter:description" content="Software Design Reviews – Lessons Learned and Best Practices">
+<meta name="twitter:creator" content="@VirtualTravel">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Software Design Reviews – Lessons Learned and Best Practices">
+<meta property="og:description" content="Software Design Reviews – Lessons Learned and Best Practices">
+<meta property="og:url" content="/2003/01/software-design-reviews-lessons-learned-and-best-practices/">
+<meta property="og:site_name" content="Virtual Travelog">
+
+
+
+
+
+<link rel="canonical" href="/2003/01/software-design-reviews-lessons-learned-and-best-practices/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Virtual Travelog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+</head>
+
+<body id="post" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/avatar.jpg" alt="John R. Harris photo" class="author-photo">
+					<h4>John R. Harris</h4>
+					<p>CTO at SPAN Digital - Engineering executive, systems architect, business and technology strategist.</p>
+				</li>
+				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				<li>
+					<a href="mailto:john@virtualtravelog.net"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/VirtualTravel"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+				</li>
+				<li>
+					<a href="https://facebook.com/VirtualTravelog"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+				</li>
+				
+				<li>
+					<a href="https://linkedin.com/in/johnrharris"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+				</li>
+				<li>
+					<a href="https://github.com/VirtualTraveler"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/posts/">All Posts</a></li>
+				<li><a href="/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		
+	    
+	    <li><a href="/publications/" >Publications</a></li>
+	  
+	    
+	    <li><a href="http://www.spandigital.com" target="_blank">SPAN Digital</a></li>
+	  
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        
+          <h1 class="entry-title"><a href="/2003/01/software-design-reviews-lessons-learned-and-best-practices/" rel="bookmark" title="Software Design Reviews – Lessons Learned and Best Practices">Software Design Reviews – Lessons Learned and Best Practices</a></h1>
+        
+        <h2><span class="entry-date date published"><time datetime="2003-01-18T00:00:00-08:00">January 18, 2003</time></span></h2>
+        
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content">
+      <p>Joel Rosi-Schwartz once advised me that if I ever found myself solving the same problem for a third time I should stop and take the opportunity to improve my efficiency by thinking of a better way to do it. Joel was very disciplined about this and over the years had developed a big bag of tricks for solving common problems encountered during systems design and development. In many ways Joel was an inspiration for me and this is one of his traits I have tried to emulate.</p>
+
+<p>In my career I have designed more than a few systems and reviewed the designs for many more. There were times when I reviewed two or three in a week and others when I went 6 months between reviews, but they have never stopped coming. Following Joels advice I have tried to incrementally improving my approach to both designing systems and reviewing others designs by developing a set of aphorisms that remind me what should be present in a good system design.</p>
+
+<blockquote>
+  <p>1 Everything in moderation and nothing to excess</p>
+</blockquote>
+
+<p>Ok so this is a platitude not an aphorism, but it is amazing how often system designers, myself included, carry otherwise good ideas to extremes. Knowing when to stop is sometimes the hardest skill of all to master. Too many designers solve problems that don’t exist, reinterpret requirements to fit their preconceived idea of an appropriate solution, or refuse to take advantage of new techniques in the name of risk reduction. Every solution and technique has an appropriate range of applicability, going beyond this range generally causes more problems that it solves. Practicality and reasonableness coupled with a willingness to use new techniques if they are better than old ones are characteristics that all systems designers would do well to cultivate.</p>
+
+<blockquote>
+  <p>2 A good system design is based on a sound conceptual model (Architecture)</p>
+</blockquote>
+
+<p>Many of the system designs I have been asked to review were little more than arbitrary collections of sub-systems and components. It was obvious that little or no thought had been given to the overall interaction of these parts. The Shorter Oxford English Dictionary defines the word Architecture as “The conceptual structure and logical organization of a computer or computer based system.” I take it as self-evident that a system design which has no conceptual structure and little logic to its organization is going to be ultimately unsuccessful. If you don’t agree you should probably stop reading now. This begs the question: what are the attributes of a sound conceptual model that allow it to support the development of a good system design?</p>
+
+<blockquote>
+  <p>3 A sound conceptual model accounts for all system requirements at a reasonable level of abstraction</p>
+</blockquote>
+
+<p>What constitutes a reasonable level of abstraction will obviously vary from system to system and will necessarily depend on the requirements, but in general I believe a reasonable level of abstraction is reached when a balance is achieved between specificity and generality.</p>
+
+<blockquote>
+  <p>3.1 A conceptual model is sufficiently generalized when it can account for all significant use cases in a concise way that reduces complexity by consolidating similar features.</p>
+</blockquote>
+
+<p>There are two important concepts here. The first is the concept of a significant use case. For any given system there are a vast number of potential use cases only some of which are significant. Determining the relative significance of use cases is an art not a science. Ultimately only the user of the system can determine the relative significance of use cases. However, most users concentrate on the normal operation of the system being designed and fail to consider more exceptional scenarios. It is up to the system designer to include use cases that go beyond the normal operation of systems. System designers commonly fail to do this and often neglect system validation (testing), installation, commissioning or recovery from failure when defining use cases.</p>
+
+<p>The second important concept is that of reducing complexity by consolidating similar features. This is where Joel’s rule of threes can be usefully applied. If there are three or more features of a system that display significant similarity it is worth considering consolidating them into a single, more generalized, feature. However a reduction in complexity that leads to a corresponding reduction in fidelity could be a <a href="/2002/12/the-misapplication-of-occams-razor-or-the-principle-of-inappropriate-parsimony/">misapplication of Occam’s razor</a> and should be avoided.</p>
+
+<p>There is of course a counter balance to generalization, namely specificity.</p>
+
+<blockquote>
+  <p>3.2 A conceptual model is sufficiently specific when it is possible to demonstrate how a system design based on the model will achieve measurable targets for required system attributes</p>
+</blockquote>
+
+<p>A clear understanding of the difference between functional requirements and system attributes is required to appreciate this statement. A functional requirement can only be present or absent – a system is capable of performing a function or it is not. Functional requirements can be derived from use cases they describe the behaviors the system is capable of displaying.</p>
+
+<p>By contrast system attributes, or qualities as they are sometimes called, define the way in which the system performs its functions. Attributes commonly include qualities like reliability, recoverability and availability , but can include more exotic qualities if needed, such as traceability, augmentability, and autonomy. In his book Principles of Software Engineering Management by Tom Gilb does a good job of describing how to define measurable systems attributes as part of a requirements specification process. The relevant point here is that a sound conceptual, model will reflect the system attributes it is required to deliver and it will also make allowance for measuring target values for these attributes.</p>
+
+<p>I have seen many designs containing valid abstractions that failed to support required system attributes. The abstractions were not grounded, they lacked specificity, they were too abstract. The following examples illustrate the point:</p>
+
+<ul>
+  <li>A system for running an energy trading market, with very strict performance requirements, had a highly generic design that reduced efficiency. There was no clear demonstration of how the generic design, which had limited benefits, could support the required performance. (processing efficiency)</li>
+  <li>A system with no intrinsic support for testing was to be implemented in a life critical environment. The system lacked any details around how it would support such an obvious requirement as the ability to prove correct operation before it was implemented in a hospital. (verifiability)</li>
+  <li>A massively complex pipeline management system that required multiple levels of abstraction had no internal diagnostics mechanism. As a result it would not be possible to isolate defects and remove them. (diagnosability)</li>
+  <li>The user interface for a scientific data warehouse exposed all the advanced configuration features to novice users without setting reasonable defaults. Most users were administrative staff with little to no understanding of these features and no reason to learn them. The conceptual model emphasized flexibility and did little to support usability even though the limited knowledge of the target audience as well understood. (usability)</li>
+</ul>
+
+<p>Some might say these are all missed requirements. They are, but they are not missed functional requirements. They each represent a failure of the designers to imbue the conceptual model (the Architecture) with support for the required system attributes. They represent a lack of specificity in how conceptual model supports the system requirements.</p>
+
+<blockquote>
+  <p>4 A good conceptual model is easy to communicate</p>
+</blockquote>
+
+<p>A sound conceptual model that accounts for all the system requirements at a reasonable level of abstraction is only half the battle. It must also be understandable. All too often a great architecture leads to a mediocre design, a poor implementation and an unsatisfactory solution. At each stage something gets lost. Extreme programming techniques can help but even then solutions don’t always live up to the original concept. The most commonly required system attribute is also one of the least often considered – Ease of communication of the conceptual model on which the design is based is essential for successful solutions.</p>
+
+<p>CORBA failed to gain wide acceptance because it was too complicated and led to more problems than it solved when placed in the hands of the average programmer. And that is the key point – Even the best architectures in the world are usually implemented by practitioners with average skills. We can’t all be James Gosling. Which is why he did not put multiple inheritances and operator overloading into Java.</p>
+
+<p>I believe there are at least three ways to improve the ease with which a conceptual model can be communicated.</p>
+
+<blockquote>
+  <p>4.1 A conceptual model is easier to understand and communicate if it is; coherent, Logical in the relationship of its parts, Aesthetically consistent.</p>
+</blockquote>
+
+<blockquote>
+  <p>4.2 A conceptual model is easier to understand and communicate if it is analogous to a commonly experienced, tangible, real world system.</p>
+</blockquote>
+
+<blockquote>
+  <p>4.3 A conceptual model is easier to understand and communicate if it is anthropomorphized: Made to mimic human behavior, characteristics and modes of interaction.</p>
+</blockquote>
+
+<p>The last point draws directly from modern studies in evolutionary psychology. In his excellent book, The Origins of Virtue, Matt Ridley describes an experiment in which two groups of students where presented with the same problem. For one group the problem was described mathematically as a set of simultaneous equations. For the other group it was presented as a problem in social dynamics in which the group had to identify who was lying in a complex situation by analyzing individual motivations. The problems were computationally identical all that differed was the presentation. The experiment clearly showed that people are far better at evaluating social situations than they are at solving mathematical problems. This is interesting and not surprising, as people have evolved over millions of years to be good at analyzing and solving social problems.</p>
+
+<p>If the conceptual model for a system is deliberately made analogous to a real world, commonly experienced, system and that system is one that involves social interaction (ie it is anthropomorphized), then communicating the design becomes a great deal easier. Another interesting feature of such conceptual models is that the analogy itself often suggests possible enhancements and steers the designer or implementer away from problem areas. In defining use cases it is common practice to identify actors. I have found it useful to assign motives and personalities to these actors. This may seem bizarre but it helps directly with clearly identifying appropriate separation of concerns between system components. When faced with design decisions it is often helpful to ask “what would this actor want to do in this situation?” or “Is this responsibility in keeping with the personality of this actor”. This line of reasoning would have prevented many of the poor design decisions I have made in the past.</p>
+
+<h2 id="summary">Summary</h2>
+
+<ol>
+  <li>Everything in moderation and nothing to excess</li>
+  <li>A good system design is based on a sound conceptual model (Architecture)</li>
+  <li>
+    <p>A sound conceptual model accounts for all system requirements at a reasonable level of abstraction</p>
+
+    <p>3.1 A conceptual model is sufficiently generalized when it can account for all significant use cases in a concise way that reduces complexity by consolidating similar features</p>
+
+    <p>3.2 A conceptual model is sufficiently specific when it is possible to demonstrate how a system design based on the model will achieve measurable targets for required system attributes</p>
+  </li>
+  <li>
+    <p>A good conceptual model is easy to communicate</p>
+
+    <p>4.1 A conceptual model is easier to understand and communicate if it is coherent – Logical in the relationship of it’s parts – Aesthetically consistent.</p>
+
+    <p>4.2 A conceptual model is easier to understand and communicate if it is analogous to a commonly experienced, tangible, real world system</p>
+
+    <p>4.3  A conceptual model is easier to understand and communicate if it is anthropomorphized – Made to mimic human behavior, characteristics and modes of interaction</p>
+  </li>
+</ol>
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags/#system design" title="Pages tagged system design" class="tag"><span class="term">system design</span></a><a href="/tags/#process" title="Pages tagged process" class="tag"><span class="term">process</span></a><a href="/tags/#review" title="Pages tagged review" class="tag"><span class="term">review</span></a></span>
+        <span>Updated on <span class="entry-date date updated"><time datetime="2016-12-23">December 23, 2016</time></span></span>
+        <span class="author vcard"><span class="fn">John R. Harris</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/2003/01/software-design-reviews-lessons-learned-and-best-practices/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/2003/01/software-design-reviews-lessons-learned-and-best-practices/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/2003/01/software-design-reviews-lessons-learned-and-best-practices/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    <div class="read-more">
+  
+    <div class="read-more-header">
+      <a href="/2003/01/internet-cartography-maps-of-the-world-wide-web-and-other-cyber-geography/" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="/2013/10/background-image/" title="Post with a Background Image">Post with a Background Image</a></h3>
+      <p>Sample post with a background image CSS override. <a href="/2013/10/background-image/">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
+    
+      <div class="list-item">
+        <h4><a href="/2013/08/code-highlighting-post/" title="Syntax Highlighting Post">Syntax Highlighting Post</a></h4>
+        <span>Published on August 16, 2013</span>
+      </div><!-- /.list-item -->
+    
+      <div class="list-item">
+        <h4><a href="/2013/08/sample-link-post/" title="Sample Link Post">Sample Link Post</a></h4>
+        <span>Published on August 12, 2013</span>
+      </div><!-- /.list-item -->
+    
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Virtual Travelog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.virtualtravelog.net/" property="cc:attributionName" rel="cc:attributionURL">John R. Harris</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'virtualtravelog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	        
+
+</body>
+</html>
