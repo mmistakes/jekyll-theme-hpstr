@@ -22,12 +22,9 @@ The Classic Theme, as we know it, seems to be an ａｅｓｔｈｅｔｉｃａ�
 Unfortunately, for some people who prefer having blocky 3D buttons and menus, this has officially been gone since Windows 8 as the Desktop Window Manager is no longer a service that can be disabled and the modern UI programs are dependant upon it. The DWM basically utilitises the graphics card to 'draw' windows on to your display, and in anything past Windows 7, disabling graphics card drivers won't revert your system to a Windows Basic theme (although it technically still exists) and whatever windows you'll have open will be rendered by software, or your processor. But since Windows 8, it is a dependancy for a lot modern-related apps.
 
 <figure>
-	<a href="images/WinClassicTheme/ClassicThemeExplorer.PNG"><img src="images/WinClassicTheme/ClassicThemeExplorer.PNG" alt=""></a>
-	<figcaption><a href="/images/WinClassicTheme/ClassicThemeExplorer.PNG" title="It's the actual Classic Theme, but there's no switch to switch it on or off like in Windows 7!">Look, that arrow pointing up! The Classic Theme still exists in Windows 8.1 and 10! No high contrast coverups here. This is on Windows Server 2016 or Windows 10 with a few modifications. Also, clicking those back/forward buttons don't have that 'pressed' effect like in Windows 7</a>.</figcaption>
+	<a href="/images/WinClassicTheme/ClassicThemeExplorer.PNG"><img src="/images/WinClassicTheme/ClassicThemeExplorer.PNG" alt=""></a>
+	<figcaption><a href="//images/WinClassicTheme/ClassicThemeExplorer.PNG" title="It's the actual Classic Theme, but there's no switch to switch it on or off like in Windows 7!">Look, that arrow pointing up! The Classic Theme still exists in Windows 8.1 and 10! No high contrast coverups here. This is on Windows Server 2016 or Windows 10 with a few modifications. Also, clicking those back/forward buttons don't have that 'pressed' effect like in Windows 7</a>.</figcaption>
 </figure>
-
-/images/WinClassicTheme/BetterContextCompare/WinXPContextMenu.png
-
 
 There's a lot of places saying how it's been 'removed' and that apparently having a flat [high contrast](http://www.howtogeek.com/133405/how-to-get-classic-style-themes-back-on-windows-8/) is the only solution (well, it's the ONLY stable solution, not a bad alternative to be fair, you don't risk messing up your system and you don't need anything else for it), although it actually hasn't been completely removed. 
 
