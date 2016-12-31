@@ -1,5 +1,5 @@
-title:            Site Title
-description:      Describe your website here.
+title:            Phorofor
+description:      The GitHub Page of Phorofor where I'll sometimes post about my repositories.
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
@@ -9,24 +9,24 @@ url:
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Phorofor
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
-  email:          you@email.com
+  bio:            "Welcome! This is the GitHub page of Phorofor."
+  email:          
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
+  #twitter:        
+  #facebook:       
+  github: Phorofor        
+  #stackexchange:  
+  #linkedin:       
+  #instagram:      
+  #flickr:         
+  #tumblr:         
   # google plus id, include the '+', eg +mmistakes
-  google_plus:
+  #google_plus:
 
 # Background image to be tiled on all pages
-background: 
+background: Tile.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
@@ -35,8 +35,8 @@ google_verify:
 bing_verify:         
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      false  # publish future dated posts --  true, false (default) 
+timezone:    Etc/UTC
+future:      true  # publish future dated posts --  true, false (default) 
 highlighter: rouge
 markdown:    kramdown
 gems:
@@ -44,6 +44,7 @@ gems:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
+  - jekyll-seo-tag
 sass:
   sass_dir: _sass
   style: compressed

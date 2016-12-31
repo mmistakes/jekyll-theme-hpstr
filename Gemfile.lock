@@ -22,6 +22,8 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.4.0)
       sass (~> 3.4)
+    jekyll-seo-tag (1.1.0)
+      jekyll (>= 2.0)
     jekyll-sitemap (0.10.0)
     jekyll-watch (1.4.0)
       listen (~> 3.0, < 3.1)
@@ -54,8 +56,9 @@ DEPENDENCIES
   jekyll-feed
   jekyll-gist
   jekyll-paginate
+  jekyll-seo-tag
   jekyll-sitemap
   json
 
 BUNDLED WITH
-   1.12.5
+   1.13.7

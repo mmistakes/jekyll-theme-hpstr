@@ -1,7 +1,7 @@
 # Menu navigation links
 
-- title: Theme Setup
-  url: /theme-setup/
+- title: Repositories
+  url: https://github.com/Phorofor?tab=repositories
 
-- title: External Link
-  url: http://mademistakes.com
+- title: Phorofor
+  url: https://github.com/Phorofor
