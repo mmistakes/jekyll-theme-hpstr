@@ -1,12 +1,12 @@
 ---
 layout: post
-title: The Classic Theme in Windows 10 and 8.1 (ClassicTheme.exe)
+title: The Classic Theme in Windows 10 and 8.1 (ClassicTheme.exe)*
 description: "The Windows Classic Theme in Windows 10 & 8.1 with a series of text explaining the method I simply use to get the native Classic Theme working to some reasonable extent with its consequences."
 modified: 2016-12-31T04:35:48+00:00
 tags: [Windows, Classic Theme, ClassicTheme.exe, Windows 8.1, Windows 10]
 
 image:
-  feature: WinClassicTheme/BackgroundImage.png
+  feature: /WinClassicTheme/BackgroundImage.png
   credit: "Note: 'This PC' and 'File History' (Click for full)"
   creditlink: /images/WinClassicTheme/BackgroundImage.png
 ---
@@ -22,9 +22,11 @@ The Classic Theme, as we know it, seems to be an ａｅｓｔｈｅｔｉｃａ�
 Unfortunately, for some people who prefer having blocky 3D buttons and menus, this has officially been gone since Windows 8 as the Desktop Window Manager is no longer a service that can be disabled and the modern UI programs are dependant upon it. The DWM basically utilitises the graphics card to 'draw' windows on to your display, and in anything past Windows 7, disabling graphics card drivers won't revert your system to a Windows Basic theme (although it technically still exists) and whatever windows you'll have open will be rendered by software, or your processor. But since Windows 8, it is a dependancy for a lot modern-related apps.
 
 <figure>
-	<a href="/Images/WinClassicTheme/ClassicThemeExplorer.PNG"><img src="/Images/WinClassicTheme/ClassicThemeExplorer.PNG" alt=""></a>
-	<figcaption><a href="/Images/WinClassicTheme/ClassicThemeExplorer.PNG" title="It's the actual Classic Theme, but there's no switch to switch it on or off like in Windows 7!">Look, that arrow pointing up! The Classic Theme still exists in Windows 8.1 and 10! No high contrast coverups here. This is on Windows Server 2016 or Windows 10 with a few modifications. Also, clicking those back/forward buttons don't have that 'pressed' effect like in Windows 7</a>.</figcaption>
+	<a href="images/WinClassicTheme/ClassicThemeExplorer.PNG"><img src="images/WinClassicTheme/ClassicThemeExplorer.PNG" alt=""></a>
+	<figcaption><a href="/images/WinClassicTheme/ClassicThemeExplorer.PNG" title="It's the actual Classic Theme, but there's no switch to switch it on or off like in Windows 7!">Look, that arrow pointing up! The Classic Theme still exists in Windows 8.1 and 10! No high contrast coverups here. This is on Windows Server 2016 or Windows 10 with a few modifications. Also, clicking those back/forward buttons don't have that 'pressed' effect like in Windows 7</a>.</figcaption>
 </figure>
+
+/images/WinClassicTheme/BetterContextCompare/WinXPContextMenu.png
 
 
 There's a lot of places saying how it's been 'removed' and that apparently having a flat [high contrast](http://www.howtogeek.com/133405/how-to-get-classic-style-themes-back-on-windows-8/) is the only solution (well, it's the ONLY stable solution, not a bad alternative to be fair, you don't risk messing up your system and you don't need anything else for it), although it actually hasn't been completely removed. 
@@ -164,8 +166,8 @@ This works fine in Windows 8.1. You can still access the security options throug
 **Do NOT use in Windows 10**: It'll eventually force you to log out with an error message or leave you at a blank screen if you try this multiple times. Also, I tried modifying this script to remove the timeout and the commands to rename the search UI to test it in Windows 10 and all it does it spawn itself back up again or leave me staring at a blank screen.
 
 <figure>
-	<a href="/Images/WinClassicTheme/Win10DWMRename.PNG"><img src="/Images/WinClassicTheme/Win10DWMRename.PNG" alt=""></a>
-	<figcaption><a href="/Images/WinClassicTheme/Win10DWMRename.PNG" title="It's the actual Classic Theme, but there's no switch to switch it on or off like in Windows 7!">At least you get a brief glance at a dialog box with a classic theme briefly before returning you to the Windows 10 lock screen or having a chance at blanking out your system if you don't see this dialog</a>.</figcaption>
+	<a href="/images/WinClassicTheme/Win10DWMRename.PNG"><img src="/images/WinClassicTheme/Win10DWMRename.PNG" alt=""></a>
+	<figcaption><a href="/images/WinClassicTheme/Win10DWMRename.PNG" title="It's the actual Classic Theme, but there's no switch to switch it on or off like in Windows 7!">At least you get a brief glance at a dialog box with a classic theme briefly before returning you to the Windows 10 lock screen or having a chance at blanking out your system if you don't see this dialog</a>.</figcaption>
 </figure>
 
 In Windows 10, the only way to accomplish preventing the Desktop Window Manager from being able to run is to suspend the winlogon process. I would not recommend this since it messes up with things like display sleeping and the inability for logoff/shutdown/restart actions to take place and this isn't really a good method just for the sake of switching off the DWM. 
@@ -212,9 +214,9 @@ I got inspired by this [video](https://www.youtube.com/watch?v=LfROOvOaHXM) and 
 
 
 <figure>
-	<!-- <a href="/Images/WinClassicTheme/CMDPrompt300Spam.gif"> --><img src="/Images/WinClassicTheme/CMDPrompt300Spam.gif" alt=""><!--</a>-->
+	<!-- <a href="/images/WinClassicTheme/CMDPrompt300Spam.gif"> --><img src="/images/WinClassicTheme/CMDPrompt300Spam.gif" alt=""><!--</a>-->
 	<figcaption>
-	<a href="/Images/WinClassicTheme/CMDPrompt300Spam.gif" title="A lot of prompts. Note that recording to create this gif prolonged the time it takes to draw those windows and the effect looks different as it's downscaled from 60 to 25 FPS in this image. Near the end, the 'Show desktop' button is triggered (after the last time command). Only a brief portion of the window spam is shown here">A lot of prompts. Note that recording to create this gif prolonged the time it takes to draw those windows and the effect looks different as it's downscaled from 60 to 25 FPS in this image. Near the end, the 'Show desktop' button is triggered (after the last time command). Only a brief portion of the window spam is shown here</a>.
+	<a href="/images/WinClassicTheme/CMDPrompt300Spam.gif" title="A lot of prompts. Note that recording to create this gif prolonged the time it takes to draw those windows and the effect looks different as it's downscaled from 60 to 25 FPS in this image. Near the end, the 'Show desktop' button is triggered (after the last time command). Only a brief portion of the window spam is shown here">A lot of prompts. Note that recording to create this gif prolonged the time it takes to draw those windows and the effect looks different as it's downscaled from 60 to 25 FPS in this image. Near the end, the 'Show desktop' button is triggered (after the last time command). Only a brief portion of the window spam is shown here</a>.
 	</figcaption>
 </figure>
 
@@ -280,7 +282,7 @@ Since using the 'Install' option for this program sets itself as the shell (that
 5. Find the files dwm_rdr.dll, dwmapi.dll and dwmapi32.dll and delete them from the Windows directory (you can quickly type 'dwm' to jump to these while browsing the folder)
 
 	<figure>
-		<!-- <a href="#"> --><img src="/Images/WinClassicTheme/BrokenExplorerTaskbar.gif" alt=""><!--</a>--><figcaption><a href="/Images/WinClassicTheme/BrokenExplorerTaskbar.gif" title="If you FORGET to delete the 'Shell' item in the Registry, your taskbar is going to have its own party of preventing any Explorer window from opening.">If you FORGET to delete the 'Shell' item in the Registry, your taskbar is going to have its own party of preventing any Explorer window from opening as seen by the taskbar having its color black with its borders sticking out. This also happens if you do not delete the .dlls that were mentioned previously.</a></figcaption>
+		<!-- <a href="#"> --><img src="/images/WinClassicTheme/BrokenExplorerTaskbar.gif" alt=""><!--</a>--><figcaption><a href="/images/WinClassicTheme/BrokenExplorerTaskbar.gif" title="If you FORGET to delete the 'Shell' item in the Registry, your taskbar is going to have its own party of preventing any Explorer window from opening.">If you FORGET to delete the 'Shell' item in the Registry, your taskbar is going to have its own party of preventing any Explorer window from opening as seen by the taskbar having its color black with its borders sticking out. This also happens if you do not delete the .dlls that were mentioned previously.</a></figcaption>
 	<figure>
 
 At this point ClassicTheme.exe is still be marked as 'installed' and we'll need the original ClassicTheme.exe. However, logging out and back in should work normally up to this point. Alternatively, you can run ``userinit`` instead of having to relogin. 
@@ -311,27 +313,27 @@ You still have to use the Run box or Task Manager new task dialog's 'Browse...' 
 I messed with this program for a bit some time back and there's some interesting stuff that nobody that I've seen yet to point it out.
 
 <figure>
-	<a href="/Images/WinClassicTheme/ColorAppletDWMDisabled.PNG"><img src="/Images/WinClassicTheme/ColorAppletDWMDisabled.PNG" alt=""></a>
-	<figcaption><a href="/Images/WinClassicTheme/ColorAppletDWMDisabled.PNG" title="Was this supposed to be a toggle?">"{Desktop composition is disabled}"? Did Microsoft originally intend there to be a switch to do this, or does this message exist in other versions of Windows? I don't know since there's no *native* way to switch off the DWM in anything later than Windows 7. This is the result when trying to change the colors where it would open up the Immersive version of Settings.</a></figcaption>
+	<a href="/images/WinClassicTheme/ColorAppletDWMDisabled.PNG"><img src="/images/WinClassicTheme/ColorAppletDWMDisabled.PNG" alt=""></a>
+	<figcaption><a href="/images/WinClassicTheme/ColorAppletDWMDisabled.PNG" title="Was this supposed to be a toggle?">"{Desktop composition is disabled}"? Did Microsoft originally intend there to be a switch to do this, or does this message exist in other versions of Windows? I don't know since there's no *native* way to switch off the DWM in anything later than Windows 7. This is the result when trying to change the colors where it would open up the Immersive version of Settings.</a></figcaption>
 </figure>
 
 <figure>
-	<a href="/Images/WinClassicTheme/ServerCore2016Login.PNG"><img src="/Images/WinClassicTheme/ServerCore2016Login.PNG" alt=""></a>
-	<figcaption><a href="/Images/WinClassicTheme/ServerCore2016Login.PNG" title="It's only just text. Nothing more.">This is the login screen for Windows Server Core 2016, which runs the non-DWM version of the Aero Lite theme (the 'Basic' version of it, if you think about it). It would be cool if we could actually have a logon UI like this in regular installations of Windows. It also doesn't rely on the DWM as it doesn't exist in Server Core. Its CTRL + ALT + DELETE options are also displayed in a list.</a></figcaption>
+	<a href="/images/WinClassicTheme/ServerCore2016Login.PNG"><img src="/images/WinClassicTheme/ServerCore2016Login.PNG" alt=""></a>
+	<figcaption><a href="/images/WinClassicTheme/ServerCore2016Login.PNG" title="It's only just text. Nothing more.">This is the login screen for Windows Server Core 2016, which runs the non-DWM version of the Aero Lite theme (the 'Basic' version of it, if you think about it). It would be cool if we could actually have a logon UI like this in regular installations of Windows. It also doesn't rely on the DWM as it doesn't exist in Server Core. Its CTRL + ALT + DELETE options are also displayed in a list.</a></figcaption>
 </figure>
 
 
 <figure>
-	<!-- <a href="#"> --><img src="/Images/WinClassicTheme/AeroLiteNoDWMServerCore.png" alt=""><!--</a>--><figcaption><a href="/Images/WinClassicTheme/AeroLiteNoDWMServerCore.png" title="This is a screenshot of Server Core 2016. Here's a bunch of windows in all of its non-DWM AeroLite glory. Notice the square titlebar buttons.">
+	<!-- <a href="#"> --><img src="/images/WinClassicTheme/AeroLiteNoDWMServerCore.png" alt=""><!--</a>--><figcaption><a href="/images/WinClassicTheme/AeroLiteNoDWMServerCore.png" title="This is a screenshot of Server Core 2016. Here's a bunch of windows in all of its non-DWM AeroLite glory. Notice the square titlebar buttons.">
 	This is a screenshot of Server Core 2016. Here's a bunch of windows in all of its non-DWM AeroLite glory. Notice the square titlebar buttons which isn't typical in a regular 8.1/10 installation.</a></figcaption>
 </figure>
 
 <figure>
-	<!-- <a href="#"> --><img src="/Images/WinClassicTheme/ServerCore2016Classic.png" alt=""><!--</a>--><figcaption><a href="/Images/WinClassicTheme/ServerCore2016Classic.png" title="Here's Server Core 2016 with the unofficial Classic Theme program applied, it appears to work well - pretty much flawlessly although there are weird properties with the button icons being folders and obscure looking symbols">Here's Server Core 2016 with the unofficial Classic Theme program applied, it appears to work well - pretty much flawlessly although there are weird properties with the button icons being folders and obscure looking symbols. Some fonts won't be changed even if you change it through the Desktop Windows & Metrics applet as there's no Desktop Experience enabled in Server Core.</a></figcaption>
+	<!-- <a href="#"> --><img src="/images/WinClassicTheme/ServerCore2016Classic.png" alt=""><!--</a>--><figcaption><a href="/images/WinClassicTheme/ServerCore2016Classic.png" title="Here's Server Core 2016 with the unofficial Classic Theme program applied, it appears to work well - pretty much flawlessly although there are weird properties with the button icons being folders and obscure looking symbols">Here's Server Core 2016 with the unofficial Classic Theme program applied, it appears to work well - pretty much flawlessly although there are weird properties with the button icons being folders and obscure looking symbols. Some fonts won't be changed even if you change it through the Desktop Windows & Metrics applet as there's no Desktop Experience enabled in Server Core.</a></figcaption>
 </figure>
 
 <figure>
-	<!-- <a href="#"> --><img src="/Images/WinClassicTheme/Server2016CoreVMStretched.png" alt=""><!--</a>--><figcaption><a href="/Images/WinClassicTheme/Server2016CoreVMStretched.png" title="Here it is again while having its width resized in a virtual machine.">Here it is again while having its width resized in a virtual machine.</a></figcaption>
+	<!-- <a href="#"> --><img src="/images/WinClassicTheme/Server2016CoreVMStretched.png" alt=""><!--</a>--><figcaption><a href="/images/WinClassicTheme/Server2016CoreVMStretched.png" title="Here it is again while having its width resized in a virtual machine.">Here it is again while having its width resized in a virtual machine.</a></figcaption>
 </figure>
 
 {% capture images %}
