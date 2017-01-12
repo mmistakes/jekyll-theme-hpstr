@@ -1,9 +1,8 @@
 ---
 layout: post
 title: To do for 2017
-description: A short note of the beginning of this blog
-tags:
-  - sample post
+description: Some things to keep me occupied this year.
+tags: ['Postgres' , 'Colesk', 'Resolution']
 published: true
 ---
 
