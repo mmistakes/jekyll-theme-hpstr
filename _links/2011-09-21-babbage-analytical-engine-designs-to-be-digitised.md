@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: link
 title: "Babbage Analytical Engine designs to be digitised"
 description: "Babbage Analytical Engine designs to be digitised"
-tags: [tag1, tag2]
+tags: [computer history]
 comments: true
 link: http://www.bbc.com/news/technology-15001514  
 ---

@@ -4,9 +4,6 @@ title: "Ada Lovelace – The Enchantress of Number or the most Overrated Figure 
 description: "Ada Lovelace – The Enchantress of Number or the most Overrated Figure in the History of Computing?"
 tags: [computer history, innovation]
 modified: 2016-12-30
-image:
-  feature: /2003-02-Mobile-Lounge.jpg
-  thumb: /2003-02-Mobile-Lounge200w.png
 ---
 Augusta Ada, Countess of Lovelace (1815 to 1852), also known as Ada Lovelace, was the only legitimate daughter of the poet [Lord Byron](https://englishhistory.net/byron/). Raised by her mother she was given private instruction in mathematics and sciences, When she was 17 she met [Charles Babbage](http://projects.exeter.ac.uk/babbage/) at a party and became interested in his work on [The Analytical Engine](http://www.fourmilab.ch/babbage/), At the suggestion of [Charles Wheatstone](https://en.wikipedia.org/wiki/Charles_Wheatstone) she translated a French description of the Analytical Engine “Notions sur la machine analytique” by the Italian Engineer [Luigi Menabrea](http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Menabrea.html). This document was based on some lectures Babbage had delivered in Turin some years earlier. After reading Ada’s translation Babbage suggested she add some notes of her own since she was “intimately acquainted” with the subject. This she did and published her [Sketch of the Analytical Engine](http://www.fourmilab.ch/babbage/sketch.html) in 1843.
 

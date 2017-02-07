@@ -1,0 +1,227 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Agent's Activity Type"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S78588"><Font size=4 color="b22222">
+AAT&#47;essential type (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4147.htm#D77842" target="SADETAILTARGET"><Font size=2 color="b22222">
+Agent's Activity Type (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S78585"><Font size=4 color="b22222">
+Activity Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Descriptive Category&quot; capable of being used as a category for &quot;Activities&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S157479"><Font size=4 color="b22222">
+Activity Type Excluded (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000576.htm" target="_top"><Font size=2><B>Activity Type Excluded</A> (
+OMT Object Model)</B></Font><BR>
+<DT><Font size=3>Description: 
+<DD><B>
+An &quot;Activity Type&quot; that may not be performed for this &quot;Authorised Agent Activity&quot;.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+This will be a species or sub-species of the &quot;Activity Type&quot; associated with the Agent via &quot;Agent's
+Activity Type&quot;.
+</B></font><BR>
+<DT><Font size=3>Examples: <B>
+This could for example mean that a doctor is allowed to perform general medical duties (an &quot;Activity
+Type&quot; included by &quot;Permitted Activity Type&quot;, with the exception of heart transplants, an excluded
+&quot;Activity Type&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S78586"><Font size=4 color="b22222">
+Activity Type Offered (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000472.htm" target="_top"><Font size=2><B>Activity Type Offered</A> (
+OMT Object Model)</B></Font><BR>
+<DT><Font size=3>Description: 
+<DD><B>
+An &quot;Activity Type&quot; that an &quot;Agent&quot; makes a general offer to perform. 
+<BR>
+
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+There is no need for any authorisation for this type of offer - it can be offered by a &quot;Free Agent&quot;.
+ Example would be setting up a business to supply goods that are not regulated by legislation (i.e.
+a pharmacists shop would not be covered by this type.)
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S154375"><Font size=4 color="b22222">
+Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+Role of a subject enabling it to act purposefully.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+CBS V2: - A role of a &quot;Subject&quot; which indicates that it has power to act
+<BR>
+
+<BR>
+This is a role which may be played by a &quot;Subject&quot;. Sometimes, an &quot;Agent&quot; may be created in order to
+assemble a set of responsibilities and authorities prior to a specific &quot;Subject&quot; being identified
+and allocated to it.
+<BR>
+
+<BR>
+For purposes of creating an &quot;Authorising Act&quot;, an &quot;Agent&quot; may actually be a group of individuals -
+for example when joint responsibility is being taken for some decision, as in a clinical case
+conference.  In such a case the details of the group are taken care of by &quot;Subject&quot; and &quot;Inter
+Subject Relationship&quot;.
+<BR>
+
+<BR>
+Examples of &quot;Agent&quot;:
+<BR>
+Dr Smithers within NHS XYZ Trust, 
+<BR>
+Ms J.Doe in the HXT Pathology laboratory.
+<BR>
+
+<BR>
+A better understanding of the types of &quot;Agent&quot; can be gained from examination of its subtypes.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S154376"><Font size=4 color="b22222">
+agent for (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S78587"><Font size=4 color="b22222">
+Agent's Activity Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+A means of establishing that an &quot;Agent&quot; may perform, offer to perform or authorise others to perform
+certain &quot;Activity Types&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+For examples see subtypes.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S78584"><Font size=4 color="b22222">
+Authorised Agent Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000491.htm" target="_top"><Font size=2><B>Authorised Agent Activity</A> (
+OMT Object Model)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+&quot;Activity Type for Agent&quot; that is subject to some type of authorisation or external control.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Such control can be interdictions, permissions and exceptions (including &quot;Activity State Types&quot;) to
+one or many Activity Types.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S78589"><Font size=4 color="b22222">
+classifier (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Activity Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Activity Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S154898"><Font size=4 color="b22222">
+geographical bound (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Location
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Location
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S154897"><Font size=4 color="b22222">
+Location (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Reference Point&quot; being a point or set of contiguous points in space.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous documented definitions providing the source for the above are:
+<BR>
+
+<BR>
+Point or set of contiguous points in space.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S157480"><Font size=4 color="b22222">
+subject to constraint (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity Type Excluded&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity Type Excluded&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

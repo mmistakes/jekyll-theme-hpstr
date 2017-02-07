@@ -112,7 +112,7 @@
 		</li>
 		
 	    
-	    <li><a href="/publications/" >Publications</a></li>
+	    <li><a href="/links/" >Links</a></li>
 	  
 	    
 	    <li><a href="http://www.spandigital.com" target="_blank">SPAN Digital</a></li>
@@ -141,20 +141,34 @@
 <article class="hentry">
   <header>
     
-      <div class="entry-image-index">
-        <a href="/2003/06/ada-lovelace-the-enchantress-of-number-or-the-most-overrated-figure-in-the-history-of-computing/" title="Ada Lovelace – The Enchantress of Number or the most Overrated Figure in the History of Computing?"><img src="/images//2003-02-Mobile-Lounge.jpg" alt="Ada Lovelace – The Enchantress of Number or the most Overrated Figure in the History of Computing?"></a>
-      </div><!-- /.entry-image -->
-    
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2003-06-07T00:00:00-07:00"><a href="/2003/06/ada-lovelace-the-enchantress-of-number-or-the-most-overrated-figure-in-the-history-of-computing/">June 07, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2004-01-26T00:00:00-08:00"><a href="/2004/01/ontology-review-1-the-nhs-common-basic-specification-why-top-level-ontologies-dont-work/">January 26, 2004</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="/2003/06/ada-lovelace-the-enchantress-of-number-or-the-most-overrated-figure-in-the-history-of-computing/" rel="bookmark" title="Ada Lovelace – The Enchantress of Number or the most Overrated Figure in the History of Computing?" itemprop="url">Ada Lovelace – The Enchantress of Number or the most Overrated Figure in the History of Computing?</a></h1>
+      <h1 class="entry-title"><a href="/2004/01/ontology-review-1-the-nhs-common-basic-specification-why-top-level-ontologies-dont-work/" rel="bookmark" title="Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work." itemprop="url">Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work.</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>Augusta Ada, Countess of Lovelace (1815 to 1852), also known as Ada Lovelace, was the only legitimate daughter of the poet <a href="https://englishhistory.net/byron/">Lord Byron</a>. Raised by her mother she was given private instruction in mathematics and sciences, When she was 17 she met <a href="http://projects.exeter.ac.uk/babbage/">Charles Babbage</a> at a party and became interested in his work on <a href="http://www.fourmilab.ch/babbage/">The Analytical Engine</a>, At the suggestion of <a href="https://en.wikipedia.org/wiki/Charles_Wheatstone">Charles Wheatstone</a> she translated a French description of the Analytical Engine “Notions sur la machine analytique” by the Italian Engineer <a href="http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Menabrea.html">Luigi Menabrea</a>. This document was based on some lectures Babbage had delivered in Turin some years earlier. After reading Ada’s translation Babbage suggested she add some notes of her own since she was “intimately acquainted” with the subject. This she did and published her <a href="http://www.fourmilab.ch/babbage/sketch.html">Sketch of the Analytical Engine</a> in 1843.</p>
+    <p>This is the first of an occasional series of reviews I intend to write to illustrate some important general traits of ontologies. In each review I will dissect an ontology and examine why it succeeded or failed. In this essay I mention concepts that are defined in my previous essay. <a href="2004/01/judging-the-likely-success-of-an-ontology/">Judging the likely success of an ontology</a>. This first review covers an ontology called the Common Basic Specification (CBS) that was designed in the late 1980s to bring much needed standardization and rationalization to the fragmented information management processes of the British National Health Service (NHS). It persisted in various forms until the late 1990′s when it was finally abandoned. This is my explanation of why it failed.</p>
+
+<p>I have been living in the US now for 6 years and have come to recognize a common reaction among Americans whenever the NHS is mentioned. They all try to hide it, but a patronizing look comes over them. It doesn’t matter how much you tell them that doctors in the NHS wash before they go into surgery, and even use anesthetics these days, Americans just can’t help feeling sorry for anyone who has to suffer under a 3 rd world healthcare system. So before I explain the CBS it is probably worth describing the NHS.</p>
+
+<h2 id="background">Background</h2>
+
+<p>The NHS is the largest employer in Europe it is the main provider of healthcare for the entire United Kingdom (pop 60 million). It’s annual budget is about 5 to 6 percent of the GDP of the United Kingdom. In 2002 that amounted to about 64 billion GBP which at current exchange rates is approximately 115 billion USD. By contrast the US spends about 15 percent of its GDP on healthcare and Americans live on average one year longer than the British. A more detailed breakdown of staffing and budget allocation for the NHS is available here. Primary healthcare in the UK is delivered through about 10,000 General Practices and about 2000 Hospitals, most with less than 100 beds. There are a few large Hospitals with up to 1000 beds, these larger hospitals are usually teaching Hospitals. All these numbers are approximate but they give a general idea of the scale of the NHS.</p>
+
+<p>In the late 1980s it became apparent that the same information management problems were being encountered over and over again in hospital after hospital throughout the UK. Not only that, but they were being solved poorly time and time again. This was obviously wasteful. Hospitals had no reason to compete in the area of information management and every reason to cooperate. If these common problems could be solved correctly and then reused significant savings might be realized. At the same time the digital patient record became the holy grail of healthcare computing. In this vision of the future any patients complete medical history would be available anywhere it was needed and could be passed from GP practice to Hospital and back. It could even follow a patient as s/he moved around the country. The Common Basic Specification was suggested as the best way to ensure consistency across multiple solutions and thus enable standardization and portability of the digital patient record.</p>
+
+<h2 id="the-common-basic-specification">The Common Basic Specification</h2>
+
+<blockquote>
+  <p>The Common Basic Specification ( CBS ) is a conceptual generic model of the activity of health care delivery.</p>
+
+  <p>[IT Standards Handbook - NHS Data Standards]</p>
+</blockquote>
+
+<p>Definition of the NHS Data Model was started in 1986 and continued for several years. It was eventually renamed the Common Basic Specification (CBS). By 1992 a CBS Generic Model had been published. This was in effect a top level ontology (similar to the SUMO currently under development). It was developed for healthcare service delivery but it as can be seen from the diagram below it was universally applicable to any kind of service delivery.</p>
 
 <div align="center">
 
@@ -166,359 +180,87 @@
 
 <figure>
     
-    <a href="/images/2003-06-Ada_Lovelace.jpg"><img src="/images/2003-06-Ada_Lovelace.jpg" alt="" /></a>
+    <a href="/images/2004-01-CBS.png"><img src="/images/2004-01-CBS.png" alt="" /></a>
     
-    <figcaption>Ada Lovelace</figcaption>
+    <figcaption>Common Basic Specification</figcaption>
 </figure>
 
 </div>
 
-<p>It was Babbage who called Ada the “Enchantress of Number” although he was probably talking about Mathematics in general or even his own Analytical Engine. There is considerable disagreement about her capabilities and achievements, some believe she was a genius and the first programmer while others believe she was nothing of the sort. Like many, I would like to believe the former but can only find convincing evidence for the latter.</p>
-
 <blockquote>
-  <p>While other visitors gazed at the working of this beautiful instrument with the sort of expression, and I dare say the sort of feeling, that some savages are said to have shown on first seeing a looking-glass or hearing a gun – if, indeed, they had as strong an idea of its marvellousness – Miss Byron, young as she was, understood its working, and saw the great beauty of the invention.</p>
+  <p><strong>Class descriptions for the figure</strong></p>
 
-  <p>Sophia De Morgan – Wife of Ada’s mathematics tutor</p>
-</blockquote>
-
-<p>Quote taken from <a href="https://www.amazon.com/exec/obidos/ASIN/0142001449/virtualtravel-20">The Difference Engine. Charles Babbage and the quest to build the first computer</a> by Doron Swade</p>
-
-<blockquote>
-  <p>There is one subject ancillary to Babbage on which far too much has been written, and that is the contributions of Ada Lovelace. It would be only a slight exaggeration to say that Babbage wrote the “Notes” to Menabrea’s paper, but for reasons of his own encouraged the illusion in the minds of Ada and the public that they were authored by her. It is no exaggeration to say that she was a manic depressive with the most amazing delusions about her own talents, and a rather shallow understanding of both Charles Babbage and the Analytical Engine…To me, this familiar material [Ada’s correspondence with Babbage] seems to make obvious once again that Ada was as mad as a hatter, and contributed little more to the “Notes” than trouble… I will retain an open mind on whether Ada was crazy because of her substance abuse… or despite it. I hope nobody feels compelled to write another book on the subject. But, then, I guess someone has to be the most overrated figure in the history of computing</p>
-
-  <p>Bruce Collier – Former Assistant Dean Harvard College and Babbage Historian</p>
-</blockquote>
-
-<p>Quote taken from <a href="https://www.amazon.com/exec/obidos/ASIN/0142001449/virtualtravel-20">The Difference Engine. Charles Babbage and the quest to build the first computer</a> by Doron Swade</p>
-
-<p>Ouch!</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2003-05-27T00:00:00-07:00"><a href="/2003/05/the-assassins-a-radical-sect-in-islam-by-bernard-lewis/">May 27, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/2003/05/the-assassins-a-radical-sect-in-islam-by-bernard-lewis/" rel="bookmark" title="The Assassins. A Radical Sect in Islam by Bernard Lewis" itemprop="url">The Assassins. A Radical Sect in Islam by Bernard Lewis</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <div style="float:left; margin:20px;">
-<p></p>
-<a href="http://www.amazon.com/exec/obidos/ASIN/0465004989/virtualtravel-20"><img src="http://www.virtualtravelog.net/images/0465004989.jpg" alt="The Assassins" /></a>
-</div>
-<p>The Assassins or Ismailis were a fascinating, enigmatic people that used assassination, and the fear of it, as a political weapon. Their influence was felt throughout the Islamic world for 2 centuries and in the 13th century extended as far as Karakorum, the capital of the Mongol empire. The Mongols targeted them for destruction in 1256 and within a year they were eradicated.</p>
-
-<p>I’ve been curious about the Assassins for some time, largely because the Mongols were so systematic in the way they set about destroying them. This book is one of the few books on the subject written by a scholar that is currently in print. The first few chapters explain how Europe gradually came to understand who the Assassins were. Lewis does a good job of explaining how layers of misinformation and second hand, often biased, reports were gradually stripped away as contemporary texts, sometimes written by the Assassins themselves, were discovered and translated.</p>
-
-<p>The middle chapters of the book are a monotonous recitation of dates, names, places, and events with little analysis or explanation. This type of history I find unbearable it is data but it is not information! I have heard that Lewis’s other book What went wrong is similarly unreadable. I could understand this approach if the book were liberally scattered with footnotes and references to source documents, it would at least be useful to historians if this were the case. But it is not, Lewis expects us to take his history largely on faith since he provides few ways to validate his claims.</p>
-
-<p>If you manage to survive the boredom of the middle chapters and reach the final chapter Lewis provides a brief analysis of the Assassins place in history their methods and goals. Unfortunately by this point he’d lost my interest.</p>
-
-<p>In general I find Lewis’s analysis unconvincing. I must confess I do not know this period of History, which is why I bought the book, but there were a few occasions when Lewis drew parallels with events I do have some knowledge of and this was enough to destroy my faith in the breadth of his knowledge and the quality of his analysis. A few examples:</p>
-
-<blockquote>
-  <p>Page 129
-In one respect the Assassins are without precedent – in the planned, systematic and log term use of terror as a political weapon. The stranglers of Iraq had been small-scale and random practitioners, rather like the thugs of India, with whom they may be connected.</p>
-</blockquote>
-
-<p>The Thugs were an Indian cult that worshipped the goddess of destruction, Kali. They allegedly strangled more than one million travelers. Hardly “small scale and random”! Even if you believe, as some people do, that the thug threat was exaggerated by the British for political purposes, it is still a bad example precisely because of the confusion.</p>
-
-<blockquote>
-  <p>Page 91
-The Ismailis in their castles might well have been in a position to offer sustained resistance to Mongol attacks – but the new Imam decided otherwise.</p>
-</blockquote>
-
-<p>I find this hard to believe. If the Assassins had been able to resist the Mongols they would have been unique. No one in China, Korea, Russia or Europe managed to offer “significant resistance” to the Mongols. If the Assassins were different Lewis does not explain why. Within a year the Mongols had not only beaten the Assassins they had eradicated them.</p>
-
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-      <div class="entry-image-index">
-        <a href="/2003/05/defining-goals-and-objects-for-system-development/" title="Defining Goals and Objectives for System Development"><img src="/images//2003-05-ChimeMech2.png" alt="Defining Goals and Objectives for System Development"></a>
-      </div><!-- /.entry-image -->
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2003-05-23T00:00:00-07:00"><a href="/2003/05/defining-goals-and-objects-for-system-development/">May 23, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/2003/05/defining-goals-and-objects-for-system-development/" rel="bookmark" title="Defining Goals and Objectives for System Development" itemprop="url">Defining Goals and Objectives for System Development</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>Clearly expressed, goals and objectives are essential prerequisites for successful change management in complex environments. System design, implementation, and commissioning in the broadest sense are classic examples of this type of change. The only rational way of measuring the success of complex systems is to assess the degree to which goals have been achieved by measuring the attainment of objectives.</p>
-
-<p>A commonly used mnemonic for defining meaningful goals is S.M.A.R.T. Which depending on who you read can mean many things including:</p>
-
-<ul>
-  <li>Specific Measurable. Acceptable. Realistic. Time Framed</li>
-  <li>Specific. Measurable. Attainable. Realistic, Tangible</li>
-  <li>Specific. Measurable. Action Plan. Realistic, Timetable</li>
-  <li>Specific. Measurable. Action Oriented. Realistic. Time Stamped</li>
-</ul>
-
-<p>Taking a superset of these we get:</p>
-
-<ul>
-  <li>Specific. Measurable, Attainable, Acceptable, Action Oriented, Realistic, Tangible, Time Stamped. Time Framed.</li>
-</ul>
-
-<p>These are all desirable attributes however I feel the S.M.A.R.T. approach confuses goals and objectives, which are actually different things. Furthermore it does not really provide much guidance on how to ensure these desirable attributes are present in any specific goals. I think a more rigorous approach is needed for system design purposes. I use the following framework when defining goals and objectives.</p>
-
-<h3 id="goals">Goals</h3>
-
-<p>Goals can often be expressed in just a few words that describe a general aim. Goals are seldom directly measurable. They usually include a desirable quality and, if appropriate, an intended modification to that quality. Examples are: increased customer satisfaction, diversified client base, greater customer knowledge, improved cash flow, reduced hosting costs, improved staff moral, increased systems flexibility, and reduced cost of ownership. Often the goal merely specifies the quality that is to be accentuated, Profitability, Reliability, Maintainability, Security etc.</p>
-
-<h3 id="objectives">Objectives</h3>
-
-<p>Objectives are tightly bound to goals. Each goal can have one or more associated objectives. Unlike Goals, Objectives are measureable and provide a direct indication that progress is being made towards the goal. By definition the goal is achieved if all its associated objectives are attained. Sometimes objectives represent steps along the way toward achieving the goal and are often called milestones. People commonly define goals without defining supporting objectives, this makes it difficult, and in many cases impossible, to assess whether the goal has been achieved.</p>
-
-<p>Objectives are comprised of 5 parts – Description, Observable Attributes, Test Procedures, Test Values, and Derivation and Authority.</p>
-
-<h3 id="description">Description</h3>
-
-<p>Every objective requires a succinct description that can be used to refer to the objective.</p>
-
-<h3 id="observable-attributes">Observable Attribute(s)</h3>
-
-<p>Every objective defines a single observable attribute – a parameter, feature, or other characteristic that can be measured and is believed to be a good indicator of the desirable quality described in the goal. For Example; mean-time-between-failure (MTBF) is a common observable attribute for system reliability, days-sold-outstanding (DSO) is often taken as an indicator of client satisfaction and cash flow, and percentage voluntary turnover can be taken as an indicator of staff moral. There are many more commonly used observable attributes and I will try to ennumerate these in another article.</p>
-
-<h3 id="test-procedures">Test Procedure(s)</h3>
-
-<p>Every objective has a defined test that can be performed to quantify the observable attribute. The test procedure usually defines the conditions under which the test must be performed. For example; MTBF could be measured over a 6 month period of normal operation commencing 2 months after any significant change to the system, voluntary turnover could be measured every quarter and would exclude employees who were fired and whose total employment was less than 31 days.</p>
-
-<h3 id="test-values">Test Values</h3>
-
-<p>Each objective has one target value. This is the actual Objective. In addition several other values may be specified for comparative purposes. These are particularly useful when deciding if the target value is achievable and what the cost of achieving it is likely to be. When goals and objectives begin to change as the initiative or project progresses it is by tracking these factors that the system designer is able to stay in control.</p>
-
-<ul>
-  <li>Comparative Values</li>
-  <li>Worst Acceptable Value</li>
-  <li>Best Achievable Value</li>
-  <li>Current Value</li>
-  <li>Target Value</li>
-  <li>Planned Value</li>
-</ul>
-
-<h3 id="derivation-and-authority">Derivation and Authority</h3>
-
-<p>This defines the origin of the objective and is useful when many changing goals and objectives must be managed.</p>
-
-<p>A note on constraints: Constraints are merely objectives not to exceed a specific target value.</p>
-
-<h2 id="an-extreme-example-the-long-now-foundations-10000-year-clockhttplongnoworgclock">An Extreme Example. The Long Now Foundation‘s <a href="http://longnow.org/clock/">10,000 Year Clock</a></h2>
-
-<p>I like extreme examples because they force us out of the mundane world and make us think about our approach as much as the solution we are designing. And as this article is really about the approach to defining goals and objectives and not a particular solution I think an extreme example is called for. The Long Now Foundation has decided to build a clock of monumental proportions that will operate for 10,000 years. They are entirely serious about this largely symbolic gesture for reasons that I will not go into here.</p>
-
-<p>Below are the <a href="http://longnow.org/clock/principles/">principles</a> that Danny Hillis generated to guide the design of the Clock.</p>
-
-<blockquote>
   <ul>
-    <li>Longevity
-With occasional maintenance, the clock should reasonably be expected to display the correct time for the next 10,000 years.</li>
-    <li>Maintainability
-The clock should be maintainable with bronze-age technology.</li>
-    <li>Transparency
-It should be possible to determine operational principles of the clock by close inspection.</li>
-    <li>Evolvability
-It should be possible to improve the clock with time.</li>
-    <li>Scalability
-It should be possible to build working models of the clock from table-top to monumental size using the same design.</li>
+    <li><strong>Act for subject:</strong> An “Activity” that is directed towards a “Subject”.</li>
+    <li><strong>Activity:</strong> Purposeful and intentional “Event”</li>
+    <li><strong>Activity class:</strong> A kind of “Activity”.</li>
+    <li><strong>Agent:</strong> Role assumed by a “Subject” enabling it to act purposefully</li>
+    <li><strong>Authorised to perform:</strong> The recording of the fact that an “Agent” may perform certain classes of “Activity”.</li>
+    <li><strong>Category:</strong> Abstraction on the basis of common properties.</li>
+    <li><strong>Concept:</strong> “Object” which is a unit of thought.</li>
+    <li><strong>Event:</strong> Something which happens.</li>
+    <li><strong>Incident:</strong> “Event” occurring without known volition.</li>
+    <li><strong>Knowledge concept:</strong> A collection of “Concepts”, the relationships between them and the reasons for them.</li>
+    <li><strong>Located at:</strong> A “Location” for a “Subject”.</li>
+    <li><strong>Location:</strong> Point or piece of space.</li>
+    <li><strong>Object:</strong> Part of the conceivable or perceivable universe</li>
+    <li><strong>Percept:</strong> Perceived or inferred to exist</li>
+    <li><strong>Reason for activity:</strong> The identification of a “Subject property” as the reason for performing or planning an “Activity for &gt; subject”.</li>
+    <li><strong>Reference point:</strong> Point or piece of time or space.</li>
+    <li><strong>Responsible for:</strong> The responsibility that an “Agent” has for a “Subject”.</li>
+    <li><strong>Results in:</strong> A means of establishing that an “Activity for subject” has resulted in a “Subject property”.</li>
+    <li><strong>Subject:</strong> “Percept” which is one or more physical objects.</li>
+    <li><strong>Subject property:</strong> Anything that describes a subject:** location, identity, characteristic etc..</li>
+    <li><strong>Timepoint:</strong> Point or span of time.</li>
   </ul>
+
 </blockquote>
 
-<p>I believe these are not so much principles as condensed goals and objectives. Below is my attempt to restate these principles as goals and objectives using the framework I have outlined above.</p>
+<p>The initial publication of the CBS was found to be too high level. The model was hurriedly reworked and republished in 1993 as a series of CBS Application views one of which was later renamed the CBS Clinical View. This view was a slightly lower level ontology. After nearly 5 years and 5 million GBP had been invested in the model it was decided to use it as the foundation for a series of “demonstrator projects”. This work began in 1992/3. I was involved in the largest of these projects where the CBS was to be used as the foundation for an entire Hospital Information Support System. This system was to cover every aspect of hospital information management: patient master index, inpatient and outpatient management, orders and results reporting, , maternity, pharmacy, and many other ancillary activities including; clinical laboratories, laundry, and facilities management. By using the CBS as a conceptual model the final system was intended to be reusable across the NHS and be fully “future-proofed”. The system took almost 3 years to build and while it was successful in the first hospital it was only reused once.</p>
 
-<h2 id="goal-operational-longevity">Goal: Operational Longevity</h2>
+<p>In 1998, 3 years after the Hospital Information Support System was completed the model was redefined yet again and renamed the NHS Healthcare Model (HcM). But by this point it was too late. No one believed in the blue fairy of future proofing anymore and the model was abandoned. It is no longer even available online from any official NHS website. However, last year I downloaded a copy in anticipation of writing this article. So here is <a href="/projects/Ontology/CBS/default.htm#Index">The Common Basic Specification (CBS) a.k.a. The NHS Healthcare Model (HcM)</a>. Take a look around and try drilling down on some of the diagrams to get a real flavor of the model. (If you want a complete copy just send me an email and I will send a zipped file. Please don’t over stress my poor machine by downloading the whole thing.)</p>
 
-<hr />
-<p><strong>Objective:</strong> Display the correct time for 10,000 years assuming occasional maintenance.</p>
+<p>As ontologies go the Common Basic Specification is large and complex, which is not surprising given its scope and the length of time it took to develop. The CBS was reworked and refined until it became a clean conceptual model for generic service delivery. It is; coherent – logical in the relationship of its parts, generic enough to handle any healthcare delivery use case, and it is mature – the corners have been knocked off. So why did it fail?</p>
 
-<p><strong>Observable Attribute:</strong> Difference between the time displayed by the clock and the time determined by another method.</p>
+<h2 id="reasons-for-failure-of-the-common-basic-specification">Reasons for Failure of the Common Basic Specification</h2>
 
-<p><strong>Test Procedure:</strong> For 10,000 years after the clock begins operation an observer will examine the clock display at regular intervals of between 1 and 10 years. The examination will last for a reasonable period, not to exceed two days, sunrise to sunrise. The observer must not have access to another timepiece and can only use bronze-age technologies to take measurements. The time must be calculated from first principles without reference to pre-calculated tables or data.</p>
-
-<p><strong>Test Values:</strong></p>
-
-<p><strong>Comparative Value 1:</strong> John Harrison (1693 – 1776) constructed a state-of-the-art mechanical clock called H4 between (1755-1759). Now kept at <a href="http://weblog.rmg.co.uk/">Greenwhich</a>, it lost 5.1 seconds after a 43 day sea voyage in 1761/2. Extrapolating to 10 years gives a loss of 7 to 8 minutes.</p>
-
-<p><strong>Target Value:</strong> Difference between displayed time of the clock and time measured by another method is within the experimental error.</p>
-
-<p>I can not find a description of how to calculate time without reference to astronomical tables or specific events such as transits of planets. I imagine it is hard to do with any accuracy in just two days. I would guess that +- 2minutes would be about as good as could be achieved. And even then the observer would need some information such as the latitude and longitude of the clock and the day of the year.</p>
-
-<hr />
-<p><strong>Objective:</strong> A reasonable expectation of long-term success assuming occasional maintenance.</p>
-
-<p><strong>Observable Attribute:</strong> Fitness of the clock design to support operational longevity</p>
-
-<p><strong>Test Procedure:</strong> The design of the clock, its intended housing, construction materials, methods, and location will be inspected by a team of 12 people with expertise in areas such as: the geology and meteorology of the clock location, Time measurement techniques using Bronze age technologies, Bronze Age construction techniques, The Archeology and construction of ancient monuments, Properties of the construction materials, Large scale chronometer construction and maintenance, survival and reliability of cultural institutions over long time periods, Cultural Anthropology, History and Large scale engineering. This team will inspect the design of the clock for a reasonable period and will vote on proposition that “with occasional maintenance, the clock should reasonably be expected to display the correct time for the next 10,000 years.”</p>
-
-<p><strong>Test Values:</strong></p>
-
-<p><strong>Comparative Value 1:</strong> With No moving parts Stonehenge has survived for about 5000 years although it evolved over its first two thousand years. The current configuration is only 3500 years old and half of the stones are now missing or fallen. The purpose of Stonehenge is still a mystery but it appears to be some form of calendar.</p>
-
-<p><strong>Comparative Value 2:</strong> The <a href="https://en.wikipedia.org/wiki/Lighthouse_of_Alexandria">Lighthouse of Alexandria</a> , the only one of the seven wonders of the ancient world that was also a functional structure, lasted nearly a thousand years but eventually succumbed to earthquake damage.</p>
-
-<p><strong>Comparative Value 3:</strong> The <a href="https://en.wikipedia.org/wiki/Ise_Grand_Shrine">Jingu Shinto Shrine at Ise</a> is rebuilt every twenty years. It was first built in 04 C.E. The Long Now Foundation have identified this Shrine as an example of the kind of tight integration between institution and artifact that they are trying to create.</p>
-
-<p><strong>Target Value:</strong> Unanimous vote of confidence in the designs ability to survive 10,000 years and still operate accurately.</p>
-
-<hr />
-<p><strong>Objective:</strong> Occasional Preventative Maintenance .</p>
-
-<p><strong>Observable Attribute:</strong> Ratio of Expected Lifetime to Maintenance Interval (Mean Time Between Preventative Maintenance) = The number of expected maintenance events</p>
-
-<p><strong>Test Procedure:</strong> A 100 year rolling Mean Time Between Required Preventative Maintenance (MTBPM) will be calculated. This will not include repair of clock failures</p>
-
-<p><strong>Test Values:</strong></p>
-
-<p><strong>Comparative Value 1:</strong> In her book Longitude Dava Sobel reports that the current curators of John Harrison’s clock H4 believe that if it were kept wound it would require maintenance, consisting of complete disassembly and cleaning , once every 3 years and could be expected to last at least 3 or 4 centuries, although after such a period so many parts would have been replaced due to loss or damage that it could not be considered the same clock. This gives a Lifetime to Maintenance Interval ratio of between 100:1 and 133:1</p>
-
-<p><strong>Comparative Value 2:</strong> The highest ratio I can think of for any machine is for an AK-47 which, I am reliable informed, could be expected to last 30 years if cleaned once a week. The remarkable thing about the AK-47 is that it rarely needs cleaning, no matter how badly it is treated. This cleaning regimen would give a Lifetime to Maintenance interval ratio of about 1500:1</p>
-
-<p><strong>Target Value:</strong> Lifetime : Maintenance Interval of 500:1 This target value implies a maintenance event every 20 years – Once a generation with enough overlap to support apprenticeship and knowledge transfer. Similar to the Jingu Shinto Shrine mentioned above.</p>
-
-<h2 id="goal-maintainability">Goal: Maintainability</h2>
-
-<hr />
-<p><strong>Objective:</strong> The overall complexity of the clock’s design must be within the grasp of Bronze Age Engineers</p>
-
-<p><strong>Observable Attribute:</strong> Design complexity must not exceed Bronze Age capabilities</p>
-
-<p><strong>Test Procedure:</strong> A panel of 12 engineers from various disciplines should agree that the clock design does not exceed the capabilities of bronze age engineers implied by Bronze Age artifacts and where available contemporary written descriptions of Bronze Age engineering accomplishments.</p>
-
-<p><strong>Test Values:</strong></p>
-
-<p><strong>Comparative Value 1:</strong> <a href="http://www.math.stonybrook.edu/~tony/whatsnew/column/antikytheraI-0400/kyth1.html">The Antikythera Mechanism</a>. Built in 87 C.E. on Rhodes and lost in a ship wreak in 76 C.E. off the island of Andikythera was discovered in 1901 by divers. It consisted of a wooden box containing a corroded lump of bronze gears.</p>
+<p>Of the Millions of pounds spent on developing the CBS very little was spent on articulating the benefits of implementing a common standard or training people to use the model. Many potential beneficiaries of the model did not see the value of training staff to understand it. Implementing an ontology is a political activity. It requires persuasion, coercion and sometimes direct threats. Small specialized groups can be persuaded to agree on large complex ontologies but large groups find such agreement difficult and often impossible. It is almost as if there was a law governing the adoption of ontologies.</p>
 
 <blockquote>
-  <p>It is hard to exaggerate the singularity of this device, or its importance in forcing a complete re-evaluation of what had been believed about technology in the ancient world. For this box contained some 32 gears, assembled into a mechanism that accurately reproduced the motion of the sun and the moon against the background of fixed stars, with a differential giving their relative position and hence the phases of the moon. It is enough to know that there is no trace of anything like it until around 1000 A.D., and that when it was first published there were serious suggestions that it had been dropped into the wreck at a much later date or even that it was the work of alien astronauts.</p>
-
-  <p>Bill Casselmann</p>
+  <p>The size and complexity of an ontology is inversely proportional to the size and complexity of the community of agents that can be persuaded to adopt it.</p>
 </blockquote>
 
-<p>The Mathematician E. Christopher Zeeman <a href="http://www.bibliotecapleyades.net/ciencia/antikythera/ak.html">claims The Antikythera Mechanism is an accurate model to 1 part in 40,000</a>.</p>
+<p>But there is a more fundamental problem with top level ontologies that is not political. At higher levels of abstraction every conceptual model is subjective; there is always another way to model reality. It can be advantageous to deliberately take a contrary view precisely because it will lead to different conclusions that may offer competitive advantage over others. The field of Healthcare delivery is large enough to accommodate many different world views. The CBS failed because it was the fossilization of a single world view.</p>
 
-<p><a href="http://ccat.sas.upenn.edu/rrice/apagadgt.html">The existence of The Antikythera Mechanism</a> implies that tantalizing ancient reports of more complex devices on Rhodes 2000 years ago may well be true. Although none is known to have survived.</p>
+<p>Finally the Common Basic Specification took a top down reductionist approach to a fundamentally bottom up emergent problem. This same fundamental error is made by all top level ontologies. It is being made today by the developers of <a href="http://www.adampease.org/OP/">SUMO</a>, an ontology doomed to the same fate as the CBS. As a professional body the <a href="http://grouper.ieee.org/groups/">IEEE</a> ought to know better. A top down reductionist approach is useful for constrained problem domains but it is the wrong strategy for broad areas of knowledge. Robert Graves understood the tradeoff between a top down and a bottom up and explained it better than I ever could in his poem In Broken Images.</p>
 
-<p><strong>Target Value:</strong> Unanimous vote of confidence that the clock’s design does not exceed the capabilities of bronze age engineers.</p>
+<blockquote>
+  <h3 id="in-broken-images">In Broken Images</h3>
 
-<hr />
-<p><strong>Objective:</strong> All parts must be within Bronze Age manufacturing capabilities.</p>
+  <p>He is quick, thinking in clear images; 
+I am slow, thinking in broken images.</p>
 
-<p><strong>Observable Attribute:</strong> Part dimension tolerances</p>
+  <p>He becomes dull, trusting to his clear images; 
+I become sharp, mistrusting my broken images,</p>
 
-<p><strong>Test Procedure:</strong></p>
+  <p>Trusting his images, he assumes their relevance; 
+Mistrusting my images, I question their relevance.</p>
 
-<p>A panel of 12 engineers must agree that the design of the clock does not require parts to be manufactured to tolerances beyond those achievable with Bronze Age technologies.</p>
+  <p>Assuming their relevance, he assumes the fact, 
+Questioning their relevance, I question the fact.</p>
 
-<p><strong>Test Values:</strong></p>
+  <p>When the fact fails him, he questions his senses;
+When the fact fails me, I approve my senses.</p>
 
-<p><strong>Comparative Value 1:</strong> The Antikythera Mechanism. Graduation marks etched on the a dial of device show an error of 0.25 degrees in a 45 degree line</p>
+  <p>He continues quick and dull in his clear images;
+I continue slow and sharp in my broken images.</p>
 
-<p><strong>Comparative Value 2:</strong> Charles Babbage’s Difference Engine No 1. In His book <a href="https://www.amazon.com/exec/obidos/ASIN/0142001449/virtualtravel-20">The Difference Engine</a>. Charles Babbage and the quest to build the first computer Doron Swade states that measurements of the handmade parts from Difference Engine No1 established that Babbage’s engineer Clement was able to make repeat parts that differed from each other by no more than two thousandths of an inch. Obviously Babbage’s techniques were beyond Bronze Age capabilities however they are about the limit of what can be hand made.</p>
+  <p>He in a new confusion of his understanding;
+I in a new understanding of my confusion.</p>
 
-<p><strong>Target Value:</strong> A unanimous vote that no parts tolerance is required by the design to exceed two thousandths of an inch.</p>
+  <p>Robert Graves</p>
+</blockquote>
 
-<p>Goal: Transparency</p>
-
-<hr />
-<p><strong>Objective:</strong> During reassembly the relative positioning and exact orientation of each part must be self evident.</p>
-
-<p><strong>Observable Attribute:</strong> Correct operation for 30 days (one lunar cycle) after reassembly.</p>
-
-<p>Test Procedure</p>
-
-<p>A mechanically competent person with no knowledge of the clocks design, applying only bronze age techniques, will attempt to assemble it from it’s component parts with no written or spoken instructions.</p>
-
-<p><strong>Test Values:</strong></p>
-
-<p><strong>Comparative Value 1:</strong> Doron Swade reports that. Charles Babbage‘s designs for the Difference engine showed all the thousands of parts in their correct position relative to each other but gave no indication as to how they were to be physically oriented during assembly so their motions harmonized with the rest of the mechanism. When the engine was finally constructed it took many attempts to get all the parts in their correct orientation. Most of these attempts ended in a mechanism jam.</p>
-
-<p><strong>Target Value:</strong> The clock can be correctly reassembled from its component parts in less than a day.</p>
-
-<hr />
-<p><strong>Objective:</strong> The mechanism must support diagnosis of problems</p>
-
-<p><strong>Observable Attribute:</strong> Mean time to diagnose a problem</p>
-
-<p>Test Procedure</p>
-
-<p>Any mechanically competent person who is also able to correctly reassemble the clock from its component parts should be able to identify the source of any operational problem by inspection alone. This ability will be tested by introducing various problems into a working model of the clock and measuring the mean time to diagnose the cause.</p>
-
-<p><strong>Test Values:</strong></p>
-
-<p><strong>Comparative Value 1:</strong> When the Difference Engine in the <a href="http://www.sciencemuseum.org.uk/">Science Museum, London</a> jams it is almost impossible to diagnose where the jam has occurred. “There is no easy way of isolating one section of the engine from another so as to localize the source of the jam” All a hapless engineer can do is to poke around with a screwdriver.” The engines design lacks any way of localizing an error to a small section of the clock and identifying the problem without disassembly.</p>
-
-<p><strong>Target Value:</strong> The mean time to diagnose the cause of a problem and shall not exceed 15 minutes from problem identification. (Fixing it may take considerably longer!)</p>
-
-<hr />
-<p><strong>Objective:</strong> The procedure for resetting and restarting the clock must be intuitive.</p>
-
-<p><strong>Observable Attribute:</strong> Mean time to reset and restart</p>
-
-<p><strong>Test Procedure:</strong></p>
-
-<p>Any mechanically competent person should be capable of resetting and restarting the clock if it is stopped.(How they know what time to set it to is their problem!)</p>
-
-<p><strong>Test Values:</strong></p>
-
-<p><strong>Comparative Value 1:</strong></p>
-
-<p><strong>Target Value:</strong> The mean time to reset and restart the clock shall not exceed 30 minutes from problem identification.</p>
-
-<p><strong>Target Value:</strong> The mean time to reset and restart the clock shall not exceed 15 minutes.</p>
-
-<h2 id="goal-evolvability">Goal: Evolvability</h2>
-
-<hr />
-<p><strong>Objective:</strong> The clock must be modular in design.</p>
-
-<p><strong>Observable Attribute:</strong> The mechanism must comprise many loosely coupled modules that can each be replaced with other modules that perform the same function but are of a different design.</p>
-
-<p><strong>Test Procedure:</strong> Functionally identical modules of different design will be constructed and switched between different model clocks.</p>
-
-<p><strong>Test Values:</strong></p>
-
-<p><strong>Comparative Value 1:</strong> The <a href="https://en.wikipedia.org/wiki/Salisbury_cathedral_clock">Salisbury Cathedral Clock</a> was installed in 1386 It has no face and only strikes the hours. It originally used a foliot balance with a verge escapement. At the end of the 17th century, these were replaced by a pendulum and a recoil escapement. Holes on the clock’s frame show that these were later replaced again. In 1884, a new clock was installed and the old one was forgotten. In 1956, the clock was restored to its original condition and made to work again. Its pendulum and recoil escapement were replaced by a new foliot balance and verge escapement.</p>
-
-<p><strong>Target Value:</strong> Each module of the clock should have two completely different designs that are interchangeable leading to 2 to the power n different configurations of the clock, where n is the number of modules.</p>
-
-<h2 id="goal-scalability">Goal: Scalability</h2>
-
-<hr />
-<p><strong>Objective:</strong> It must be possible to build a working model of the clock over a large range of sizes.</p>
-
-<p>Observable AttributeSize of different versions of the clock</p>
-
-<p><strong>Comparative Value 1:</strong> 1/30th scale Corliss steam engine. <a href="http://www.craftsmanshipmuseum.com/Kieffer.htm">Jerry Kieffer</a>, a field representative for a Wisconsin power company managed to construct a working 1/30 scale Corliss steam engine model (1.5 orders of magnitude). This involved constructing miniature .009″ diameter hex bolts and matching nuts for use on the model. Every part of the model was to scale although some of the model parts were not made of the same material as the original engine.</p>
-
-<p><strong>Comparative Value 2:</strong> The great clock in the tower of the Place of Westminster, London, commonly known as Big Ben, was the largest clock ever built when it was installed. However size brings it’s own problems namely momentum which increases with the cube of distance. When one part of the mechanism failed in 1976 it took a year to repair the extensive damage.</p>
-
-<p>At 3:45am on the 5th of August 1976 as the clock started to chime, metal fatigue in the shaft connecting the chiming train to its fly fan caused the shaft to break. Without the retarding and braking effect of the fly, the chiming mechanism, propelled by the 1.25 ton weight in the shaft, increased its speed of rotation dramatically. This led to the total destruction of the chiming mechanism, with various components and fragments of others being scattered about the clockroom. Some pieces of machinery were flung at the ceiling with sufficient force to penetrate to the room above. The cast iron frame was fractured and collapsed onto the winding motor below. The flying debris also caused damage to the going and striking trains.</p>
-
-<p>It was necessary for the chiming train to be reconstructed from scratch. The magnitude of this task meant that other options, such as replacement with an electric motor, were considered. The reconstruction took almost one year to complete.</p>
-
-<p><strong>Target Value:</strong> The clock design must allow working models that scale over 2 orders of magnitude (1 to 100 meters)</p>
-
-<hr />
-
-<h2 id="conclusions">Conclusions</h2>
-
-<p>In thinking about the 10,000 year clock I have come to several conclusions;</p>
-
-<p>Bronze Age technology was more advanced than I ever knew.
-There appears to be one issue that Danny Hillis did not address in his principles. If the clock survives it could well become a victim of it’s own success. John Harrison’s H4 has become an historic object and is now considered too important to be wound. The “evolution” of Salisbury Cathedral’s clock has been reversed by removing the pendulum and recoil escapement, added to improve the clocks time keeping, and replacing it with a foliot balance with a verge escapement, thus “restoring” the clock to its original configuration. It would be a shame if The 10,000 year Clock of the Long Now were to survive only to be stopped to “preserve” it for future generations. Paradoxically it may be worth deliberately designing all the clocks parts to wear out and be replaced before they can become historic artifacts in their own right.</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -527,15 +269,192 @@ There appears to be one issue that Danny Hillis did not address in his principle
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2003-04-28T00:00:00-07:00"><a href="/2003/04/the-emerging-science-of-food-webs/">April 28, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2004-01-19T00:00:00-08:00"><a href="/2004/01/judging-the-likely-success-of-an-ontology/">January 19, 2004</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="/2003/04/the-emerging-science-of-food-webs/" rel="bookmark" title="The Emerging Science of Food Webs" itemprop="url">The Emerging Science of Food Webs</a></h1>
+      <h1 class="entry-title"><a href="/2004/01/judging-the-likely-success-of-an-ontology/" rel="bookmark" title="Judging the likely Success of an Ontology" itemprop="url">Judging the likely Success of an Ontology</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>This diagram shows a food web, The nodes are species and the lines show predator-prey relationships between the species. Species at higher <a href="http://www.dictionary.com/browse/trophic">trophic</a> levels eat those lower down in the web. This particular food web is for Little Rock Lake in Wisconsin and was produced by <a href="http://thecity.sfsu.edu/~wow/NeoMartinez.html">Neo D. Martinez</a> of San Francisco State University, <a href="http://rtc.sfsu.edu/">Romberg Tiburon Center for Environmental Studies</a>.</p>
+    <p>The debate about the promised value of the Semantic Web seems to me to be missing a dispassionate examination of the success, or otherwise, of existing ontology based solutions. Clay Shirky is obviously right when he states that <a href="http://www.shirky.com/writings/semantic_syllogism.html">a single monolithic ontology will never work</a>. His critics are equally right when they claim the Semantic web will only work if it is a melange of multiple interoperable Ontologies. What is missing from the debate is a more detailed explanation of what ontologies are good at, how they interoperate, and why systems based on ontologies succeed or fail. From my perspective as a systems designer this last point is the most significant. Debates about theory are nice, but examples of real solutions are more instructive. This essay will begin to examine this question by attempting to define the anatomy of an ontology. I will use this structure in later essays to examine the reasons for success and failure of individual ontologies.</p>
+
+<p>Ontologies are nice, in theory, but difficult to extract value from, in practice. They fail for a variety of reasons: The fundamental assumptions on which they are based are often unsound. Sometimes they are inflexible and unable to adapt to new circumstances. Or, conversely, while attempting to make them adaptable their designers make them too abstract for the people who are then burdened with their implementation. Frequently they are inadequately specified, leaving vital areas open to interpretation, thus negating their usefulness. And just as frequently they are designed without consideration for interoperability with other ontologies – ironic considering their basic purpose. Despite all these opportunities for failure successful ontologies can be spectacularly powerful.</p>
+
+<p>To analyze the success or failure of example ontologies it will be necessary to first define the anatomy or architecture of an ontology. By defining the roles and responsibilities of the component parts of an ontology it will be possible to explain the success or failure of various examples in terms of these components. Ontologies can vary widely in complexity. Some contain all the components listed below but many do not. The anatomy I develop below is based on practical experience of what has worked in systems I have designed, reviewed, or studied. This anatomy may not; be consistent with text books, agree with the latest theory, or reflect current best practice. It does however work for me. It may work for you, but I make no promises.</p>
+
+<h2 id="ontologies-in-theory">Ontologies in Theory</h2>
+
+<p>Tom Gruber of Stanford University <a href="http://www-ksl.stanford.edu/kst/what-is-an-ontology.html">defines the word Ontology</a> as :-</p>
+
+<blockquote>
+  <p>A specification of a conceptualization. That is, an ontology is a description (like a formal specification of a program) of the concepts and relationships that can exist for an agent or a community of agents.</p>
+</blockquote>
+
+<p>An Ontology can be thought of as a contract shared between agents that intend to exchange information. The contract takes the form of a model for structuring and interpreting exchanged data and a vocabulary that constrains these exchanges. Using a relatively small ontology agents can exchange vast quantities of data and consistently interpret it to extract information. Furthermore they can, in principle, infer new information by applying logical rules allowed, and sometimes explicitly specified, by the Ontology.</p>
+
+<p>It is worth remembering that every non-trivial ontology will allow logical inconsistencies. As Godel pointed out in his Incompleteness Theorem – In any axiomatic system it is possible to create propositions that cannot be proved or disproved. This does not negate the usefulness of ontologies just as it does not negate the usefulness of mathematics. However it does mean ontologies, like everything else, have their limitations.</p>
+
+<p>The sense of the word “Ontology” defined above was defined by the Artificial Intelligence research community after they stole the word from the field of philosophy. More recently it has been adopted to describe components of the Semantic Web. In the AI community the ability to infer new information from existing data is of fundamental importance and this is sometimes misinterpreted as a defining feature of an ontology. In fact many ontologies support this capability only weakly, if at all. The word is also sometimes narrowly defined to mean hierarchical taxonomies or constrained vocabularies, this usage is too narrow since an ontology also contains assertions about how data can be structured and interpreted and these assertions are missing from taxonomies and constrained vocabularies.</p>
+
+<p>The following brief summary taken from the essay <a href="http://infogrid.org/trac/wiki/Reference/PidcockArticle?story=20030115211223271">What are the differences between a vocabulary, a taxonomy, a thesaurus, an ontology, and a meta-model?</a> by Johannes Ernst provides a good description of the various frameworks often classified as ontologies.</p>
+
+<blockquote>
+  <p>Taxonomies and Thesauri may relate terms in a controlled vocabulary via parent-child and associative relationships, but do not contain explicit grammar rules to constrain how to use controlled vocabulary terms to express (model) something meaningful within a domain of interest. A meta-model is an ontology used by modelers. People make commitments to use a specific controlled vocabulary or ontology for a domain of interest</p>
+</blockquote>
+
+<p>For the purpose of this essay I will use a broad definition for the word ontology</p>
+
+<blockquote>
+  <p><strong>Ontology</strong> :- A specification of a conceptualization used by a community of agents to support the exchange and consistent use of information.</p>
+</blockquote>
+
+<h2 id="ontologies-in-practice">Ontologies in Practice</h2>
+
+<p>Ontologies, far from being an unproven new concept, are already in practical daily use. They form the foundation of classification systems, databases, and object oriented software applications. In a few notable cases ontologies have persisted and even evolved over many decades. What is new is the realization that all these seemingly different systems can be compared from an ontological point of view. With the rise of the Internet and the more recent global adoption of the Web the desire to discover and exchange information, rather than mere data, has grown. Developing methods to allow the interoperation of existing and new ontologies has become imperative – hence the efforts being expended on the development of the Semantic Web.</p>
+
+<h2 id="ontologies-in-context">Ontologies in Context</h2>
+
+<p>The value of an ontology can only be judged by its ability to support the exchange of information between agents. An ontology considered outside its context of use is a meaningless abstraction. It is only when a number of agents agree to use the same ontology to constrain their interactions that it gains any value. Most ontologies, especially successful ones, are less than perfect. Every useful ontology is a compromise between the conflicting needs of different agents. To fully appreciate the ability of an ontology to successfully support the exchange of information it is necessary to examine the instance data that is exchanged. All too often ontologies are presented in isolation as if they were the end of the story when in fact they are only the beginning of the dialog. The exchange is what is important not the ontology. For this reason I also include the instance data in the discussion below even though it is strictly not part of an ontology. It is worth noting that use cases are an essential part of ontology design. An ontology provided without supporting use cases is likely to be a failure.</p>
+
+<h2 id="general-purpose-and-single-purpose-ontologies">General Purpose and Single Purpose Ontologies</h2>
+
+<p>There are two basic types of ontology :- General purpose and single purpose. A General purpose ontology is analogous to a Universal Turing Machine in that it is capable of defining any other arbitrary ontology just as a Universal Turing Machine is capable of defining any other arbitrary Turing machine. General purpose ontologies are also capable of defining themselves. Self-definition is an significant capability because it provides for auto-discovery by both programmers and programs.</p>
+
+<p>For example, a program or programmer that can read and understand xml schema is theoretically capable of examining the definition of the xml language (<a href="https://www.w3.org/TR/xmlschema-1/#normative-schemaSchema">itself written in xml</a>) and auto-discovering new features should they be introduced at some point in the future. Thus programmers and programs need only be taught one ontology definition language if that language is auto-defining. Codd understood this need for self-definition when he specified rule 4 of his <a href="https://en.wikipedia.org/wiki/Codd's_12_rules">12 rules</a>.</p>
+
+<blockquote>
+  <p>Codds Rule 4 – Active online catalog based on the relational model</p>
+
+  <p>The system is required to support an online, inline, relational catalog that is accessible to authorized users by means of their regular query language.</p>
+</blockquote>
+
+<p>And if you don’t believe relational databases are ontologies you should read this.</p>
+
+<p>Self-definition is only one of the benefits of general purpose ontologies. The other is the ability to define new arbitrarily complex ontologies. Paul Rendell has used John Conway’s <a href="http://www.cpdee.ufmg.br/~seixas/PaginaATR/Download/DownloadFiles/MathematicalGames.pdf">game of life</a> (a set of rules defining a simple tile game) to implement a <a href="http://rendell-attic.org/gol/tm.htm">Turing machine</a>. This mind boggling example proves that the game of life is Turing complete and neatly illustrates how massive complexity can arise from a very simple specification. Another similar example is the <a href="http://www.unidex.com/turing/utm.xsl.htm">XSLT Turing machine</a>. In this example XSLT itself defined in XML is used to define a Turing Machine.</p>
+
+<p>Self definition and the ability to define arbitrarily complex ontologies is more than a party-trick. Consider the C programming language. The first C compiler was written in a programming language called B by Dennis Ritchie. The first thing he wrote in C was another C compiler which he compiled using the compiler written in B. He then created another executable compiler from the same C source code this time using the new pure C compiler. Since he now had the source code for a C compiler written in C and an executable version of that same code he was free of the B language forever.</p>
+
+<p>General purpose ontologies capable of self definition have existed for a century at the most and have only had any practical application outside mathematics and philosophy since the widespread adoption of the computer in the 1960′s and 70′s. Special purpose ontologies are a different matter. There are many successful special purpose ontologies that are not defined by any formal language (yet) but are never-the-less formally defined. I will examine several of these in later entries but for the time being two examples will illustrate their value.</p>
+
+<p><a href="http://www.rsc.org/periodic-table">The periodic table</a> is a classic widely used taxonomy. It becomes an ontology when it is combined with the following assertions and constants. (Please forgive me for any errors in these rules I am not a chemist.)</p>
+
+<ul>
+  <li>A molecule is the smallest quantity of a compound composed of chemically bonded elements</li>
+  <li>A chemical reaction occurs when reactants (elements and/or molecules) combine to produce products (elements and/or molecules) of different composition</li>
+  <li>Mass is conserved in a chemical reaction</li>
+  <li>Elements cannot be transmuted in a chemical reaction</li>
+  <li>A Mole of any compound is the product of the Avogadro number and the sum of the atomic masses of its constituent elements</li>
+</ul>
+
+<p>This classic chemistry ontology has withstood the attacks of scientist and abuse of school children for 200 years. It allows chemists to test the plausibility of any possible chemical reaction and predict the quantities of reaction products. The system is not perfect it cannot predict if reactions are thermodynamically likely, and it cannot predict some element properties, for example <a href="http://www.madsci.org/posts/archives/may97/862179191.Ch.r.html">why Mercury is a liquid</a>, but it can rule out many implausible chemical reactions. Most spectacularly it has been used to infer the existence of undiscovered elements and compounds.</p>
+
+<p>The <a href="https://www.rad.org.uk/study/Benesh">Benesh Movement Notation</a> is an ontology with a very different purpose. It is a system for recording any form of human movement. Expert Choreologists can use the notation to record entire ballets with multiple, interacting performers so that other choreologist can recreate the ballet in high fidelity without the original choreographer being present. The system records human movement symbolically on a musical stave so that the movements can be synchronized with a musical accompaniment. The system is superior to video since it can record the intentions of the original choreographer rather than the individual interpretation created by a particular performer.</p>
+
+<p>Special purpose ontologies are common. Some are widely used and some are very specialized, many are successful. All these ontologies will gradually be defined by general purpose ontology definition languages so they can be made to interoperate with other similar or overlapping ontologies. By studying these successful and in some cases long-lived ontologies we can learn a great deal about how to make the semantic web successful. Even interoperability of ontologies is not a new problem (more on interoperability in a later entry).</p>
+
+<h2 id="anatomy-of-an-ontology-a-five-layer-model">Anatomy of an Ontology. A Five Layer Model</h2>
+
+<p>It may be claimed that the model presented here is really a three layer model and that layers 0 and 4 are not strictly part of an ontology. This is true but it is necessary to consider all five layers when evaluating an ontology since they all affect the fitness for purpose of the complete solution.</p>
+
+<h3 id="layer-0-ontology-definition-language">Layer 0. Ontology Definition Language</h3>
+
+<p>The days of informally defined special purpose ontologies are over. From now on anyone taking the trouble to define an ontology will use a formal specification language. All the existing special purpose ontologies will gradually be re-defined using one of the available languages. The question is which one? There are legitimate reasons for having more than one language – different language bestow different qualities on the ontologies they define. It is still early days for many of these languages and today there are few, if any, experts who can make truly informed choices. A few general observations can be made.</p>
+
+<p>Ontology specification languages are not a mature technology. They are still evolving. It is likely that there will be several generations of these languages just as there were several generations of programming languages. The languages in use today will be replaced by “better” languages tomorrow. We can already see this happening, SGML has largely given way to XML and XML may in turn give way to RDF or OWL at least for certain uses. A well designed ontology has the potential to retain its usefulness for a long time and so may need to be migrated from one specification language to another. Languages that are better able to support interoperability will be a safer choice since ontologies specified with them will be easier to migrate to new “better” languages.</p>
+
+<p>In choosing an ontology specification language it should be remembered the relational data model and SQL have been the default choice for the past 25 years. This approach has been phenomenally successful. There is no doubt that it works and there is plenty of support for the model in terms of tools and expertise. It is no coincidence however, that new ontology specification languages are emerging just as the web has made the Internet ubiquitous. Relational databases work well on isolated servers where encapsulation of tightly coupled data and functionality are a benefit and applications interacting with the database can be strictly controlled. But smearing a relational database across multiple unreliably networked machines is to not a good idea. It can be done, but it isn’t pretty. The new languages (XML,RDF,OWL,etc) are designed to support exactly this kind of distribution. When functionality and data are distributed, loosely coupled, and independently controlled an ontology specification language will be a much better choice.</p>
+
+<h3 id="layer-1-data-structures">Layer 1. Data Structures</h3>
+
+<p>All ontologies specify data structures. Depending on the specification language selected these could be; tables containing columns, classes with slots, statements of the form: subject, predicate, object or one of several other basic formats. Whatever language is chosen a conceptual model must be developed that defines a set of data structures that is fit for the intended use. This process is the most influential factor in determining the quality of any solution subsequently designed to use the ontology. Support for flexibility, reliability, maintainability and many other qualities is either designed into the ontology or neglected at this point. Desirable qualities such as these are frequently weakened during later stages by poor development practices, but, even good development practices will not put these qualities back in if they were never there in the first place.</p>
+
+<p>In a previous essay on <a href="/2003/01/software-design-reviews-lessons-learned-and-best-practices/">system design reviews</a> I defined a set of axioms for good conceptual modeling. I have reproduced them here in summary form below. They apply equally to ontology design since an otology is merely a specification of a conceptualization.</p>
+
+<ol>
+  <li>Everything in moderation and nothing to excess</li>
+  <li>A good system design is based on a sound conceptual model (Architecture)</li>
+  <li>A sound conceptual model accounts for all system requirements at a reasonable level of abstraction
+    <ol>
+      <li>A conceptual model is sufficiently generalized when it can account for all significant use cases in a concise way that reduces complexity by consolidating similar features</li>
+      <li>A conceptual model is sufficiently specific when it is possible to demonstrate how a system design based on the model will achieve measurable targets for required system attributes</li>
+    </ol>
+  </li>
+  <li>
+    <p>A good conceptual model is easy to communicate</p>
+
+    <ol>
+      <li>A conceptual model is easier to understand and communicate if it is coherent – Logical in the relationship of it’s parts – Aesthetically consistent.</li>
+      <li>A conceptual model is easier to understand and communicate if it is analogous to a commonly experienced, tangible, real world system
+ 	3. A conceptual model is easier to understand and communicate if it is anthropomorphized – Made to mimic human behavior, characteristics and modes of interaction</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="layer-2-assertions-and-constraints">Layer 2. Assertions and Constraints</h3>
+
+<p>Data structures only implement part of a conceptual model. An ontology also contains a set of assertions and constraints. These assertions and constraints define rules concerning the relationships between data structures and the way the data they contain can be used.</p>
+
+<ul>
+  <li><strong>Integrity Constraints</strong> define what it means for operational data to be well formed or well structured. These constraints define the rules controlling validity of data such as uniqueness of; objects, records, or statements, and the cardinality and optionality of allowed relationships. Simpler constraints defined the data types for individual items like dates, numbers and specially formatted strings.</li>
+  <li><strong>Inference Constraints</strong> define how operational data can be combined and manipulated to produce new information – inferences. In most software applications these rules are usually static and embedded in the code and not directly accessible to other applications. However one of the features of ontology specification languages designed to support Artificial Intelligence systems is their ability to explicitly specify these rules so that external systems can learn them.</li>
+</ul>
+
+<h3 id="layer-3-reference-data">Layer 3. Reference Data</h3>
+
+<p>Many ontologies specify reference data in the form of constrained vocabularies, taxonomies, or thesauri. These data are used as components and classifiers of the operational data that is exchanged between agents. Agents agree on the meaning of reference data beforehand and thus can interpret exchanged messages or statements without ambiguity. Implicit in this use of reference data is the assumption that changes to the reference data will be infrequent as they will likely require version changes of the entire ontology. This is a non-trivial happening. Modification to a previously agreed constrained vocabulary may require many agents to change the way they interpret and process data and should be avoided if possible. Significant effort should be expended on considering the consequence of changes to reference data. It is too easy to ignore such issues and assume someone else will deal with problem should they arise.</p>
+
+<h3 id="layer-4-operational-data">Layer 4. Operational Data</h3>
+
+<p>Operational data, sometimes also called instance data, is supported by it’s ontology but is not part of it. The purpose of the ontology is to provide structure for the operational data. As a result it is necessary to consider the operational data when evaluating an ontology. It is my experience that there are two general types of operational data.</p>
+
+<ul>
+  <li>
+    <p><strong>Configuration Data.</strong> This data supports the required degree of flexibility in the solution by allowing certain features to be reconfigured. Systems that make a special feature of this type of flexibility are often called data driven, In a banking solution the types of bank account and the data relating to interest rates associated with each account could be considered configuration data. This is not the same as reference data. Configuration data is expected to change and must not require a version change of the ontology. In a hospital solution configuration data may describe the wards in the hospital and the bed compliment on each ward. All agents in such a system expect these things change over time and must be capably of reconfiguring the way they process data accordingly.</p>
+  </li>
+  <li>
+    <p><strong>Activity Data.</strong> Management of activity data is the main reason for the existence of any ontology. Activity data includes the actual exchanges of messages and statements between agents that have agreed to use the ontology. Without activity data everything that goes before is pointless. In a banking environment activity data could describe the opening or closing of an accounts or the actual deposits and withdrawals. In a health care setting activity data could describe clinical interventions; the x-rays and blood test performed on a patient, or at a slightly higher level the inpatient stays and diagnoses.</p>
+  </li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<p>The success or failure of any ontology should be judged primarily by it’s ability to support the exchange of operational activity data between agents. This can only be confirmed after the ontology is implemented by assessing how the system performs in the context of use. To reduce the risk of failure in the early stages of specification the various components of the ontology should be assessed individually and collectively in terms of their ability to support required use cases for operational activity data. The design of any ontology should be assessed in terms of the following components</p>
+
+<ol>
+  <li>Ontology Definition Language</li>
+  <li>Data Structures</li>
+  <li>Assertions and Constraints
+    <ol>
+      <li>Integrity Constraints</li>
+      <li>Inference Constraints</li>
+    </ol>
+  </li>
+  <li>Reference Data</li>
+  <li>Operational Data
+    <ol>
+      <li>Configuration Data</li>
+      <li>Activity Data</li>
+    </ol>
+  </li>
+</ol>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2003-12-29T00:00:00-08:00"><a href="/2003/12/source-code-as-history/">December 29, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/2003/12/source-code-as-history/" rel="bookmark" title="Source Code as History" itemprop="url">Source Code as History</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>When the history of early software development is written it will be a travesty. Few historians will have the ability, and even fewer the inclination, to learn long dead programming languages. History will be derived from the documentation not the source code. Alan Turings perplexed, hand written annotation “How did this happen?” on a cutting of Autocode taped into his <a href="http://www.chstm.manchester.ac.uk/research/nahc/contents/">note book</a> will remain a mystery.</p>
 
 <div align="center">
 
@@ -547,51 +466,16 @@ There appears to be one issue that Danny Hillis did not address in his principle
 
 <figure>
     
-    <a href="/images/2003-04-food_web.jpg"><img src="/images/2003-04-food_web.jpg" alt="" /></a>
+    <a href="/images/2003-12-How.png"><img src="/images/2003-12-How.png" alt="" /></a>
     
-    <figcaption>Little Rock Lake food web</figcaption>
+    <figcaption>How did this happen? Annotation of a program bug by Alan Turing</figcaption>
 </figure>
 
 </div>
 
-<p>Enough food webs have now been cataloged and described in detail for them to be studied as a general class of system using the techniques applied to the study of other networks. There are only a few descriptions of these studies outside the scientific literature. The California Academy of Sciences quarterly magazine – California Wild had this article called Untangled Food Webs and the BBC ran this story Life’s not so complicated Web but beyond that there does not appear to be much out there.</p>
+<p>What kind of bug would stump Alan Turing? Was it merely a typo that took a few hours to find? a simple mistake maybe? Or did the discipline of the machine expose a fundamental misconception and thereby teach him a lesson? The only way to know would be to learn Autocode.</p>
 
-<p>Searching the <a href="http://www.pnas.org/">Proceedings of the National Academy of Sciences (PNAS)</a> for papers published since January 2000 with the search string “food web” in the title or abstract yields <a href="http://www.pnas.org/search?submit=yes&amp;volume=&amp;firstpage=&amp;DOI=&amp;author1=&amp;author2=&amp;titleabstract=food+web&amp;fulltext=&amp;tocsectionid=all&amp;fmonth=Jan&amp;fyear=2000&amp;tmonth=Apr&amp;tyear=2003&amp;hits=110&amp;sendit=Search&amp;fdatedef=1+January+1990&amp;tdatedef=15+April+2003">104 results</a> (2003-04-28) and after a visual examination of these papers only 5 seem to deal with the study of food webs as a distinct phenomenon.</p>
-
-<p>Below I have attempted to summarize these articles and papers. All the errors and omissions are my doing. Please check the sources I have linked to above before you draw any conclusion based on my summary, I am not an expert.</p>
-
-<h3 id="all-food-webs-seem-to-share-similar-properties">All food webs seem to share similar properties</h3>
-
-<p>Food webs with more than around 12 species appear to have common properties that seem largely independent of the particular ecosystem they describe. These properties allow interesting predictions to be made about food webs and the species they contain. For example; the number of cannibalistic species, the ratio of species with specialized diets to species with broad non-specialized diets, and the maximum length of possible food chains can all be predicted.</p>
-
-<h3 id="big-fish-tend-to-be-less-common-than-the-little-fish-they-eat">Big fish tend to be less common than the little fish they eat</h3>
-
-<p>There appears to be a roughly inverse relationship between body mass and abundance for individual species within food webs. In one study body mass and abundance were each found to vary by at least 10 orders of magnitude but biomass abundance (average body mass times numerical abundance) varied by only 5 orders of magnitude. In addition species with small body mass tend to appear low in the food web and are numerically abundant.</p>
-
-<h3 id="food-webs-are-highly-connected-and-easily-disrupted">Food webs are highly connected and easily disrupted</h3>
-
-<p>In one study of 16 food webs with 25-172 nodes from variety of aquatic and terrestrial ecosystems food webs were found to have higher connectance (the fraction of all possible links between nodes that actually exist in the network) and smaller size than other types of networks that were studied. The complex feeding relationships between species typical of high connectance food webs can mean population fluctuations of one species dramatically affect another. There is evidence to suggest this ripple effect rarely travels more than 3 links away from the source. However the high connectance of food webs (on average species in a food web are just two links apart and &gt;95% of all species are within 3 links of each other) means that biodiversity loss and species invasion may have a greater effect on ecosystems than previously thought. The introduction of wild pigs to the California Channel Islands is thought to be an example of this knock on effect. Piglets provided a bountiful food source for golden eagles, that turned to the native island fox as a food source when the piglets were out of season, thus allowing the population of island skunks to soar. An attempt is being made to put the Channel Islands ecosystem back to what it was. A mass cull of pigs likely to take 6 years and a captive breading program for the few remaining foxes is now underway.</p>
-
-<h3 id="food-webs-interact-with-each-other">Food Webs interact with each other</h3>
-
-<p>In a study of contiguous food webs, a stream and the deciduous forest it ran through, the two food webs were shown to exchange insect prey during different seasons. During spring adult insects emerged from the stream and where eaten by birds and during summer insects fell into the river and were eaten by the fish. This exchange represented a reciprocal alternating subsidy.</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2003-04-18T00:00:00-07:00"><a href="/2003/04/the-traveler-guitar-an-example-of-fitness-for-purpose-in-product-design/">April 18, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/2003/04/the-traveler-guitar-an-example-of-fitness-for-purpose-in-product-design/" rel="bookmark" title="The Traveler Guitar – An Example of Fitness for Purpose in Product Design" itemprop="url">The Traveler Guitar – An Example of Fitness for Purpose in Product Design</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <div align="center">
+<div align="center">
 
 
 
@@ -601,16 +485,130 @@ There appears to be one issue that Danny Hillis did not address in his principle
 
 <figure>
     
-    <a href="/images/2003-04-speedster_large.jpg"><img src="/images/2003-04-speedster_large.jpg" alt="" /></a>
+    <a href="/images/2003-12-Turing_Bug.png"><img src="/images/2003-12-Turing_Bug.png" alt="" /></a>
     
-    <figcaption>Speedster from Traveler Guitar</figcaption>
+    <figcaption>Page from Alan Turing's notebook showing an annotated program with a bug</figcaption>
 </figure>
 
 </div>
 
-<p>I’ve been through so many airports recently I can’t remember which one this happen at. But I was waiting at the gate when this huge Viking of a guy came and sat next to me with what looked like a rifle case slung over his shoulder. My curiosity was aroused and as I checked out his case he caught me looking at it, so I felt it best to ask him about his Traveler Guitar to show I wasn’t just some loony staring at his baggage. He lit up with enthusiasm and proceeded to pull out the guitar and bolt on the arm support. Then he produced a digital sound processor the size of a cigarette pack, and some headphones. He plugged them all together and handed it to me. Cool! The thing was actually still in tune! He dialed in a nice funky sound and I was off, much to the amusement of the other passengers.</p>
+<p>The first stored program to be successfully executed was written by Tom Kilburn and executed on Monday 21 st June 1948 at Manchester University, England. It is said that this was the first and last program that Kilburn ever wrote. The program found the highest factor of a number and took 1 minute to complete on it’s first run. A second run with a different number took 2 minutes and 52 seconds. Unfortunately no one thought to document the program until Geoffrey C. Tootill wrote an amended version in his <a href="http://www.chstm.manchester.ac.uk/research/nahc/contents/">note book</a> a month later on the 18 th July 1948. The original has been lost. Below is a copy of Tootill’s version.</p>
 
-<p>Some people get confused about quality. Quality is fitness for purpose it is not an absolute. This is the finest quality traveling guitar I’ve ever come across. But it’s not a patch on my Fender Stratocaster for sound quality. The point is it doesn’t need to be. The difference is all about fitness for purpose. The traveler guitar weighs in at only 4 lbs, half the weight of my Strat. It has a full scale neck with 22 frets. But the machine heads are buried inside the body so they can’t get damaged or knocked out of tune. As an added benefit the neck is shorter as there is no head stock. The arm rest has two positions one for playing and one conveniently tucked away for traveling. And the whole thing looks great which is essential for an electric guitar! But best of all when packed for traveling it fits in a small bag that can be easily slung over the shoulder, unlike my fender which requires a flight case the size of a small coffin. Necessity is the mother of invention which is why this guitar could only have been invented by a pilot. But the high degree of quality coupled with the simplicity of the design makes this guitar a masterpiece in my book.</p>
+<div align="center">
+
+
+
+
+
+
+
+<figure>
+    
+    <a href="/images/2003-12-First_Program.png"><img src="/images/2003-12-First_Program.png" alt="" /></a>
+    
+    <figcaption>Page from Geoffrey C. Tootill's notebook showing his amended version of the first, successfully executed, stored program</figcaption>
+</figure>
+
+</div>
+
+<p><a href="http://www.chstm.manchester.ac.uk/downloads/media,38917,en.pdf">Via The National Archive for the History of Computing</a></p>
+
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2003-11-29T00:00:00-08:00"><a href="/2003/11/linksys-befw11s4-wireless-b-broadband-router-problems-low-reliability-and-poor-fault-tolerance/">November 29, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/2003/11/linksys-befw11s4-wireless-b-broadband-router-problems-low-reliability-and-poor-fault-tolerance/" rel="bookmark" title="Linksys BEFW11S4 Wireless-B Broadband Router Problems – Low Reliability and Poor Fault Tolerance" itemprop="url">Linksys BEFW11S4 Wireless-B Broadband Router Problems – Low Reliability and Poor Fault Tolerance</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <h2 id="background">Background</h2>
+
+<div style="float:left; margin:10px;">
+<p></p>
+<a href="http://www.amazon.com/exec/obidos/ASIN/B00005ARK3/virtualtravel-20"><img src="/images/2003-11_BEFW11S4_v4.jpg" alt="Linksys BEFW11S4 Wireless-B Broadband Router" /></a>
+</div>
+
+<p>A few months ago I had to setup a home office and decided I would take the opportunity to upgrade my home network. My Linksys BEFSR41 Etherfast Cable / DSL Router had never given me any problems and so I decided to upgrade to the Linksys BEFW11S4 Wireless-B broadband Router. I now have everything working reliably but getting to this happy state and resolving the problems took a lot of luck and in the end the solution was far from obvious. Judging by the bad reviews on Amazon and elsewhere it appears that many people have been unable to fix similar problems with this device. Below is my description of the problem and a solution that worked for me. Hopefully this will help others, but as always, your mileage may vary!</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>I have two Macs running OSX on my home network, both machines have static IP addresses and are wired to the router. I wanted to add a wireless Windows Laptop with a DHCP assigned IP address. I purchased a Linksys BEFW11S4 Wireless-B broadband Router and at the same time I bought a Proxim ORiNOCO Gold 802.11a/b/g ComboCard for the Laptop this came with a Proxim client utility. Installation and setup of the laptop card was very easy. Simply plug in the card, insert the disc and install the driver. The card immediately picked up my neighbors open network and I was on the Internet. Setting up the router was a bit more challenging; I copied the configuration from my previous device and enabled DHCP to start issuing IP numbers out of range of my 2 static machines. Everything worked and I was connected to the Internet via my new router.</p>
+
+<h2 id="symptoms">Symptoms</h2>
+
+<p>The wireless network seemed to work fine for several days but then it “hung”. The only fix was to turn off the router and turn it back on again. This hang affected all machines connected to the router. Whenever they attempted any network operations they would time out. However the Proxim client utility and the laptop claimed the wireless network was still running! The network hung once or twice a week – Annoying, but tolerable. Then I upgraded the laptop from windows 2000 to XP and things got worse! The network would hang one or two times a day. At first I did not connect the OS upgrade with the router problems, besides, I had another bigger issue.</p>
+
+<p>I connect to work via a Cisco VPN client which seemed to be working ok but all of a sudden (in fact immediately after the XP upgrade), Microsoft Exchange slowed to glacial speed. It would take hours to sync with the Exchange Server. This was not acceptable. I had to fix things. I called our company technical support and got through to the guy who manages the VPN. He said “What order did you install the wireless card driver and the VPN client? Because they don’t play nice together and you must install the wireless card driver first and then the VPN client”.</p>
+
+<h2 id="solution">Solution</h2>
+
+<ol>
+  <li>Download and install the latest firmware upgrade from Linksys. This is not enough to fix the problem on its own. I tried this first and the network still hung. But it’s a good idea and this solution may not work without it.</li>
+  <li>Uninstall the Cisco VPN client and the Proxim client utility from the laptop</li>
+  <li>Reinstalled the Proxim client utility on the laptop</li>
+  <li>Reinstalled the Cisco VPN client on the laptop
+Outcome</li>
+</ol>
+
+<p>The network has been running for 10 days without a single hitch.</p>
+
+<h2 id="cause">Cause</h2>
+
+<p>I’m still not certain what the cause was but this is what I suspect. The VPN client and Proxim client utility share something in common dlls or configuration or something! When installed in the wrong order things get messed up and in unusual circumstances the laptop sends network traffic that is somehow malformed. This affects the router and causes it to hang. Basically the router appears to be intolerant of glitches in low level network messages and this leads to low reliability. Not a great explanation I know and it may be completely spurious but my network now works reliably so I’m happy!</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2003-11-27T00:00:00-08:00"><a href="/2003/11/the-evolution-of-the-modern-computer-1934-to-1950-an-open-source-graphical-history/">November 27, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/2003/11/the-evolution-of-the-modern-computer-1934-to-1950-an-open-source-graphical-history/" rel="bookmark" title="The Evolution of the Modern Computer (1934 to 1950): An Open Source Graphical History" itemprop="url">The Evolution of the Modern Computer (1934 to 1950): An Open Source Graphical History</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>Some time between 1934 and 1950 the first modern computer was created. Pinning down exactly when that event occured is not easy. It depends on how you define the term computer and what you think is more important: The concept, the design, the first succesful test, or the first time the machine solved a real problem. In those early days it usually took years for a team to progress from concept through design to working machine. There were many such teams working mainly in the US and UK. These teams competed and cooperated somtimes they shared ideas and designs, and they sent representatives to visit each others laboratories. On one famous occassion in the Summer of 1946 almost all the leaders in the field got together at <a href="/2003/10/the-moore-school-lectures-and-the-british-lead-in-stored-program-computer-development-1946-1953/">the Moore School for an 8 week long series of lectures</a>. In short the story of the emergence of the modern computer is a complex one that involves both direct and indirect contributions from many people.</p>
+
+<p>There are many Computer History Timelines in existence. But all of these suffer from the same flaws. They are incomplete and thier linear nature fails to capture the complex web of influence that was the hallmark of computer development.</p>
+
+<div align="center">
+
+
+
+
+
+
+
+<figure>
+    
+    <a href="/images/2003-11_EarlyComputers_lrg_V0.2.png"><img src="/images/2003-11_EarlyComputers_lrg_V0.2.png" alt="" /></a>
+    
+    <figcaption>The Evolution of Early Computers</figcaption>
+</figure>
+
+</div>
+
+<p>Downloadable files available here</p>
+
+<p>In an effort to visualize this web of interaction. I have started to develop a graphical representation of the evolution of the modern computer. Fortunately AT&amp;T have kindly released a package called Graphviz which is capable of drawing complex directed graphs. The graph above is produced by Graphviz from a text file.</p>
+
+<p>The text file contains a detailed description of my approach, the classification I have used, and lists all the machines and the references to the data sources I used. I have not duplicated that information here because the whole point of the exercise is to gather all the data in one place.</p>
+
+<p>I have licensed this file with an attribution, share alike creative commons license. So please feel free to download and improve what I have started. If you do make changes please send me a copy and I will share the updates on this page.</p>
+
+<p>For the record. I believe that <a href="/2003/08/the-first-modern-computer-the-case-for-baby-the-manchester-mk-i-prototype/">The Manchester Mk I Prototype was the first Computer in a modern sense</a>. But the text file is not intended to prove this or any other machine was first. It is only intended to record the known dates and influences for computing machines designed between 1934 and 1950. I Believe that the graph is complex enough to support many interpretations.</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -667,9 +665,11 @@ There appears to be one issue that Danny Hillis did not address in his principle
 
     
     
+      <li>…</li>
+    
 
     
-      <li><a href="/page6/">6</a></li>
+      <li><a href="/page11/">11</a></li>
     
 
     

@@ -112,7 +112,7 @@
 		</li>
 		
 	    
-	    <li><a href="/publications/" >Publications</a></li>
+	    <li><a href="/links/" >Links</a></li>
 	  
 	    
 	    <li><a href="http://www.spandigital.com" target="_blank">SPAN Digital</a></li>
@@ -141,277 +141,22 @@
 <article class="hentry">
   <header>
     
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2002-12-31T00:00:00-08:00"><a href="/2002/12/a-solution-for-managing-timesones-times-and-dates-in-international-internet-systems/">December 31, 2002</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/2002/12/a-solution-for-managing-timesones-times-and-dates-in-international-internet-systems/" rel="bookmark" title="A Solution for Managing Timezones, Times, and Dates in International Internet Systems" itemprop="url">A Solution for Managing Timezones, Times, and Dates in International Internet Systems</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>The measurement and management of time is something most people give little thought to. But when designing Internet based systems time presentation, manipulation and management can rapidly become a major headache. Just when you think youve got it nailed some other unanticipated problem arises. The regular failure of systems designers to get this right is a classic example of the principle of inappropriate parsimony.</p>
-
-<p>The world is a sphere that rotates on its axis once every 24 hours and takes 365 days to rotate around the sun, more or less. Its very simple. But, the more or less part is vitally important. The world is not actually a sphere it is an oblate spheroid. It does not rotate every 24 hours it takes a ever-so-slightly longer than that and its getting slower, it wobbles on its axis which by the way is inclined to the plane of its rotation around the Sun. And as we all know it takes about a 1/4 of a day longer than a year to rotate around the Sun, more or less, and this time period is also increasing. Add to this the vagaries of international politics, national pride and public safety and you have a pretty complex system. All these factors affect the measurement and management of time. Given this complexity its not difficult to see why system designers try to simplify the conceptual model of the real world on which they base their solutions. However, this is the wrong thing to simplify. The solution can and should be simplified but the conceptual model on which it is based must be high fidelity not an approximation.</p>
-
-<h2 id="time-measurement-in-the-real-world">Time measurement in the real world</h2>
-
-<h3 id="international-time-zones">International Time Zones</h3>
-
-<p>Imagine the earth as a giant orange with 24 equally sized segments. Each segment takes up 1/24th of the earths circumference at any latitude. If two observers are standing on the same line of latitude, for example the equator, and they are exactly one segment (15 degrees) apart then there will be one hour difference between each observers local time. One of the observers will experience midday exactly 1 hour before the other. If the observers are exactly 2 segments apart then there will be 2 hours difference and so on.</p>
-
-<p>By international treaty these segments are called international time zones. The first segment is called UTC-0 and is centered in the Greenwich Meridian that passes through both poles and Greenwich in London, England. This is the 0 degree line of longitude. International Time Zones are numbered, east of London they are positive and west of London they are negative as follows.</p>
-
-<p>(…. UTC-3, UTC-2, UTC-1, UTC0, UTC+1, UTC+2, UTC+3…..)</p>
-
-<p>In case you were wondering UTC-12 does not exist it is called UTC+12. The numbers refer to the offset in hours from the Greenwich Meridian. So UTC-8 is 8 hours behind UTC0. The time in the UTC0 time zone is considered to be the “base” time. All other times are relative to UTC. UTC stands for Coordinated Universal Time or just Universal Time. (Yes! the Acronym has the letters the wrong way round. The French insisted on having it that way!). “Greenwich Mean Time” is no longer the international base time it has been replaced by UTC.</p>
-
-<p>The main point to understand is that each International Time Zone defines a precise geographical area of the earth’s surface and an offset in hours from Universal Time. Each area is exactly 15 degrees wide, they cut across countries without regard to national borders or the decisions of local governments. But we all know that time often changes as we cross state borders not as we cross some arbitrary line defined by geometry. So what is going on? Thinking of International Time Zones as geometrically rigid is not a common practice as this map shows. Most people and even organizations confuse International Time Zones with Local Civil Time Zones. Even the name of this map is oxymoronic. There is nothing “standard” about the areas it defines, they change regularly forcing the map to be redrawn on a yearly basis.</p>
-
-<div align="center">
-
-
-
-
-
-
-
-<figure>
-    
-    <a href="/images/2002-12-TimeZoneMap.jpg"><img src="/images/2002-12-TimeZoneMap.jpg" alt="" /></a>
-    
-    <figcaption>Map of local civil time zones overlaid on International Time Zones</figcaption>
-</figure>
-
-</div>
-
-<h3 id="local-civil-time">Local Civil Time</h3>
-
-<p>Each country in the world, and sometimes each administrative subdivision within a country, aligns itself with an International Time Zone and bases it’s own definition of Civil Time on this alignment. Choosing which International Time Zone to align with involves the evaluation of several factors; Maximizing useful daylight hours, the Time Zones chosen by trading partners, national pride etc.</p>
-
-<p>For Example the west coast of North America including administrative sub-divisions in Mexico, the USA (but not Alaska) and Canada have all aligned themselves with the UTC-8 International Time Zone even though the west coast of Canada lies mostly in the UTC-9 International Time Zone. The result is a region with the same offset in hours from UTC running from the Yukon Territory of northern Canada to half way down Baja California, Mexico. Each country and subdivision has named its Local Civil Time; in Canada it is called Pacific Time as it is in the USA but in Mexico it is called America/Tijuana Time.</p>
-
-<p>Countries cannot arbitrarily redefine or rename International Time Zones all they can change is their own definition of Local Civil Time. So Local Civil Time in India is defined as being 5 ½ hours ahead of Universal Time. This is convenient for India because of it’s geographical location (straddling the boundary between UTC+5 and UTC+6) but there is no International Time Zone called UTC+5.5.</p>
-
-<p>Much confusion results from the naming of International Time Zones UTC+3 is the name of a geographical area that is 3 hours ahead of Universal Time. However the name is also convenient shorthand for the offset from Universal Time. This leads many people to concluded that UTC+5.5 is the name of an International Time Zone. While it is plausible it is not accurate. There are only 24 International Time Zones.
-### Daylight Saving</p>
-
-<p>Daylight Saving is the process of changing Local Civil Time, by adding or subtracting a fixed time period, usually and hour. This adjustment is carried out seasonally and has the effect of extending the amount of daylight available during the standard 9-5 working day. It has been shown that this simple adjustment can save lives by allowing people to travel to and from work during daylight hours. Continuing the example above there are two versions of US Pacific Time, Pacific Standard Time and Pacific Daylight Time. Pacific Standard Time is UTC -8 hours. But Pacific Daylight time is UTC -8 hours, + 1 hour, (effectively UTC -7 hours).</p>
-
-<p>In the Northern Hemisphere the switch to daylight savings usually happens on the first Sunday of April at 2 am by adding one hour. The switch back usually occurs the on last Sunday of October again at 2 am by subtracting one hour. In the southern hemisphere everything is reversed. Daylight saving starts in September or October and ends in March or April.</p>
-
-<p>From a systems design view point handling International Time Zones and Daylight saving is tricky. The end of daylight saving is the most disruptive time. Since the same hour is repeated. This can lead to severe problems if datestamps are recorded using Local Civil Time. Many designers do not realize that the system works differently in the northern and southern hemispheres, and Designers often assume that International Time Zones are the same thing as Local Civil Time.</p>
-
-<h3 id="leap-years-and-leap-seconds">Leap Years and Leap Seconds</h3>
-
-<p>Everyone knows that there are 365 days in a year, but every 4 years the Gregorian calendar makes a correction by adding an extra day because there are actually 365.25 days in a year. But this itself is merely an approximation. The rule for leap years is if it is divisible by 4 unless it is also divisible by 100 unless it is also divisible by 400 in which case it is a leap year again (So the year 2000 was a leap year!)</p>
-
-<p>Every now and then leap seconds are added or taken away from UTC. This is achieved by adding, or subtracting, a second from the last minute, of the last day, of June or December. The last minute of 1996 was 61 seconds long. The reason for this adjustment is complex. If you want to understand then you need to look up the difference between International Atomic Time and Coordinated Universal Time. So far all leap seconds have been positive additions.</p>
-
-<h2 id="recording-dates-and-times-for-internet-systems">Recording Dates and Times for Internet Systems</h2>
-
-<p>One clean solution to the above problems is as follows</p>
-
-<ul>
-  <li>All Times must include the date as well since, as you will see, the date can change depending on where we choose to display the time.</li>
-  <li>All Times are recorded in UTC.</li>
-  <li>All Times are recorded with the Name of the local Civil time used to record them and a few denormailzed attributes (Offset and Daylight Savings) for efficiency.</li>
-</ul>
-
-<p>In this example dates are formatted as follows YYYY-MM-DD and all times are 24HR:MM:SS. This is how you would record 10 pm on May 18th 2002 in San Francisco</p>
-
-<table rules="groups">
-  <thead>
-    <tr>
-      <th style="text-align: center">UTC</th>
-      <th style="text-align: center">Civil Time</th>
-      <th style="text-align: center">Offset from UTC</th>
-      <th style="text-align: center">Daylight Saving</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">2002-05-19 5:00:00</td>
-      <td style="text-align: center">Pacific Daylight Time</td>
-      <td style="text-align: center">-8</td>
-      <td style="text-align: center">+1</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Notice that the days are different. In San Francisco it is still the 18th but at Greenwich it is the 19th. The benefit of this way of recording dates is that all dates recorded anywhere in the world can be compared. Since they are all recorded in UTC we can order by the UTC value and get everything in chronological order. Furthermore we can recreate the format of the original entered date and time easily and any other Time Zone without too much trouble.</p>
-
-<p>2002-05-19 5:00:00 Subtract 8 hours and then add 1 hour = 2002-05-18 22:00:00 (Pacific Daylight Time)</p>
-
-<p>This even gives us a way to untangle switches from daylight saving back to normal time. Consider the following. (Remember the switch from Daylight Saving back to Pacific Standard Time happened at 2 am on October 27th).</p>
-
-<table rules="groups">
-  <thead>
-    <tr>
-      <th style="text-align: center">UTC</th>
-      <th style="text-align: center">Civil Time</th>
-      <th style="text-align: center">Offset from UTC</th>
-      <th style="text-align: center">Daylight Saving</th>
-      <th style="text-align: left">Time in San Francisco</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">2002-10-27 09:30:00</td>
-      <td style="text-align: center">Pacific Daylight Time</td>
-      <td style="text-align: center">-8</td>
-      <td style="text-align: center">+1</td>
-      <td style="text-align: left">2002-10-27 02:30:00 (Pacific Daylight Time)</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td style="text-align: center">2002-10-27 10:30:00</td>
-      <td style="text-align: center">Pacific Standard Time</td>
-      <td style="text-align: center">-8</td>
-      <td style="text-align: center">+0</td>
-      <td style="text-align: left">2002-10-27 02:30:00 (Pacific Standard Time)</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>This demonstrates why recording UTC is essential to avoid repeating the same timestamps when switching from daylight savings back to normal time.</p>
-
-<p>What this model lacks is a way to lookup when daylight saving comes into effect. For this a lookup table is required as follows</p>
-
-<h3 id="civil-time-lookup-table">Civil Time Lookup Table</h3>
-
-<table rules="groups">
-  <thead>
-    <tr>
-      <th style="text-align: left">Column Name</th>
-      <th style="text-align: left">Example Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Year</td>
-      <td style="text-align: left">2002</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Local Civil Time Name</td>
-      <td style="text-align: left">Pacific Time</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Country</td>
-      <td style="text-align: left">USA</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Administrative Subdivisions</td>
-      <td style="text-align: left">Oregon, Washington, California</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Daylight Saving Time Name</td>
-      <td style="text-align: left">Pacific Daylight Time</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Daylight Saving Time Offset</td>
-      <td style="text-align: left">+1</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Daylight Saving Time Start</td>
-      <td style="text-align: left">2002-04-07 10:00:00 UTC-0</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Daylight Saving Time Stop</td>
-      <td style="text-align: left">2002-10-27 09:00:00 UTC-0</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Standard Time Name</td>
-      <td style="text-align: left">Pacific Standard Time</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Standard Time Offset</td>
-      <td style="text-align: left">0</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">International Time Zone Name</td>
-      <td style="text-align: left">UTC-8</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Offset from UTC</td>
-      <td style="text-align: left">-8</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>When recording a time with this model you need to know the date and time and the civil time that is being used. Then a check on the lookup table can be used to set the required parameters such as offset and the daylight savings value. This is not particularly efficient since it requires a lookup every time a date-time is recorded.</p>
-
-<p>Finally if you are going to all this trouble you really need access to a reliable system clock for accurate timestamps. This can be done by configuring Network Time Protocol.</p>
-
-<p>There is one thing this model does not handle. In the event that a negative leap second is ever required this model will not work. The second in question will be repeated. This seems unlikely. Since the earth is slowing down in its rotation around the sun not speeding up.</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2002-12-30T00:00:00-08:00"><a href="/2002/12/the-misapplication-of-occams-razor-or-the-principle-of-inappropriate-parsimony/">December 30, 2002</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/2002/12/the-misapplication-of-occams-razor-or-the-principle-of-inappropriate-parsimony/" rel="bookmark" title="The Misapplication of Occam’s Razor or the Principle of Inappropriate Parsimony" itemprop="url">The Misapplication of Occam’s Razor or the Principle of Inappropriate Parsimony</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>There is a class of design problem that can mislead the unwary systems designer, myself included, although I am getting better at identifying the warning signs. These design problems require the designer to base the solution on a conceptual model of a real world system or process. It often appears that a simple conceptual model that approximates to the real world system will suffice. In practices solutions based on these simple, low fidelity, models fail to handle the problem completely and often causes a whole series of new problems. Redesigning the solution to handle these exceptions only produces more problems that require more redesign and so on. If the hapless designer persists s/he will often go through several complete redesigns before getting to a solution that finally solves the problem by modeling the real world system with a high degree of fidelity. This iterative redesign process is typical of this class of design problem. Some might say that only poor designers are ever trapped in this way, others will say these solutions are anti patterns. But I think there is more too it.</p>
-
-<p>The type of design problem under consideration here is particularly intractable because there exists a series of approximate conceptual models of increasing fidelity and complexity. Faced with situations like these many systems designers will claim to be applying Occam’s razor when they opt to base their solution on the simplest conceptual model. But, a solution based on an approximation is only as good as the approximation. The only way to improve such a solution, if it is insufficient, is to replace the low fidelity conceptual model with one of higher fidelity. The worst type of problem is one that has many plausible conceptual models each of slightly higher fidelity and complexity than the last. The slavish misapplication of the principle of parsimony will condemn our systems designer to step through each successively higher complexity model until they finally reach one with the required fidelity.</p>
-
-<blockquote>
-  <p>Occams Razor – When faced with several explanations of a phenomenon One should always choose the simplest, the one that requires the fewest leaps of logic</p>
-</blockquote>
-
-<p>This leads to a tentative conclusion: Occam’s Razor is no good for selecting between alternative models if the alternatives are approximations with differing fidelity. A simple low fidelity model cannot be compared with a complex high fidelity one.</p>
-
-<p>An old joke comes to mind. An engineer, a physicist, a mathematician and a biologist were asked to define Pi: The engineer said About 3, the physicist said 3.14159 +- 0.00001, the mathematician said The circumference of a circle divided by its diameter and the biologist said What is Pi. Choosing the least complex, lowest fidelity model is not always the right answer! Too many systems designers think there is virtue in always assuming Pi should be about three.</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2002-12-27T00:00:00-08:00"><a href="/2002/12/first-entry/">December 27, 2002</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/2002/12/first-entry/" rel="bookmark" title="First Entry" itemprop="url">First Entry</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p>Hello World</p>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
       <div class="entry-image-index">
-        <a href="/2001/01/post-name/" title="Post Name"><img src="/images//2003-02-Mobile-Lounge.jpg" alt="Post Name"></a>
+        <a href="/2003/08/the-meaning-of-invention/" title="The Meaning of Invention"><img src="/images//2003-08-wright-flyer.png" alt="The Meaning of Invention"></a>
       </div><!-- /.entry-image -->
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2001-01-01T00:00:00-08:00"><a href="/2001/01/post-name/">January 01, 2001</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2003-08-22T00:00:00-07:00"><a href="/2003/08/the-meaning-of-invention/">August 22, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="/2001/01/post-name/" rel="bookmark" title="Post Name" itemprop="url">Post Name</a></h1>
+      <h1 class="entry-title"><a href="/2003/08/the-meaning-of-invention/" rel="bookmark" title="The Meaning of Invention" itemprop="url">The Meaning of Invention</a></h1>
     
   </header>
   <div class="entry-content">
-    <h3 id="title">Title</h3>
+    <p>I ‘ve been trying to understand what it means to invent something and found this site very useful <a href="http://www.wright-house.com/wright-brothers/taleplane.html">Wright Brothers History: The Tale of the Airplane A Brief Account of the Invention of the Airplane</a> researched, written, and designed by Gary Bradshaw.</p>
 
-<p>Body text here</p>
+<p>This graph really sums it up. You don’t have to be first but you do have to change the Paradigm.</p>
 
 <div align="center">
 
@@ -423,12 +168,196 @@
 
 <figure>
     
-    <a href="/images/2003-03-Problem_Resolution_Flow.jpg"><img src="/images/2003-03-Problem_Resolution_Flow.jpg" alt="" /></a>
+    <a href="/images/2003-08-Flight-Distances.jpg"><img src="/images/2003-08-Flight-Distances.jpg" alt="" /></a>
     
-    <figcaption>Caption here</figcaption>
+    <figcaption>Early flight distances</figcaption>
 </figure>
 
 </div>
+
+<blockquote>
+  <p>The Figure above depicts the longest flights made by various aircraft in the period 1890 to 1909. Green points represent the various Wright craft during this period. Blue points represent non-Wright craft made between 1890 and 1905, while red points represent non-Wright craft made from 1906 to 1909. Lines on the graph are regression functions. The flat blue line indicates that the field as a whole was making NO sustained progress through the end of 1905. This lack of progress is almost invariably true of individual inventors as well as the group as a whole. The positive slope of the Wright brothers indicates a steady progression in the ability of their heavier-than-air craft. Once details of the Wrights methods became public when their patent was issued in late 1905, other inventors quickly copied the important discoveries of the Wright brothers, and developed airplanes as capable as those of the Wrights.</p>
+</blockquote>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2003-08-07T00:00:00-07:00"><a href="/2003/08/is-traffic-congestion-leading-to-the-resurrection-of-trolley-cars-and-trams-in-large-cities/">August 07, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/2003/08/is-traffic-congestion-leading-to-the-resurrection-of-trolley-cars-and-trams-in-large-cities/" rel="bookmark" title="Is Traffic Congestion Leading to the Resurrection of Trolley Cars and Trams in Large Cities ?" itemprop="url">Is Traffic Congestion Leading to the Resurrection of Trolley Cars and Trams in Large Cities ?</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>I saw a Blackpool tram on the Embarcadero in San Francisco today. The destination on the side said “<a href="https://en.wikipedia.org/wiki/Blackpool_Tower">Tower</a>“. At first I was dumb-struck and then I thought “That’s a bloody long way on a tram!”</p>
+
+<div align="center">
+
+
+
+
+
+
+
+<figure>
+    
+    <a href="/images/2003-08-Blackpool-Tram.png"><img src="/images/2003-08-Blackpool-Tram.png" alt="" /></a>
+    
+    <figcaption>Blackpool Boat Tram</figcaption>
+</figure>
+
+</div>
+
+<p>I particularly liked the description of <a href="http://www.streetcar.org/streetcars/228-228-233-Blackpool-England/">San Francisco’s Blackpool tram</a> on the Market Street Railway website Every time I read it I hear Fred Dibnah‘s accent.</p>
+
+<blockquote>
+  <p>In England, “trolleys” are shopping carts. This is a “tram” and a special one at that….”</p>
+</blockquote>
+
+<p>The tram drivers on the newly extended <a href="http://www.streetcar.org/rider-information-map-2/">F-line</a> that runs the length of Market Street and then along the Embarcadero to Fisherman’s Wharf seem to like this tram. At lunchtime they park a few trams outside the newly renovated ferry building at the end of Market Street and all sit in the Blackpool tram to chat and eat. It really is quite a site. It’s even illuminated! For those who don’t know the <a href="https://en.wikipedia.org/wiki/Blackpool_Illuminations">Blackpool illuminations</a> are a national institution in the UK and date back to the days when electric street lights were such a novelty that people would travel miles to see them.</p>
+
+<p>Anyway all this got me thinking about trams and more particularly their rise, fall and recent resurrection as a serious form of public transportation.</p>
+
+<p>In the UK Trams were introduced in the late 1800′s. Manchester, for example, had its first horse drawn tram in 1877. Steam power was tried for a while but rapidly replaced with electricity at the turn of the century. By 1927 British tramways as a whole operated 14,481 cars on 4110 km of track. The internal combustion engine soon proved a more flexible power source. Busses did not require expensive track or electrical power supply systems and private automobiles delivered the ultimate in personal transportation flexibility, not to mention increased social standing. After the second world war the automobile came within the financial reach of the average person and the trams were slowly phased out. The last tram in Manchester ran in January 1949, on the Manchester to Hazel Grove route. Its number was 1007.</p>
+
+<p>By the 1970′s and 1980′s the automobile had became ubiquitous in many cities in the developed world. These cities became severely congested during the morning and evening rush hours. The virtues of the old trams that had been scrapped in the 1950′s slowly became self-evident. A well organized and run public transport system based on trams can carry greater numbers of people with more efficiency in and out of major cities than open access to private motor cars can support. This is definitely true of the relatively compact cities developed before the motor car but the sprawling cities developed since its invention, like Los Angeles and Phoenix, can probably never be saved.</p>
+
+<p>Trams returned to Manchester with the opening of the Metrolink in 1992 the first test run through the City streets was made by vehicle number 1007. The Metrolink has proved so successful that other UK Cities are following Manchester’s lead and reviving tram systems.</p>
+
+<ul>
+  <li><a href="http://www.railway-technology.com/projects/leeds/">Leeds Supertram</a></li>
+  <li><a href="http://www.railway-technology.com/projects/sheffield-tram/">Sheffield Supertram</a></li>
+  <li><a href="http://www.railway-technology.com/projects/nottingham/">Nottingham Express Transit</a></li>
+  <li>Croydon Tramlink</li>
+</ul>
+
+<p><a href="http://www.railway-technology.com/">railway-technology.com</a>
+lists 41 current light railway systems being built in cities around the world.</p>
+
+<p>I think the trend of rebuilding tram systems in major cities is a response to the way automobile congestion affects transportation networks. All commuters act out of self-interest by trying to shorten their journeys both in duration and distance. By having their own single or double occupancy vehicles commuters also have the convenience of traveling to a particular location at a time that is convenient for them. This strategy is more efficient than top down regulated systems of multiple occupancy vehicles with limited routes (Busses). But only up to a point. That point is somewhere just short of gridlock when journey time increase significantly. Here it becomes more efficient to travel together in multiple occupancy vehicles on a limited number of routes. Or at least it would be if everyone did so, the problem is that multiple occupancy vehicles get caught in the same traffic. There are two main ways of solving this problem.</p>
+
+<ol>
+  <li>Reduce traffic by punishing travelers for using selfish, low occupancy, modes of transportation. London’s new tax on entering the city in an automobile is exactly this type of punishment.</li>
+  <li>Provide segregated routes for multiple occupancy vehicles. Bus lanes, car pool lanes, and segregated tram lines all provide this form of advantage. This still leaves the question of why trams and not busses? A debate that appears to have been going on for years with no clear conclusion.</li>
+</ol>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2003-07-28T00:00:00-07:00"><a href="/2003/07/un-commission-on-human-rights-loses-all-credibility/">July 28, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/2003/07/un-commission-on-human-rights-loses-all-credibility/" rel="bookmark" title="UN Commission on Human Rights Loses All Credibility" itemprop="url">UN Commission on Human Rights Loses All Credibility</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>On 24 July 2003 <a href="https://rsf.org/en">Reporters Without Borders</a> was suspended from the <a href="http://www.ohchr.org/EN/HRBodies/CHR/Pages/CommissionOnHumanRights.aspx">United Nations Human Rights Commission</a> for one year. For details of why this injustice happened see my previous entry <a href="/2003/06/farce-at-the-united-nations-human-rights-commission/">Farce at the United Nations Human Rights Commission</a>. Reporters Without Borders have published a press release and a report on the commission’s accelerating decline, entitled UN Commission on Human Rights Loses all Credibility. Wheeling and dealing, incompetence and non-action.</p>
+
+<blockquote>
+  <p>The results of the vote on the suspension of the consultative status of Reporters without borders :</p>
+
+  <p>In favour (27): Azerbaijan, Benin, Bhutan, Brazil, Burundi, China, Congo, Cuba, Egypt, Ethiopia, Ghana, India, Iran, Jamaica, Kenya, Libya, Malaysia, Mozambique, Nepal, Nigeria, Pakistan, Qatar, Russian Federation, Saudi Arabia, South Africa, Uganda, and Zimbabwe.</p>
+
+  <p>Against (23): Andorra, Australia, Chile, El Salvador, Finland, France, Georgia, Germany, Greece, Guatemala, Hungary, Ireland, Italy, Netherlands, Nicaragua, Peru, Portugal, Republic of Korea, Romania, Sweden, Ukraine, United Kingdom, and United States.</p>
+
+  <p>Abstentions (4): Argentina, Ecuador, Japan, and Senegal.</p>
+</blockquote>
+
+<p>Taken from the Reports without Borders press release</p>
+
+<p>It seems Argentina, Ecuador, Japan and Senegal were too spineless to even have an opinion! The report by Reporters Without Borders makes clear that the noble idea of the United Nations Human Rights Commission is far from it’s ignominious reality.</p>
+
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2003-07-26T00:00:00-07:00"><a href="/2003/07/free-culture-by-lawrence-lessig/">July 26, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/2003/07/free-culture-by-lawrence-lessig/" rel="bookmark" title="Free Culture by Lawrence Lessig" itemprop="url">Free Culture by Lawrence Lessig</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>I just watched Lawrence Lessig‘s speech, Free Culturefor a second time. The recording below was made at the <a href="http://conferences.oreillynet.com/os2002/">O’Reilly Open Source Convention 2002</a> where Lessig delivered the keynote. It is a superb example of a well designed and delivered power point presentation. It is also very persuasive.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xVk77VQuPAY" frameborder="0"></iframe>
+
+<p>Throughout the presentation Lessig repeats the refrain:</p>
+
+<blockquote>
+  <ol>
+    <li>Creativity and innovation always builds on the past.</li>
+    <li>The past always tries to control the creativity that builds on it.</li>
+    <li>Free societies enable the future by limiting the past</li>
+    <li>Ours is less and less a free society.</li>
+  </ol>
+</blockquote>
+
+<p>He concludes with the observation…</p>
+
+<blockquote>
+  <p>Extending copyright perpetually… is itself a form of theft – a theft of our common culture.</p>
+</blockquote>
+
+<p>It worries me when a lawyer as smart as Lessig calls on people to defend long held freedoms. He strikes me as very level headed and clear thinking and when he claims there is something to be defended I believe he is probably right.</p>
+
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2003-07-23T00:00:00-07:00"><a href="/2003/07/emergence-of-cooperation-in-balinese-rice-farming/">July 23, 2003</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About John R. Harris">John R. Harris</a></span></span>
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/2003/07/emergence-of-cooperation-in-balinese-rice-farming/" rel="bookmark" title="Emergence of Cooperation in Balinese Rice Farming" itemprop="url">Emergence of Cooperation in Balinese Rice Farming</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p><a href="http://samoa.santafe.edu/media/workingpapers/03-05-030.pdf">Cooperation in Balinese Rice Farming</a> by J. Stephen Lansing and John H. Miller</p>
+
+<p>This great article explains in clear terms how Balinese rice farmers acting in self interest and following a few simple rules have caused the emergency of a large scale system that tends to maximize rice yields given the prevailing constraints.</p>
+
+<div align="center">
+
+
+
+
+
+
+
+<figure>
+    
+    <a href="/images/2003-07-Balinese-Rice-Fields.jpg"><img src="/images/2003-07-Balinese-Rice-Fields.jpg" alt="" /></a>
+    
+    <figcaption>Balinese rice fields</figcaption>
+</figure>
+
+</div>
+
+<blockquote>
+  <p>For centuries Balinese rice farmers have engaged in cooperative agricultural practices. Without centralized control, farmers have created a carefully coordinated system that allows productive farming in an ecosystem that is rife with water scarcity and the threat of disease and pests.</p>
+</blockquote>
+
+<p>It seems to me that P2P computing networks are in some ways analogus to the rice famers networks of fields and irrigation channels. Yet they have so far failed to produce any large scale emergent features, unless you count the destruction of the music industry as an emergent feature! The current crop of P2P systems seem to lack the simple rules that lead to emergent properties. I suspect it will not be too long before we see P2P systems that feature these simple rules and produce large scale emergent features.</p>
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -475,15 +404,37 @@
         <li><a href="/page5/">5</a></li>
       
     
+      
+        <li><strong class="current-page">6</strong></li>
+      
+    
+      
+        
+        
+        
+        <li><a href="/page7/">7</a></li>
+      
+    
+      
+        
+        
+        
+        <li><a href="/page8/">8</a></li>
+      
+    
 
     
     
-
-    
-      <li><strong class="current-page">6</strong></li>
+      <li>…</li>
     
 
     
+      <li><a href="/page11/">11</a></li>
+    
+
+    
+    
+      <li><a href="/page7/" class="btn">Next</a></li>
     
   </ul>
 </div>

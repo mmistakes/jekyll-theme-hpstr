@@ -1,0 +1,130 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Access Group For Information"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S75067"><Font size=4 color="b22222">
+Access Group For Information (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Access allowed for a particular &quot;Access Group&quot; to a &quot;Subject&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+The &quot;Subject&quot; to which access is allowed is normally one holding information. Others are not
+prohibited but would be meaningless in this context.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S75102"><Font size=4 color="b22222">
+Access Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Level&quot; specifying the extents to which access to information may be granted.
+</B></font><BR>
+<DT><Font size=3>Examples: 
+<DD><B>
+Examples which may be considered include:
+<BR>
+Read only
+<BR>
+Copy
+<BR>
+Forward to others
+<BR>
+Absolute.
+<BR>
+Each level would be deemed to include all lower levels.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S75065"><Font size=4 color="b22222">
+Agent Access Group (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Method of allowing one or more &quot;Agents&quot; to gain access to &quot;Subjects&quot; or information about them.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S75068"><Font size=4 color="b22222">
+group (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Agent Access Group&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Information&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Information&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Agent Access Group&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S75103"><Font size=4 color="b22222">
+maximum access (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Access Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Information&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Access Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Information&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S75069"><Font size=4 color="b22222">
+subject (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Information&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Information&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S75162"><Font size=4 color="b22222">
+Subject (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Percept&quot; consisting of one or more persistent physical objects.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+The definition above, as for others, has been distilled from what has been suggested in the past,
+including:
+<BR>
+
+<BR>
+The &quot;Object&quot; of interest to an &quot;Agent&quot; (CBS v2).
+<BR>
+One or a collection of physical objects.
+<BR>
+&quot;Percept&quot; which is a physical object and &#47; or a collection of physical objects.
+<BR>
+Persistent perceivable object.
+<BR>
+Extension of one or more &quot;Concepts&quot; which is perceived or inferred to exist in the universe.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

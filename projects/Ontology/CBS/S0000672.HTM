@@ -1,0 +1,271 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Authorised Agent Activity"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S173485"><Font size=4 color="b22222">
+AAA&#47;essential type (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4155.htm#D78303" target="SADETAILTARGET"><Font size=2 color="b22222">
+Authorised Agent Activity (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173484"><Font size=4 color="b22222">
+AAT&#47;essential type (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Agent's Activity Type&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4147.htm#D77842" target="SADETAILTARGET"><Font size=2 color="b22222">
+Agent's Activity Type (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173478"><Font size=4 color="b22222">
+Activity Specification (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Comment: <B>
+Activity specification is included here as a place-holder.  When this model merged with the protocol
+model the definition from that model should be used.  If there is no Activity specification in the
+protocol model then it should be deleted from this diagram and from the Agent encyclopaedia.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173482"><Font size=4 color="b22222">
+Activity Type Offered (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+An &quot;Activity Type&quot; that an &quot;Agent&quot; makes a general offer to perform. 
+<BR>
+
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+There is no need for any authorisation for this type of offer - it can be offered by a &quot;Free Agent&quot;.
+ Example would be setting up a business to supply goods that are not regulated by legislation (i.e.
+a pharmacists shop would not be covered by this type.)
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173487"><Font size=4 color="b22222">
+agent for (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>Number: <B>
+0
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>Redefines: <B>
+Agent.&quot;Agent's Activity Type&quot;.&quot;agent for&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173477"><Font size=4 color="b22222">
+Agent's Activity Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Number: <B>
+0
+</B></font><BR>
+<DT><Font size=3>Description: <B>
+A means of establishing that an &quot;Agent&quot; may perform, offer to perform or authorise others to perform
+certain &quot;Activity Types&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+For examples see subtypes.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173479"><Font size=4 color="b22222">
+Authorised Activity Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000670.htm" target="_top"><Font size=2><B>Authorised Activity Type</A> (
+UML Class)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+&quot;Activity Type&quot; that an &quot;Agent&quot; has been authorised to perform by another &quot;Agent&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+This could be very broad: 'General Surgical Duties', or narrower:  'Cardiac Surgical Duties'.  
+<BR>
+
+<BR>
+It could be a hospital's authorisation to a clinician that, although generally authorised to perform
+all surgical duties, the hospital only authorises the clinician to perform cardiac surgical
+procedures.
+<BR>
+
+<BR>
+The relationship to &quot;Activity Type&quot; via &quot;Activity Type Permission&quot; and its subtypes, allows for
+selective inclusion and exclusion of Authorise Activities.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173481"><Font size=4 color="b22222">
+Authorised Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Agent&quot; whose actions are subject to another's authority and control.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+The type of control would include permissions (may do), obligations (must do) and interdictions
+(must not do).
+<BR>
+
+<BR>
+An &quot;Agent&quot; who invests authority in another shares some liability for the actions of those to whom
+it gives authority.
+<BR>
+
+<BR>
+An example of an &quot;Authorised Agent &quot; would be Dr. Smithers given the authority by the NHS XYZ Trust
+to run the Medical Clinical Directorate.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173475"><Font size=4 color="b22222">
+Authorised Agent Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity Type for Agent&quot; that is subject to some type of authorisation or external control.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Such control can be interdictions, permissions and exceptions (including &quot;Activity State Types&quot;) to
+one or many Activity Types.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173480"><Font size=4 color="b22222">
+Authority To Authorise (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000673.htm" target="_top"><Font size=2><B>Authority To Authorise</A> (
+UML Class)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+Authority held by one &quot;Agent&quot; to authorise other &quot;Agents&quot; to perform certain &quot;Activity Types&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+The General Medical Council has the &quot;Authority to Authorise&quot; medical staff to perform various kinds
+of medical duties.  It does not have the authority to perform these duties itself.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173496"><Font size=4 color="b22222">
+end (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173486"><Font size=4 color="b22222">
+specified by (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity Specification&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity Specification&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173495"><Font size=4 color="b22222">
+start (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173483"><Font size=4 color="b22222">
+State Transition Excluded (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000804.htm" target="_top"><Font size=2><B>State Transition Excluded</A> (
+UML Class)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+&quot;State Transition&quot; that  may not be performed for this &quot;Authorised Agent Activity&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+For example, whilst an &quot;Agent&quot; may be permitted to perform some activity or group of activities,
+s&#47;he may not be allowed to authorise it.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173488"><Font size=4 color="b22222">
+subject to constraint (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Excluded&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Permission&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173476"><Font size=4 color="b22222">
+Timepoint (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Reference Point&quot; being a point or period in time.
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

@@ -1,0 +1,800 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Definitions, Encyclopedia:"D:\DATA\SYSARCH\HCM\GEN_DATA\SUBJECT\V01\CURRENT\"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<A NAME="Definitions">
+<A NAME="D154753"><Font size=4 color="b22222">
+AC&#47;Direction (Gen-Spec Arc)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Associative Category&quot;
+</B></font><BR>
+<DT><Font size=3>Open: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4153.htm#D67879" target="SADETAILTARGET"><Font size=2 color="b22222">
+Associative Category (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="D75027"><Font size=4 color="b22222">
+Access Group For Information (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Access allowed for a particular &quot;Access Group&quot; to a &quot;Subject&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+The &quot;Subject&quot; to which access is allowed is normally one holding information. Others are not
+prohibited but would be meaningless in this context.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D75033"><Font size=4 color="b22222">
+Access Group For Object (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Describes the access an &quot;Agent Access Group&quot; has to an &quot;Object&quot;.
+</B></font><BR>
+<DT><Font size=3>Examples: <B>
+For example, if a patient says to a GP, &quot;Don't tell anyone about this but another doctor in the
+practice&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D75100"><Font size=4 color="b22222">
+Access Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Level&quot; specifying the extents to which access to information may be granted.
+</B></font><BR>
+<DT><Font size=3>Examples: 
+<DD><B>
+Examples which may be considered include:
+<BR>
+Read only
+<BR>
+Copy
+<BR>
+Forward to others
+<BR>
+Absolute.
+<BR>
+Each level would be deemed to include all lower levels.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D73134"><Font size=4 color="b22222">
+accuracy unit for (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Unit Of Measure&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Measured Qualifier&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D31248"><Font size=4 color="b22222">
+Acquired Permanent Property (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Subject Property&quot;, effective from a point in time, which cannot be changed.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+post-CBS
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D31250"><Font size=4 color="b22222">
+Acquired Temporary Property (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Subject Property&quot; which exists until it is observed to change. 
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+post-CBS
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D127"><Font size=4 color="b22222">
+Activity For Subject (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; directed towards a single &quot;Subject&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous definitions from which the above have been distilled:
+<BR>
+
+<BR>
+An act which changes either the state, or the knowledge of the state, of a &quot;Subject&quot; (CBS v2).
+<BR>
+
+<BR>
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+CBS V2 Gen
+</B></font><BR>
+<DT><Font size=3>Previous name: <B>
+ACTUAL ACT
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D34413"><Font size=4 color="b22222">
+activity for (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Activity
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D74026"><Font size=4 color="b22222">
+Activity In Context (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity For Subject&quot; placed within a &quot;Context Activity&quot; by an &quot;Agent&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D154933"><Font size=4 color="b22222">
+Activity Qualifier Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Descriptive Category&quot; capable of classifying an &quot;Activity Qualifier&quot;
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Necessary to indicate the nature of the qualification as opposed to its value.
+</B></font><BR>
+<DT><Font size=3>Examples: <B>
+In medication, &quot;Route&quot;, &quot;Form&quot;, &quot;Strength&quot;, &quot;Special Instructions&quot; are all examples of &quot;Activity
+Qualifier Type&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+COSHER
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D35463"><Font size=4 color="b22222">
+Activity Qualifier (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Phenomenon Qualifier&quot; qualifying an &quot;Activity For Subject&quot;.
+</B></font><BR>
+<DT><Font size=3>Examples: <B>
+Laterality and site of an operative procedure; route, strength and form of a drug administration.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+CCC
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D78300"><Font size=4 color="b22222">
+Activity Specification (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Comment: <B>
+Activity specification is included here as a place-holder.  When this model merged with the protocol
+model the definition from that model should be used.  If there is no Activity specification in the
+protocol model then it should be deleted from this diagram and from the Agent encyclopaedia.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+PRESTIGE
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D8717"><Font size=4 color="b22222">
+Activity State Change (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; changing the state of another &quot;Activity&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+post-CBS
+</B></font><BR>
+<DT><Font size=3>Previous name: <B>
+State Change Activity
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D157472"><Font size=4 color="b22222">
+activity state type from (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Excluded&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D157473"><Font size=4 color="b22222">
+activity state type to (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Excluded&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D74133"><Font size=4 color="b22222">
+Activity State Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;State Type&quot; being one of the permissible states for &quot;Activity State&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D34412"><Font size=4 color="b22222">
+Activity State (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; in a state which it is currently or has been previously.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that there are both subtypes (comprising all the possible states) and a &quot;power type&quot; of
+&quot;Activity State Type&quot;. The latter's contents are identical to the subtypes; it exists in order to
+control topics such as access and permission to amend.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D154596"><Font size=4 color="b22222">
+Activity Substitution (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has been wholly or partially replaced by another and hence will not be taken
+forward.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that the &quot;Activity&quot; which is not to be taken forward moves to the &quot;Not Required&quot; state.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+PRESTIGE
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D8891"><Font size=4 color="b22222">
+Activity To Be Done (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; required to be undertaken.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Required activities are those which an Agent has made a specific decision to take forward.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+post-CBS
+</B></font><BR>
+<DT><Font size=3>Previous name: <B>
+Established Activity
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D77844"><Font size=4 color="b22222">
+Activity Type Excluded (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+An &quot;Activity Type&quot; that may not be performed for this &quot;Authorised Agent Activity&quot;.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+This will be a species or sub-species of the &quot;Activity Type&quot; associated with the Agent via &quot;Agent's
+Activity Type&quot;.
+</B></font><BR>
+<DT><Font size=3>Examples: <B>
+This could for example mean that a doctor is allowed to perform general medical duties (an &quot;Activity
+Type&quot; included by &quot;Permitted Activity Type&quot;, with the exception of heart transplants, an excluded
+&quot;Activity Type&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+Unspecified
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D77846"><Font size=4 color="b22222">
+Activity Type Offered (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+An &quot;Activity Type&quot; that an &quot;Agent&quot; makes a general offer to perform. 
+<BR>
+
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+There is no need for any authorisation for this type of offer - it can be offered by a &quot;Free Agent&quot;.
+ Example would be setting up a business to supply goods that are not regulated by legislation (i.e.
+a pharmacists shop would not be covered by this type.)
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+CBS V2 Gen
+</B></font><BR>
+<DT><Font size=3>Previous name: <B>
+Business Scope of Agent
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D72179"><Font size=4 color="b22222">
+Activity Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Descriptive Category&quot; capable of being used as a category for &quot;Activities&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+CBS V2 Gen
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D8890"><Font size=4 color="b22222">
+Activity Under Consideration (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which is considered appropriate by an &quot;Agent&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that there is not necessarily any intention to perform the Activity at this stage - indeed a
+set of conflicting Activities may all be simultaneously under consideration.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+post-CBS
+</B></font><BR>
+<DT><Font size=3>Previous name: <B>
+Relevant Activity
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D8721"><Font size=4 color="b22222">
+Activity&#47;Direction (Gen-Spec Arc)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+Activity
+</B></font><BR>
+<DT><Font size=3>Open: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4143.htm#D55" target="SADETAILTARGET"><Font size=2 color="b22222">
+Activity (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="D8859"><Font size=4 color="b22222">
+Activity&#47;Repetition (Gen-Spec Arc)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+Activity
+</B></font><BR>
+<DT><Font size=3>Open: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4143.htm#D55" target="SADETAILTARGET"><Font size=2 color="b22222">
+Activity (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="D8897"><Font size=4 color="b22222">
+Activity&#47;State (Gen-Spec Arc)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+<DT><Font size=3>Open: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4143.htm#D34412" target="SADETAILTARGET"><Font size=2 color="b22222">
+Activity State (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="D55"><Font size=4 color="b22222">
+Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Purposeful and intentional &quot;Event&quot;
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous documented definitions providing the source for the above are:
+<BR>
+
+<BR>
+An exertion of energy initiated by an &quot;Agent&quot; (CBS v2) - this definition is followed by a definition
+of its subtypes.
+<BR>
+
+<BR>
+Conscious, directed and purposeful exertion of energy.
+<BR>
+
+<BR>
+&quot;Event&quot; occurring through the volition of an &quot;Agent&quot;.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+CBS V2 Gen
+</B></font><BR>
+<DT><Font size=3>Previous name: <B>
+Activity
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Attributes: 
+<DD><B>
+Quantity
+<BR>
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5155.htm#D73981" target="SADETAILTARGET"><Font size=2 color="b22222">
+Quantity (Class Attribute)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="D35213"><Font size=4 color="b22222">
+Actual Outcome (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Outcome&quot; deduced to be in effect preceding or at the time of the deducing &quot;Activity&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+post-CBS
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D33891"><Font size=4 color="b22222">
+Actual Property (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Derived: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Allow Shared: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Override Shared: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Default Shared: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Allow Transactional: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Override Transactional: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Default Transactional: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Allow Monitored: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Override Monitored: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Default Monitored: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Allow Distributed: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Override Distributed: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Default Distributed: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Normalize: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Description: <B>
+&quot;Property&quot; applicable at or before time of attribution.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+post-CBS
+</B></font><BR>
+<DT><Font size=3>Previous name: <B>
+Factual Characteristic
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D73886"><Font size=4 color="b22222">
+Actual Resource For Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Resource For Activity&quot; using a specific identified &quot;Resource Held&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+CBS V2 Gen
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D36266"><Font size=4 color="b22222">
+actual source of (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Subject Phenomenon&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Actual Outcome&quot;
+</B></font><BR>
+<DT><Font size=3>Redefines: <B>
+&quot;Causal Relation&quot;.&quot;source of&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs534F.htm#D72412" target="SADETAILTARGET"><Font size=2 color="b22222">
+source of (Association)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="D75008"><Font size=4 color="b22222">
+actual user (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Completed Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Resource For Completed Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D75009"><Font size=4 color="b22222">
+actual user (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Abandoned Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Resource For Abandoned Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D75010"><Font size=4 color="b22222">
+actual user (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Started Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Resource For Started Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

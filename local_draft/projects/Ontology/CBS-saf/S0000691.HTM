@@ -1,0 +1,201 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Derived Agent"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S173877"><Font size=4 color="b22222">
+AA&#47;origin (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Number: <B>
+0
+</B></font><BR>
+<DT><Font size=3>Base Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4155.htm#D77793" target="SADETAILTARGET"><Font size=2 color="b22222">
+Authorised Agent (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173874"><Font size=4 color="b22222">
+Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+Role of a subject enabling it to act purposefully.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+CBS V2: - A role of a &quot;Subject&quot; which indicates that it has power to act
+<BR>
+
+<BR>
+This is a role which may be played by a &quot;Subject&quot;. Sometimes, an &quot;Agent&quot; may be created in order to
+assemble a set of responsibilities and authorities prior to a specific &quot;Subject&quot; being identified
+and allocated to it.
+<BR>
+
+<BR>
+For purposes of creating an &quot;Authorising Act&quot;, an &quot;Agent&quot; may actually be a group of individuals -
+for example when joint responsibility is being taken for some decision, as in a clinical case
+conference.  In such a case the details of the group are taken care of by &quot;Subject&quot; and &quot;Inter
+Subject Relationship&quot;.
+<BR>
+
+<BR>
+Examples of &quot;Agent&quot;:
+<BR>
+Dr Smithers within NHS XYZ Trust, 
+<BR>
+Ms J.Doe in the HXT Pathology laboratory.
+<BR>
+
+<BR>
+A better understanding of the types of &quot;Agent&quot; can be gained from examination of its subtypes.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173878"><Font size=4 color="b22222">
+Agent&#47;authorisation (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+Identifies whether the &quot;Agent&quot; is authorised to undertake specific activities or whether they are
+acting under their own volition.
+<BR>
+
+<BR>
+Problem: In practical terms, it is likely that an implementation will not know whether an &quot;Agent&quot; is
+authorised or not. Similarly, because &quot;Agent&quot; is a join between a &quot;Person&quot; and another authorising
+&quot;Agent&quot;, then in order to establish the appropriate &quot;Agent&quot; it is necessary to know both the
+&quot;Person&quot; and the authorising &quot;Agent&quot;. What if only the &quot;Person&quot; is known?
+<BR>
+</B></font><BR>
+<DT><Font size=3>Base Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4147.htm#D77790" target="SADETAILTARGET"><Font size=2 color="b22222">
+Agent (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173873"><Font size=4 color="b22222">
+Authorised Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Agent&quot; whose actions are subject to another's authority and control.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+The type of control would include permissions (may do), obligations (must do) and interdictions
+(must not do).
+<BR>
+
+<BR>
+An &quot;Agent&quot; who invests authority in another shares some liability for the actions of those to whom
+it gives authority.
+<BR>
+
+<BR>
+An example of an &quot;Authorised Agent &quot; would be Dr. Smithers given the authority by the NHS XYZ Trust
+to run the Medical Clinical Directorate.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173879"><Font size=4 color="b22222">
+DA&#47;volition (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Derived Agent&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4445.htm#D77829" target="SADETAILTARGET"><Font size=2 color="b22222">
+Derived Agent (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173871"><Font size=4 color="b22222">
+Derived Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Authorised Agent&quot; derived from another (the origin).
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+A professional person (&quot;Authorised Agent&quot; through professional licence) becomes an employee of a
+hospital, a &quot;Derived Agent&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173876"><Font size=4 color="b22222">
+Derived Agent By Agreement (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<DT><Font size=3>Description: <B>
+A &quot;Derived Agent&quot; who is empowered by some agreement or act.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+This covers most employment and contractual arrangements.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173875"><Font size=4 color="b22222">
+Derived Agent By Decree (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<DT><Font size=3>Description: <B>
+A &quot;Derived Agent&quot; created by some authority without the necessary agreement of the source &quot;Agent&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+This may imply some degree of coercion.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173880"><Font size=4 color="b22222">
+origin (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Derived Agent&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Derived Agent&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173872"><Font size=4 color="b22222">
+Principal Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+&quot;Authorised Agent&quot; derived directly from a &quot;Subject&quot; not from another &quot;Agent&quot;.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Typically these will be organisations created by others (the authority) with specific powers.  For
+example, an NHS Trust is not a change&#47;extension in the authority of another organisation.
+<BR>
+
+<BR>
+All &quot;Principal Agents&quot; are the result of decree as agreements cannot be made by Subjects.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

@@ -1,0 +1,229 @@
+<html>
+<head>
+</head>
+<body bgcolor=FFFFD6>
+<A NAME="D74416"<Font size=3><STRONG>Temporal Link Type</Font size></STRONG><A HREF="D0000828.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Associative Category" capable of classifying "Temporal Phenomenon Links" and "Timepoint Associations".</Font size>
+<BR>
+<Font size=2><EM>The types of link are:</Font size></EM>
+<BR>
+<Font size=2><EM>A starts and ends before B starts</Font size></EM>
+<BR>
+<Font size=2><EM>A starts before B starts and ends when B starts</Font size></EM>
+<BR>
+<Font size=2><EM>A starts before B starts and ends after B starts but before it ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts before B starts and ends when B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts before B starts and ends after B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts when B starts and ends when B starts</Font size></EM>
+<BR>
+<Font size=2><EM>A starts when B starts and ends after B starts and before B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts when B starts and ends when B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts when B starts and ends after B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts after B starts but before it ends and ends before B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts after B starts but before it ends and ends when B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts after B starts but before it ends and ends after B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts when B ends and ends when B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts when B ends and ends after B ends</Font size></EM>
+<BR>
+<Font size=2><EM>A starts and ends after B ends.</Font size></EM>
+<BR>
+<Font size=2><EM>For linked objects which are of zero duration, the start and end are simultaneous.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Temporal Phenomenon Link</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Timepoint Association</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Associative Category</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D35608"<Font size=3><STRONG>Temporal Phenomenon Link</Font size></STRONG><A HREF="D0000829.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Link between two "Subject Phenomena" based on time.</Font size>
+<BR>
+<Font size=2><EM>Note that for Activities, the start and end are assumed to be that of performance.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Temporal Link Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">from</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Subject Phenomenon</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">to</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Subject Phenomenon</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Phenomenon Qualifier</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D73851"<Font size=3><STRONG>Temporal Resource</Font size></STRONG><A HREF="D0000830.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Resource Held" whose availability may be expressed as a rate.</Font size>
+<BR>
+<Font size=2><EM>Temporal Resources are available only through the "Resource Activities" in which they are used. Examples of these are:</Font size></EM>
+<BR>
+<Font size=2><EM>Shift rotas (for people)</Font size></EM>
+<BR>
+<Font size=2><EM>Booking rotas for buildings, rooms etc.</Font size></EM>
+<BR>
+<Font size=2><EM>Temporal Resources may be composed of other Temporal Resources.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Attributes:</Font size></STRONG>
+<BR>
+<Font size=2>Rate Of Availability  (M)  (Rate)</Font size>
+<BR>
+<Font size=2><EM>The rate at which the resource is available (eg 40 hours / week)</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">resource</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Temporal Resource Act</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Resource Held</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D73869"<Font size=3><STRONG>Temporal Resource Act</Font size></STRONG><A HREF="D0000831.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity" making a "Temporal Resource" available for a specified period.</Font size>
+<BR>
+<Font size=2><EM>Examples include:</Font size></EM>
+<BR>
+<Font size=2><EM>Staff roster</Font size></EM>
+<BR>
+<Font size=2><EM>Room schedule</Font size></EM>
+<BR>
+<Font size=2><EM>Operating theatre session list.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">source</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Temporal Resource For Activity</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">resource</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Temporal Resource</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Activity</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D73888"<Font size=3><STRONG>Temporal Resource For Activity</Font size></STRONG><A HREF="D0000832.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Actual Resource For Activity" using a specific "Temporal Resource".</Font size>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">source</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Temporal Resource Act</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Actual Resource For Activity</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D154632"<Font size=3><STRONG>Text Valued Characteristic</Font size></STRONG><A HREF="D0000833.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Subject Characteristic" having a value expressed by a text string.</Font size>
+<BR>
+<Font size=2><EM>The string may be structured or unstructured. Examples include pathology and radiology reports, unstructured assessments as well as amplification and addenda to phenomena. For example, an informal assessment may be recorded as a Text Valued </Font size></EM>
+<BR>
+<Font size=2><EM>Characteristic. The obvious drawback is that any automated analysis of these is difficult if not impossible.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Attributes:</Font size></STRONG>
+<BR>
+<Font size=2>Text  (M)  (String)</Font size>
+<BR>
+<Font size=2><EM>One or more words.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Subject Characteristic</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D74713"<Font size=3><STRONG>Text Valued Qualifier</Font size></STRONG><A HREF="D0000834.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Phenomenon Qualifier" having a value expressed by a text string.</Font size>
+<BR>
+<Font size=2><EM>The string may be structured or unstructured. Examples include pathology and radiology reports, unstructured assessments as well as amplification and addenda to phenomena or qualifiers with other values. For example, an Image Valued Qualifier </Font size></EM>
+<BR>
+<Font size=2><EM>containing an X-ray image may be qualified by a report from the radiologist.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Attributes:</Font size></STRONG>
+<BR>
+<Font size=2>Text  (M)  (String)</Font size>
+<BR>
+<Font size=2><EM>One or more words.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Phenomenon Qualifier</Font size></EM>
+<BR>
+</body>
