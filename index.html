@@ -6,16 +6,20 @@ tags: [Jekyll, theme, themes, responsive, blog, modern]
 comments: false
 image:
   feature: abstract-1.jpg
-  credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
 
 {% for post in paginator.posts %}
 <article class="hentry">
   <header>
-    {% if post.image.feature %}
+    {% if post.image.feature or post.image.url %}
       <div class="entry-image-index">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+          {% if post.image.feature%}
+          <img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
+          {% else %}
+          <img src="{{ post.image.url }}" alt="{{ post.title }}"></a>
+          {% endif %}
       </div><!-- /.entry-image -->
     {% endif %}
     <div class="entry-meta">
