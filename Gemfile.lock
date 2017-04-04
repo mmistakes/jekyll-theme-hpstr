@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.4.0)
+    asciidoctor (1.5.5)
     colorator (0.1)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
@@ -16,6 +17,9 @@ GEM
       mercenary (~> 0.3.3)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-asciidoc (2.0.1)
+      asciidoctor (>= 1.5.0)
+      jekyll (>= 2.3.0)
     jekyll-feed (0.5.1)
     jekyll-gist (1.4.0)
       octokit (~> 4.2)
@@ -51,6 +55,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-asciidoc
   jekyll-feed
   jekyll-gist
   jekyll-paginate
@@ -58,4 +63,4 @@ DEPENDENCIES
   json
 
 BUNDLED WITH
-   1.12.5
+   1.14.6
