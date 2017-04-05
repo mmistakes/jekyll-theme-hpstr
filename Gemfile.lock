@@ -7,6 +7,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
     ffi (1.9.10-x64-mingw32)
+    ffi (1.9.10-x86-mingw32)
     jekyll (3.1.6)
       colorator (~> 0.1)
       jekyll-sass-converter (~> 1.0)
@@ -48,6 +49,7 @@ GEM
 PLATFORMS
   ruby
   x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
   jekyll
@@ -58,4 +60,4 @@ DEPENDENCIES
   json
 
 BUNDLED WITH
-   1.12.5
+   1.14.6

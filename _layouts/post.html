@@ -7,16 +7,20 @@
 {% include head.html %}
 </head>
 
-<body id="post" {% if page.image.feature %}class="feature"{% endif %}>
+<body id="post" {% if page.image.feature or page.image.url %}class="feature"{% endif %}>
 
 {% include browser-upgrade.html %}
 {% include navigation.html %}
 
-{% if page.image.feature %}
+{% if page.image.feature or page.image.url %}
 <div class="entry-header">
   {% if page.image.credit %}<div class="image-credit">Image source: {% if page.image.creditlink %}<a href="{{ page.image.creditlink }}">{% endif %}{{ page.image.credit }}{% if page.image.creditlink %}</a>{% endif %}</div><!-- /.image-credit -->{% endif %}
   <div class="entry-image">
+    {% if page.image.feature %}
     <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
+    {% else %}
+    <img src="{{ page.image.url }}" alt="{{ page.title }}">
+    {% endif %}
   </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
 {% endif %}
@@ -59,7 +63,7 @@
   </footer>
 </div><!-- /.footer-wrapper -->
 
-{% include scripts.html %}	        
+{% include scripts.html %}
 
 </body>
 </html>

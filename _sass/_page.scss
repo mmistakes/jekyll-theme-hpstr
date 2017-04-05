@@ -9,13 +9,17 @@ body {
 	background-color: $body-color;
 }
 
-/* 
+/*
    Main content
    ========================================================================== */
 
 .entry,
 .hentry {
 	@include clearfix;
+	&::before,
+	&::after{
+		content: none;
+	}
 
 	h1, h2, h3, h4, h5, h6, p, li {
 		word-wrap: break-word;
@@ -46,7 +50,7 @@ body {
 	}
 }
 
-/* 
+/*
    Entry header
    ========================================================================== */
 
@@ -138,9 +142,9 @@ body {
 
 .entry-image {
 	position: relative;
-	top: -50%; 
-	left: -50%; 
-	width: 200%; 
+	top: -50%;
+	left: -50%;
+	width: 200%;
 	height: 200%;
 	min-height: $feature-image-height;
 	overflow: hidden;
@@ -156,12 +160,12 @@ body {
 	}
 
 	img {
-		position: absolute; 
-		top: 0; 
-		left: 0; 
-		right: 0; 
-		bottom: 0; 
-		margin: auto; 
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
 		min-width: 50%;
 		min-height: $feature-image-height; // match .entry-image min-height
 	}
@@ -212,17 +216,17 @@ body {
 	}
 }
 
-/* 
+/*
    Single post and page
    ========================================================================== */
 
 .entry-meta {
 	@include font-rem(12);
 	text-transform: uppercase;
-	color: lighten($base-color,60);
+	color: white;
 
 	a {
-		color: lighten($base-color,60);
+		color: white;
 	}
 
 	.vcard {
@@ -264,6 +268,15 @@ header .entry-meta {
 
 	@media #{$medium} {
 		display: block;
+	}
+}
+#post{
+	.entry-image{
+		-webkit-filter: blur(3px);
+	  -moz-filter: blur(3px);
+	  -o-filter: blur(3px);
+	  -ms-filter: blur(3px);
+	  filter: blur(3px);
 	}
 }
 
@@ -409,7 +422,7 @@ header .entry-meta {
 		margin: 0;
 		@include font-rem(28);
 
-		a { 
+		a {
 			color: $text-color;
 		}
 
@@ -427,12 +440,12 @@ header .entry-meta {
 	width: 100%;
 	text-align: left;
 
-	h4 { 
+	h4 {
 		@include font-rem(18);
-		margin-bottom: 0; 
+		margin-bottom: 0;
 	}
 
-	span { 
+	span {
 		display: block;
 		@include font-rem(14);
 		color: lighten($base-color,50);
@@ -448,7 +461,7 @@ header .entry-meta {
 	}
 }
 
-/* 
+/*
    Post index
    ========================================================================== */
 
@@ -487,24 +500,77 @@ header .entry-meta {
 	}
 }
 
+.entry-image-container {
+	height: 100%;
+	width: 100%;
+
+	img{
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.entry-image-container::after{
+	display: block;
+	position: absolute;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .8) 95%);
+	height: 100%;
+	width: 100%;
+	top: 0;
+	content: '';
+}
+
+.entry-title-container {
+	position: absolute;
+	bottom: 0;
+
+	.entry-meta{
+		margin: 0px 30px 20px;
+		text-shadow: 1px 1px 1px black;
+	}
+
+	h1 {
+		margin: 20px 30px;
+
+		a{
+			color: white;
+			font-size: x-large;
+			text-shadow: 2px 2px 5px black;
+
+			@media #{$medium} {
+				font-size: -webkit-xxx-large;
+			}
+
+			@media #{$large} {
+				font-size: -webkit-xxx-large;
+			}
+		}
+	}
+}
+
 .entry-image-index {
 	margin-top: -25px;
 	margin-left: -15px;
 	margin-right: -15px;
-	margin-bottom: 10px;
+	margin-bottom: -30px;
+	position: relative;
+	height: 250px;
 
 	@media #{$medium} {
 		margin-top: -30px;
 		margin-left: -30px;
 		margin-right: -30px;
-		margin-bottom: 15px;
+		margin-bottom: -30px;
+		height: 500px;
 	}
 
 	@media #{$large} {
 		margin-top: -50px;
 		margin-left: -80px;
 		margin-right: -80px;
-		margin-bottom: 20px;
+		margin-bottom: -50px;
+		height: 500px;
 	}
 
 	img {
@@ -512,7 +578,7 @@ header .entry-meta {
 	}
 }
 
-/* 
+/*
    Footer
    ========================================================================== */
 
@@ -527,14 +593,14 @@ header .entry-meta {
 	}
 }
 
-/* 
+/*
    Social share
    ========================================================================== */
 
 .socialcount {
 	@include font-rem(16);
 
-	li { 
+	li {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -546,7 +612,7 @@ header .entry-meta {
 }
 
 
-/* 
+/*
    Browser upgrade
    ========================================================================== */
 
@@ -555,7 +621,7 @@ header .entry-meta {
 	text-align: center;
 }
 
-/* 
+/*
    Google Search
    ========================================================================== */
 
