@@ -2,7 +2,7 @@
 layout: post
 title: Criando e distribuindo um CocoaPod com Swift3 e integração contínua com Travis
 description: "Demo post displaying the various ways of highlighting code in Markdown."
-modified: 2016-06-01T15:27:45-04:00
+modified: 2016-05-01T15:27:45-04:00
 tags: [CocoaPods, Swift3, Travis]
 image:
   url: https://s19.postimg.org/4bhekbi7n/foggy-owl.jpg
