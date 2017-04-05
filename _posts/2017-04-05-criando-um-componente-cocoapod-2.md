@@ -9,6 +9,7 @@ image:
 ---
 Criando um CocoaPod passo a passo.
 
+
 Neste post iremos ver como criar um componente em **Swift3** e reaproveitá-lo em futuros projetos, utilizando também ferramentas de integração contínua. Vamos aprender a distribuir esse componente de modo privado, com um repositório pessoal, ou público, através do próprio CocoaPods.
 
 Utilizaremos o **Github** como repositório, já que ele nos permite usufruir de ferramentas como o **Travis** de maneira **gratuita** desde que seu repositório seja **público**.
