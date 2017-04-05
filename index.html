@@ -15,29 +15,34 @@ image:
     {% if post.image.feature or post.image.url %}
       <div class="entry-image-index">
         <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-          {% if post.image.feature%}
-          <img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
-          {% else %}
-          <img src="{{ post.image.url }}" alt="{{ post.title }}"></a>
-          {% endif %}
+
+          <div class="entry-image-container">
+            {% if post.image.feature%}
+            <img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
+            {% else %}
+            <img src="{{ post.image.url }}" alt="{{ post.title }}"></a>
+            {% endif %}
+          </div>
+
+
           <div class="entry-title-container">
             {% if post.link %}
               <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h1>
             {% else %}
               <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
             {% endif %}
+            <div class="entry-meta">
+              <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
+              {% if site.reading_time %}
+              <span class="entry-reading-time">
+                <i class="fa fa-clock-o"></i>
+                {% include read-time-index.html %}
+              </span><!-- /.entry-reading-time -->
+              {% endif %}
+            </div><!-- /.entry-meta -->
           </div>
       </div><!-- /.entry-image -->
     {% endif %}
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn"><a href="{{ site.url }}/about/" title="About {{ site.owner.name }}">{{ site.owner.name }}</a></span></span>
-      {% if site.reading_time %}
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        {% include read-time-index.html %}
-      </span><!-- /.entry-reading-time -->
-      {% endif %}
-    </div><!-- /.entry-meta -->
   </header>
 </article><!-- /.hentry -->
 {% endfor %}
