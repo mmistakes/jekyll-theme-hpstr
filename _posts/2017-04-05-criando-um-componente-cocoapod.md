@@ -5,7 +5,7 @@ description: "Demo post displaying the various ways of highlighting code in Mark
 modified: 2016-06-01T15:27:45-04:00
 tags: [CocoaPods, Swift3, Travis]
 image:
-  url: https://s19.postimg.org/4bhekbi7n/foggy-owl.jpg
+  url: http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/A-G/caracal-run.adapt.1900.1.jpg
 ---
 Criando um CocoaPod passo a passo.
 
