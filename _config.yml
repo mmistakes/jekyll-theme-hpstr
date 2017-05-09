@@ -1,5 +1,6 @@
-title:            Site Title
-description:      Describe your website here.
+title:            You've been Ished! 
+                  An Adarsh S production.
+description:      Just a blog I created to document my journey on a path I'm travelling.
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
@@ -9,17 +10,17 @@ url:
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Adarsh S
   avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
-  email:          you@email.com
+  bio:            A ruby in an emerald pool. A stubborn self-obsessed ameteur Django-ist's blog. Now, trying to get into the world of Open Source. 
+  email:          4darshofficial@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
+  facebook:       awesomatic.in
+  github:         isht3
+  stackexchange:  www.stackoverflow.com/7053271/adarsh-s
   linkedin:       
-  instagram:      
+  instagram:      4darsh_s
   flickr:         
   tumblr:         
   # google plus id, include the '+', eg +mmistakes
@@ -36,7 +37,7 @@ bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
-future:      false  # publish future dated posts --  true, false (default) 
+future:      true  # publish future dated posts --  true, false (default) 
 highlighter: rouge
 markdown:    kramdown
 gems:
