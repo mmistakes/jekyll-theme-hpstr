@@ -127,7 +127,7 @@ A `drawGrid()` function uses `for` comprehensions to draw the grid on the window
 
 ![alt text][logo]
 
-[logo]: /blog/images/posts/grid.png "Grid on Canvas"
+[logo]: /images/posts/grid.png "Grid on Canvas"
 
 To draw points on the canvas we simply draw little circles around each point, you can check the source code for the details.
 
@@ -200,13 +200,13 @@ and pass this function to our `phasePortrait` that takes care of plotting the co
 **Pendulum**
 ![alt text][pendulum]
 
-[pendulum]: /blog/images/posts/pendulum.png "Pendulum phase portrait"
+[pendulum]: /images/posts/pendulum.png "Pendulum phase portrait"
 We can clearly identify the single orbits (from the given color). The further we move from the horizontal axis, the higher is the speed and therefore our samples are getting more sparse. An adaptive sampling algorithm would have helped us having a better drawing, but the essence of the implementation does not change.
 
 **Van der Pol**
 ![alt text][vanDerPol]
 
-[vanDerPol]: /blog/images/posts/vanDerPol.png "Van der Pol equation phase portrait"
+[vanDerPol]: /images/posts/vanDerPol.png "Van der Pol equation phase portrait"
 We can see that in this system all the orbits end up overlapping with a given, globally attracting, orbit. This is a clear phenomenom of *limit cycle*, examples of which we have also in the discrete world, e.g. in digital signal processing.
 
 #### Conclusion
