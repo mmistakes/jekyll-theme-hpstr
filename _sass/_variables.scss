@@ -6,7 +6,7 @@
    Page
    ========================================================================== */
 
-$feature-image-height            : 400px; // min 150px recommended
+$feature-image-height            : 250px; // min 150px recommended
 $front-page-feature-image-height : 400px; // min 150px recommended
 
 /* 
@@ -39,6 +39,11 @@ $text-color                      : rgba(#222,0.8);
 $comp-color                      : complement(#222);
 $border-color                    : lighten($base-color,60);
 $link-color                      : rgba(#222,0.8);
+$article-bg-color                : #F6F6F6;
+$page-bg-color                   : #F6F6F6;
+$header-border-bg-color          : #EE2B47;
+$disqus-bg-color                 : #fff;
+$readmore-bg-color               : #fff;
 
 $primary                         : #222;
 $success                         : #5cb85c;

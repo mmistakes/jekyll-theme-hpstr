@@ -7,7 +7,7 @@ categories: [Scala, functional-programming]
 mathjax: true
 ---
 
-I embraced functional programming through Scala starting with the great Marting Odersky's course in Coursera, following with the Reactive Programming course in Coursera (a second edition of which will start shortly and I really recommend you to sign up and follow it), and later on working with Play framework and Akka streams.
+I embraced functional programming through Scala starting with the great Marting Odersky's course on Coursera, following with the Reactive Programming course in Coursera (a second edition of which will start shortly and I really recommend you to sign up and follow it), and later on working with Play framework and Akka streams.
 
 I spent a few years programming in Java in a purely imperative way, and as soon as I could understand the functional approach, I realized it is a great way to focus on the essence of the problem, and it provides a more organic way to decompose reasoning and handling complexity.
 
@@ -19,7 +19,7 @@ $$ f: A \rightarrow B $$
 
 is translated into a definition of a function in Scala as (the `???` mean that the function is still undefined):
 
-```Scala
+```scala
 scala> def f: Double => Double = ???
 f: Double => Double
 ```
@@ -28,13 +28,13 @@ Functions in Scala are first class citizens, and they can be passed as arguments
 
 Consider for example calculating the integral of the \\(sin(x)\\) function over the interval \\([0, \pi]\\), which we know from our math classes being 2. We map real numbers to their finite precision representation as Double, and we can have a Scala definition of \\(\sin(x), x \in \mathbb{R}\\) as
 
-```Scala
+```scala
 def f: Double => Double = (x: Double) => Math.sin(x)
 ```
 
 or even more concisely
 
-```Scala
+```scala
 scala> import Math.sin
 import Math.sin
 scala>def f: Double => Double = sin(_)
@@ -51,7 +51,7 @@ with \\(\Delta x = \pi / N\\) and \\(x_n = n\Delta x\\).
 We know the explicit way of finding N given \\(\Delta x\\) and \\(\pi\\), however let's exploit a great feature of Scala which are `Stream`s and lazy evaluation (see http://www.scala-lang.org/api/2.11.5/index.html#scala.collection.immutable.Stream).
 We can define the `Stream` of \\(x_n\\) as a potentially unbounded sequence of doubles, with the guarantee that the next number will be generated on demand, lazily, only when required:
 
-```Scala
+```scala
 scala> val deltaX = 0.01
 deltaX: Double = 0.01
 scala> def xn = Stream.iterate(0.0)(_ + deltaX)
@@ -62,13 +62,13 @@ Here we did two things: we created a `Stream`, where no value is allocated yet, 
 
 The stream `xn` defined above is potentially unbound, it represents all the sequence of `xn` obtained as `0, deltaX, deltaX + deltaX, deltaX + deltaX + deltaX, ...` but we can set easily an upper limit in this way
 
-```Scala
+```scala
 scala> def xnPi = xn.takeWhile(_ < Math.PI)
 xnPi: scala.collection.immutable.Stream[Double]
 ```
 We can now take the values of the `f` function in each of these values simply by mapping the `Stream` of `xn` through the function:
 
-```Scala
+```scala
 scala> def ynPi = xnPi.map(f)
 ynPi: scala.collection.immutable.Stream[Double]
 ```
@@ -78,7 +78,7 @@ This interpretation of the `map` function applies only to sequence-like types su
 
 Now the only thing left to do is add up the `ynPi` and multiply them by \\(\Delta x\\), and this can easily be achieved through a `foldLeft` application:
 
-```Scala
+```scala
 scala> deltaX * ynPi.foldLeft(0.0)(_ + _)
 res1: Double = 1.9999900283082575
 ```

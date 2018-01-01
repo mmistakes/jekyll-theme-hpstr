@@ -1,11 +1,12 @@
 ---
 layout: post-index
-title: Latest Posts
+title: Adventures of a F[P]
 description: "Describe this nonsense."
 tags: [Jekyll, theme, themes, responsive, blog, modern]
 comments: false
+mathjax: true
 image:
-  feature: abstract-1.jpg
+  feature: tre-cime.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
@@ -15,7 +16,9 @@ image:
   <header>
     {% if post.image.feature %}
       <div class="entry-image-index">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}"></a>
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+          <img src="{{ site.url }}/images/{{ post.image.feature }}" alt="{{ post.title }}">
+        </a>
       </div><!-- /.entry-image -->
     {% endif %}
     <div class="entry-meta">
@@ -34,7 +37,8 @@ image:
     {% endif %}
   </header>
   <div class="entry-content">
-    {{ post.content }}
+    <!-- {{ post.content }} -->
+      {{ post.excerpt }}
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 {% endfor %}

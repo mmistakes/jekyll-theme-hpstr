@@ -20,6 +20,8 @@ body {
 	h1, h2, h3, h4, h5, h6, p, li {
 		word-wrap: break-word;
 	}
+
+	background-color: $header-border-bg-color;
 }
 
 .entry-content {
@@ -106,7 +108,7 @@ body {
 		margin: 0 auto;
 		text-align: center;
 	}
-
+ 
 	h1 {
 		margin: 10px;
 		font-weight: 700;
@@ -138,10 +140,8 @@ body {
 
 .entry-image {
 	position: relative;
-	top: -50%; 
-	left: -50%; 
-	width: 200%; 
-	height: 200%;
+	width: 100%; 
+	height: auto;
 	min-height: $feature-image-height;
 	overflow: hidden;
 
@@ -273,7 +273,7 @@ header .entry-meta {
 	.entry-content {
 		margin: 40px 2px 20px 2px;
 		padding: 10px 15px;
-		background-color: #fff;
+		background-color: $page-bg-color;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba(#000,0.1);
 		border-radius: 3px;
 
@@ -297,7 +297,7 @@ header .entry-meta {
 	#disqus_thread {
 		margin: 40px 2px 20px 2px;
 		padding: 10px 15px;
-		background-color: #fff;
+		background-color: $disqus-bg-color;
 		box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba(#000,0.1);
 		border-radius: 3px;
 
@@ -361,7 +361,7 @@ header .entry-meta {
 	position: relative;
 	margin: 40px 2px 20px 2px;
 	padding: 40px 15px 25px;
-	background-color: #fff;
+	background-color: $readmore-bg-color;
 	box-shadow: 0 0 0 1px rgba($border-color,0.1), 0 6px 12px rgba(#000,0.1);
 	border-radius: 3px;
 
@@ -470,7 +470,7 @@ header .entry-meta {
 	}
 
 	article {
-		background-color: #fff;
+		background-color: $article-bg-color;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.1);
 		border-radius: 3px;
 		margin-bottom: 20px;
@@ -579,7 +579,7 @@ header .entry-meta {
 	padding: 8px 20px;
 	display: inline-block;
 	@include font-rem(14);
-	background-color: #fff;
+	background-color: $article-bg-color;
 	color: $text-color;
 	border-width: 2px !important;
 	border-style: solid !important;
