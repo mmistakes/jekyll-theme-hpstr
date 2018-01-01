@@ -5,7 +5,7 @@ reading_time:     false
 words_per_minute: 200
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:
+url: https://pierangeloc.github.io
 
 # Owner/author information
 owner:
@@ -39,7 +39,7 @@ timezone:    Europe/Amsterdam
 future:      false  # publish future dated posts --  true, false (default)
 highlighter: rouge
 markdown:    kramdown
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
@@ -49,7 +49,7 @@ sass:
   style: compressed
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:year/:month/:day/:title.html
+permalink:   blog/:year/:month/:day/:title.html
 
 # Amount of post to show on home page
 paginate: 5
