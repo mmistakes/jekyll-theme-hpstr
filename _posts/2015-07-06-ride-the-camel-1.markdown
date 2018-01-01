@@ -6,14 +6,14 @@ comments: true
 categories: Camel, Java, Integration
 ---
 
-#### Context
+### Context
 Any application in an enterprise context, regardless how small this context might be, must relate with other systems. These systems might be File system, databases, webservices, message queues, logging systems, or systems using a particular communication protocol. Moreover, data typically undergo transformations, switching and routing logics before reaching other systems. The variety of combinations this allows is enormous, and tackling each of these in a hand made, custom way might easily become an integration nightmare. _Enterprise Integration Patterns_ (EIP) establish a standard way to describe and identify the different approaches that one can follow to deal with an integration problem (see [http://www.enterpriseintegrationpatterns.com](http://www.enterpriseintegrationpatterns.com)). They establish a common vocabulary that can be used unambiguously when talking about integration. If we consider that integration solutions are ubuquitous in application development, we realize easily how convenient it might be to have solid foundations on this subject.
 
 [Apache Camel](http://camel.apache.org/) is a framework that implements EIPs through a very expressive DSL, so one can translate almost immediately any EIP to a corresponding expression in the DSL. Moreover, Camel provides an extensible set of components that allows you to deal with basically any system that might come at hand. A key feature of Camel is that it deals with a _normalized message format_, so after the consumption point the message has a standard format, e.g. it can be handled identically either if it comes from consuming from a JMS queue or from a SOAP or REST webservice.
 
 It is easier to grasp the concepts setting up a simple Camel project and seeing these features at work.
 
-Camel is a Spring-based framework, so the easiest way to use it is to include it in your Spring context. We will use Camel 2.15.1 that provides a way to setup a Camel-based application without the need of xml configuration.
+The easiest way to use Camel is to include it in your Spring context. We will use Camel 2.15.1 that provides a way to setup a Camel-based application without the need of xml configuration.
 
 #### Maven Dependencies
 First of all let's include the dependencies in our `pom.xml`:
