@@ -1,0 +1,181 @@
+<html>
+<head>
+</head>
+<body bgcolor=FFFFD6>
+<A NAME="D74563"<Font size=3><STRONG>Classification Element</Font size></STRONG><A HREF="D0000680.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Knowledge Concept" describing a genus - species relation between two "Categories".</Font size>
+<BR>
+<Font size=2><EM>Note that genus - species or "is-a" relations mean that any object which is an instance of the species category is also an instance of the genus category and hence will exhibit all properties exhibited in common by all instances of that genus category plus some </Font size></EM>
+<BR>
+<Font size=2><EM>specific properties of its own. No more and no less.</Font size></EM>
+<BR>
+<Font size=2><EM>It is also important to recognise that Associative categories can only partake in genus / species relations with other Associative categories, and that Descriptive categories can only partake in genus / species relations with other Descriptive categories.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Attributes:</Font size></STRONG>
+<BR>
+<Font size=2>Basis For Differentiation  (M)  (String)</Font size>
+<BR>
+<Font size=2><EM>A statement of the basis on which the genus "Category" has been speciated. For example, if "Infection" has the species "Bacterial Infection" and "Viral Infection", the basis for differentiation would be "Causing Organism".</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">component</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Classification In Version</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">genus</td>
+<td valign="top" width="0%"><font size="2">Many</td>
+<td valign="top" width="0%"><font size="2">Species Relation</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">genus for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Category</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Knowledge Concept</Font size></EM>
+<BR>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>CE/Ordering</Font size>
+<BR>
+<Font size=2><EM>Unordered Classificatn Element</Font size></EM>
+<BR>
+<Font size=2><EM>Ordered Classification Element</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D74579"<Font size=3><STRONG>Classification In Version</Font size></STRONG><A HREF="D0000681.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Describes the location of a "Classification" in a "Classification Version".</Font size>
+<BR>
+<Font size=2><EM>Note that the same Classification may occur in more than one Classification Version. For example, constructs may be carried forward from Read v2 to Read v3.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">component</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Classification Element</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Many</td>
+<td valign="top" width="0%"><font size="2">context</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Classification System Version</td>
+</tr>
+</table>
+<center><hr></center>
+<A NAME="D74564"<Font size=3><STRONG>Classification System</Font size></STRONG><A HREF="D0000682.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Knowledge Concept" being a collection of two or more "Classifications" into a coherent system.</Font size>
+<BR>
+<Font size=2><EM>Within Classification Systems, all Categories which do not form the highest level Classification are species in one or more Classifications.</Font size></EM>
+<BR>
+<Font size=2><EM>All Categories which do not form lowest level Classifications are genuses in one or more Classifications.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">basis</td>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">Classification System Version</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">responsible for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Knowledge Concept</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D74577"<Font size=3><STRONG>Classification System Version</Font size></STRONG><A HREF="D0000683.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Knowledge Concept" acting as a single version of a "Classification System".</Font size>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">context</td>
+<td valign="top" width="0%"><font size="2">Many</td>
+<td valign="top" width="0%"><font size="2">Classification In Version</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">basis</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Classification System</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">responsible for</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Knowledge Concept</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D154899"<Font size=3><STRONG>Classified Property Qualifier</Font size></STRONG><A HREF="D0000684.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Subject Property Qualifier" classified by a "Property Qualifier Type".</Font size>
+<BR>
+<Font size=2><EM>This is distinct from the specific subtypes such as "Intention" and "Perception Of Property" and is intended to allow for a generalised qualification.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Examples:</Font size></STRONG>
+<BR>
+<Font size=2><EM>"Laterality" and "Site" in describing characteristics.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Property Qualifier Type</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Subject Property Qualifier</Font size></EM>
+<BR>
+</body>

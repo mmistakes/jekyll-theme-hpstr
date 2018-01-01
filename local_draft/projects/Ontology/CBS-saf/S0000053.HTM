@@ -1,0 +1,283 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Performer Accepted Activity"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S73456"><Font size=4 color="b22222">
+Abandoned Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has ended abnormally and for which no further work is intended.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73466"><Font size=4 color="b22222">
+Activity State (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; in a state which it is currently or has been previously.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that there are both subtypes (comprising all the possible states) and a &quot;power type&quot; of
+&quot;Activity State Type&quot;. The latter's contents are identical to the subtypes; it exists in order to
+control topics such as access and permission to amend.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73453"><Font size=4 color="b22222">
+Activity To Be Done (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; required to be undertaken.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Required activities are those which an Agent has made a specific decision to take forward.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73465"><Font size=4 color="b22222">
+Activity Under Consideration (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which is considered appropriate by an &quot;Agent&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that there is not necessarily any intention to perform the Activity at this stage - indeed a
+set of conflicting Activities may all be simultaneously under consideration.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73467"><Font size=4 color="b22222">
+Activity&#47;State (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4143.htm#D34412" target="SADETAILTARGET"><Font size=2 color="b22222">
+Activity State (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73455"><Font size=4 color="b22222">
+Completed Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has ended normally and for which no further work is intended.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+An end state.
+<BR>
+Note that a repetitive activity may be deemed complete even though not all its actual or potential
+components have been identified.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73463"><Font size=4 color="b22222">
+Decomposed Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has been wholly or partially decomposed into other &quot;Activities&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S34311"><Font size=4 color="b22222">
+earliest performance start (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Performer Accepted Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Performer Accepted Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S34308"><Font size=4 color="b22222">
+for performance (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Location
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Performer Accepted Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Location
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Performer Accepted Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73464"><Font size=4 color="b22222">
+Instantiated Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Repetitive Activity&quot; which has had some or all of its instances created.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S34312"><Font size=4 color="b22222">
+latest performance end (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Performer Accepted Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Performer Accepted Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S34306"><Font size=4 color="b22222">
+Location (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Reference Point&quot; being a point or set of contiguous points in space.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous documented definitions providing the source for the above are:
+<BR>
+
+<BR>
+Point or set of contiguous points in space.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73458"><Font size=4 color="b22222">
+Not Required Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot;  which is no longer required.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Like Completed, this is an end state.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73460"><Font size=4 color="b22222">
+Performance Rejected Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; whose performance has been curtailed prior to re-scheduling or abandoning by the same
+Performer.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73452"><Font size=4 color="b22222">
+Performance Suspended Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has started but whose performance has been temporarily stopped.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+The Activity will recommence at the point at which it was suspended. It may of course immediately
+then be abandoned or deemed not required.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73454"><Font size=4 color="b22222">
+Performer Accepted Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; for which the responsibility for performance has been taken by an &quot;Agent&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73459"><Font size=4 color="b22222">
+Performer Rejected Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which the identified performer does not intend to perform.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73457"><Font size=4 color="b22222">
+Performer Selected Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; where the preferred &quot;Agent&quot; who will take responsibility for performance has been
+identified.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+May be requested or if the originator wants to do it.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S74952"><Font size=4 color="b22222">
+Resource For Accepted Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Resource For Activity&quot; associated with a &quot;Performer Accepted Activity&quot;.
+</B></font><BR>
+<BR>
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5155.htm#D154532" target="SADETAILTARGET"><Font size=2 color="b22222">
+Quantity (Class Attribute)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73461"><Font size=4 color="b22222">
+Scheduled Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; where the &quot;Agent&quot; responsible for its performance considers that sufficient &quot;Resources&quot;
+have been allocated, a start &quot;Location&quot; has been stipulated and a specific &quot;Timepoint&quot; for its start
+has been set.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73462"><Font size=4 color="b22222">
+Started Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has commenced.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S34302"><Font size=4 color="b22222">
+Timepoint (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Reference Point&quot; being a point or period in time.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S34307"><Font size=4 color="b22222">
+user (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Performer Accepted Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Resource For Accepted Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Performer Accepted Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Resource For Accepted Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

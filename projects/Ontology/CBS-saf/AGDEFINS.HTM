@@ -1,0 +1,592 @@
+<html>
+<head>
+</head>
+<body bgcolor=FFFFD6>
+<A NAME="D78320"<Font size=3><STRONG>Agency Active</Font size></STRONG><A HREF="D0000649.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>An Agency that is current ("Agency Started")  and active.</Font size>
+<BR>
+<Font size=2><EM>This is the normal state of affairs - the Agency exists and is operational.</Font size></EM>
+<BR>
+<Font size=2><EM>Note that in the case of an "Authorised Agent", this is the point at which all "Authorised Activities" become active, unless they have explicitly different start and end timepoints.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Agent State</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78319"<Font size=3><STRONG>Agency Ended</Font size></STRONG> Defining Diagram</A>
+<BR>
+<Font size=2>An Agency that has ended.</Font size>
+<BR>
+<Font size=2><EM>The Agency may terminate for many reasons: change of employment (however it happens), death, closure of some health facility.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Agent State</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78451"<Font size=3><STRONG>Agency Proposed</Font size></STRONG><A HREF="D0000651.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>A state of Agency in which it is proposed that it should exist.</Font size>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Agent State</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78321"<Font size=3><STRONG>Agency Suspended</Font size></STRONG><A HREF="D0000652.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>An Agency that is current ("Agency Started")  but which is suspended.</Font size>
+<BR>
+<Font size=2><EM>This covers situations where, for example, a healthcare professional is suspended from work whilst some allegation of professional misconduct is investigated.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Agent State</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D77790"<Font size=3><STRONG>Agent</Font size></STRONG><A HREF="D0000653.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Role of a subject enabling it to act purposefully.</Font size>
+<BR>
+<Font size=2><EM>CBS V2: - A role of a "Subject" which indicates that it has power to act</Font size></EM>
+<BR>
+<Font size=2><EM>This is a role which may be played by a "Subject". Sometimes, an "Agent" may be created in order to assemble a set of responsibilities and authorities prior to a specific "Subject" being identified and allocated to it.</Font size></EM>
+<BR>
+<Font size=2><EM>For purposes of creating an "Authorising Act", an "Agent" may actually be a group of individuals - for example when joint responsibility is being taken for some decision, as in a clinical case conference.  In such a case the details of the group are taken care of by </Font size></EM>
+<BR>
+<Font size=2><EM>"Subject" and "Inter Subject Relationship".</Font size></EM>
+<BR>
+<Font size=2><EM>Examples of "Agent":</Font size></EM>
+<BR>
+<Font size=2><EM>Dr Smithers within NHS XYZ Trust, </Font size></EM>
+<BR>
+<Font size=2><EM>Ms J.Doe in the HXT Pathology laboratory.</Font size></EM>
+<BR>
+<Font size=2><EM>A better understanding of the types of "Agent" can be gained from examination of its subtypes.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">agent</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent In Access Group</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">agent</td>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent State</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">agent</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Fundamental Characteristic</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">agent</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Preferred Contact For Subject</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">agent</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Preferred Name For Subject</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">agent for</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent's Activity Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">agent responsible for</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Identifier Domain</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">authority</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Authorised Agent</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">interested agent</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Property To Be Established</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">origin</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Derived Agent</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">originator</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent Access Group</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">represented</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent For Third Party</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">responsible for</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Classification System</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">responsible for</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Classification System Version</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">responsible for assigning</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Phenomenon As Heading</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">responsible for devising</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Standard Heading Set</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">responsible for identifying</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity In Context</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">responsible for performance of</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">State Change Activity</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">responsible for progress</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity To Be Done</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">selected agent</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent Selected Intention</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">selected agent</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Performer Selected Activity</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">user</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent's Term For Concept</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">user</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Resource Held</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Percept</Font size></EM>
+<BR>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>Agent/authorisation</Font size>
+<BR>
+<Font size=2><EM>Authorised Agent</Font size></EM>
+<BR>
+<Font size=2><EM>Free Agent</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D24745"<Font size=3><STRONG>Agent Accepted Intention</Font size></STRONG><A HREF="D0000654.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Intention" which has been accepted by the originator and/or another "Agent" for action.</Font size>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">source of</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity Under Consideration</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Intention State</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D75024"<Font size=3><STRONG>Agent Access Group</Font size></STRONG><A HREF="D0000655.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Method of allowing one or more "Agents" to gain access to "Subjects" or information about them.</Font size>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">group</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Access Group For Information</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">group</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Access Group For Object</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">group</td>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent In Access Group</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">originator</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<center><hr></center>
+<A NAME="D78472"<Font size=3><STRONG>Agent By Devolvement</Font size></STRONG><A HREF="D0000656.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Agent" whose authority derives from the devolvement of the authority of another.</Font size>
+<BR>
+<Font size=2><EM>A hospital registrar acts through the devolved authority of the consultant.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Authorised Agent</Font size></EM>
+<BR>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>ABD/party</Font size>
+<BR>
+<Font size=2><EM>Agent For Third Party</Font size></EM>
+<BR>
+<Font size=2><EM>Agent For First Party</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78437"<Font size=3><STRONG>Agent By Licence</Font size></STRONG><A HREF="D0000657.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Agent" who has permission to perform some activity or activities.</Font size>
+<BR>
+<Font size=2><EM>Example: driving licence.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Authorised Agent</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78082"<Font size=3><STRONG>Agent For First Party</Font size></STRONG><A HREF="D0000658.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Authorised Agent" not representing a third party "Agent".</Font size>
+<BR>
+<Font size=2><EM>This represents all situations where there is a direct relationship between the parties to the agreement and the agreement itself.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Agent By Devolvement</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78083"<Font size=3><STRONG>Agent For Third Party</Font size></STRONG><A HREF="D0000659.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Authorised Agent" appointed or authorised to represent or act for another "Agent" .</Font size>
+<BR>
+<Font size=2><EM>This covers the use of Proxy, an "Agent" acting for another "Agent".</Font size></EM>
+<BR>
+<Font size=2><EM>The authority for the proxy may or may not be the same as the represented "Agent".  For example, the parent or guardian of a juvenile is a proxy by law, not by the authority of the child.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">represented</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Agent By Devolvement</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D75025"<Font size=3><STRONG>Agent In Access Group</Font size></STRONG><A HREF="D0000660.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Specifying that an "Agent" is a member of an "Access Group".</Font size>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">agent</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">group</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent Access Group</td>
+</tr>
+</table>
+<center><hr></center>
+<A NAME="D34918"<Font size=3><STRONG>Agent Rejected Intention</Font size></STRONG><A HREF="D0000661.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Intention" which has been rejected by the requestee "Agent".</Font size>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">reason for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Reason For Rejection</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Intention State</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D26198"<Font size=3><STRONG>Agent Selected Intention</Font size></STRONG><A HREF="D0000662.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Intention" which has been requested of another "Agent" for action.</Font size>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">selected agent</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Intention State</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78316"<Font size=3><STRONG>Agent State</Font size></STRONG><A HREF="D0000663.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Agent" in a state which it is currently or has been previously.</Font size>
+<BR>
+<Font size=2><EM>Note that there are both subtypes (comprising all the possible states) and a "power type" of "Agent State Type". The latter's contents are identical to the subtypes; it exists in order to control topics such as access and permission to amend.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">agent</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">responsible for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent State Change</td>
+</tr>
+</table>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>Agent/lifespan</Font size>
+<BR>
+<Font size=2><EM>Agency Proposed</Font size></EM>
+<BR>
+<Font size=2><EM>Agency Suspended</Font size></EM>
+<BR>
+<Font size=2><EM>Agency Active</Font size></EM>
+<BR>
+<Font size=2><EM>Agency Ended</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78317"<Font size=3><STRONG>Agent State Change</Font size></STRONG><A HREF="D0000664.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"State Change Activity" changing the state of an "Agent".</Font size>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">responsible for</td>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent State</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>State Change Activity</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D77842"<Font size=3><STRONG>Agent's Activity Type</Font size></STRONG><A HREF="D0000665.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>A means of establishing that an "Agent" may perform, offer to perform or authorise others to perform certain "Activity Types".</Font size>
+<BR>
+<Font size=2><EM>For examples see subtypes.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">subject to constraint</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity Type Excluded</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">agent for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">geographical bound</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Location</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">geographical bound</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Location</td>
+</tr>
+</table>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>AAT/essential type</Font size>
+<BR>
+<Font size=2><EM>Activity Type Offered</Font size></EM>
+<BR>
+<Font size=2><EM>Authorised Agent Activity</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D74666"<Font size=3><STRONG>Agent's Term For Concept</Font size></STRONG><A HREF="D0000666.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Meaningful name used by an "Agent" for a "Concept".</Font size>
+<BR>
+<Font size=2><EM>Note that these may possibly be divided into "Preferred" and "Other" terms.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">concept</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Concept</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">user</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+</body>

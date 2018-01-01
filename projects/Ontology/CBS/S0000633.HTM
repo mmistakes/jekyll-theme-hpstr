@@ -1,0 +1,177 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Activity In Context"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S172792"><Font size=4 color="b22222">
+Activity For Subject (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; directed towards a single &quot;Subject&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous definitions from which the above have been distilled:
+<BR>
+
+<BR>
+An act which changes either the state, or the knowledge of the state, of a &quot;Subject&quot; (CBS v2).
+<BR>
+
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172793"><Font size=4 color="b22222">
+Activity In Context (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity For Subject&quot; placed within a &quot;Context Activity&quot; by an &quot;Agent&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172797"><Font size=4 color="b22222">
+AFS&#47;Scope (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Activity For Subject&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4143.htm#D127" target="SADETAILTARGET"><Font size=2 color="b22222">
+Activity For Subject (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172796"><Font size=4 color="b22222">
+Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+Role of a subject enabling it to act purposefully.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+CBS V2: - A role of a &quot;Subject&quot; which indicates that it has power to act
+<BR>
+
+<BR>
+This is a role which may be played by a &quot;Subject&quot;. Sometimes, an &quot;Agent&quot; may be created in order to
+assemble a set of responsibilities and authorities prior to a specific &quot;Subject&quot; being identified
+and allocated to it.
+<BR>
+
+<BR>
+For purposes of creating an &quot;Authorising Act&quot;, an &quot;Agent&quot; may actually be a group of individuals -
+for example when joint responsibility is being taken for some decision, as in a clinical case
+conference.  In such a case the details of the group are taken care of by &quot;Subject&quot; and &quot;Inter
+Subject Relationship&quot;.
+<BR>
+
+<BR>
+Examples of &quot;Agent&quot;:
+<BR>
+Dr Smithers within NHS XYZ Trust, 
+<BR>
+Ms J.Doe in the HXT Pathology laboratory.
+<BR>
+
+<BR>
+A better understanding of the types of &quot;Agent&quot; can be gained from examination of its subtypes.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172799"><Font size=4 color="b22222">
+context (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Context Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity In Context&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Context Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity In Context&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172794"><Font size=4 color="b22222">
+Context Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; acting as a context for one or more other &quot;Activities&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+The context activity may be generated before the component activities exist.
+<BR>
+Common types of Context Activity are:
+<BR>
+Consultant Episode
+<BR>
+Ward Stay
+<BR>
+Consultation
+<BR>
+Out Patient Attendance
+<BR>
+Case Conference.
+<BR>
+
+<BR>
+Note that Context Activities may themselves be components of other Context Activities.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172798"><Font size=4 color="b22222">
+detail (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Activity For Subject&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity In Context&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Activity For Subject&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity In Context&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172795"><Font size=4 color="b22222">
+Direct Activity For Subject (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity For Subject&quot; not acting as the context for any other.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172803"><Font size=4 color="b22222">
+responsible for identifying (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity In Context&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity In Context&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

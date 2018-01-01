@@ -1,0 +1,328 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work. &#8211; Virtual Travelog</title>
+<meta name="description" content="Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work.">
+<meta name="keywords" content="ontology, system design">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/">
+<meta name="twitter:title" content="Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work.">
+<meta name="twitter:description" content="Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work.">
+<meta name="twitter:creator" content="@VirtualTravel">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work.">
+<meta property="og:description" content="Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work.">
+<meta property="og:url" content="/2004/01/ontology-review-1-the-nhs-common-basic-specification-why-top-level-ontologies-dont-work/">
+<meta property="og:site_name" content="Virtual Travelog">
+
+
+
+
+
+<link rel="canonical" href="/2004/01/ontology-review-1-the-nhs-common-basic-specification-why-top-level-ontologies-dont-work/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Virtual Travelog Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+</head>
+
+<body id="post" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="/images/avatar.jpg" alt="John R. Harris photo" class="author-photo">
+					<h4>John R. Harris</h4>
+					<p>CTO at SPAN Digital - Engineering executive, systems architect, business and technology strategist.</p>
+				</li>
+				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				<li>
+					<a href="mailto:john@virtualtravelog.net"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/VirtualTravel"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+				</li>
+				<li>
+					<a href="https://facebook.com/VirtualTravelog"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+				</li>
+				
+				<li>
+					<a href="https://linkedin.com/in/johnrharris"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+				</li>
+				<li>
+					<a href="https://github.com/VirtualTraveler"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/posts/">All Posts</a></li>
+				<li><a href="/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		
+	    
+	    <li><a href="/links/" >Links</a></li>
+	  
+	    
+	    <li><a href="http://www.spandigital.com" target="_blank">SPAN Digital</a></li>
+	  
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
+
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <header class="header-title">
+      <div class="header-title-wrap">
+        
+          <h1 class="entry-title"><a href="/2004/01/ontology-review-1-the-nhs-common-basic-specification-why-top-level-ontologies-dont-work/" rel="bookmark" title="Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work.">Ontology Review 1. The NHS Common Basic Specification. Why top level Ontologies don’t work.</a></h1>
+        
+        <h2><span class="entry-date date published"><time datetime="2004-01-26T00:00:00-08:00">January 26, 2004</time></span></h2>
+        
+      </div><!-- /.header-title-wrap -->
+    </header>
+    <div class="entry-content">
+      <p>This is the first of an occasional series of reviews I intend to write to illustrate some important general traits of ontologies. In each review I will dissect an ontology and examine why it succeeded or failed. In this essay I mention concepts that are defined in my previous essay. <a href="2004/01/judging-the-likely-success-of-an-ontology/">Judging the likely success of an ontology</a>. This first review covers an ontology called the Common Basic Specification (CBS) that was designed in the late 1980s to bring much needed standardization and rationalization to the fragmented information management processes of the British National Health Service (NHS). It persisted in various forms until the late 1990′s when it was finally abandoned. This is my explanation of why it failed.</p>
+
+<p>I have been living in the US now for 6 years and have come to recognize a common reaction among Americans whenever the NHS is mentioned. They all try to hide it, but a patronizing look comes over them. It doesn’t matter how much you tell them that doctors in the NHS wash before they go into surgery, and even use anesthetics these days, Americans just can’t help feeling sorry for anyone who has to suffer under a 3 rd world healthcare system. So before I explain the CBS it is probably worth describing the NHS.</p>
+
+<h2 id="background">Background</h2>
+
+<p>The NHS is the largest employer in Europe it is the main provider of healthcare for the entire United Kingdom (pop 60 million). It’s annual budget is about 5 to 6 percent of the GDP of the United Kingdom. In 2002 that amounted to about 64 billion GBP which at current exchange rates is approximately 115 billion USD. By contrast the US spends about 15 percent of its GDP on healthcare and Americans live on average one year longer than the British. A more detailed breakdown of staffing and budget allocation for the NHS is available here. Primary healthcare in the UK is delivered through about 10,000 General Practices and about 2000 Hospitals, most with less than 100 beds. There are a few large Hospitals with up to 1000 beds, these larger hospitals are usually teaching Hospitals. All these numbers are approximate but they give a general idea of the scale of the NHS.</p>
+
+<p>In the late 1980s it became apparent that the same information management problems were being encountered over and over again in hospital after hospital throughout the UK. Not only that, but they were being solved poorly time and time again. This was obviously wasteful. Hospitals had no reason to compete in the area of information management and every reason to cooperate. If these common problems could be solved correctly and then reused significant savings might be realized. At the same time the digital patient record became the holy grail of healthcare computing. In this vision of the future any patients complete medical history would be available anywhere it was needed and could be passed from GP practice to Hospital and back. It could even follow a patient as s/he moved around the country. The Common Basic Specification was suggested as the best way to ensure consistency across multiple solutions and thus enable standardization and portability of the digital patient record.</p>
+
+<h2 id="the-common-basic-specification">The Common Basic Specification</h2>
+
+<blockquote>
+  <p>The Common Basic Specification ( CBS ) is a conceptual generic model of the activity of health care delivery.</p>
+
+  <p>[IT Standards Handbook - NHS Data Standards]</p>
+</blockquote>
+
+<p>Definition of the NHS Data Model was started in 1986 and continued for several years. It was eventually renamed the Common Basic Specification (CBS). By 1992 a CBS Generic Model had been published. This was in effect a top level ontology (similar to the SUMO currently under development). It was developed for healthcare service delivery but it as can be seen from the diagram below it was universally applicable to any kind of service delivery.</p>
+
+<div align="center">
+
+
+
+
+
+
+
+<figure>
+    
+    <a href="/images/2004-01-CBS.png"><img src="/images/2004-01-CBS.png" alt="" /></a>
+    
+    <figcaption>Common Basic Specification</figcaption>
+</figure>
+
+</div>
+
+<blockquote>
+  <p><strong>Class descriptions for the figure</strong></p>
+
+  <ul>
+    <li><strong>Act for subject:</strong> An “Activity” that is directed towards a “Subject”.</li>
+    <li><strong>Activity:</strong> Purposeful and intentional “Event”</li>
+    <li><strong>Activity class:</strong> A kind of “Activity”.</li>
+    <li><strong>Agent:</strong> Role assumed by a “Subject” enabling it to act purposefully</li>
+    <li><strong>Authorised to perform:</strong> The recording of the fact that an “Agent” may perform certain classes of “Activity”.</li>
+    <li><strong>Category:</strong> Abstraction on the basis of common properties.</li>
+    <li><strong>Concept:</strong> “Object” which is a unit of thought.</li>
+    <li><strong>Event:</strong> Something which happens.</li>
+    <li><strong>Incident:</strong> “Event” occurring without known volition.</li>
+    <li><strong>Knowledge concept:</strong> A collection of “Concepts”, the relationships between them and the reasons for them.</li>
+    <li><strong>Located at:</strong> A “Location” for a “Subject”.</li>
+    <li><strong>Location:</strong> Point or piece of space.</li>
+    <li><strong>Object:</strong> Part of the conceivable or perceivable universe</li>
+    <li><strong>Percept:</strong> Perceived or inferred to exist</li>
+    <li><strong>Reason for activity:</strong> The identification of a “Subject property” as the reason for performing or planning an “Activity for &gt; subject”.</li>
+    <li><strong>Reference point:</strong> Point or piece of time or space.</li>
+    <li><strong>Responsible for:</strong> The responsibility that an “Agent” has for a “Subject”.</li>
+    <li><strong>Results in:</strong> A means of establishing that an “Activity for subject” has resulted in a “Subject property”.</li>
+    <li><strong>Subject:</strong> “Percept” which is one or more physical objects.</li>
+    <li><strong>Subject property:</strong> Anything that describes a subject:** location, identity, characteristic etc..</li>
+    <li><strong>Timepoint:</strong> Point or span of time.</li>
+  </ul>
+
+</blockquote>
+
+<p>The initial publication of the CBS was found to be too high level. The model was hurriedly reworked and republished in 1993 as a series of CBS Application views one of which was later renamed the CBS Clinical View. This view was a slightly lower level ontology. After nearly 5 years and 5 million GBP had been invested in the model it was decided to use it as the foundation for a series of “demonstrator projects”. This work began in 1992/3. I was involved in the largest of these projects where the CBS was to be used as the foundation for an entire Hospital Information Support System. This system was to cover every aspect of hospital information management: patient master index, inpatient and outpatient management, orders and results reporting, , maternity, pharmacy, and many other ancillary activities including; clinical laboratories, laundry, and facilities management. By using the CBS as a conceptual model the final system was intended to be reusable across the NHS and be fully “future-proofed”. The system took almost 3 years to build and while it was successful in the first hospital it was only reused once.</p>
+
+<p>In 1998, 3 years after the Hospital Information Support System was completed the model was redefined yet again and renamed the NHS Healthcare Model (HcM). But by this point it was too late. No one believed in the blue fairy of future proofing anymore and the model was abandoned. It is no longer even available online from any official NHS website. However, last year I downloaded a copy in anticipation of writing this article. So here is <a href="/projects/Ontology/CBS/default.htm#Index">The Common Basic Specification (CBS) a.k.a. The NHS Healthcare Model (HcM)</a>. Take a look around and try drilling down on some of the diagrams to get a real flavor of the model. (If you want a complete copy just send me an email and I will send a zipped file. Please don’t over stress my poor machine by downloading the whole thing.)</p>
+
+<p>As ontologies go the Common Basic Specification is large and complex, which is not surprising given its scope and the length of time it took to develop. The CBS was reworked and refined until it became a clean conceptual model for generic service delivery. It is; coherent – logical in the relationship of its parts, generic enough to handle any healthcare delivery use case, and it is mature – the corners have been knocked off. So why did it fail?</p>
+
+<h2 id="reasons-for-failure-of-the-common-basic-specification">Reasons for Failure of the Common Basic Specification</h2>
+
+<p>Of the Millions of pounds spent on developing the CBS very little was spent on articulating the benefits of implementing a common standard or training people to use the model. Many potential beneficiaries of the model did not see the value of training staff to understand it. Implementing an ontology is a political activity. It requires persuasion, coercion and sometimes direct threats. Small specialized groups can be persuaded to agree on large complex ontologies but large groups find such agreement difficult and often impossible. It is almost as if there was a law governing the adoption of ontologies.</p>
+
+<blockquote>
+  <p>The size and complexity of an ontology is inversely proportional to the size and complexity of the community of agents that can be persuaded to adopt it.</p>
+</blockquote>
+
+<p>But there is a more fundamental problem with top level ontologies that is not political. At higher levels of abstraction every conceptual model is subjective; there is always another way to model reality. It can be advantageous to deliberately take a contrary view precisely because it will lead to different conclusions that may offer competitive advantage over others. The field of Healthcare delivery is large enough to accommodate many different world views. The CBS failed because it was the fossilization of a single world view.</p>
+
+<p>Finally the Common Basic Specification took a top down reductionist approach to a fundamentally bottom up emergent problem. This same fundamental error is made by all top level ontologies. It is being made today by the developers of <a href="http://www.adampease.org/OP/">SUMO</a>, an ontology doomed to the same fate as the CBS. As a professional body the <a href="http://grouper.ieee.org/groups/">IEEE</a> ought to know better. A top down reductionist approach is useful for constrained problem domains but it is the wrong strategy for broad areas of knowledge. Robert Graves understood the tradeoff between a top down and a bottom up and explained it better than I ever could in his poem In Broken Images.</p>
+
+<blockquote>
+  <h3 id="in-broken-images">In Broken Images</h3>
+
+  <p>He is quick, thinking in clear images; 
+I am slow, thinking in broken images.</p>
+
+  <p>He becomes dull, trusting to his clear images; 
+I become sharp, mistrusting my broken images,</p>
+
+  <p>Trusting his images, he assumes their relevance; 
+Mistrusting my images, I question their relevance.</p>
+
+  <p>Assuming their relevance, he assumes the fact, 
+Questioning their relevance, I question the fact.</p>
+
+  <p>When the fact fails him, he questions his senses;
+When the fact fails me, I approve my senses.</p>
+
+  <p>He continues quick and dull in his clear images;
+I continue slow and sharp in my broken images.</p>
+
+  <p>He in a new confusion of his understanding;
+I in a new understanding of my confusion.</p>
+
+  <p>Robert Graves</p>
+</blockquote>
+
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags/#ontology" title="Pages tagged ontology" class="tag"><span class="term">ontology</span></a><a href="/tags/#system design" title="Pages tagged system design" class="tag"><span class="term">system design</span></a></span>
+        <span>Updated on <span class="entry-date date updated"><time datetime="2016-12-30">December 30, 2016</time></span></span>
+        <span class="author vcard"><span class="fn">John R. Harris</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/2004/01/ontology-review-1-the-nhs-common-basic-specification-why-top-level-ontologies-dont-work/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/2004/01/ontology-review-1-the-nhs-common-basic-specification-why-top-level-ontologies-dont-work/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+      </footer>
+    </div><!-- /.entry-content -->
+    <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    <div class="read-more">
+  
+    <div class="read-more-header">
+      <a href="/2004/01/judging-the-likely-success-of-an-ontology/" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="/2013/10/background-image/" title="Post with a Background Image">Post with a Background Image</a></h3>
+      <p>Sample post with a background image CSS override. <a href="/2013/10/background-image/">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
+    
+      <div class="list-item">
+        <h4><a href="/2013/08/code-highlighting-post/" title="Syntax Highlighting Post">Syntax Highlighting Post</a></h4>
+        <span>Published on August 16, 2013</span>
+      </div><!-- /.list-item -->
+    
+      <div class="list-item">
+        <h4><a href="/2013/08/sample-link-post/" title="Sample Link Post">Sample Link Post</a></h4>
+        <span>Published on August 12, 2013</span>
+      </div><!-- /.list-item -->
+    
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Virtual Travelog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.virtualtravelog.net/" property="cc:attributionName" rel="cc:attributionURL">John R. Harris</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'virtualtravelog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	        
+
+</body>
+</html>

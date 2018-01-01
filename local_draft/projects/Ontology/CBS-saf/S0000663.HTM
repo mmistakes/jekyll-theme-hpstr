@@ -1,0 +1,201 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Agent State"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S173337"><Font size=4 color="b22222">
+Agency Active (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000649.htm" target="_top"><Font size=2><B>Agency Active</A> (
+UML Class)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+An Agency that is current (&quot;Agency Started&quot;)  and active.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+This is the normal state of affairs - the Agency exists and is operational.
+<BR>
+
+<BR>
+Note that in the case of an &quot;Authorised Agent&quot;, this is the point at which all &quot;Authorised
+Activities&quot; become active, unless they have explicitly different start and end timepoints.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173338"><Font size=4 color="b22222">
+Agency Ended (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000650.htm" target="_top"><Font size=2><B>Agency Ended</A> (
+UML Deployment)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+An Agency that has ended.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+The Agency may terminate for many reasons: change of employment (however it happens), death, closure
+of some health facility.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173335"><Font size=4 color="b22222">
+Agency Proposed (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000651.htm" target="_top"><Font size=2><B>Agency Proposed</A> (
+UML Class)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+A state of Agency in which it is proposed that it should exist.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173336"><Font size=4 color="b22222">
+Agency Suspended (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000652.htm" target="_top"><Font size=2><B>Agency Suspended</A> (
+UML Class)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+An Agency that is current (&quot;Agency Started&quot;)  but which is suspended.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+This covers situations where, for example, a healthcare professional is suspended from work whilst
+some allegation of professional misconduct is investigated.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173343"><Font size=4 color="b22222">
+agent (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent State&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent State&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173340"><Font size=4 color="b22222">
+Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+Role of a subject enabling it to act purposefully.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+CBS V2: - A role of a &quot;Subject&quot; which indicates that it has power to act
+<BR>
+
+<BR>
+This is a role which may be played by a &quot;Subject&quot;. Sometimes, an &quot;Agent&quot; may be created in order to
+assemble a set of responsibilities and authorities prior to a specific &quot;Subject&quot; being identified
+and allocated to it.
+<BR>
+
+<BR>
+For purposes of creating an &quot;Authorising Act&quot;, an &quot;Agent&quot; may actually be a group of individuals -
+for example when joint responsibility is being taken for some decision, as in a clinical case
+conference.  In such a case the details of the group are taken care of by &quot;Subject&quot; and &quot;Inter
+Subject Relationship&quot;.
+<BR>
+
+<BR>
+Examples of &quot;Agent&quot;:
+<BR>
+Dr Smithers within NHS XYZ Trust, 
+<BR>
+Ms J.Doe in the HXT Pathology laboratory.
+<BR>
+
+<BR>
+A better understanding of the types of &quot;Agent&quot; can be gained from examination of its subtypes.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173334"><Font size=4 color="b22222">
+Agent State (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000667.htm" target="_top"><Font size=2><B>Agent&#47;Lifespan</A> (
+UML State)</B></Font><BR>
+<DT><Font size=3>Description: 
+<DD><B>
+&quot;Agent&quot; in a state which it is currently or has been previously.
+<BR>
+
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Note that there are both subtypes (comprising all the possible states) and a &quot;power type&quot; of &quot;Agent
+State Type&quot;. The latter's contents are identical to the subtypes; it exists in order to control
+topics such as access and permission to amend.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173339"><Font size=4 color="b22222">
+Agent State Change (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+&quot;State Change Activity&quot; changing the state of an &quot;Agent&quot;.
+<BR>
+
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173341"><Font size=4 color="b22222">
+Agent&#47;lifespan (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000667.htm" target="_top"><Font size=2><B>Agent&#47;Lifespan</A> (
+UML State)</B></Font><BR>
+<DT><Font size=3>Base Class: <B>
+&quot;Agent State&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4147.htm#D78316" target="SADETAILTARGET"><Font size=2 color="b22222">
+Agent State (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173342"><Font size=4 color="b22222">
+responsible for (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Agent State Change&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent State&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Agent State Change&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Agent State&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

@@ -1,0 +1,835 @@
+<html>
+<head>
+</head>
+<body bgcolor=FFFFD6>
+<A NAME="D75027"<Font size=3><STRONG>Access Group For Information</Font size></STRONG><A HREF="D0000626.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Access allowed for a particular "Access Group" to a "Subject".</Font size>
+<BR>
+<Font size=2><EM>The "Subject" to which access is allowed is normally one holding information. Others are not prohibited but would be meaningless in this context.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">group</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent Access Group</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">maximum access</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Access Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">subject</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Subject</td>
+</tr>
+</table>
+<center><hr></center>
+<A NAME="D75033"<Font size=3><STRONG>Access Group For Object</Font size></STRONG><A HREF="D0000627.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Describes the access an "Agent Access Group" has to an "Object".</Font size>
+<BR>
+<Font size=2><STRONG>Examples:</Font size></STRONG>
+<BR>
+<Font size=2><EM>For example, if a patient says to a GP, "Don't tell anyone about this but another doctor in the practice".</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">group</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent Access Group</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">maximum access</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Access Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">object</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Object</td>
+</tr>
+</table>
+<center><hr></center>
+<A NAME="D75100"<Font size=3><STRONG>Access Type</Font size></STRONG><A HREF="D0000628.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Level" specifying the extents to which access to information may be granted.</Font size>
+<BR>
+<Font size=2><STRONG>Examples:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Examples which may be considered include:</Font size></EM>
+<BR>
+<Font size=2><EM>Read only</Font size></EM>
+<BR>
+<Font size=2><EM>Copy</Font size></EM>
+<BR>
+<Font size=2><EM>Forward to others</Font size></EM>
+<BR>
+<Font size=2><EM>Absolute.</Font size></EM>
+<BR>
+<Font size=2><EM>Each level would be deemed to include all lower levels.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">maximum access</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Access Group For Information</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">maximum access</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Access Group For Object</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Level</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D31248"<Font size=3><STRONG>Acquired Permanent Property</Font size></STRONG><A HREF="D0000629.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Subject Property", effective from a point in time, which cannot be changed.</Font size>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">onset</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Subject Property</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D31250"<Font size=3><STRONG>Acquired Temporary Property</Font size></STRONG><A HREF="D0000630.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Subject Property" which exists until it is observed to change. </Font size>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">end</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">onset</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Subject Property</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D55"<Font size=3><STRONG>Activity</Font size></STRONG><A HREF="D0000846.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Purposeful and intentional "Event"</Font size>
+<BR>
+<Font size=2><EM>Previous documented definitions providing the source for the above are:</Font size></EM>
+<BR>
+<Font size=2><EM>An exertion of energy initiated by an "Agent" (CBS v2) - this definition is followed by a definition of its subtypes.</Font size></EM>
+<BR>
+<Font size=2><EM>Conscious, directed and purposeful exertion of energy.</Font size></EM>
+<BR>
+<Font size=2><EM>"Event" occurring through the volition of an "Agent".</Font size></EM>
+<BR>
+<Font size=2><STRONG>Attributes:</Font size></STRONG>
+<BR>
+<Font size=2>Quantity  (M)  (Number)</Font size>
+<BR>
+<Font size=2><EM>Quantity of an Activity.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">activity for</td>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity State</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">replacement activity</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity Substitution</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">unit for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Unit Of Measure</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">urgency classifier</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Urgency</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Event</Font size></EM>
+<BR>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>Activity/Direction</Font size>
+<BR>
+<Font size=2><EM>Activity For Subject</Font size></EM>
+<BR>
+<Font size=2><EM>Temporal Resource Act</Font size></EM>
+<BR>
+<Font size=2><EM>State Change Activity</Font size></EM>
+<BR>
+<Font size=2>Activity/Repetition</Font size>
+<BR>
+<Font size=2><EM>Single Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Repetitive Activity</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D127"<Font size=3><STRONG>Activity For Subject</Font size></STRONG><A HREF="D0000632.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity" directed towards a single "Subject".</Font size>
+<BR>
+<Font size=2><EM>Previous definitions from which the above have been distilled:</Font size></EM>
+<BR>
+<Font size=2><EM>An act which changes either the state, or the knowledge of the state, of a "Subject" (CBS v2).</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">detail</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity In Context</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">focus for qualification</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity Qualifier</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Subject Phenomenon</Font size></EM>
+<BR>
+<Font size=2><EM>Activity</Font size></EM>
+<BR>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>AFS/Scope</Font size>
+<BR>
+<Font size=2><EM>Direct Activity For Subject</Font size></EM>
+<BR>
+<Font size=2><EM>Subject Responsibility Act</Font size></EM>
+<BR>
+<Font size=2><EM>Context Activity</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D74026"<Font size=3><STRONG>Activity In Context</Font size></STRONG><A HREF="D0000633.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity For Subject" placed within a "Context Activity" by an "Agent".</Font size>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">context</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Context Activity</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">detail</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity For Subject</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">responsible for identifying</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<center><hr></center>
+<A NAME="D35463"<Font size=3><STRONG>Activity Qualifier</Font size></STRONG><A HREF="D0000634.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Phenomenon Qualifier" qualifying an "Activity For Subject".</Font size>
+<BR>
+<Font size=2><STRONG>Examples:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Laterality and site of an operative procedure; route, strength and form of a drug administration.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity Qualifier Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">focus for qualification</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity For Subject</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Phenomenon Qualifier</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D154933"<Font size=3><STRONG>Activity Qualifier Type</Font size></STRONG><A HREF="D0000635.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Descriptive Category" capable of classifying an "Activity Qualifier"</Font size>
+<BR>
+<Font size=2><EM>Necessary to indicate the nature of the qualification as opposed to its value.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Examples:</Font size></STRONG>
+<BR>
+<Font size=2><EM>In medication, "Route", "Form", "Strength", "Special Instructions" are all examples of "Activity Qualifier Type".</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity Qualifier</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Descriptive Category</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78300"<Font size=3><STRONG>Activity Specification</Font size></STRONG> Defining Diagram</A>
+<BR>
+<Font size=2><EM>Activity specification is included here as a place-holder.  When this model merged with the protocol model the definition from that model should be used.  If there is no Activity specification in the protocol model then it should be deleted from this diagram </Font size></EM>
+<BR>
+<Font size=2><EM>and from the Agent encyclopaedia.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">specified by</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Authorised Agent Activity</td>
+</tr>
+</table>
+<center><hr></center>
+<A NAME="D34412"<Font size=3><STRONG>Activity State</Font size></STRONG><A HREF="D0000636.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity" in a state which it is currently or has been previously.</Font size>
+<BR>
+<Font size=2><EM>Note that there are both subtypes (comprising all the possible states) and a "power type" of "Activity State Type". The latter's contents are identical to the subtypes; it exists in order to control topics such as access and permission to amend.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">observer</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Subject Creation</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">observer</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Subject Property</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">observer</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Subject Property Qualifier</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">recorder</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Phenomenon Or Qualifier</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">reporter</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Phenomenon Or Qualifier</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">source of</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Outcome Of Activity</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">activity for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity State Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">responsible for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity State Change</td>
+</tr>
+</table>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>Activity/State</Font size>
+<BR>
+<Font size=2><EM>Performance Suspended Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Decomposed Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Completed Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Activity Under Consideration</Font size></EM>
+<BR>
+<Font size=2><EM>Started Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Instantiated Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Not Required Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Performance Rejected Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Performer Selected Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Activity To Be Done</Font size></EM>
+<BR>
+<Font size=2><EM>Performer Rejected Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Performer Accepted Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Abandoned Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Scheduled Activity</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D8717"<Font size=3><STRONG>Activity State Change</Font size></STRONG><A HREF="D0000637.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity" changing the state of another "Activity".</Font size>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">responsible for</td>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity State</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>State Change Activity</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D74133"<Font size=3><STRONG>Activity State Type</Font size></STRONG><A HREF="D0000638.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"State Type" being one of the permissible states for "Activity State".</Font size>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">activity state type from</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">State Transition Excluded</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">activity state type to</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">State Transition Excluded</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity State</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>State Type</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D154596"<Font size=3><STRONG>Activity Substitution</Font size></STRONG><A HREF="D0000639.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity" which has been wholly or partially replaced by another and hence will not be taken forward.</Font size>
+<BR>
+<Font size=2><EM>Note that the "Activity" which is not to be taken forward moves to the "Not Required" state.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">replacement activity</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">superseded activity</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Not Required Activity</td>
+</tr>
+</table>
+<center><hr></center>
+<A NAME="D8891"<Font size=3><STRONG>Activity To Be Done</Font size></STRONG><A HREF="D0000640.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity" required to be undertaken.</Font size>
+<BR>
+<Font size=2><EM>Required activities are those which an Agent has made a specific decision to take forward.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">for performance start</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Location</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">responsible for progress</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">source for</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Instantiated Activity</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Activity State</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D72179"<Font size=3><STRONG>Activity Type</Font size></STRONG><A HREF="D0000641.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Descriptive Category" capable of being used as a category for "Activities".</Font size>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Activity Type Excluded</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Agent's Activity Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Subject Responsibility</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Descriptive Category</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D77844"<Font size=3><STRONG>Activity Type Excluded</Font size></STRONG><A HREF="D0000642.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>An "Activity Type" that may not be performed for this "Authorised Agent Activity".</Font size>
+<BR>
+<Font size=2><EM>This will be a species or sub-species of the "Activity Type" associated with the Agent via "Agent's Activity Type".</Font size></EM>
+<BR>
+<Font size=2><STRONG>Examples:</Font size></STRONG>
+<BR>
+<Font size=2><EM>This could for example mean that a doctor is allowed to perform general medical duties (an "Activity Type" included by "Permitted Activity Type", with the exception of heart transplants, an excluded "Activity Type".</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">classifier</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">subject to constraint</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent's Activity Type</td>
+</tr>
+</table>
+<center><hr></center>
+<A NAME="D77846"<Font size=3><STRONG>Activity Type Offered</Font size></STRONG><A HREF="D0000643.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>An "Activity Type" that an "Agent" makes a general offer to perform. </Font size>
+<BR>
+<Font size=2><EM>There is no need for any authorisation for this type of offer - it can be offered by a "Free Agent".  Example would be setting up a business to supply goods that are not regulated by legislation (i.e. a pharmacists shop would not be covered by this type.)</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Agent's Activity Type</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D8890"<Font size=3><STRONG>Activity Under Consideration</Font size></STRONG><A HREF="D0000644.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity" which is considered appropriate by an "Agent".</Font size>
+<BR>
+<Font size=2><EM>Note that there is not necessarily any intention to perform the Activity at this stage - indeed a set of conflicting Activities may all be simultaneously under consideration.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">earliest performance start</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">latest performance end</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">parent</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Decomposed Activity</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">source of</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Agent Accepted Intention</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Activity State</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D35213"<Font size=3><STRONG>Actual Outcome</Font size></STRONG><A HREF="D0000646.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Outcome" deduced to be in effect preceding or at the time of the deducing "Activity".</Font size>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">actual source of</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Subject Phenomenon</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">property for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Actual Property</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Causal Relation</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D33891"<Font size=3><STRONG>Actual Property</Font size></STRONG><A HREF="D0000647.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Property" applicable at or before time of attribution.</Font size>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">basis</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Projected Property</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">property for</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Actual Outcome</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">source</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Property Natural Progression</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Subject Property</Font size></EM>
+<BR>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>AP/Deduction</Font size>
+<BR>
+<Font size=2><EM>Hypothesis</Font size></EM>
+<BR>
+<Font size=2><EM>Observed Property</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D73886"<Font size=3><STRONG>Actual Resource For Activity</Font size></STRONG><A HREF="D0000648.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Resource For Activity" using a specific identified "Resource Held".</Font size>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Resource For Activity</Font size></EM>
+<BR>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>ARA/Temporality</Font size>
+<BR>
+<Font size=2><EM>Temporal Resource For Activity</Font size></EM>
+<BR>
+<Font size=2><EM>Physical Resource For Activity</Font size></EM>
+<BR>
+</body>

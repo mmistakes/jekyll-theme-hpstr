@@ -288,9 +288,13 @@ header .entry-meta {
 			margin: 50px auto 30px auto;
 			padding: 50px 80px;
 
-			> p:first-child {
-				@include font-size(20);
-			}
+/* 
+   JRH 2016-12-25 Disable styling to make the first paragraph larger 
+
+			> p:first-child {			
+				@include font-size(20); 
+			} 
+*/
 		}
 	}
 

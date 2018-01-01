@@ -1,0 +1,2122 @@
+	##pf1##Abandoned Activity
+	##pf3##"Activity" which has ended abnormally and for which no further work is intended.
+	##pf2##Associations From:
+	##pf5##Only One	actual user	Zero, One or Many	Resource For Abandoned Activity
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	reason for	Only One	Reason For Abandoning
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Abandoned Intention
+	##pf3##"Intention" which has not been fulfilled, but for which there is no further action intended.
+	##pf4##As distinct from "Not Required", where it was never required in the first place.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	reason for	Only One	Reason For Abandoning
+	##pf2##Supertypes:
+	##pf4##Intention State
+	##pf1##Access Group For Information
+	##pf3##Access allowed for a particular "Access Group" to a "Subject".
+	##pf4##The "Subject" to which access is allowed is normally one holding information. Others are not prohibited but would be meaningless in this context.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	group	Only One	Agent Access Group
+	##pf5##Zero, One or Many	maximum access	Only One	Access Type
+	##pf5##Zero, One or Many	subject	Only One	Subject
+	##pf1##Access Group For Object
+	##pf3##Describes the access an "Agent Access Group" has to an "Object".
+	##pf2##Examples:
+	##pf4##For example, if a patient says to a GP, "Don't tell anyone about this but another doctor in the practice".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	group	Only One	Agent Access Group
+	##pf5##Zero, One or Many	maximum access	Only One	Access Type
+	##pf5##Zero, One or Many	object	Only One	Object
+	##pf1##Access Type
+	##pf3##"Level" specifying the extents to which access to information may be granted.
+	##pf2##Examples:
+	##pf4##Examples which may be considered include:
+	Read only
+	Copy
+	Forward to others
+	Absolute.
+	Each level would be deemed to include all lower levels.
+	##pf2##Associations From:
+	##pf5##Only One	maximum access	Zero, One or Many	Access Group For Information
+	##pf5##Only One	maximum access	Zero, One or Many	Access Group For Object
+	##pf2##Supertypes:
+	##pf4##Level
+	##pf1##Acquired Permanent Property
+	##pf3##"Subject Property", effective from a point in time, which cannot be changed.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	onset	Only One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf1##Acquired Temporary Property
+	##pf3##"Subject Property" which exists until it is observed to change. 
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	end	Zero or One	Timepoint
+	##pf5##Zero, One or Many	onset	Only One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf1##Activity
+	##pf3##Purposeful and intentional "Event"
+	##pf4##Previous documented definitions providing the source for the above are:
+	
+	An exertion of energy initiated by an "Agent" (CBS v2) - this definition is followed by a definition of its subtypes.
+	
+	Conscious, directed and purposeful exertion of energy.
+	
+	"Event" occurring through the volition of an "Agent".
+	##pf2##Attributes:
+	##pf3##Quantity  (M)  (Number)
+	##pf4##Quantity of an Activity.
+	##pf2##Associations From:
+	##pf5##Only One	activity for	One or Many	Activity State
+	##pf5##Only One	replacement activity	Zero, One or Many	Activity Substitution
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Activity Type
+	##pf5##Zero, One or Many	unit for	Only One	Unit Of Measure
+	##pf5##Zero, One or Many	urgency classifier	Zero or One	Urgency
+	##pf2##Supertypes:
+	##pf4##Event
+	##pf2##Subtype Partitions:
+	##pf3##Activity/Direction
+	##pf4##Activity For Subject
+	##pf4##Temporal Resource Act
+	##pf4##State Change Activity
+	##pf3##Activity/Repetition
+	##pf4##Single Activity
+
+	##pf4##Repetitive Activity
+	##pf1##Activity For Subject
+	##pf3##"Activity" directed towards a single "Subject".
+	##pf4##Previous definitions from which the above have been distilled:
+	
+	An act which changes either the state, or the knowledge of the state, of a "Subject" (CBS v2).
+	
+	##pf2##Associations From:
+	##pf5##Only One	detail	Zero, One or Many	Activity In Context
+	##pf5##Only One	focus for qualification	Zero, One or Many	Activity Qualifier
+	##pf2##Supertypes:
+	##pf4##Subject Phenomenon
+	##pf4##Activity
+	##pf2##Subtype Partitions:
+	##pf3##AFS/Scope
+	##pf4##Direct Activity For Subject
+	##pf4##Subject Responsibility Act
+	##pf4##Context Activity
+	##pf1##Activity In Context
+	##pf3##"Activity For Subject" placed within a "Context Activity" by an "Agent".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	context	Only One	Context Activity
+	##pf5##Zero, One or Many	detail	Only One	Activity For Subject
+	##pf5##Zero, One or Many	responsible for identifying	Only One	Agent
+	##pf1##Activity Qualifier
+	##pf3##"Phenomenon Qualifier" qualifying an "Activity For Subject".
+	##pf2##Examples:
+	##pf4##Laterality and site of an operative procedure; route, strength and form of a drug administration.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Activity Qualifier Type
+	##pf5##Zero, One or Many	focus for qualification	Only One	Activity For Subject
+	##pf2##Supertypes:
+	##pf4##Phenomenon Qualifier
+	##pf1##Activity Qualifier Type
+	##pf3##"Descriptive Category" capable of classifying an "Activity Qualifier"
+	##pf4##Necessary to indicate the nature of the qualification as opposed to its value.
+	##pf2##Examples:
+	##pf4##In medication, "Route", "Form", "Strength", "Special Instructions" are all examples of "Activity Qualifier Type".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Activity Qualifier
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Activity Specification
+	##pf4##Activity specification is included here as a place-holder.  When this model merged with the protocol model the definition from that model should be used.  If there is no Activity specification in the protocol model then it should be deleted from this diagram 
+	and from the Agent encyclopaedia.
+	##pf2##Associations To:
+	##pf5##Only One	specified by	Zero, One or Many	Authorised Agent Activity
+	##pf1##Activity State
+	##pf3##"Activity" in a state which it is currently or has been previously.
+	##pf4##Note that there are both subtypes (comprising all the possible states) and a "power type" of "Activity State Type". The latter's contents are identical to the subtypes; it exists in order to control topics such as access and permission to amend.
+	##pf2##Associations From:
+	##pf5##Only One	observer	Zero, One or Many	Subject Creation
+	##pf5##Only One	observer	Zero, One or Many	Subject Property
+	##pf5##Only One	observer	Zero, One or Many	Subject Property Qualifier
+	##pf5##Zero or One	recorder	Zero, One or Many	Phenomenon Or Qualifier
+	##pf5##Zero or One	reporter	Zero, One or Many	Phenomenon Or Qualifier
+	##pf5##Only One	source of	Zero, One or Many	Outcome Of Activity
+	##pf2##Associations To:
+	##pf5##One or Many	activity for	Only One	Activity
+	##pf5##Zero, One or Many	classifier	Only One	Activity State Type
+	##pf5##One or Many	responsible for	Only One	Activity State Change
+	##pf2##Subtype Partitions:
+	##pf3##Activity/State
+	##pf4##Performance Suspended Activity
+	##pf4##Decomposed Activity
+	##pf4##Completed Activity
+	##pf4##Activity Under Consideration
+	##pf4##Started Activity
+	##pf4##Instantiated Activity
+	##pf4##Not Required Activity
+	##pf4##Performance Rejected Activity
+	##pf4##Performer Selected Activity
+	##pf4##Activity To Be Done
+	##pf4##Performer Rejected Activity
+	##pf4##Performer Accepted Activity
+	##pf4##Abandoned Activity
+	##pf4##Scheduled Activity
+	##pf1##Activity State Change
+	##pf3##"Activity" changing the state of another "Activity".
+	##pf2##Associations From:
+
+	##pf5##Only One	responsible for	One or Many	Activity State
+	##pf2##Supertypes:
+	##pf4##State Change Activity
+	##pf1##Activity State Type
+	##pf3##"State Type" being one of the permissible states for "Activity State".
+	##pf2##Associations From:
+	##pf5##Zero or One	activity state type from	Zero, One or Many	State Transition Excluded
+	##pf5##Only One	activity state type to	Zero, One or Many	State Transition Excluded
+	##pf5##Only One	classifier	Zero, One or Many	Activity State
+	##pf2##Supertypes:
+	##pf4##State Type
+	##pf1##Activity Substitution
+	##pf3##"Activity" which has been wholly or partially replaced by another and hence will not be taken forward.
+	##pf4##Note that the "Activity" which is not to be taken forward moves to the "Not Required" state.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	replacement activity	Only One	Activity
+	##pf5##Zero, One or Many	superseded activity	Only One	Not Required Activity
+	##pf1##Activity To Be Done
+	##pf3##"Activity" required to be undertaken.
+	##pf4##Required activities are those which an Agent has made a specific decision to take forward.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	for performance start	Zero or One	Location
+	##pf5##Zero, One or Many	responsible for progress	Only One	Agent
+	##pf5##One or Many	source for	Zero or One	Instantiated Activity
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Activity Type
+	##pf3##"Descriptive Category" capable of being used as a category for "Activities".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Activity
+	##pf5##Only One	classifier	Zero, One or Many	Activity Type Excluded
+	##pf5##Only One	classifier	Zero, One or Many	Agent's Activity Type
+	##pf5##Only One	classifier	Zero, One or Many	Subject Responsibility
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Activity Type Excluded
+	##pf3##An "Activity Type" that may not be performed for this "Authorised Agent Activity".
+	##pf4##This will be a species or sub-species of the "Activity Type" associated with the Agent via "Agent's Activity Type".
+	##pf2##Examples:
+	##pf4##This could for example mean that a doctor is allowed to perform general medical duties (an "Activity Type" included by "Permitted Activity Type", with the exception of heart transplants, an excluded "Activity Type".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Activity Type
+	##pf5##Zero, One or Many	subject to constraint	Only One	Agent's Activity Type
+	##pf1##Activity Type Offered
+	##pf3##An "Activity Type" that an "Agent" makes a general offer to perform. 
+	
+	##pf4##There is no need for any authorisation for this type of offer - it can be offered by a "Free Agent".  Example would be setting up a business to supply goods that are not regulated by legislation (i.e. a pharmacists shop would not be covered by this type.)
+	##pf2##Supertypes:
+	##pf4##Agent's Activity Type
+	##pf1##Activity Under Consideration
+	##pf3##"Activity" which is considered appropriate by an "Agent".
+	##pf4##Note that there is not necessarily any intention to perform the Activity at this stage - indeed a set of conflicting Activities may all be simultaneously under consideration.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	earliest performance start	Only One	Timepoint
+	##pf5##Zero, One or Many	latest performance end	Only One	Timepoint
+	##pf5##One or Many	parent	Zero or One	Decomposed Activity
+	##pf5##Zero, One or Many	source of	Zero or One	Agent Accepted Intention
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Actual Outcome
+	##pf3##"Outcome" deduced to be in effect preceding or at the time of the deducing "Activity".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	actual source of	Only One	Subject Phenomenon
+	##pf5##Zero, One or Many	property for	Only One	Actual Property
+	##pf2##Supertypes:
+	##pf4##Causal Relation
+	##pf1##Actual Property
+	##pf3##"Property" applicable at or before time of attribution.
+	##pf2##Associations From:
+	##pf5##Zero, One or Many	basis	Zero, One or Many	Projected Property
+	##pf5##Only One	property for	Zero, One or Many	Actual Outcome
+	##pf5##Only One	source	Zero, One or Many	Property Natural Progression
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf2##Subtype Partitions:
+	##pf3##AP/Deduction
+	##pf4##Hypothesis
+	##pf4##Observed Property
+	##pf1##Actual Resource For Activity
+	##pf3##"Resource For Activity" using a specific identified "Resource Held".
+
+	##pf2##Supertypes:
+	##pf4##Resource For Activity
+	##pf2##Subtype Partitions:
+	##pf3##ARA/Temporality
+	##pf4##Temporal Resource For Activity
+	##pf4##Physical Resource For Activity
+	##pf1##Agency Active
+	##pf3##An Agency that is current ("Agency Started")  and active.
+	##pf4##This is the normal state of affairs - the Agency exists and is operational.
+	
+	Note that in the case of an "Authorised Agent", this is the point at which all "Authorised Activities" become active, unless they have explicitly different start and end timepoints.
+	##pf2##Supertypes:
+	##pf4##Agent State
+	##pf1##Agency Ended
+	##pf3##An Agency that has ended.
+	##pf4##The Agency may terminate for many reasons: change of employment (however it happens), death, closure of some health facility.
+	##pf2##Supertypes:
+	##pf4##Agent State
+	##pf1##Agency Proposed
+	##pf3##A state of Agency in which it is proposed that it should exist.
+	##pf2##Supertypes:
+	##pf4##Agent State
+	##pf1##Agency Suspended
+	##pf3##An Agency that is current ("Agency Started")  but which is suspended.
+	##pf4##This covers situations where, for example, a healthcare professional is suspended from work whilst some allegation of professional misconduct is investigated.
+	##pf2##Supertypes:
+	##pf4##Agent State
+	##pf1##Agent
+	##pf3##Role of a subject enabling it to act purposefully.
+	##pf4##CBS V2: - A role of a "Subject" which indicates that it has power to act
+	
+	This is a role which may be played by a "Subject". Sometimes, an "Agent" may be created in order to assemble a set of responsibilities and authorities prior to a specific "Subject" being identified and allocated to it.
+	
+	For purposes of creating an "Authorising Act", an "Agent" may actually be a group of individuals - for example when joint responsibility is being taken for some decision, as in a clinical case conference.  In such a case the details of the group are taken care of by 
+	"Subject" and "Inter Subject Relationship".
+	
+	Examples of "Agent":
+	Dr Smithers within NHS XYZ Trust, 
+	Ms J.Doe in the HXT Pathology laboratory.
+	
+	A better understanding of the types of "Agent" can be gained from examination of its subtypes.
+	##pf2##Associations From:
+	##pf5##Only One	agent	Zero, One or Many	Agent In Access Group
+	##pf5##Only One	agent	One or Many	Agent State
+	##pf5##Only One	agent	Zero, One or Many	Fundamental Characteristic
+	##pf5##Only One	agent	Zero, One or Many	Preferred Contact For Subject
+	##pf5##Only One	agent	Zero, One or Many	Preferred Name For Subject
+	##pf5##Only One	agent for	Zero, One or Many	Agent's Activity Type
+	##pf5##Only One	agent responsible for	Zero, One or Many	Identifier Domain
+	##pf5##Only One	authority	Zero, One or Many	Authorised Agent
+	##pf5##Only One	interested agent	Zero, One or Many	Property To Be Established
+	##pf5##Only One	origin	Zero, One or Many	Derived Agent
+	##pf5##Only One	originator	Zero, One or Many	Agent Access Group
+	##pf5##Only One	represented	Zero, One or Many	Agent For Third Party
+	##pf5##Only One	responsible for	Zero, One or Many	Classification System
+	##pf5##Zero or One	responsible for	Zero, One or Many	Classification System Version
+	##pf5##Only One	responsible for assigning	Zero, One or Many	Phenomenon As Heading
+	##pf5##Only One	responsible for devising	Zero, One or Many	Standard Heading Set
+	##pf5##Only One	responsible for identifying	Zero, One or Many	Activity In Context
+	##pf5##Only One	responsible for performance of	Zero, One or Many	State Change Activity
+	##pf5##Only One	responsible for progress	Zero, One or Many	Activity To Be Done
+	##pf5##Only One	selected agent	Zero, One or Many	Agent Selected Intention
+	##pf5##Only One	selected agent	Zero, One or Many	Performer Selected Activity
+	##pf5##Only One	user	Zero, One or Many	Agent's Term For Concept
+	##pf5##Only One	user	Zero, One or Many	Resource Held
+	##pf2##Supertypes:
+	##pf4##Percept
+	##pf2##Subtype Partitions:
+	##pf3##Agent/authorisation
+	##pf4##Authorised Agent
+	##pf4##Free Agent
+	##pf1##Agent Accepted Intention
+	##pf3##"Intention" which has been accepted by the originator and/or another "Agent" for action.
+	##pf2##Associations From:
+	##pf5##Zero or One	source of	Zero, One or Many	Activity Under Consideration
+	##pf2##Supertypes:
+	##pf4##Intention State
+	##pf1##Agent Access Group
+	##pf3##Method of allowing one or more "Agents" to gain access to "Subjects" or information about them.
+	##pf2##Associations From:
+	##pf5##Only One	group	Zero, One or Many	Access Group For Information
+	##pf5##Only One	group	Zero, One or Many	Access Group For Object
+	##pf5##Only One	group	One or Many	Agent In Access Group
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	originator	Only One	Agent
+	##pf1##Agent By Devolvement
+
+	##pf3##"Agent" whose authority derives from the devolvement of the authority of another.
+	##pf4##A hospital registrar acts through the devolved authority of the consultant.
+	##pf2##Supertypes:
+	##pf4##Authorised Agent
+	##pf2##Subtype Partitions:
+	##pf3##ABD/party
+	##pf4##Agent For Third Party
+	##pf4##Agent For First Party
+	##pf1##Agent By Licence
+	##pf3##"Agent" who has permission to perform some activity or activities.
+	##pf4##Example: driving licence.
+	##pf2##Supertypes:
+	##pf4##Authorised Agent
+	##pf1##Agent For First Party
+	##pf3##"Authorised Agent" not representing a third party "Agent".
+	##pf4##This represents all situations where there is a direct relationship between the parties to the agreement and the agreement itself.
+	##pf2##Supertypes:
+	##pf4##Agent By Devolvement
+	##pf1##Agent For Third Party
+	##pf3##"Authorised Agent" appointed or authorised to represent or act for another "Agent" .
+	##pf4##This covers the use of Proxy, an "Agent" acting for another "Agent".
+	
+	The authority for the proxy may or may not be the same as the represented "Agent".  For example, the parent or guardian of a juvenile is a proxy by law, not by the authority of the child.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	represented	Only One	Agent
+	##pf2##Supertypes:
+	##pf4##Agent By Devolvement
+	##pf1##Agent In Access Group
+	##pf3##Specifying that an "Agent" is a member of an "Access Group".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	agent	Only One	Agent
+	##pf5##One or Many	group	Only One	Agent Access Group
+	##pf1##Agent Rejected Intention
+	##pf3##"Intention" which has been rejected by the requestee "Agent".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	reason for	Only One	Reason For Rejection
+	##pf2##Supertypes:
+	##pf4##Intention State
+	##pf1##Agent Selected Intention
+	##pf3##"Intention" which has been requested of another "Agent" for action.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	selected agent	Only One	Agent
+	##pf2##Supertypes:
+	##pf4##Intention State
+	##pf1##Agent State
+	##pf3##"Agent" in a state which it is currently or has been previously.
+	
+	##pf4##Note that there are both subtypes (comprising all the possible states) and a "power type" of "Agent State Type". The latter's contents are identical to the subtypes; it exists in order to control topics such as access and permission to amend.
+	##pf2##Associations To:
+	##pf5##One or Many	agent	Only One	Agent
+	##pf5##One or Many	responsible for	Only One	Agent State Change
+	##pf2##Subtype Partitions:
+	##pf3##Agent/lifespan
+	##pf4##Agency Proposed
+	##pf4##Agency Suspended
+	##pf4##Agency Active
+	##pf4##Agency Ended
+	##pf1##Agent State Change
+	##pf3##"State Change Activity" changing the state of an "Agent".
+	
+	##pf2##Associations From:
+	##pf5##Only One	responsible for	One or Many	Agent State
+	##pf2##Supertypes:
+	##pf4##State Change Activity
+	##pf1##Agent's Activity Type
+	##pf3##A means of establishing that an "Agent" may perform, offer to perform or authorise others to perform certain "Activity Types".
+	##pf4##For examples see subtypes.
+	##pf2##Associations From:
+	##pf5##Only One	subject to constraint	Zero, One or Many	Activity Type Excluded
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	agent for	Only One	Agent
+	##pf5##Zero, One or Many	classifier	Only One	Activity Type
+	##pf5##Zero, One or Many	geographical bound	Zero or One	Location
+	##pf5##Zero, One or Many	geographical bound	Zero, One or Many	Location
+	##pf2##Subtype Partitions:
+	##pf3##AAT/essential type
+	##pf4##Activity Type Offered
+	##pf4##Authorised Agent Activity
+	##pf1##Agent's Term For Concept
+	##pf3##Meaningful name used by an "Agent" for a "Concept".
+	##pf4##Note that these may possibly be divided into "Preferred" and "Other" terms.
+	##pf2##Associations To:
+
+	##pf5##One or Many	concept	Only One	Concept
+	##pf5##Zero, One or Many	user	Only One	Agent
+	##pf1##Associative Category
+	##pf3##"Category" capable of classifying associations between "Objects".
+	##pf2##Supertypes:
+	##pf4##Category
+	##pf2##Subtype Partitions:
+	##pf3##AC/Direction
+	##pf4##Subject Location Type
+	##pf4##Temporal Link Type
+	##pf4##Phenomenon Qualifier Type
+	##pf4##Location Structure Type
+	##pf4##Inter Subject Relationship Type
+	##pf4##Incident Involvement Type
+	##pf1##Associative Subject Relation
+	##pf3##Peer to peer "Inter Subject Relationship".
+	##pf2##Supertypes:
+	##pf4##Inter Subject Relationship
+	##pf1##Authorised Activity Type
+	##pf3##"Activity Type" that an "Agent" has been authorised to perform by another "Agent".
+	##pf4##This could be very broad: 'General Surgical Duties', or narrower:  'Cardiac Surgical Duties'.  
+	
+	It could be a hospital's authorisation to a clinician that, although generally authorised to perform all surgical duties, the hospital only authorises the clinician to perform cardiac surgical procedures.
+	
+	The relationship to "Activity Type" via "Activity Type Permission" and its subtypes, allows for selective inclusion and exclusion of Authorise Activities.
+	##pf2##Supertypes:
+	##pf4##Authorised Agent Activity
+	##pf1##Authorised Agent
+	##pf3##"Agent" whose actions are subject to another's authority and control.
+	##pf4##The type of control would include permissions (may do), obligations (must do) and interdictions (must not do).
+	
+	An "Agent" who invests authority in another shares some liability for the actions of those to whom it gives authority.
+	
+	An example of an "Authorised Agent " would be Dr. Smithers given the authority by the NHS XYZ Trust to run the Medical Clinical Directorate.
+	##pf2##Associations From:
+	##pf5##Only One	agent for	Zero, One or Many	Authorised Agent Activity
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	at some specified	Zero, One or Many	Location
+	##pf5##Zero, One or Many	authority	Only One	Agent
+	##pf5##Zero, One or Many	for some	One or Many	Subject Characteristic Type
+	##pf5##Zero, One or Many	for some	Zero, One or Many	Subject Characteristic Type
+	##pf5##Zero, One or Many	from	Only One	Timepoint
+	##pf5##Zero, One or Many	to	Zero or One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Agent
+	##pf2##Subtype Partitions:
+	##pf3##AA/nature
+	##pf4##Agent By Devolvement
+	##pf4##Agent By Licence
+	##pf3##AA/origin
+	##pf4##Derived Agent
+	##pf4##Principal Agent
+	##pf1##Authorised Agent Activity
+	##pf3##"Activity Type for Agent" that is subject to some type of authorisation or external control.
+	##pf4##Such control can be interdictions, permissions and exceptions (including "Activity State Types") to one or many Activity Types.
+	##pf2##Associations From:
+	##pf5##Zero, One or Many	specified by	Only One	Activity Specification
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	agent for	Only One	Authorised Agent
+	##pf5##Zero, One or Many	end	Only One	Timepoint
+	##pf5##Zero, One or Many	end	Zero or One	Timepoint
+	##pf5##Zero, One or Many	start	Only One	Timepoint
+	##pf5##Zero, One or Many	start	Zero or One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Agent's Activity Type
+	##pf2##Subtype Partitions:
+	##pf3##AAA/essential type
+	##pf4##Authorised Activity Type
+	##pf4##Authority To Authorise
+	##pf1##Authority To Authorise
+	##pf3##Authority held by one "Agent" to authorise other "Agents" to perform certain "Activity Types".
+	##pf4##The General Medical Council has the "Authority to Authorise" medical staff to perform various kinds of medical duties.  It does not have the authority to perform these duties itself.
+	##pf2##Supertypes:
+	##pf4##Authorised Agent Activity
+	##pf1##Basis For Hypothesis
+	##pf3##"Property Qualifier" being the association between a "Hypothesis" and another "Subject Property" forming all or part of the basis for the deduction.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	basis	Only One	Subject Property
+	##pf5##One or Many	deduction	Only One	Hypothesis
+	##pf2##Supertypes:
+	##pf4##Subject Property Qualifier
+	##pf1##Category
+	##pf3##Abstraction on the basis of common properties.
+
+	##pf2##Associations From:
+	##pf5##Only One	genus for	Zero, One or Many	Classification Element
+	##pf5##Only One	species	Zero, One or Many	Species Relation
+	##pf2##Supertypes:
+	##pf4##Concept
+	##pf2##Subtype Partitions:
+	##pf3##Cat/Scope
+	##pf4##Descriptive Category
+	##pf4##Value Category
+	##pf4##Associative Category
+	##pf1##Category Valued Characteristic
+	##pf3##"Subject Characteristic" with a value defined by a "Value Category".
+	##pf4##See "Value Category" for typical values.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	value	Only One	Value Category
+	##pf2##Supertypes:
+	##pf4##Subject Characteristic
+	##pf1##Category Valued Qualifier
+	##pf3##"Phenomenon Qualifier" with a value defined by a "Value Category".
+	##pf4##See "Value Category" for typical values.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	value	Only One	Value Category
+	##pf2##Supertypes:
+	##pf4##Phenomenon Qualifier
+	##pf1##Causal Relation
+	##pf3##"Subject Property Qualifier" indicating that the associated "Subject Property" is deduced to be the outcome of an "Event" or another "Subject Property".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	level for	Only One	Certainty Level
+	##pf5##Zero, One or Many	outcome of	Only One	Subject Property
+	##pf5##Zero, One or Many	source of	Only One	Subject Phenomenon
+	##pf2##Supertypes:
+	##pf4##Subject Property Qualifier
+	##pf2##Subtype Partitions:
+	##pf3##CR/Association
+	##pf4##Outcome of Property
+	##pf4##Outcome Of Activity
+	##pf4##Outcome Of Incident
+	##pf3##CR/Prediction
+	##pf4##Expected Outcome
+	##pf4##Actual Outcome
+	##pf1##Certainty Level
+	##pf3##"Level" being an extent to which confidence can be ascribed to the value or existence of a "Subject Property" or a qualifier.
+	##pf2##Associations From:
+	##pf5##Only One	level for	Zero, One or Many	Causal Relation
+	##pf5##Only One	level for	Zero, One or Many	Subject Property
+	##pf2##Supertypes:
+	##pf4##Level
+	##pf1##Classification Element
+	##pf3##"Knowledge Concept" describing a genus - species relation between two "Categories".
+	##pf4##Note that genus - species or "is-a" relations mean that any object which is an instance of the species category is also an instance of the genus category and hence will exhibit all properties exhibited in common by all instances of that genus category plus some 
+	specific properties of its own. No more and no less.
+	It is also important to recognise that Associative categories can only partake in genus / species relations with other Associative categories, and that Descriptive categories can only partake in genus / species relations with other Descriptive categories.
+	##pf2##Attributes:
+	##pf3##Basis For Differentiation  (M)  (String)
+	##pf4##A statement of the basis on which the genus "Category" has been speciated. For example, if "Infection" has the species "Bacterial Infection" and "Viral Infection", the basis for differentiation would be "Causing Organism".
+	##pf2##Associations From:
+	##pf5##Only One	component	Zero, One or Many	Classification In Version
+	##pf5##Only One	genus	Many	Species Relation
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	genus for	Only One	Category
+	##pf2##Supertypes:
+	##pf4##Knowledge Concept
+	##pf2##Subtype Partitions:
+	##pf3##CE/Ordering
+	##pf4##Unordered Classificatn Element
+	##pf4##Ordered Classification Element
+	##pf1##Classification In Version
+	##pf3##Describes the location of a "Classification" in a "Classification Version".
+	##pf4##Note that the same Classification may occur in more than one Classification Version. For example, constructs may be carried forward from Read v2 to Read v3.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	component	Only One	Classification Element
+	##pf5##Many	context	Only One	Classification System Version
+	##pf1##Classification System
+	##pf3##"Knowledge Concept" being a collection of two or more "Classifications" into a coherent system.
+	##pf4##Within Classification Systems, all Categories which do not form the highest level Classification are species in one or more Classifications.
+	All Categories which do not form lowest level Classifications are genuses in one or more Classifications.
+	##pf2##Associations From:
+	##pf5##Only One	basis	One or Many	Classification System Version
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	responsible for	Only One	Agent
+	##pf2##Supertypes:
+
+	##pf4##Knowledge Concept
+	##pf1##Classification System Version
+	##pf3##"Knowledge Concept" acting as a single version of a "Classification System".
+	##pf2##Associations From:
+	##pf5##Only One	context	Many	Classification In Version
+	##pf2##Associations To:
+	##pf5##One or Many	basis	Only One	Classification System
+	##pf5##Zero, One or Many	responsible for	Zero or One	Agent
+	##pf2##Supertypes:
+	##pf4##Knowledge Concept
+	##pf1##Classified Property Qualifier
+	##pf3##"Subject Property Qualifier" classified by a "Property Qualifier Type".
+	##pf4##This is distinct from the specific subtypes such as "Intention" and "Perception Of Property" and is intended to allow for a generalised qualification.
+	##pf2##Examples:
+	##pf4##"Laterality" and "Site" in describing characteristics.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Property Qualifier Type
+	##pf2##Supertypes:
+	##pf4##Subject Property Qualifier
+	##pf1##Completed Activity
+	##pf3##"Activity" which has ended normally and for which no further work is intended.
+	##pf4##An end state.
+	Note that a repetitive activity may be deemed complete even though not all its actual or potential components have been identified.
+	##pf2##Associations From:
+	##pf5##Only One	actual user	Zero, One or Many	Resource For Completed Activity
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	end location for	Only One	Location
+	##pf5##Zero, One or Many	end location for	Zero or One	Location
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Component Subject Relation
+	##pf3##"Partitive Subject Relation" where a "Subject" forms part of the other as a component and may not exist as a component in another "Component Subject Relation" at the same time.
+	##pf4##There are four types of COMPONENT SUBJECT RELATION:
+		*    That where both the component and the assembly SUBJECTS can continue their existence and may be reused after the destruction of the relation;
+		*    That where neither the component nor any assembly SUBJECT can continue their existence after the destruction of the relation;
+		*    That where the component SUBJECTS can continue their existence after the destruction of the relation but the assembly cannot;
+		*    That where the assembly SUBJECT can continue its existence after the destruction of the relation but the components cannot function as designed.
+	##pf2##Examples:
+	##pf4##First type:    The front off side wheel on car  J76 VFA.
+	Second type:   Lenin's brain
+	Third type:    An orange and its segments
+	Fourth type:   Dave Jones' left index finger.
+	##pf2##Supertypes:
+	##pf4##Partitive Subject Relation
+	##pf1##Concept
+	##pf3##"Object" which is a unit of thought.
+	##pf2##Associations From:
+	##pf5##Only One	concept	One or Many	Agent's Term For Concept
+	##pf2##Supertypes:
+	##pf4##Object
+	##pf2##Subtype Partitions:
+	##pf3##Concept/Essential Type
+	##pf4##Category
+	##pf4##Unit Of Measure
+	##pf4##Knowledge Concept
+	##pf1##Contact Method
+	##pf3##"Category" describing a "Subject Contact".
+	##pf4##The population of this includes:
+	Postal address
+	Telephone number (landline / mobile)
+	Fax number
+	Email address
+	Telex number
+	Bleeper number.
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Subject Contact
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Context Activity
+	##pf3##"Activity" acting as a context for one or more other "Activities".
+	##pf4##The context activity may be generated before the component activities exist.
+	Common types of Context Activity are:
+	Consultant Episode
+	Ward Stay
+	Consultation
+	Out Patient Attendance
+	Case Conference.
+	
+	Note that Context Activities may themselves be components of other Context Activities.
+	##pf2##Associations From:
+	##pf5##Only One	context	Zero, One or Many	Activity In Context
+	##pf2##Supertypes:
+	##pf4##Activity For Subject
+	##pf1##Decomposed Activity
+	##pf3##"Activity" which has been wholly or partially decomposed into other "Activities".
+	##pf2##Associations From:
+	##pf5##Zero or One	parent	One or Many	Activity Under Consideration
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Derived Agent
+
+	##pf3##"Authorised Agent" derived from another (the origin).
+	##pf4##A professional person ("Authorised Agent" through professional licence) becomes an employee of a hospital, a "Derived Agent".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	origin	Only One	Agent
+	##pf2##Supertypes:
+	##pf4##Authorised Agent
+	##pf2##Subtype Partitions:
+	##pf3##DA/volition
+	##pf4##Derived Agent By Decree
+	##pf4##Derived Agent By Agreement
+	##pf1##Derived Agent By Agreement
+	##pf3##A "Derived Agent" who is empowered by some agreement or act.
+	##pf4##This covers most employment and contractual arrangements.
+	##pf2##Supertypes:
+	##pf4##Derived Agent
+	##pf1##Derived Agent By Decree
+	##pf3##A "Derived Agent" created by some authority without the necessary agreement of the source "Agent".
+	##pf4##This may imply some degree of coercion.
+	##pf2##Supertypes:
+	##pf4##Derived Agent
+	##pf1##Descriptive Category
+	##pf3##"Category" capable of classifying an "Object" directly rather than by associating it with another "Object". 
+	##pf4##As distinct from Associative Category.
+	##pf2##Supertypes:
+	##pf4##Category
+	##pf2##Subtype Partitions:
+	##pf3##DC/Describing
+	##pf4##Reason Not Required
+	##pf4##Property Qualifier Type
+	##pf4##Subject Characteristic Type
+	##pf4##Incident Type
+	##pf4##Resource Type
+	##pf4##Level
+	##pf4##Reason For Rejection
+	##pf4##Intention Type
+	##pf4##State Type
+	##pf4##Activity Qualifier Type
+	##pf4##Contact Method
+	##pf4##Activity Type
+	##pf4##Reason For Abandoning
+	##pf1##Desirability Level
+	##pf3##"Level" providing a value for an "Evaluated Desirability".
+	##pf2##Associations From:
+	##pf5##Only One	level for	Zero, One or Many	Desirability Of Property
+	##pf2##Supertypes:
+	##pf4##Level
+	##pf1##Desirability Of Property
+	##pf3##"Perception Of Property" which provides the extent to which the "Subject Property" is deemed desirable by the "Agent".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	level for	Only One	Desirability Level
+	##pf2##Supertypes:
+	##pf4##Perception Of Property
+	##pf1##Direct Activity For Subject
+	##pf3##"Activity For Subject" not acting as the context for any other.
+	##pf2##Supertypes:
+	##pf4##Activity For Subject
+	##pf1##Established Focus
+	##pf3##"Focus For Further Activity" for which at least one intention has been attributed.
+	##pf2##Associations From:
+	##pf5##Only One	focus for	Zero, One or Many	Intention Under Consideration
+	##pf2##Supertypes:
+	##pf4##Focus For Further Activity
+	##pf1##Event
+	##pf3##Something which happens.
+	##pf2##Associations From:
+	##pf5##Only One	creating event	Zero, One or Many	Subject Creation
+	##pf2##Supertypes:
+	##pf4##Percept
+	##pf2##Subtype Partitions:
+	##pf3##Event/Essential Type
+	##pf4##Activity
+	##pf4##Incident
+	##pf1##Expected Outcome
+	##pf3##"Outcome" predicted to be in effect subsequent to the deducing "Activity".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	predicted source of	Only One	Subject Phenomenon
+	##pf5##One or Many	property for	Only One	Projected Outcome
+	##pf5##Zero, One or Many	property for	Only One	Projected Outcome
+	##pf2##Supertypes:
+
+	##pf4##Causal Relation
+	##pf1##Focus For Further Activity
+	##pf3##"Property Qualifier" being an "Agent's" view of a "Subject Property" which may have attention directed towards it.
+	##pf2##Associations From:
+	##pf5##Only One	focus for	One or Many	Focus State
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	urgency classifier	Zero or One	Urgency
+	##pf2##Supertypes:
+	##pf4##Subject Property Qualifier
+	##pf2##Subtype Partitions:
+	##pf3##FFA/State
+	##pf4##Relevant Focus
+	##pf4##Rejected Focus
+	##pf4##Focus State
+	##pf4##Established Focus
+	##pf1##Focus State
+	##pf3##"Focus For Further Activity" in a state which it is currently or has been previously.
+	##pf4##Note that there are both subtypes (comprising all the possible states) and a "power type" of "Focus State Type". The latter's contents are identical to the subtypes; it exists in order to control topics such as access and permission to amend.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Focus State Type
+	##pf5##One or Many	focus for	Only One	Focus For Further Activity
+	##pf5##One or Many	responsible for	Only One	Focus State Change
+	##pf2##Supertypes:
+	##pf4##Focus For Further Activity
+	##pf1##Focus State Change
+	##pf3##"Activity" changing the state of a "Focus For Further Activity".
+	##pf2##Associations From:
+	##pf5##Only One	responsible for	One or Many	Focus State
+	##pf2##Supertypes:
+	##pf4##State Change Activity
+	##pf1##Focus State Type
+	##pf3##"State Type" being one of the permissible states for "Focus For Further Activity".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Focus State
+	##pf2##Supertypes:
+	##pf4##State Type
+	##pf1##Free Agent
+	##pf3##"Agent" whose actions are not subject to another's control.
+	##pf4##"Authorised Agents" operate within the bounds of their authority. However, the model needs to account for the possibility of actions being undertaken outside these limits. Patients, for example, where they perform activities, would normally do so as Free
+	 Agents.
+	
+	An example of acting outside the bounds set would be where a person working for an NHS Trust operates an illicit sideline selling confectionery. In this case the person is operating as a "Free Agent" relative to the NHS Trust. 
+	
+	See "Authorised Agent" to gain an overall view.
+	##pf2##Associations To:
+	##pf5##Zero or One	has role as	Only One	Subject
+	##pf2##Supertypes:
+	##pf4##Agent
+	##pf1##Fulfilled Intention
+	##pf3##"Intention" considered to have been completed successfully.
+	##pf2##Supertypes:
+	##pf4##Intention State
+	##pf1##Fundamental Characteristic
+	##pf3##"Agent's" view of an "Existence Characteristic" as the "Subject's" fundamental type.
+	##pf4##Stands in the place of "Subject Type" allowing different Agents to use different characteristics as the type for the same Subject. For instance, a pathologist may see a heart as a specimen; a transplant surgeon may see the same heart as an organ for transplant. 
+	Both are valid but of necessity subjective.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	agent	Only One	Agent
+	##pf5##Zero, One or Many	characteristic for	Only One	Subject Characteristic
+	##pf1##Guideline
+	##pf2##Supertypes:
+	##pf4##Knowledge Concept
+	##pf1##Heading
+	##pf3##Method of grouping "Subject Phenomena".
+	##pf2##Associations From:
+	##pf5##Only One	heading for	Zero, One or Many	Phenomenon Under Heading
+	##pf2##Subtype Partitions:
+	##pf3##Heading/Essential Type
+	##pf4##Standard Heading
+	##pf4##Phenomenon As Heading
+	##pf1##Hypothesis
+	##pf3##"Actual Property" established by a process of reasoning based on one or more other properties of this "Subject" or other directly or indirectly related "Subjects".
+	##pf4##Properties may be deduced only from the existence of other properties. These may be associated either with the target SUBJECT or with one or more other, associated, SUBJECTS.
+	Example.
+	     A GP identifies that a patient has an "elevated temperature" because they have a
+	     temperature of 101 degrees.
+	##pf2##Associations From:
+	##pf5##Only One	deduction	One or Many	Basis For Hypothesis
+	##pf2##Supertypes:
+	##pf4##Actual Property
+	##pf1##Identifier Domain
+	##pf3##Means by which an "Agent" may collect two or more "Identifiers In Domain".
+	##pf2##Associations From:
+
+	##pf5##Only One	domain	Many	Identifier In Domain
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	agent responsible for	Only One	Agent
+	##pf1##Identifier In Domain
+	##pf3##"Subject Identifier" which is unique within an "Identifier Domain".
+	##pf2##Associations To:
+	##pf5##Many	domain	Only One	Identifier Domain
+	##pf2##Supertypes:
+	##pf4##Subject Identifier
+	##pf1##Image Valued Characteristic
+	##pf3##"Subject Characteristic" having a value represented by an image.
+	##pf4##The image may be video or audio and may be static or moving. Examples would include:
+	Scans
+	X rays
+	Videos of colposcopies etc
+	Recordings of sounds or conversations.
+	##pf2##Attributes:
+	##pf3##Image  (M)  (Image)
+	##pf4##Video or audio image.
+	##pf2##Supertypes:
+	##pf4##Subject Characteristic
+	##pf1##Image Valued Qualifier
+	##pf3##"Phenomenon Qualifier" having a value represented by an image.
+	##pf4##The image may be video or audio and may be static or moving. Examples would include:
+	Scans
+	X rays
+	Videos of colposcopies etc
+	Recordings of sounds or conversations.
+	##pf2##Attributes:
+	##pf3##Image  (M)  (Image)
+	##pf4##Video or audio image.
+	##pf2##Supertypes:
+	##pf4##Phenomenon Qualifier
+	##pf1##Incident
+	##pf3##"Event" occurring without known volition.
+	##pf4##The word "known" should be emphasised; many events which are perceived as incidents (eg terrorist bombs) are in fact activities when viewed from a different perspective. It's all to do with where you are sitting.
+	
+	The definition above, as for others, has been distilled from what has been suggested in the past, including:
+	
+	A distinct or definite occurrence. An event (sic) (CBS v2).
+	"Event" occurring without volition (of an "Agent").
+	Unintentional occurrence.
+	##pf2##Associations From:
+	##pf5##Only One	incident for	Zero, One or Many	Involvement In Incident
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Incident Type
+	##pf5##Zero, One or Many	end for	Only One	Timepoint
+	##pf5##Zero, One or Many	location for	Zero, One or Many	Location
+	##pf5##Zero, One or Many	start for	Only One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Event
+	##pf1##Incident Involvement Type
+	##pf3##"Associative Category" capable of classifying an "Involvement In Incident".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Involvement In Incident
+	##pf2##Supertypes:
+	##pf4##Associative Category
+	##pf1##Incident Type
+	##pf3##"Descriptive Category" capable of being used as a category for "Incidents".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Incident
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Inherent Temporary Property
+	##pf3##"Subject Property" which is applicable from the start of existence of the "Subject" but may cease to be so before the end of the "Subject"'s existence.
+	##pf2##Examples:
+	##pf4##Virginity
+	Non-smoking
+	6th finger on one hand
+	Two kidneys.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	end	Zero or One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf1##Instantiated Activity
+	##pf3##"Repetitive Activity" which has had some or all of its instances created.
+	##pf2##Associations From:
+	##pf5##Zero or One	source for	One or Many	Activity To Be Done
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Intention
+	##pf3##"Property Qualifier" being the general purpose of the care for an "Established Focus".
+	##pf2##Associations From:
+	##pf5##Only One	intention for	One or Many	Intention State
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Intention Type
+	##pf2##Supertypes:
+	##pf4##Subject Property Qualifier
+
+	##pf1##Intention State
+	##pf3##"Intention" in a state which it is currently or has been previously.
+	##pf4##Note that there are both subtypes (comprising all the possible states) and a "power type" of "Intention State Type". The latter's contents are identical to the subtypes; it exists in order to control topics such as access and permission to amend.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Intention State Type
+	##pf5##One or Many	intention for	Only One	Intention
+	##pf5##One or Many	responsible for	Only One	Intention State Change
+	##pf2##Subtype Partitions:
+	##pf3##Intention/State
+	##pf4##Fulfilled Intention
+	##pf4##Not Required Intention
+	##pf4##Abandoned Intention
+	##pf4##Intention Under Consideration
+	##pf4##Agent Accepted Intention
+	##pf4##Agent Rejected Intention
+	##pf4##Required Intention
+	##pf4##Agent Selected Intention
+	##pf1##Intention State Change
+	##pf3##"Activity" changing the state of an "Intention".
+	##pf2##Associations From:
+	##pf5##Only One	responsible for	One or Many	Intention State
+	##pf2##Supertypes:
+	##pf4##State Change Activity
+	##pf1##Intention State Type
+	##pf3##"State Type" being one of the permissible states for "Intention".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Intention State
+	##pf2##Supertypes:
+	##pf4##State Type
+	##pf1##Intention Type
+	##pf3##"Category" being capable of classifying a purpose of care.
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Intention
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Intention Under Consideration
+	##pf3##"Intention" which is appropriate for the "Focus For Further Activity".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	focus for	Only One	Established Focus
+	##pf2##Supertypes:
+	##pf4##Intention State
+	##pf1##Inter Subject Relationship
+	##pf3##"Subject Property" associating one "Subject" with another.
+	##pf4##Previous documented definitions providing the source for the above are:
+	
+	A connection of interest from one "Subject" to another (CBS v2).
+	
+	Note that authoritative relationships (eg employee) are recorded in Authorised Agent rather than here.
+	##pf2##Associations From:
+	##pf5##Only One	inverse	Only One	Inter Subject Relationship
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Inter Subject Relationship Type
+	##pf5##Only One	inverse	Only One	Inter Subject Relationship
+	##pf5##Zero, One or Many	relation	Only One	Subject
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf2##Subtype Partitions:
+	##pf3##ISR/Role
+	##pf4##Associative Subject Relation
+	##pf4##Partitive Subject Relation
+	##pf1##Inter Subject Relationship Type
+	##pf3##"Associative Category" capable of classifying an "Inter Subject Relationship".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Inter Subject Relationship
+	##pf2##Supertypes:
+	##pf4##Associative Category
+	##pf1##Involvement In Incident
+	##pf3##"Subject Property" associating the "Subject" with an "Incident". 
+	##pf4##
+	##pf2##Associations From:
+	##pf5##Only One	source of	Zero, One or Many	Outcome Of Incident
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Incident Involvement Type
+	##pf5##Zero, One or Many	incident for	Only One	Incident
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf1##Knowledge Concept
+	##pf3##Collection of concepts, the relationships between them and the reasons for them.
+	##pf2##Supertypes:
+	##pf4##Concept
+	##pf2##Subtype Partitions:
+
+	##pf3##KC/Essential Type
+	##pf4##Classification System
+	##pf4##Classification System Version
+	##pf4##Classification Element
+	##pf4##Guideline
+	##pf1##Level
+	##pf3##"Descriptive Category" used to describe the level to which something obtains.
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf2##Subtype Partitions:
+	##pf3##Level/Direction
+	##pf4##Certainty Level
+	##pf4##Desirability Level
+	##pf4##Normality Level
+	##pf4##Urgency
+	##pf4##Access Type
+	##pf4##Significance Level
+	##pf1##Lifelong Property
+	##pf3##"Inter Subject Relationship" which is effective from the start of the "Subject" which it describes and will not change
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf1##Location
+	##pf3##"Reference Point" being a point or set of contiguous points in space.
+	##pf4##Previous documented definitions providing the source for the above are:
+	
+	Point or set of contiguous points in space.
+	##pf2##Associations From:
+	##pf5##Zero, One or Many	at some specified	Zero, One or Many	Authorised Agent
+	##pf5##Zero or One	end location for	Zero, One or Many	Completed Activity
+	##pf5##Only One	end location for	Zero, One or Many	Completed Activity
+	##pf5##Zero or One	for performance	Zero, One or Many	Performer Accepted Activity
+	##pf5##Only One	for performance	Zero, One or Many	Performer Accepted Activity
+	##pf5##Zero or One	for performance start	Zero, One or Many	Activity To Be Done
+	##pf5##Only One	from	Zero, One or Many	Location Structure
+	##pf5##Zero or One	geographical bound	Zero, One or Many	Agent's Activity Type
+	##pf5##Zero, One or Many	geographical bound	Zero, One or Many	Agent's Activity Type
+	##pf5##Zero, One or Many	location for	Zero, One or Many	Incident
+	##pf5##Zero or One	location for	Zero, One or Many	Subject Contact
+	##pf5##Only One	location for	Zero, One or Many	Subject Location
+	##pf5##Only One	start location for	Zero, One or Many	Scheduled Activity
+	##pf5##Zero or One	start location for	Zero, One or Many	Started Activity
+	##pf5##Only One	start location for	Zero, One or Many	Started Activity
+	##pf5##Only One	to	Zero, One or Many	Location Structure
+	##pf2##Supertypes:
+	##pf4##Reference Point
+	##pf1##Location Structure
+	##pf3##Connexion between two "Locations" indication that one is related to the other.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Location Structure Type
+	##pf5##Zero, One or Many	from	Only One	Location
+	##pf5##Zero, One or Many	to	Only One	Location
+	##pf1##Location Structure Type
+	##pf3##"Associative Category" capable of classifying "Location Structures".
+	##pf4##Ways in which locations may be connected include:
+	Included within
+	Adjacent to
+	Not adjacent
+	Complete superposition
+	Partial superposition.
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Location Structure
+	##pf2##Supertypes:
+	##pf4##Associative Category
+	##pf1##Measured Characteristic
+	##pf3##"Subject Characteristic" with a declared value defined as a number.
+	##pf4##An example would be "75 bpm" as a pulse rate.
+	##pf2##Attributes:
+	##pf3##numeric value  (M)  (Number)
+	##pf4##A numeric value (with or without a sign)
+	##pf2##Supertypes:
+	##pf4##Subject Characteristic
+	##pf1##Measured Qualifier
+	##pf3##"Phenomenon Qualifier" with a declared value defined as a number.
+	##pf4##An example would be "25%" as the extent of burn damage.
+	##pf2##Attributes:
+	##pf3##numeric value  (M)  (Number)
+	##pf4##A numeric value (with or without a sign)
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	accuracy unit for	Zero or One	Unit Of Measure
+	##pf5##Zero, One or Many	accuracy unit for	Only One	Unit Of Measure
+	##pf5##Zero, One or Many	measurement unit for	Only One	Unit Of Measure
+	##pf5##Zero, One or Many	precision unit for	Only One	Unit Of Measure
+	##pf5##Zero, One or Many	precision unit for	Zero or One	Unit Of Measure
+
+	##pf2##Supertypes:
+	##pf4##Phenomenon Qualifier
+	##pf1##Membership Subject Relation
+	##pf3##"Partitive Subject Relation" where a "Subject" forms part of the other as a member and may exist as a component in other "Membership Subject Relations" at the same time.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	member	Only One	Subject
+	##pf2##Supertypes:
+	##pf4##Partitive Subject Relation
+	##pf1##Natural Progression
+	##pf3##"Projected Property" attributing a condition or state which is expected to occur in the absence of any intervention.
+	##pf2##Supertypes:
+	##pf4##Projected Property
+	##pf2##Subtype Partitions:
+	##pf3##NP/Source
+	##pf4##Subject Natural Progression
+	##pf4##Property Natural Progression
+	##pf1##Normality Level
+	##pf3##"Level" providing a value for a "Normality of Property".
+	##pf2##Associations From:
+	##pf5##Only One	level for	Zero, One or Many	Normality Of Property
+	##pf2##Supertypes:
+	##pf4##Level
+	##pf1##Normality Of Property
+	##pf3##"Perception of Property" which indicates the observer's assessment of the normality of the "Subject Property".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	level for	Only One	Normality Level
+	##pf2##Supertypes:
+	##pf4##Perception Of Property
+	##pf1##Not Required Activity
+	##pf3##"Activity"  which is no longer required.
+	##pf4##Like Completed, this is an end state.
+	##pf2##Associations From:
+	##pf5##Only One	superseded activity	Zero, One or Many	Activity Substitution
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	reason for	Only One	Reason Not Required
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Not Required Intention
+	##pf3##"Intention" which it has been decided not to proceed with.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	reason for	Only One	Reason Not Required
+	##pf2##Supertypes:
+	##pf4##Intention State
+	##pf1##Object
+	##pf3##Part of the perceivable or conceivable universe.
+	##pf4##Previous documented definitions providing the source for the above are:
+	
+	Something that exists (CBS v2).
+	##pf2##Attributes:
+	##pf3##Identifier  (M)  (String)
+	##pf4##Unique identifier for each instance of "Object". Allows use of the model as an Information Model.
+	##pf2##Associations From:
+	##pf5##Only One	object	Zero, One or Many	Access Group For Object
+	##pf5##Only One	object	Zero, One or Many	Object Representation
+	##pf2##Subtype Partitions:
+	##pf3##Object/Essential Type
+	##pf4##Concept
+	##pf4##Percept
+	##pf1##Object Representation
+	##pf3##Representation of an "Object" in a "Subject".
+	##pf4##Any "Subject" may hold information about an "Object", either itself or others. Typically, such "Subjects" are created expressly to perform this role, eg case notes, electronic patient records, but sometimes this is done by impressing the information on a 
+	"Subject" which has other roles. Examples would be batch number and use by date on a drug container, manufacturer logo on a capsule.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	object	Only One	Object
+	##pf5##One or Many	subject	Only One	Subject
+	##pf5##Zero, One or Many	subject	Only One	Subject
+	##pf1##Observed Property
+	##pf3##"Actual Property" established by direct sensation or measurement.
+	##pf4##Establishment may be by human senses or machine.
+	##pf2##Supertypes:
+	##pf4##Actual Property
+	##pf1##Ordered Classification Element
+	##pf3##"Classification Element" whose species have an ordered relation one to another.
+	##pf2##Examples:
+	##pf4##The Glasgow coma scale.
+	##pf2##Attributes:
+	##pf3##Duplicates allowed  (M)  (Boolean)
+	##pf4##If "True", duplicate values of "Order" in the associated "Ordered Species Relations" are allowed.
+	##pf2##Associations From:
+	##pf5##Only One	genus	Many	Ordered Species Relation
+	##pf2##Supertypes:
+
+	##pf4##Classification Element
+	##pf1##Ordered Species Relation
+	##pf3##"Species Relation" which has an ordinal relation with others in the same "Ordered Classification Element"
+	##pf2##Examples:
+	##pf4##CIN1, CIN2, CIN3 etc used in cytology; staging of diseases.
+	##pf2##Attributes:
+	##pf3##Order  (M)  (Integer)
+	##pf4##Position held by an "Ordered Species Relation" within an "Ordered Classification Element". Note that duplicates are not illegal.
+	##pf2##Associations To:
+	##pf5##Many	genus	Only One	Ordered Classification Element
+	##pf2##Supertypes:
+	##pf4##Species Relation
+	##pf1##Outcome Of Activity
+	##pf3##"Subject Property" deduced to be a result of an "Activity".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	source of	Only One	Activity State
+	##pf2##Supertypes:
+	##pf4##Causal Relation
+	##pf1##Outcome Of Incident
+	##pf3##"Subject Property" deduced to be a result of an "Incident".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	source of	Only One	Involvement In Incident
+	##pf2##Supertypes:
+	##pf4##Causal Relation
+	##pf1##Outcome of Property
+	##pf3##"Subject Property" deduced to be a result of another "Subject Property".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	source of	Only One	Subject Property
+	##pf2##Supertypes:
+	##pf4##Causal Relation
+	##pf1##Partitive Subject Relation
+	##pf3##"Inter Subject Relationship" where the subordinate "Subject" does, has or will form part of the superordinate such that the existence of the subordinate "Subject" is not destroyed by the relation.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	inclusion of	Only One	Subject
+	##pf5##Zero, One or Many	part of	Only One	Subject
+	##pf2##Supertypes:
+	##pf4##Inter Subject Relationship
+	##pf2##Subtype Partitions:
+	##pf3##PSR/Exclusivity
+	##pf4##Membership Subject Relation
+	##pf4##Component Subject Relation
+	##pf1##Percept
+	##pf3##"Object" perceived or inferred to have physical existence.
+	##pf2##Supertypes:
+	##pf4##Object
+	##pf2##Subtype Partitions:
+	##pf3##Percept/Essential Type
+	##pf4##Subject
+	##pf4##Agent
+	##pf4##Event
+	##pf4##Reference Point
+	##pf1##Perception Of Property
+	##pf3##"Property Qualifier" being an "Agent's" interpretation of a "Subject Property".
+	##pf2##Supertypes:
+	##pf4##Subject Property Qualifier
+	##pf2##Subtype Partitions:
+	##pf3##POP/Essential Type
+	##pf4##Significance Of Property
+	##pf4##Normality Of Property
+	##pf4##Desirability Of Property
+	##pf1##Performance Rejected Activity
+	##pf3##"Activity" whose performance has been curtailed prior to re-scheduling or abandoning by the same Performer.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	reason for	Only One	Reason For Rejection
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Performance Suspended Activity
+	##pf3##"Activity" which has started but whose performance has been temporarily stopped.
+	##pf4##The Activity will recommence at the point at which it was suspended. It may of course immediately then be abandoned or deemed not required.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	expected restart	Only One	Timepoint
+	##pf5##Zero, One or Many	expected restart	Zero or One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Performer Accepted Activity
+	##pf3##"Activity" for which the responsibility for performance has been taken by an "Agent".
+	##pf2##Associations From:
+	##pf5##Only One	user	Zero, One or Many	Resource For Accepted Activity
+	##pf2##Associations To:
+
+	##pf5##Zero, One or Many	earliest performance start	Zero or One	Timepoint
+	##pf5##Zero, One or Many	earliest performance start	Only One	Timepoint
+	##pf5##Zero, One or Many	for performance	Zero or One	Location
+	##pf5##Zero, One or Many	for performance	Only One	Location
+	##pf5##Zero, One or Many	latest performance end	Only One	Timepoint
+	##pf5##Zero, One or Many	latest performance end	Zero or One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Performer Rejected Activity
+	##pf3##"Activity" which the identified performer does not intend to perform.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	reason for	Only One	Reason For Rejection
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Performer Selected Activity
+	##pf3##"Activity" where the preferred "Agent" who will take responsibility for performance has been identified.
+	##pf4##May be requested or if the originator wants to do it.
+	##pf2##Associations From:
+	##pf5##Only One	allocated user	Zero, One or Many	Resource For Selected Activity
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	earliest performance start	Zero or One	Timepoint
+	##pf5##Zero, One or Many	earliest performance start	Only One	Timepoint
+	##pf5##Zero, One or Many	latest performance end	Zero or One	Timepoint
+	##pf5##Zero, One or Many	latest performance end	Only One	Timepoint
+	##pf5##Zero, One or Many	selected agent	Only One	Agent
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Phenomenon As Heading
+	##pf3##"Heading" being a "Subject Phenomenon" used as a heading for one or more other "Subject Phenomena".
+	##pf4##For instance, a clinician may wish associate all relevant properties and activities with a "focus" property. A myocardial infarct may act as the focus for an emergency admission, a subsequent by-pass procedure, follow up medication and physiotherapy.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	heading	Only One	Subject Phenomenon
+	##pf5##Zero, One or Many	responsible for assigning	Only One	Agent
+	##pf2##Supertypes:
+	##pf4##Heading
+	##pf1##Phenomenon Or Qualifier
+	##pf3##"Subject Phenomenon" or "Phenomenon Qualifier" extending knowledge about a "Subject".
+	##pf2##Associations From:
+	##pf5##Only One	focus for qualification	Zero, One or Many	Phenomenon Qualifier
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	recorder	Zero or One	Activity State
+	##pf5##Zero, One or Many	reporter	Zero or One	Activity State
+	##pf2##Subtype Partitions:
+	##pf3##PhOQ/Direction
+	##pf4##Subject Phenomenon
+	##pf4##Phenomenon Qualifier
+	##pf1##Phenomenon Qualifier
+	##pf3##Extension or modification of a "Subject Phenomenon" or another "Phenomenon Qualifier".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Phenomenon Qualifier Type
+	##pf5##Zero, One or Many	focus for qualification	Only One	Phenomenon Or Qualifier
+	##pf2##Supertypes:
+	##pf4##Phenomenon Or Qualifier
+	##pf2##Subtype Partitions:
+	##pf3##PhenQ/Value Type
+	##pf4##Category Valued Qualifier
+	##pf4##Measured Qualifier
+	##pf4##Timepoint Valued Qualifier
+	##pf4##Text Valued Qualifier
+	##pf4##Image Valued Qualifier
+	##pf3##PhQ/Qualification
+	##pf4##Temporal Phenomenon Link
+	##pf4##Subject Property Qualifier
+	##pf4##Activity Qualifier
+	##pf1##Phenomenon Qualifier Type
+	##pf3##"Associative Category" capable of classifying a "Phenomenon Qualifier"
+	##pf4##This classifies the nature of the qualifier, eg "laterality of" when speaking about a fractured rib. The actual laterality (ie left or right) is the Category used as the Value by the Phenomenon Qualifier.
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Phenomenon Qualifier
+	##pf2##Supertypes:
+	##pf4##Associative Category
+	##pf1##Phenomenon Under Heading
+	##pf3##"Subject Phenomenon" placed under a "Heading" by an "Agent".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	associated phenomenon	Only One	Subject Phenomenon
+	##pf5##Zero, One or Many	heading for	Only One	Heading
+	##pf1##Physical Resource
+	##pf3##"Resource Held" available for use as one or more physical objects.
+
+	##pf4##There are two types of this:
+	Consumables (eg drugs, foodstuffs, fuels)
+	Assets (eg computers, vehicles, beds).
+	##pf2##Attributes:
+	##pf3##Quantity  (M)  (Number)
+	##pf4##Quantity of the physical resource held.
+	##pf2##Associations From:
+	##pf5##Only One	source	Zero, One or Many	Physical Resource For Activity
+	##pf2##Supertypes:
+	##pf4##Resource Held
+	##pf1##Physical Resource For Activity
+	##pf3##"Resource For Activity" using a specific "Physical Resource".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	source	Only One	Physical Resource
+	##pf2##Supertypes:
+	##pf4##Actual Resource For Activity
+	##pf1##Preferred Contact For Subject
+	##pf3##"Subject Contact" preferred by an "Agent" to contact a "Subject".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	agent	Only One	Agent
+	##pf5##Zero, One or Many	contact	Only One	Subject Contact
+	##pf1##Preferred Name For Subject
+	##pf3##"Subject Name" used by preference for a "Subject" by an "Agent".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	agent	Only One	Agent
+	##pf5##Zero, One or Many	name	Only One	Subject Name
+	##pf1##Principal Agent
+	##pf3##"Authorised Agent" derived directly from a "Subject" not from another "Agent".
+	##pf4##Typically these will be organisations created by others (the authority) with specific powers.  For example, an NHS Trust is not a change/extension in the authority of another organisation.
+	
+	All "Principal Agents" are the result of decree as agreements cannot be made by Subjects.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	has role as	Only One	Subject
+	##pf2##Supertypes:
+	##pf4##Authorised Agent
+	##pf1##Projected Outcome
+	##pf3##"Projected Property" attributing a condition or state as a potential effect of an "Activity".
+	##pf4##This is something which, at the time of deduction, does not exist but is predicted so to do, as distinct from an actual outcome which is deduced to exist at the time of observation.
+	
+	
+	This is not the same as the result (finding) of an observing activity.
+	##pf2##Associations From:
+	##pf5##Only One	property for	One or Many	Expected Outcome
+	##pf5##Only One	property for	Zero, One or Many	Expected Outcome
+	##pf2##Supertypes:
+	##pf4##Projected Property
+	##pf1##Projected Property
+	##pf3##"Property" predicted to be applicable after the time of identification.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	basis	Zero, One or Many	Actual Property
+	##pf5##Zero, One or Many	predicted to be effective at	Only One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf2##Subtype Partitions:
+	##pf3##PrPr/Intention
+	##pf4##Projected Outcome
+	##pf4##Natural Progression
+	##pf4##Target Property
+	##pf1##Property Natural Progression
+	##pf3##"Natural Progression" resulting from a specific "Actual Property".
+	##pf4##In the case of a disease, often known as Prognosis.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	source	Only One	Actual Property
+	##pf2##Supertypes:
+	##pf4##Natural Progression
+	##pf1##Property Qualifier Type
+	##pf3##"Descriptive Category" capable of classifying a "Classified Property Qualifier".
+	##pf4##Used to indicate how a "Property Qualifier" qualifies a "Subject Property".
+	##pf2##Examples:
+	##pf4##Laterality, site (of the body).
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Classified Property Qualifier
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Property To Be Established
+	##pf3##"Subject Property" whose value is unknown but which an "Agent" wishes to establish.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	interested agent	Only One	Agent
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf1##Reason For Abandoning
+	##pf3##"Category" capable of classifying abandoned activities and intentions.
+	##pf2##Associations From:
+
+	##pf5##Only One	reason for	Zero, One or Many	Abandoned Activity
+	##pf5##Only One	reason for	Zero, One or Many	Abandoned Intention
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Reason For Rejection
+	##pf3##"Category" capable of classifying rejected "Activities", "Foci" and "Intentions".
+	##pf4##Attribute in CBS v2.
+	Extended to cover foci & intentions as well as activities.
+	##pf2##Associations From:
+	##pf5##Only One	reason for	Zero, One or Many	Agent Rejected Intention
+	##pf5##Only One	reason for	Zero, One or Many	Performance Rejected Activity
+	##pf5##Only One	reason for	Zero, One or Many	Performer Rejected Activity
+	##pf5##Only One	reason for	Zero, One or Many	Rejected Focus
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Reason Not Required
+	##pf3##"Category" capable of classifying reasons why "Activities" are not required.
+	##pf2##Associations From:
+	##pf5##Only One	reason for	Zero, One or Many	Not Required Activity
+	##pf5##Only One	reason for	Zero, One or Many	Not Required Intention
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Reference Point
+	##pf3##Point or piece of time or space.
+	##pf4##Previous documented definitions providing the source for the above are:
+	
+	Point in time or space (derived from CBS V2).
+	##pf2##Supertypes:
+	##pf4##Percept
+	##pf2##Subtype Partitions:
+	##pf3##RP/Dimension
+	##pf4##Location
+	##pf4##Timepoint
+	##pf1##Rejected Focus
+	##pf3##"Focus For Further Activity" which was initially decided to be a "Relevant Focus" but which is not now so considered.
+	##pf4##Previously known as "Discarded" but name changed to make it consistent.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	reason for	Only One	Reason For Rejection
+	##pf2##Supertypes:
+	##pf4##Focus For Further Activity
+	##pf1##Relevant Focus
+	##pf3##"Focus For Further Activity" indicating that there is an intention to change or address a "Subject Property".
+	##pf4##Old definition was "Subject Property" for which there is an intention to change. Changed this to be in line with other states.
+	Suggest change name to "Focus Under Consideration".
+	##pf2##Supertypes:
+	##pf4##Focus For Further Activity
+	##pf1##Repetitive Activity
+	##pf3##"Activity" which has a predefined frequency of implementation and for which resources and/or occurrence time or other information is required about each implementation of the activity.
+	##pf2##Attributes:
+	##pf3##Effective time period  (M)  (Length of Time)
+	##pf4##Time period during which the repetitive activity should be being performed, eg ("One week", "One Year").
+	##pf3##Frequency  (M)  (Number)
+	##pf4##Number of times within the specified time period for frequency that the activity should be performed.
+	##pf3##Time period for frequency  (M)  (Length of Time)
+	##pf4##Time period to which the frequency relates (eg "day", "week").
+	##pf2##Supertypes:
+	##pf4##Activity
+	##pf1##Required Intention
+	##pf3##"Intention" which is definitely to be taken forward.
+	##pf2##Supertypes:
+	##pf4##Intention State
+	##pf1##Resource For Abandoned Activity
+	##pf3##"Resource For Activity" associated with an "Abandoned Activity".
+	##pf2##Attributes:
+	##pf3##Quantity  (M)  (Number)
+	##pf4##The quantity of the resource actually used in the activity. This cannot exceed the amount supplied via the "Resource Act". It is measured in the same units of measure as the source "Resource Held".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	actual user	Only One	Abandoned Activity
+	##pf2##Supertypes:
+	##pf4##Resource For Activity
+	##pf1##Resource For Accepted Activity
+	##pf3##"Resource For Activity" associated with a "Performer Accepted Activity".
+	##pf2##Attributes:
+	##pf3##Quantity  (O)  (Number)
+	##pf4##The quantity of the resource to be used in the activity. This cannot exceed the amount supplied via the "Resource Act". It is measured in the same units of measure as the source "Resource Held".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	user	Only One	Performer Accepted Activity
+	##pf2##Supertypes:
+	##pf4##Resource For Activity
+	##pf1##Resource For Activity
+	##pf3##Use of a particular "Resource" or "Resource Type" by an "Activity".
+	##pf2##Attributes:
+
+	##pf3##Quantity  (M)  (Number)
+	##pf4##The quantity of the resource to be used in the activity. This cannot exceed the amount supplied via the "Resource Act". It is measured in the same units of measure as the source "Resource Held".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	unit for	Only One	Unit Of Measure
+	##pf2##Subtype Partitions:
+	##pf3##RFA/actuality
+	##pf4##Actual Resource For Activity
+	##pf4##Resource Type For Activity
+	##pf3##RFA/Direction
+	##pf4##Resource For Accepted Activity
+	##pf4##Resource For Started Activity
+	##pf4##Resource For Selected Activity
+	##pf4##Resource For Completed Activity
+	##pf4##Resource For Abandoned Activity
+	##pf4##Resource For Scheduled Activity
+	##pf1##Resource For Completed Activity
+	##pf3##"Resource For Activity" associated with a "Completed Activity".
+	##pf2##Attributes:
+	##pf3##Quantity  (M)  (Number)
+	##pf4##The quantity of the resource actually used in the activity. This cannot exceed the amount supplied via the "Resource Act". It is measured in the same units of measure as the source "Resource Held".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	actual user	Only One	Completed Activity
+	##pf2##Supertypes:
+	##pf4##Resource For Activity
+	##pf1##Resource For Scheduled Activity
+	##pf3##"Resource For Activity" associated with a "Scheduled Activity".
+	##pf2##Attributes:
+	##pf3##Quantity  (O)  (Number)
+	##pf4##The quantity of the resource scheduled to be used in the activity. This cannot exceed the amount supplied via the "Resource Act". It is measured in the same units of measure as the source "Resource Held".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	scheduled user	Only One	Scheduled Activity
+	##pf2##Supertypes:
+	##pf4##Resource For Activity
+	##pf1##Resource For Selected Activity
+	##pf3##"Resource For Activity" associated with a "Performer Selected Activity".
+	##pf2##Attributes:
+	##pf3##Quantity  (O)  (Number)
+	##pf4##The quantity of the resource to be used in the activity. This cannot exceed the amount supplied via the "Resource Act". It is measured in the same units of measure as the source "Resource Held".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	allocated user	Only One	Performer Selected Activity
+	##pf2##Supertypes:
+	##pf4##Resource For Activity
+	##pf1##Resource For Started Activity
+	##pf3##"Resource For Activity" associated with a "Started Activity".
+	##pf2##Attributes:
+	##pf3##Quantity  (O)  (Number)
+	##pf4##The quantity of the resource expected to be used in the activity. This cannot exceed the amount supplied via the "Resource Act". It is measured in the same units of measure as the source "Resource Held".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	actual user	Only One	Started Activity
+	##pf2##Supertypes:
+	##pf4##Resource For Activity
+	##pf1##Resource Held
+	##pf3##Availability of a "Subject" as a resource for use by an "Agent".
+	##pf4##Carried over from CBS V2.
+	Note that the same "Subject" may act as both a "Temporal Resource Held" and a "Physical Resource Held". For example, a computer may be treated as a physical resource in the sense that it may be bought and sold as a commodity. It may also have a role as one (or 
+	more) temporal resources in cases where it is actually in use.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Resource Type
+	##pf5##Zero, One or Many	maintained as	Only One	Subject
+	##pf5##Zero, One or Many	unit for	Only One	Unit Of Measure
+	##pf5##Zero, One or Many	user	Only One	Agent
+	##pf2##Subtype Partitions:
+	##pf3##RH/Temporality
+	##pf4##Temporal Resource
+	##pf4##Physical Resource
+	##pf1##Resource Type
+	##pf3##"Descriptive Category" with the ability to classify "Resource Held".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Resource Held
+	##pf5##Only One	classifier	Zero, One or Many	Resource Type For Activity
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Resource Type For Activity
+	##pf3##"Resource For Activity" specifying a "Resource Type" rather than a specific resource.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Resource Type
+	##pf2##Supertypes:
+	##pf4##Resource For Activity
+	##pf1##Scheduled Activity
+	##pf3##"Activity" where the "Agent" responsible for its performance considers that sufficient "Resources" have been allocated, a start "Location" has been stipulated and a specific "Timepoint" for its start has been set.
+
+	##pf2##Associations From:
+	##pf5##Only One	scheduled user	Zero, One or Many	Resource For Scheduled Activity
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	scheduled end time	Zero or One	Timepoint
+	##pf5##Zero, One or Many	scheduled end time	Only One	Timepoint
+	##pf5##Zero, One or Many	scheduled start time	Only One	Timepoint
+	##pf5##Zero, One or Many	start location for	Only One	Location
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##Significance Level
+	##pf3##"Level" providing a value for a "Significance Of Property".
+	##pf2##Associations From:
+	##pf5##Only One	level for	Zero, One or Many	Significance Of Property
+	##pf2##Supertypes:
+	##pf4##Level
+	##pf1##Significance Of Property
+	##pf3##"Perception Of Property" which indicates its significance.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	level for	Only One	Significance Level
+	##pf2##Supertypes:
+	##pf4##Perception Of Property
+	##pf1##Single Activity
+	##pf3##"Activity" which has no repetitive properties and therefore may be implemented only once.
+	##pf2##Supertypes:
+	##pf4##Activity
+	##pf1##Species Relation
+	##pf3##Indicating that a "Category" is in a species relation with a "Classification".
+	##pf4##Note that it is the extension of the Category which are in fact the species.
+	##pf2##Attributes:
+	##pf3##Differentiating Factor  (M)  (String)
+	##pf4##The factor which differentiates this species of the genus from others. For example, if "Bacterial Infection" is a species of "Infection", the differentiating factor would be "Caused by Bacterium".
+	##pf2##Associations To:
+	##pf5##Many	genus	Only One	Classification Element
+	##pf5##Zero, One or Many	species	Only One	Category
+	##pf2##Subtype Partitions:
+	##pf3##SR/Ordering
+	##pf4##Unordered Species Relation
+	##pf4##Ordered Species Relation
+	##pf1##Standard Heading
+	##pf3##Method for an "Agent" to subdivide "Subject Phenomena".
+	##pf4##Note that Headings may be devised by a variety of authorities and may be orthogonal.
+	##pf2##Associations To:
+	##pf5##One or Many	collector	Only One	Standard Heading Set
+	##pf2##Supertypes:
+	##pf4##Heading
+	##pf1##Standard Heading Set
+	##pf3##"Knowledge Concept" used to form a coherent set of "Standard Headings".
+	##pf4##For example, the set of headings generated by the ACIG and CCC sponsored workshops.
+	##pf2##Associations From:
+	##pf5##Only One	collector	One or Many	Standard Heading
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	responsible for devising	Only One	Agent
+	##pf1##Started Activity
+	##pf3##"Activity" which has commenced.
+	##pf2##Associations From:
+	##pf5##Only One	actual user	Zero, One or Many	Resource For Started Activity
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	start location for	Only One	Location
+	##pf5##Zero, One or Many	start location for	Zero or One	Location
+	##pf2##Supertypes:
+	##pf4##Activity State
+	##pf1##State Change Activity
+	##pf3##"Activity" which changes the state of an "Object".
+	##pf4##The "to" state is deemed to take effect simultaneously with the completion of the state change activity. There will of course be occasions when the decision to make a state change is made well in advance of this and that this decision may be communicated to 
+	interested parties.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	completion timepoint	Only One	Timepoint
+	##pf5##Zero, One or Many	responsible for performance of	Only One	Agent
+	##pf2##Supertypes:
+	##pf4##Activity
+	##pf2##Subtype Partitions:
+	##pf3##SCA/Direction
+	##pf4##Intention State Change
+	##pf4##Focus State Change
+	##pf4##Subject Identifier State Change
+	##pf4##Agent State Change
+	##pf4##Activity State Change
+	##pf1##State Transition Excluded
+	##pf3##"State Transition" that  may not be performed for this "Authorised Agent Activity".
+	##pf4##For example, whilst an "Agent" may be permitted to perform some activity or group of activities, s/he may not be allowed to authorise it.
+
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	activity state type from	Zero or One	Activity State Type
+	##pf5##Zero, One or Many	activity state type to	Only One	Activity State Type
+	##pf1##State Type
+	##pf3##"Descriptive Category" capable of classifying a state of a Class which has a documented state transition.
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf2##Subtype Partitions:
+	##pf3##ST/Direction
+	##pf4##Focus State Type
+	##pf4##Intention State Type
+	##pf4##Subject Identifier State Type
+	##pf4##Activity State Type
+	##pf1##Subject
+	##pf3##"Percept" consisting of one or more persistent physical objects.
+	##pf4##The definition above, as for others, has been distilled from what has been suggested in the past, including:
+	
+	The "Object" of interest to an "Agent" (CBS v2).
+	One or a collection of physical objects.
+	"Percept" which is a physical object and / or a collection of physical objects.
+	Persistent perceivable object.
+	Extension of one or more "Concepts" which is perceived or inferred to exist in the universe.
+	##pf2##Associations From:
+	##pf5##Only One	created subject	Zero, One or Many	Subject Creation
+	##pf5##Only One	has role as	Zero or One	Free Agent
+	##pf5##Only One	has role as	Zero, One or Many	Principal Agent
+	##pf5##Only One	inclusion of	Zero, One or Many	Partitive Subject Relation
+	##pf5##Only One	maintained as	Zero, One or Many	Resource Held
+	##pf5##Only One	member	Zero, One or Many	Membership Subject Relation
+	##pf5##Only One	part of	Zero, One or Many	Partitive Subject Relation
+	##pf5##Only One	relation	Zero, One or Many	Inter Subject Relationship
+	##pf5##Only One	subject	Zero, One or Many	Access Group For Information
+	##pf5##Only One	subject	Zero, One or Many	Object Representation
+	##pf5##Only One	subject	One or Many	Object Representation
+	##pf5##Only One	subject	One or Many	Subject Identifier
+	##pf5##Only One	subject	Zero, One or Many	Subject Phenomenon
+	##pf2##Supertypes:
+	##pf4##Percept
+	##pf1##Subject Characteristic
+	##pf3##"Subject Property" which is a specific condition, state or other item of information observed about a "Subject" at a point in time and excluding its location, identifiers and relationships to other "Subjects".
+	##pf4##Derived in part from CBS v2:
+	
+	Any specific condition, state, property or other item of information about a "Subject" at a point in time.
+	##pf2##Associations From:
+	##pf5##Only One	characteristic for	Zero, One or Many	Fundamental Characteristic
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Subject Characteristic Type
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf2##Subtype Partitions:
+	##pf3##SCH/Value Type
+	##pf4##Category Valued Characteristic
+	##pf4##Measured Characteristic
+	##pf4##Image Valued Characteristic
+	##pf4##Text Valued Characteristic
+	##pf4##Timepoint Valued Characteristic
+	##pf1##Subject Characteristic Type
+	##pf3##"Descriptive Category" capable of classifying a "Subject Characteristic".
+	##pf4##Note that Subject Characteristic is the only type of Subject Property which is descriptive, ie not associative.
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Subject Characteristic
+	##pf5##Zero, One or Many	for some	Zero, One or Many	Authorised Agent
+	##pf5##One or Many	for some	Zero, One or Many	Authorised Agent
+	##pf2##Supertypes:
+	##pf4##Descriptive Category
+	##pf1##Subject Contact
+	##pf3##"Subject Identifier" being a means by which the Subject may receive communications.
+	##pf2##Associations From:
+	##pf5##Only One	contact	Zero, One or Many	Preferred Contact For Subject
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Contact Method
+	##pf5##Zero, One or Many	location for	Zero or One	Location
+	##pf2##Supertypes:
+	##pf4##Subject Identifier
+	##pf1##Subject Creation
+	##pf3##Deduction by an "Agent" that a "Subject" was created by an "Event".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	created subject	Only One	Subject
+	##pf5##Zero, One or Many	creating event	Only One	Event
+	##pf5##Zero, One or Many	observer	Only One	Activity State
+	##pf1##Subject Identifier
+	##pf3##Assigned symbol or term to discriminate the "Subject" from others.
+	##pf4##May not uniquely discriminate a "Subject" from all others. Any "Subject Property" or  "Subject Identifier" may be used for discrimination. A Subject Identifier is unique only where it occurs as a "Unique Identifier In Domain".
+	
+
+	##pf2##Associations From:
+	##pf5##Only One	subject identifier for	One or Many	Subject Identifier State
+	##pf2##Associations To:
+	##pf5##One or Many	subject	Only One	Subject
+	##pf2##Subtype Partitions:
+	##pf3##SI/Uniqueness
+	##pf4##Subject Name
+	##pf4##Subject Contact
+	##pf4##Identifier In Domain
+	##pf1##Subject Identifier Allocated
+	##pf3##"Subject Identifier" which has been assigned to a "Subject".
+	##pf4##The authority by which the identifier is assigned is represented in the relationship to the allocating ACTIVITY and its states.
+	This is the only entry point. "Subject Identifiers" are considered available whilst in this state.
+	##pf2##Supertypes:
+	##pf4##Subject Identifier State
+	##pf1##Subject Identifier Rescinded
+	##pf3##"Subject Identifier" which is no longer available for a "Subject".
+	##pf4##The authority by which the identifier is rescinded is represented in the relationship to the allocating ACTIVITY and its states.
+	This is not an entry point but is an end point. "Subject Identifiers" are considered unavailable in this state.
+	##pf2##Supertypes:
+	##pf4##Subject Identifier State
+	##pf1##Subject Identifier State
+	##pf3##"Subject Identifier" in a state which it is currently or has been previously.
+	##pf4##Note that there are both subtypes (comprising all the possible states) and a "power type" of "Subject Identifier State Type". The latter's contents are identical to the subtypes; it exists in order to control topics such as access and permission to amend.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Subject Identifier State Type
+	##pf5##One or Many	responsible for	Only One	Subject Identifier State Change
+	##pf5##One or Many	subject identifier for	Only One	Subject Identifier
+	##pf2##Subtype Partitions:
+	##pf3##SI/Availability
+	##pf4##Subject Identifier Allocated
+	##pf4##Subject Identifier Rescinded
+	##pf1##Subject Identifier State Change
+	##pf3##"Activity" changing the state of a "Subject Identifier".
+	##pf2##Associations From:
+	##pf5##Only One	responsible for	One or Many	Subject Identifier State
+	##pf2##Supertypes:
+	##pf4##State Change Activity
+	##pf1##Subject Identifier State Type
+	##pf3##"State Type" being one of the permissible states for "Subject Identifier".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Subject Identifier State
+	##pf2##Supertypes:
+	##pf4##State Type
+	##pf1##Subject Location
+	##pf3##"Property" giving the past, present or future physical location of the "Subject".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Subject Location Type
+	##pf5##Zero, One or Many	end for	Zero or One	Timepoint
+	##pf5##Zero, One or Many	location for	Only One	Location
+	##pf5##Zero, One or Many	start for	Only One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf1##Subject Location Type
+	##pf3##"Associative Category" capable of classifying a relationship between a "Subject" and a "Location".
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Subject Location
+	##pf2##Supertypes:
+	##pf4##Associative Category
+	##pf1##Subject Name
+	##pf3##"Subject Identifier" being a specific and ordered combination of words and titles not in a specific "Identifier Domain".
+	##pf4##From PJR July 97. Note that there is no suggestion that a Name is unique.
+	##pf2##Attributes:
+	##pf3##Name  (M)  (String)
+	##pf4##One or more words.
+	##pf2##Associations From:
+	##pf5##Only One	name	Zero, One or Many	Preferred Name For Subject
+	##pf2##Supertypes:
+	##pf4##Subject Identifier
+	##pf1##Subject Natural Progression
+	##pf3##"Natural Progression" not associated with a specific "Actual Property" but associated generally with the "Subject".
+	##pf2##Supertypes:
+	##pf4##Natural Progression
+	##pf1##Subject Phenomenon
+	##pf3##Fact or event, related to a "Subject", that appears or is perceived by one of the senses or by the mind. 
+	##pf2##Associations From:
+	##pf5##Only One	actual source of	Zero, One or Many	Actual Outcome
+	##pf5##Only One	associated phenomenon	Zero, One or Many	Phenomenon Under Heading
+	##pf5##Only One	from	Zero, One or Many	Temporal Phenomenon Link
+	##pf5##Only One	heading	Zero, One or Many	Phenomenon As Heading
+	##pf5##Only One	predicted source of	Zero, One or Many	Expected Outcome
+
+	##pf5##Only One	source of	Zero, One or Many	Causal Relation
+	##pf5##Only One	to	Zero, One or Many	Temporal Phenomenon Link
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	subject	Only One	Subject
+	##pf2##Supertypes:
+	##pf4##Phenomenon Or Qualifier
+	##pf2##Subtype Partitions:
+	##pf3##SPh/Essential Type
+	##pf4##Subject Property
+	##pf4##Activity For Subject
+	##pf1##Subject Property
+	##pf3##Condition or state associated with a "Subject".
+	##pf2##Associations From:
+	##pf5##Only One	basis	Zero, One or Many	Basis For Hypothesis
+	##pf5##Only One	focus for qualification	Zero, One or Many	Subject Property Qualifier
+	##pf5##Only One	outcome of	Zero, One or Many	Causal Relation
+	##pf5##Only One	source of	Zero, One or Many	Outcome of Property
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	level for	Only One	Certainty Level
+	##pf5##Zero, One or Many	observer	Only One	Activity State
+	##pf2##Supertypes:
+	##pf4##Subject Phenomenon
+	##pf2##Subtype Partitions:
+	##pf3##SPr/Association
+	##pf4##Involvement In Incident
+	##pf4##Subject Location
+	##pf4##Subject Characteristic
+	##pf4##Inter Subject Relationship
+	##pf3##SPr/Persistence
+	##pf4##Inherent Temporary Property
+	##pf4##Acquired Temporary Property
+	##pf4##Acquired Permanent Property
+	##pf4##Transient Property
+	##pf4##Lifelong Property
+	##pf3##SPr/Time
+	##pf4##Actual Property
+	##pf4##Unknown Property
+	##pf4##Property To Be Established
+	##pf4##Projected Property
+	##pf1##Subject Property Qualifier
+	##pf3##"Phenomenon Qualifier" qualifying a "Subject Property".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	focus for qualification	Only One	Subject Property
+	##pf5##Zero, One or Many	observer	Only One	Activity State
+	##pf2##Supertypes:
+	##pf4##Phenomenon Qualifier
+	##pf2##Subtype Partitions:
+	##pf3##PrQ/Association
+	##pf4##Basis For Hypothesis
+	##pf4##Causal Relation
+	##pf4##Classified Property Qualifier
+	##pf4##Focus For Further Activity
+	##pf4##Intention
+	##pf4##Perception Of Property
+	##pf1##Subject Responsibility
+	##pf3##Responsibility of an "Agent" to provide an "Activity Type" for a "Subject".
+	##pf4##The Subject is inherited from the Subject Responsibility Act.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Activity Type
+	##pf5##One or Many	creator	Only One	Subject Responsibility Act
+	##pf1##Subject Responsibility Act
+	##pf3##An "Activity for Subject" that establishes the responsibility that an "Agent" has for some "Subject" to perform some "Activity Type" or for when some "Activity Type" is being performed.
+	##pf4##Examples:
+	The responsibility that a GP has for a patient to perform 'general medical duties'.  
+	The responsibility of a 'named nurse' to a patient to be the central reference point within a hospital.
+	##pf2##Associations From:
+	##pf5##Only One	creator	One or Many	Subject Responsibility
+	##pf2##Supertypes:
+	##pf4##Activity For Subject
+	##pf1##Target Property
+	##pf3##"Projected Property" attributing a condition or state as an aim, objective or goal.
+	##pf2##Supertypes:
+	##pf4##Projected Property
+	##pf1##Temporal Link Type
+	##pf3##"Associative Category" capable of classifying "Temporal Phenomenon Links" and "Timepoint Associations".
+
+	##pf4##The types of link are:
+	A starts and ends before B starts
+	A starts before B starts and ends when B starts
+	A starts before B starts and ends after B starts but before it ends
+	A starts before B starts and ends when B ends
+	A starts before B starts and ends after B ends
+	A starts when B starts and ends when B starts
+	A starts when B starts and ends after B starts and before B ends
+	A starts when B starts and ends when B ends
+	A starts when B starts and ends after B ends
+	A starts after B starts but before it ends and ends before B ends
+	A starts after B starts but before it ends and ends when B ends
+	A starts after B starts but before it ends and ends after B ends
+	A starts when B ends and ends when B ends
+	A starts when B ends and ends after B ends
+	A starts and ends after B ends.
+	
+	For linked objects which are of zero duration, the start and end are simultaneous.
+	##pf2##Associations From:
+	##pf5##Only One	classifier	Zero, One or Many	Temporal Phenomenon Link
+	##pf5##Only One	classifier	Zero, One or Many	Timepoint Association
+	##pf2##Supertypes:
+	##pf4##Associative Category
+	##pf1##Temporal Phenomenon Link
+	##pf3##Link between two "Subject Phenomena" based on time.
+	##pf4##Note that for Activities, the start and end are assumed to be that of performance.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Temporal Link Type
+	##pf5##Zero, One or Many	from	Only One	Subject Phenomenon
+	##pf5##Zero, One or Many	to	Only One	Subject Phenomenon
+	##pf2##Supertypes:
+	##pf4##Phenomenon Qualifier
+	##pf1##Temporal Resource
+	##pf3##"Resource Held" whose availability may be expressed as a rate.
+	##pf4##Temporal Resources are available only through the "Resource Activities" in which they are used. Examples of these are:
+	Shift rotas (for people)
+	Booking rotas for buildings, rooms etc.
+	
+	Temporal Resources may be composed of other Temporal Resources.
+	##pf2##Attributes:
+	##pf3##Rate Of Availability  (M)  (Rate)
+	##pf4##The rate at which the resource is available (eg 40 hours / week)
+	##pf2##Associations From:
+	##pf5##Only One	resource	Zero, One or Many	Temporal Resource Act
+	##pf2##Supertypes:
+	##pf4##Resource Held
+	##pf1##Temporal Resource Act
+	##pf3##"Activity" making a "Temporal Resource" available for a specified period.
+	##pf4##Examples include:
+	Staff roster
+	Room schedule
+	Operating theatre session list.
+	##pf2##Associations From:
+	##pf5##Only One	source	Zero, One or Many	Temporal Resource For Activity
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	resource	Only One	Temporal Resource
+	##pf2##Supertypes:
+	##pf4##Activity
+	##pf1##Temporal Resource For Activity
+	##pf3##"Actual Resource For Activity" using a specific "Temporal Resource".
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	source	Only One	Temporal Resource Act
+	##pf2##Supertypes:
+	##pf4##Actual Resource For Activity
+	##pf1##Text Valued Characteristic
+	##pf3##"Subject Characteristic" having a value expressed by a text string.
+	##pf4##The string may be structured or unstructured. Examples include pathology and radiology reports, unstructured assessments as well as amplification and addenda to phenomena. For example, an informal assessment may be recorded as a Text Valued 
+	Characteristic. The obvious drawback is that any automated analysis of these is difficult if not impossible.
+	##pf2##Attributes:
+	##pf3##Text  (M)  (String)
+	##pf4##One or more words.
+	##pf2##Supertypes:
+	##pf4##Subject Characteristic
+	##pf1##Text Valued Qualifier
+	##pf3##"Phenomenon Qualifier" having a value expressed by a text string.
+	##pf4##The string may be structured or unstructured. Examples include pathology and radiology reports, unstructured assessments as well as amplification and addenda to phenomena or qualifiers with other values. For example, an Image Valued Qualifier 
+	containing an X-ray image may be qualified by a report from the radiologist.
+	##pf2##Attributes:
+	##pf3##Text  (M)  (String)
+	##pf4##One or more words.
+	##pf2##Supertypes:
+	##pf4##Phenomenon Qualifier
+	##pf1##Timepoint
+	##pf3##"Reference Point" being a point or period in time.
+	##pf2##Associations From:
+	##pf5##Only One	completion timepoint	Zero, One or Many	State Change Activity
+	##pf5##Only One	earliest performance start	Zero, One or Many	Activity Under Consideration
+	##pf5##Zero or One	earliest performance start	Zero, One or Many	Performer Accepted Activity
+	##pf5##Only One	earliest performance start	Zero, One or Many	Performer Accepted Activity
+	##pf5##Zero or One	earliest performance start	Zero, One or Many	Performer Selected Activity
+	##pf5##Only One	earliest performance start	Zero, One or Many	Performer Selected Activity
+	##pf5##Zero or One	end	Zero, One or Many	Acquired Temporary Property
+
+	##pf5##Only One	end	Zero, One or Many	Authorised Agent Activity
+	##pf5##Zero or One	end	Zero, One or Many	Authorised Agent Activity
+	##pf5##Zero or One	end	Zero, One or Many	Inherent Temporary Property
+	##pf5##Only One	end for	Zero, One or Many	Incident
+	##pf5##Zero or One	end for	Zero, One or Many	Subject Location
+	##pf5##Zero or One	expected restart	Zero, One or Many	Performance Suspended Activity
+	##pf5##Only One	expected restart	Zero, One or Many	Performance Suspended Activity
+	##pf5##Only One	from	Zero, One or Many	Authorised Agent
+	##pf5##Only One	from	Zero, One or Many	Timepoint Association
+	##pf5##Only One	latest performance end	Zero, One or Many	Activity Under Consideration
+	##pf5##Zero or One	latest performance end	Zero, One or Many	Performer Accepted Activity
+	##pf5##Only One	latest performance end	Zero, One or Many	Performer Accepted Activity
+	##pf5##Zero or One	latest performance end	Zero, One or Many	Performer Selected Activity
+	##pf5##Only One	latest performance end	Zero, One or Many	Performer Selected Activity
+	##pf5##Only One	onset	Zero, One or Many	Acquired Permanent Property
+	##pf5##Only One	onset	Zero, One or Many	Acquired Temporary Property
+	##pf5##Only One	predicted to be effective at	Zero, One or Many	Projected Property
+	##pf5##Only One	scheduled end time	Zero, One or Many	Scheduled Activity
+	##pf5##Zero or One	scheduled end time	Zero, One or Many	Scheduled Activity
+	##pf5##Only One	scheduled start time	Zero, One or Many	Scheduled Activity
+	##pf5##Zero or One	start	Zero, One or Many	Authorised Agent Activity
+	##pf5##Only One	start	Zero, One or Many	Authorised Agent Activity
+	##pf5##Only One	start for	Zero, One or Many	Incident
+	##pf5##Only One	start for	Zero, One or Many	Subject Location
+	##pf5##Zero or One	to	Zero, One or Many	Authorised Agent
+	##pf5##Only One	to	Zero, One or Many	Timepoint Association
+	##pf5##Only One	value	Zero, One or Many	Timepoint Valued Characteristic
+	##pf5##Only One	value	Zero, One or Many	Timepoint Valued Qualifier
+	##pf2##Supertypes:
+	##pf4##Reference Point
+	##pf1##Timepoint Association
+	##pf3##Association of interest between two "Timepoints".
+	##pf4##Types of association include:
+	A starts and ends before B starts
+	A starts before B starts and ends when B starts
+	A starts before B starts and ends after B starts but before it ends
+	A starts before B starts and ends when B ends
+	A starts before B starts and ends after B ends
+	A starts when B starts and ends when B starts
+	A starts when B starts and ends after B starts and before B ends
+	A starts when B starts and ends when B ends
+	A starts when B starts and ends after B ends
+	A starts after B starts but before it ends and ends before B ends
+	A starts after B starts but before it ends and ends when B ends
+	A starts after B starts but before it ends and ends after B ends
+	A starts when B ends and ends when B ends
+	A starts when B ends and ends after B ends
+	A starts and ends after B ends.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	classifier	Only One	Temporal Link Type
+	##pf5##Zero, One or Many	from	Only One	Timepoint
+	##pf5##Zero, One or Many	to	Only One	Timepoint
+	##pf1##Timepoint Valued Characteristic
+	##pf3##"Subject Characteristic" whose value is specified by a "Timepoint"
+	##pf4##For example: DoB.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	value	Only One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Subject Characteristic
+	##pf1##Timepoint Valued Qualifier
+	##pf3##"Phenomenon Qualifier" whose value is specified by a "Timepoint"
+	##pf4##For example: date from which the severity of a condition changed.
+	##pf2##Associations To:
+	##pf5##Zero, One or Many	value	Only One	Timepoint
+	##pf2##Supertypes:
+	##pf4##Phenomenon Qualifier
+	##pf1##Transient Property
+	##pf3##"Subject Property" applying only at the time of its "Observing Act".
+	##pf2##Supertypes:
+	##pf4##Subject Property
+	##pf1##Unit Of Measure
+	##pf3##"Concept" used to quantify measurement of a dimension or set of dimensions.
+	##pf2##Associations From:
+	##pf5##Zero or One	accuracy unit for	Zero, One or Many	Measured Qualifier
+	##pf5##Only One	accuracy unit for	Zero, One or Many	Measured Qualifier
+	##pf5##Only One	measurement unit for	Zero, One or Many	Measured Qualifier
+	##pf5##Zero or One	precision unit for	Zero, One or Many	Measured Qualifier
+	##pf5##Only One	precision unit for	Zero, One or Many	Measured Qualifier
+	##pf5##Only One	unit for	Zero, One or Many	Activity
+	##pf5##Only One	unit for	Zero, One or Many	Resource For Activity
+	##pf5##Only One	unit for	Zero, One or Many	Resource Held
+	##pf2##Supertypes:
+	##pf4##Concept
+	##pf1##Unknown Property
+	##pf3##'"Subject Property" whose existence or value needs to be established.'
+	##pf2##Supertypes:
+
+	##pf4##Subject Property
+	##pf1##Unordered Classificatn Element
+	##pf3##"Classification Element" whose species do not have an ordered relation one to another.
+	##pf2##Associations From:
+	##pf5##Only One	genus	Many	Unordered Species Relation
+	##pf2##Supertypes:
+	##pf4##Classification Element
+	##pf1##Unordered Species Relation
+	##pf3##"Species Relation" which does not have an ordinal relation with others in the same "Ordered Classification Element"
+	##pf2##Associations To:
+	##pf5##Many	genus	Only One	Unordered Classificatn Element
+	##pf2##Supertypes:
+	##pf4##Species Relation
+	##pf1##Urgency
+	##pf3##"Level" capable of specifying a perceived requirement for speed.
+	##pf2##Associations From:
+	##pf5##Zero or One	urgency classifier	Zero, One or Many	Activity
+	##pf5##Zero or One	urgency classifier	Zero, One or Many	Focus For Further Activity
+	##pf2##Supertypes:
+	##pf4##Level
+	##pf1##Value Category
+	##pf3##"Category" which may be used to give a value to a "Category Valued PhenorQual".
+	##pf4##Typical examples are:
+	"True"
+	"False"
+	"Left" (laterality)
+	"Right" (ditto)
+	"High"
+	"Low".
+	Obviously, there are sets from which selection may be made. This should be governed by constraining selection to one out of a set of species categories within a single Classification Element.
+	##pf2##Associations From:
+	##pf5##Only One	value	Zero, One or Many	Category Valued Characteristic
+	##pf5##Only One	value	Zero, One or Many	Category Valued Qualifier
+	##pf2##Supertypes:
+	##pf4##Category

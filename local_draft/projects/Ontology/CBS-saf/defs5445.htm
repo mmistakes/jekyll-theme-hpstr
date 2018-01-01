@@ -1,0 +1,309 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Definitions, Encyclopedia:"D:\DATA\SYSARCH\HCM\GEN_DATA\SUBJECT\V01\CURRENT\"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<A NAME="Definitions">
+<A NAME="D74416"><Font size=4 color="b22222">
+Temporal Link Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Associative Category&quot; capable of classifying &quot;Temporal Phenomenon Links&quot; and &quot;Timepoint
+Associations&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+The types of link are:
+<BR>
+A starts and ends before B starts
+<BR>
+A starts before B starts and ends when B starts
+<BR>
+A starts before B starts and ends after B starts but before it ends
+<BR>
+A starts before B starts and ends when B ends
+<BR>
+A starts before B starts and ends after B ends
+<BR>
+A starts when B starts and ends when B starts
+<BR>
+A starts when B starts and ends after B starts and before B ends
+<BR>
+A starts when B starts and ends when B ends
+<BR>
+A starts when B starts and ends after B ends
+<BR>
+A starts after B starts but before it ends and ends before B ends
+<BR>
+A starts after B starts but before it ends and ends when B ends
+<BR>
+A starts after B starts but before it ends and ends after B ends
+<BR>
+A starts when B ends and ends when B ends
+<BR>
+A starts when B ends and ends after B ends
+<BR>
+A starts and ends after B ends.
+<BR>
+
+<BR>
+For linked objects which are of zero duration, the start and end are simultaneous.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D35608"><Font size=4 color="b22222">
+Temporal Phenomenon Link (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Link between two &quot;Subject Phenomena&quot; based on time.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that for Activities, the start and end are assumed to be that of performance.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D73869"><Font size=4 color="b22222">
+Temporal Resource Act (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; making a &quot;Temporal Resource&quot; available for a specified period.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Examples include:
+<BR>
+Staff roster
+<BR>
+Room schedule
+<BR>
+Operating theatre session list.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+CBS V2 Gen
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D73888"><Font size=4 color="b22222">
+Temporal Resource For Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Actual Resource For Activity&quot; using a specific &quot;Temporal Resource&quot;.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+CBS V2 Gen
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D73851"><Font size=4 color="b22222">
+Temporal Resource (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Resource Held&quot; whose availability may be expressed as a rate.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Temporal Resources are available only through the &quot;Resource Activities&quot; in which they are used.
+Examples of these are:
+<BR>
+Shift rotas (for people)
+<BR>
+Booking rotas for buildings, rooms etc.
+<BR>
+
+<BR>
+Temporal Resources may be composed of other Temporal Resources.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+CBS V2 Gen
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Attributes: 
+<DD><B>
+&quot;Rate Of Availability&quot;
+<BR>
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5241.htm#D73978" target="SADETAILTARGET"><Font size=2 color="b22222">
+Rate Of Availability (Class Attribute)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="D154632"><Font size=4 color="b22222">
+Text Valued Characteristic (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Subject Characteristic&quot; having a value expressed by a text string.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+The string may be structured or unstructured. Examples include pathology and radiology reports,
+unstructured assessments as well as amplification and addenda to phenomena. For example, an informal
+assessment may be recorded as a Text Valued Characteristic. The obvious drawback is that any
+automated analysis of these is difficult if not impossible.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Attributes: 
+<DD><B>
+Text
+<BR>
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5445.htm#D154633" target="SADETAILTARGET"><Font size=2 color="b22222">
+Text (Class Attribute)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="D74713"><Font size=4 color="b22222">
+Text Valued Qualifier (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Phenomenon Qualifier&quot; having a value expressed by a text string.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+The string may be structured or unstructured. Examples include pathology and radiology reports,
+unstructured assessments as well as amplification and addenda to phenomena or qualifiers with other
+values. For example, an Image Valued Qualifier containing an X-ray image may be qualified by a
+report from the radiologist.
+</B></font><BR>
+<DT><Font size=3>Source: <B>
+HcM QA
+</B></font><BR>
+<DT><Font size=3>State Type: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Attributes: 
+<DD><B>
+Text
+<BR>
+</B></font><BR>
+<DT><Font size=3>&amp;Abstract: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Value: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5445.htm#D74714" target="SADETAILTARGET"><Font size=2 color="b22222">
+Text (Class Attribute)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="D154633"><Font size=4 color="b22222">
+Text (Class Attribute)</font></A><BR>
+<DL>
+<DT><Font size=3>Derived: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Value Type: <B>
+String
+</B></font><BR>
+<DT><Font size=3>Optional: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Unique: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Const: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Description: <B>
+One or more words.
+</B></font><BR>
+<DT><Font size=3>Class Name: <B>
+&quot;Text Valued Characteristic&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="D74714"><Font size=4 color="b22222">
+Text (Class Attribute)</font></A><BR>
+<DL>
+<DT><Font size=3>Derived: <B>
+F
+</B></font><BR>
+<DT><Font size=3>&amp;Value Type: <B>
+String
+</B></font><BR>
+<DT><Font size=3>Optional: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Unique: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Const: <B>
+F
+</B></font><BR>
+<DT><Font size=3>Description: <B>
+One or more words.
+</B></font><BR>
+<DT><Font size=3>Class Name: <B>
+&quot;Text Valued Qualifier&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

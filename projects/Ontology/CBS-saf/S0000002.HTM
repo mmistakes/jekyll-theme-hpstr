@@ -1,0 +1,350 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Subject"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S110"><Font size=4 color="b22222">
+Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+Role of a subject enabling it to act purposefully.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+CBS V2: - A role of a &quot;Subject&quot; which indicates that it has power to act
+<BR>
+
+<BR>
+This is a role which may be played by a &quot;Subject&quot;. Sometimes, an &quot;Agent&quot; may be created in order to
+assemble a set of responsibilities and authorities prior to a specific &quot;Subject&quot; being identified
+and allocated to it.
+<BR>
+
+<BR>
+For purposes of creating an &quot;Authorising Act&quot;, an &quot;Agent&quot; may actually be a group of individuals -
+for example when joint responsibility is being taken for some decision, as in a clinical case
+conference.  In such a case the details of the group are taken care of by &quot;Subject&quot; and &quot;Inter
+Subject Relationship&quot;.
+<BR>
+
+<BR>
+Examples of &quot;Agent&quot;:
+<BR>
+Dr Smithers within NHS XYZ Trust, 
+<BR>
+Ms J.Doe in the HXT Pathology laboratory.
+<BR>
+
+<BR>
+A better understanding of the types of &quot;Agent&quot; can be gained from examination of its subtypes.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73103"><Font size=4 color="b22222">
+created subject (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73104"><Font size=4 color="b22222">
+creating event (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Event
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Event
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S111"><Font size=4 color="b22222">
+Event (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Something which happens.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S8691"><Font size=4 color="b22222">
+Inter Subject Relationship (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Subject Property&quot; associating one &quot;Subject&quot; with another.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous documented definitions providing the source for the above are:
+<BR>
+
+<BR>
+A connection of interest from one &quot;Subject&quot; to another (CBS v2).
+<BR>
+
+<BR>
+Note that authoritative relationships (eg employee) are recorded in Authorised Agent rather than
+here.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73804"><Font size=4 color="b22222">
+maintained as (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Resource Held&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Resource Held&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S101"><Font size=4 color="b22222">
+Percept (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Object&quot; perceived or inferred to have physical existence.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S113"><Font size=4 color="b22222">
+Percept&#47;Essential Type (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+Percept
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5045.htm#D61" target="SADETAILTARGET"><Font size=2 color="b22222">
+Percept (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S112"><Font size=4 color="b22222">
+Reference Point (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Point or piece of time or space.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous documented definitions providing the source for the above are:
+<BR>
+
+<BR>
+Point in time or space (derived from CBS V2).
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S8693"><Font size=4 color="b22222">
+relation (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Inter Subject Relationship&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Inter Subject Relationship&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73803"><Font size=4 color="b22222">
+Resource Held (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000337.htm" target="_top"><Font size=2><B>Resource Held</A> (
+OMT Object Model)</B></Font><BR>
+<BR>
+</B></font><BR>
+<DT><Font size=3>Description: <B>
+Availability of a &quot;Subject&quot; as a resource for use by an &quot;Agent&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Carried over from CBS V2.
+<BR>
+Note that the same &quot;Subject&quot; may act as both a &quot;Temporal Resource Held&quot; and a &quot;Physical Resource
+Held&quot;. For example, a computer may be treated as a physical resource in the sense that it may be
+bought and sold as a commodity. It may also have a role as one (or more) temporal resources in cases
+where it is actually in use.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S5840"><Font size=4 color="b22222">
+SPh&#47;Essential Type (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Subject Phenomenon&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5355.htm#D5643" target="SADETAILTARGET"><Font size=2 color="b22222">
+Subject Phenomenon (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S8692"><Font size=4 color="b22222">
+SPr&#47;Association (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Partition of Subject Property based on the associations which the subtypes have.
+</B></font><BR>
+<DT><Font size=3>Base Class: <B>
+&quot;Subject Property&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5355.htm#D8363" target="SADETAILTARGET"><Font size=2 color="b22222">
+Subject Property (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S5844"><Font size=4 color="b22222">
+subject (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Phenomenon&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Phenomenon&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S9105"><Font size=4 color="b22222">
+subject (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Identifier&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Identifier&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S102"><Font size=4 color="b22222">
+Subject (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Percept&quot; consisting of one or more persistent physical objects.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+The definition above, as for others, has been distilled from what has been suggested in the past,
+including:
+<BR>
+
+<BR>
+The &quot;Object&quot; of interest to an &quot;Agent&quot; (CBS v2).
+<BR>
+One or a collection of physical objects.
+<BR>
+&quot;Percept&quot; which is a physical object and &#47; or a collection of physical objects.
+<BR>
+Persistent perceivable object.
+<BR>
+Extension of one or more &quot;Concepts&quot; which is perceived or inferred to exist in the universe.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73102"><Font size=4 color="b22222">
+Subject Creation (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000304.htm" target="_top"><Font size=2><B>Subject Creation</A> (
+OMT Object Model)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+Deduction by an &quot;Agent&quot; that a &quot;Subject&quot; was created by an &quot;Event&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S9104"><Font size=4 color="b22222">
+Subject Identifier (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000020.htm" target="_top"><Font size=2><B>Subject Identifier</A> (
+OMT Object Model)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+Assigned symbol or term to discriminate the &quot;Subject&quot; from others.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+May not uniquely discriminate a &quot;Subject&quot; from all others. Any &quot;Subject Property&quot; or  &quot;Subject
+Identifier&quot; may be used for discrimination. A Subject Identifier is unique only where it occurs as a
+&quot;Unique Identifier In Domain&quot;.
+<BR>
+
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S129"><Font size=4 color="b22222">
+Subject Phenomenon (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000003.htm" target="_top"><Font size=2><B>Subject Phenomenon</A> (
+OMT Object Model)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+Fact or event, related to a &quot;Subject&quot;, that appears or is perceived by one of the senses or by the
+mind. 
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S5839"><Font size=4 color="b22222">
+Subject Property (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Condition or state associated with a &quot;Subject&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>
