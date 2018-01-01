@@ -2,7 +2,7 @@
 layout: post
 title: "Why Evolution Is True by Jerry A. Coyne"
 description: "Why Evolution Is True by Jerry A. Coyne"
-tags: [review, emergence, evelution]
+tags: [review, emergence, evolution]
 modified: 2017-07-16
 ---
 My rating: [4 of 5 stars](https://www.goodreads.com/review/show/112783206)

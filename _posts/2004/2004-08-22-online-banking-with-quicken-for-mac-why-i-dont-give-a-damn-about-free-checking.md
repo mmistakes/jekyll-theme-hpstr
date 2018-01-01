@@ -2,7 +2,7 @@
 layout: post
 title: "Online Banking with Quicken for Mac. Why I don’t give a damn about free checking"
 description: "Online Banking with Quicken for Mac. Why I don’t give a damn about free checking"
-tags: [reviews, technology, economics, strategy]
+tags: [review, technology, economics, strategy]
 modified: 2017-06-15
 ---
 

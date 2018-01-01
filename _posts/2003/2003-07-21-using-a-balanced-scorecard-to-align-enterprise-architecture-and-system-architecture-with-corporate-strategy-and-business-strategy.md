@@ -2,7 +2,7 @@
 layout: post
 title: "Aligning System Architecture with Corporate Strategy using a Balanced Scorecard"
 description: "Using a Balanced Scorecard to align Enterprise Architecture and System Architecture with Corporate Strategy and Business Strategy"
-tags: [strategy, architecture, economics]
+tags: [strategy, architecture, economics, capabilities]
 modified: 2016-12-30
 image:
   feature: /2003-07-Metropolis.png
@@ -63,7 +63,7 @@ The goals and objectives of the corporate balanced scorecard should be labeled t
 
 The Quality Attribute Perspective
 
-When developing an enterprise architecture a new perspective should be added to the existing corporate balanced scorecard. This perspective should define the quality attributes of the enterprise architecture. Quality attribute definition has long been used to specify desirable features of software systems (I will cover the definition of software quality attributes in another article). What this approach has lacked in the past is a way to link the goals and objectives for quality attributes into the overall corporate and business strategy. By adding a quality attribute perspective to an existing balanced scorecard this problem can be solved. The new quality attribute perspective should be subservient to all other perspectives. Every goal and objective on the new perspective must be linked to one or more other goals or objectives in the other perspectives. There is absolutely no point in defining goals and objectives for enterprise architecture quality attributes unless they support some other business objective. Enterprise architecture has no meaningful purpose independent of the enterprise! By making the relationship between the quality attribute perspective and the rest of the balanced scorecard explicit changes in corporate strategy can be assessed in terms of their impact on the enterprise architecture and vice versa.
+When developing an enterprise architecture a new perspective should be added to the existing corporate balanced scorecard. This perspective should define the quality attributes of the enterprise architecture. Quality attribute definition has long been used to specify desirable capabilities of software systems (I will cover the definition of software quality attributes (capabilities) in another article). What this approach has lacked in the past is a way to link the goals and objectives for quality attributes into the overall corporate and business strategy. By adding a quality attribute perspective to an existing balanced scorecard this problem can be solved. The new quality attribute perspective should be subservient to all other perspectives. Every goal and objective on the new perspective must be linked to one or more other goals or objectives in the other perspectives. There is absolutely no point in defining goals and objectives for enterprise architecture quality attributes unless they support some other business objective. Enterprise architecture has no meaningful purpose independent of the enterprise! By making the relationship between the quality attribute perspective and the rest of the balanced scorecard explicit changes in corporate strategy can be assessed in terms of their impact on the enterprise architecture and vice versa.
 
 <div align="center">
 {% capture images %}

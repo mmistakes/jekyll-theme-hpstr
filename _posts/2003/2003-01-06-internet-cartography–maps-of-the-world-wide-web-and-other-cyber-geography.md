@@ -2,7 +2,7 @@
 layout: post
 title: "Internet Cartography – Maps of the World Wide Web and other Cyber Geography"
 description: "Internet Cartography, Maps of the World Wide Web and other Cyber Geography"
-tags: [complexity, technology, networking, visualization]
+tags: [complexity, technology, networks, visualization]
 modified: 2016-12-23
 ---
 In the Beginning there was one.

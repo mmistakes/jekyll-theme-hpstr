@@ -2,7 +2,7 @@
 layout: post
 title: "The Evolutionary Origins of Ritual, Music, and Dance"
 description: "The Evolutionary Origins of Ritual, Music, and Dance"
-tags: [complexity, reviews, evolution, music, dance]
+tags: [complexity, review, evolution, music, dance]
 modified: 2017-07-17
 ---
 [Evolutionary Psychology](https://en.wikipedia.org/wiki/Evolutionary_psychology) posits that many human behaviors are evolved adaptations. In his excellent books [The Red Queen](https://www.amazon.com/exec/obidos/ASIN/0060556579/virtualtravel-20), and [The Origins of Virtue](https://www.amazon.com/exec/obidos/ASIN/0140264450/virtualtravel-20), [Matt Ridley](http://www.rationaloptimist.com/blog) explains the evolutionary origins of human sexuality, reciprocity, and collaboration. It is an easy mistake to assume that all common behaviors are adaptations of some kind, when in fact many are often merely side effects and confer no direct advantage. Despite this problem, the evidence that many behaviors are advantageous is compelling. With this in mind I am always on the look-out for evolutionary explanations of other behaviors, but remain wary that these may not imply adaptation.

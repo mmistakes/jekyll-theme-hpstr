@@ -2,7 +2,7 @@
 layout: post
 title: "Google's Ngram Viewer exposes Gartners Hype Cycles"
 description: "Google’s Ngram Viewer exposes Gartner’s Hype Cycles"
-tags: [reviews, technology, innovation, outlier, prediction, strategy]
+tags: [review, technology, innovation, outlier, prediction, strategy, failure]
 modified: 2011-04-20
 image:
   feature: /2011-04-Gartner-Hype-Cycle-title.png

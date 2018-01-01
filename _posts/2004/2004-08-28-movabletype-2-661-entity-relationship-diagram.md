@@ -2,7 +2,7 @@
 layout: post
 title: "Movabletype 2.661 Entity Relationship Diagram"
 description: "Movabletype 2.661 Entity Relationship Diagram"
-tags: [system design, reviews, information visualization]
+tags: [system design, review, information visualization]
 modified: 2017-06-15
 ---
 I have been experimenting with [Python](https://www.python.org/) 2.3 and[MySQL](https://www.mysql.com/) 4.0.13 recently and have been using a copy of my Movabletype 2.661 database as a sandbox. Before I started a spent a few minutes working out the structure of the database. This Entity Relationship Diagram is what I came up with. I expect version 3.0 of Movabletype is different, but just in case anyone else is digging around in Movabletype and could use a map here is a [pdf version](/content/2004/2004-08-MT-ERD.pdf).

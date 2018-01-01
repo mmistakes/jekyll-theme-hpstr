@@ -2,7 +2,7 @@
 layout: post
 title: "Is Traffic Congestion Leading to the Resurrection of Trolley Cars and Trams in Large Cities ?"
 description: "Is Traffic Congestion Leading to the Resurrection of Trolley Cars and Trams in Large Cities ?"
-tags: [technology, adoption]
+tags: [technology]
 modified: 2016-12-30
 ---
 I saw a Blackpool tram on the Embarcadero in San Francisco today. The destination on the side said “[Tower](https://en.wikipedia.org/wiki/Blackpool_Tower)“. At first I was dumb-struck and then I thought “That’s a bloody long way on a tram!”

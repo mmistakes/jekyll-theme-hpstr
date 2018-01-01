@@ -2,7 +2,7 @@
 layout: post
 title: "Ontology Review 2: The International System of Units (SI). US Resistance to Adoption of the Metric System"
 description: "Ontology Review 2: The International System of Units (SI). US Resistance to Adoption of the Metric System"
-tags: [ontolog, globalization, failure, review]
+tags: [ontology, globalization, failure, review]
 modified: 2016-12-30
 ---
 The International System of Units (SI) [72 page pdf Brochure] is maintained by the [Bureau International des Poids et Measures](http://www.bipm.org/en/about-us/) at it’s headquarters in Sevres near Paris, France. The Metric System as it is often known has a long history; supposedly invented in 1670 by Gabriel Mouton, a French clergyman, It was adopted by France in 1795 and by the United States in 1866. The system gained international status with the signing of [The Convention of the Meter](http://www.bipm.org/en/worldwide-metrology/metre-convention/) in Paris on 20th May 1875. The U.S. was one of the original seventeen signatory nations and is the only industrialized nation that still does not use the system.
