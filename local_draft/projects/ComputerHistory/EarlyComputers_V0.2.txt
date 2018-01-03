@@ -1,0 +1,1728 @@
+digraph EarlyComputers {
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//  The Evolution of the Modern Computer
+//  ------------------------------------
+//
+//  EarlyComputers.txt  Version 0.2 Beta
+//
+//------------------------------------------------------------------------------
+//  Change Log (Add new changes at the top of the list)
+//  ----------
+//  Date        Name                    Notes and email
+//  ----------  ----------------------- ---------------------------------------
+//
+//  2003-11-26  John R. Harris          Second Release V.0.2 Beta
+//                                      Thanks to Alder Yarrow for advice on 
+//                                      layout and information design issues
+//                                      JohnRHarris@VirtualTravelog.net
+//  2003-11-07  John R. Harris          First Release V.0.1 Beta
+//                                      JohnRHarris@VirtualTravelog.net
+//  2003-09-10  John R. Harris          Created first version
+//                                      JohnRHarris@VirtualTravelog.net
+//
+//------------------------------------------------------------------------------
+//  Description
+//  -----------
+//  This file is a documented input file for the dot preprocessor of 
+//  the graphviz package. Graphviz is freely available from AT&T Labs-Research 
+//  http://www.research.att.com/sw/tools/graphviz/. If you download graphviz 
+//  and follow the install instructions and use this file as input to dot it 
+//  will produce a directed graph plotted against a time axis showing the 
+//  evolution of early computers.
+//
+//  This file is intended to present the known FACTS about early computers. 
+//  The interpretation of the directed graph this file produces is up to you. 
+//  There is a great deal of noise and misinformation about early computers. 
+//  Almost every computer developed before 1950 is claimed by someone as a 
+//  first in some respect. This file and the graph it generates are intended 
+//  to enable the unbiased student to visually compare these claims and come
+//  to their own judgment.  
+//
+//  Graphviz is limited in its capabilities but it has three major advantages. 
+//  It is freely available, it is driven by an ascii input file, and it 
+//  contains a reasonable layout engine. The first two  factors will ensure 
+//  the widest audience possible can enhance the file. An the last factor will
+//  prevent unnecessary arguments about layout.
+//
+//  If you wish you are free to configure graphviz to generate its output file 
+//  in a suitable format for importing into illustrator or similar professional
+//  graphics package. From there you can enhance the image as needed. 
+//  However unless you can automate this process enhancements and updates to 
+//  the original Graphviz input file will cause you problems in the future.  
+//  
+//  Enhancements, Updates and Corrections
+//  -------------------------------------
+//
+//  If you feel a machine is missing, misclassified or there is incorrect 
+//  data in this file please correct the error, and send me a copy. But follow
+//  the rules below.
+//
+//  1.  Stick to the existing format or if you must change it, then change the 
+//      entire file and make sure you have not introduced any errors. Changing 
+//      the format of the entire file will be a major effort so make sure it is 
+//      a good idea before you start. That means you should talk to other 
+//      people about it first! I would be happy to talk about such changes.
+//  2.  If you make a factual change please cite a reference in an appropriate
+//      place in the file. Prefer source documents over modern summaries. Try
+//      to get confirmation from more than one source.
+//  3.  If you disagree with the way a machine has been classified. Check the 
+//      references, then check again, if you still disagree make the change.
+//      and add a citation or preferably two.
+//  4.  I reserve the right to reject any change from my version of the file 
+//      without justification. You have the right to do almost anything you 
+//      want you want with your version (see license). It would be nice if we 
+//      could keep one version that everyone agrees with. 
+//	5.  Email changes to me at (JohnRHarris@VirtualTravelog.net) and I will
+//      incorporate them with other changes and publish a new version of the 
+//		file. 
+// 
+//  The latest version of this file can be found at 
+//  http://www.virtualtravelog.net/projects/ComputerHistory/index.html
+//  
+//  PLEASE CHECK YOU HAVE THE LATEST VERSION BEFORE YOU START MAKING CHANGES 
+//
+//  John R. Harris 26-11-2003 
+//
+//------------------------------------------------------------------------------
+//  License
+//  -------
+//  Copyright 2003 John R. Harris. Some Rights Reserved 
+//  This work is licensed under the Creative Commons 
+//  Attribution-ShareAlike License. To view a copy of this 
+//  license, visit http://creativecommons.org/licenses/by-sa/1.0/ 
+//  or send a letter to :-
+//                              Creative Commons, 
+//                              559 Nathan Abbott Way, 
+//                              Stanford, 
+//                              California 
+//                              94305, USA.
+//
+//------------------------------------------------------------------------------
+// Document Setup
+//
+// Page Size
+// size="11,17";
+margin="0.20";
+//
+// Fontpath
+// on Mac OSX your truetype fonts may be here. Mine are :-) 
+// fontpath="/Library/Fonts/webfonts/";
+// Label
+fontname="Arial"; fontcolor="black"; fontsize="30";
+label = "The Evolution of the Modern Computer";
+fontname="Arial"; fontcolor="black"; fontsize="20";
+comment = "Copyright 2003 John R. Harris. Some rights reserved. Creative Commons Attribution-ShareAlike License";
+//
+// Line Concentration 
+// ------------------
+// Concentration allows graphviz to merge  lines to simplify the diagram. This 
+// is somewhat misleading since it suggests different efforts and influences 
+// were in some way linked when they may not have been. However the reduction
+// in overall clutter this produces seems worth it. Comment ot this line if 
+// you don't like line concentration.
+concentrate="true";
+//
+//------------------------------------------------------------------------------
+//  To Dos 
+//  ------
+//
+//	Throughout this file the sting -TODO- indicates that additional data 
+//  is required to complete an entry and the data that follows is incomplete
+//  or speculative. A quick way to add value to the file is to find the 
+//  information necessary to complete these entries.
+//
+//  Visually indicate some of the encoded machine attributes. Graphviz is 
+//  very limited in what it can do so if anyone can find a way to make it
+//  possible to visually encode more information into each node it would be 
+//  very useful
+//
+//  Review all references and add references for every node and link
+//
+//  Review document and font size parameters . The goal is to produce a 
+//  good looking graph that will fit on reasonably sized paper 
+//
+//  Possible Improvements
+//  ---------------------
+//  Visually indicate the "school" that developed  each machine. There is 
+//  currently a subgraph for each school. Some of the influences shown at the 
+//  machine level would be better shown at the "school" level. Although this 
+//  may make the graph too complicated
+//
+//  Integrate the file and graph with the Wikipedea entries for each machine 
+//  and school. This file can then be kept free of historical details 
+//  
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//
+//  Legend
+//  -------
+//  The legend is broken into several parts; the Node Style Key, the Node i
+//  Encoding Key and the Relationship Key. These parts appear in various 
+//  places throughout the file. The placement of these sections controls, to 
+//  some degree, the position they appear on the graph.
+//
+//  Machine Attributes
+//  ------------------
+//  Early machines varied considerably in their capabilities and construction.
+//  I have chosen to track what I believe to be the most important attributes
+//  of early computers however the vizgraph package is limited and so there 
+//  are some important attributes that are only encoded in the label of the
+//  nodes and are not shown visually on the graph. The intention is to find a 
+//  way to include these other attributes visually at some point. 
+//
+//  I have chosen to track what I believe are the most important attributes 
+//  for understanding the emergence of the first modern computer. At some point
+//  early machines that cannot be considered computers acquired enough features 
+//  to  make them computers in the modern sense. Deciding where that line is 
+//  drawn is contentious and is not the purpose of this file. The purpose of 
+//  this file is to record various significant dates in the history of these 
+//  early machines and record each machines capabilities. This section defines 
+//  what these dates and attributes mean. 
+//
+//  Events and Phases
+//  -----------------
+//
+//  One of the features of the development of early computers is the long 
+//  development times. For the purpose of this file each machine's development 
+//  has been divided into two phases Design and Construction. The design phase 
+//  starts with the concept and finishes with the completed design. The 
+//  construction phase starts with the completed design and finishes with an 
+//  operational machine. 
+//
+//  This file defines events as nodes and phases as solid lines joining nodes.
+//  Dotted lines are used to show influence between different machines. In this
+//  way, for example, it is possible to show that the concept for the EDVAC was
+//  very influential and Babbage while very early had little direct influence.
+//
+//  Concept
+//  -------
+//  This is often the most difficult date to fix. Sometimes there is a well 
+//  known story associated with the decision to start designing a machine, or 
+//  sometimes a publication was made but other times it is more difficult to
+//  determine.
+//
+//  Design
+//  -------
+//  This is the date on which the physical design was finalized and 
+//  construction began. In many cases this is hard to determine as some 
+//  experimental test components were constructed before the design was 
+//  finalized. Quite often this date is taken as the date of publication of 
+//  the physical design. 
+//
+//  Operation
+//  ---------
+//  This is the first date on which the machine was known to operate 
+//  successfully. This was usually during the testing or commissioning phase.  
+//  In many cases the machine was then dismantled and shipped to another 
+//  location where it was rebuilt and put to use. 
+//
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//
+// Node Encoding Key
+// -----------------
+//
+subgraph clusterEncodingLegend {
+fontsize="20";
+label = "Node Encoding";
+
+subgraph EncodingLegend {
+    node [  shape="plaintext", 
+            fontname="Arial", fontsize="14", fontcolor="black" ];
+//
+// Basic Approach
+//
+    Basic_Approach [label="Basic\nApproach\n(A)"];
+//
+// Technologies
+//
+    Memory_Technology [label="Primary\nMemory\nTechnology\n(P)"];
+    Input_Technology [label="Input\nTechnology\n1 Data input\n2 Program input\n(I)"];
+    Secondary_Storage [label="Secondary\nStorage\nTechnology\n(S)"];
+    Output_Technology [label="Output\nTechnology\n(O)"];
+//
+// Capabilities
+//
+    Turing_Complete [label="Turing\nComplete\n(T)"];
+    Conditional_Branching [label="Conditional\nBranching\n(C)"];
+    Memory_Capability [label="Memory\nCapability\n1 Variable Memory\n2 Program Memory\n(M)"];
+    Number_Base [label="Number\nBase\n(B)"];
+    edge [  style=invis ];
+     Basic_Approach -> Memory_Technology -> Input_Technology -> 
+     Secondary_Storage -> Output_Technology ->
+     Turing_Complete -> Conditional_Branching -> Memory_Capability ->
+     Number_Base;
+    }
+node [fontname="Arial", fontsize="10", fontcolor="black" ];
+//------------------------------------------------------------------------------
+//
+//    Basic Approach = A
+//    --------------
+//     ( Analog  = A
+//       Digital = D
+//       Unknown = ?
+//     )
+A [shape="plaintext" label="A = Analog\nD = Digital\n? = Unknown",
+ group="Legend"];
+{ rank=same; Basic_Approach; A;}
+//
+//    Primary Memory Technology = P     Memory Access Type
+//    -------------------------         ------------------ 
+//     ( Williams-Kilbun Tube   = W  -> Random Access
+//       Selectron              = S  -> Random Access
+//       Ferrite-Core           = C  -> Random Access
+//       Mercury Delay Line     = H  -> Cyclical Access
+//       Drum                   = D  -> Cyclical Access
+//       Disc                   = I  -> Cyclical Access
+//       Tape                   = T  -> Linear Access
+//       Mechanical             = M     
+//       Unknown                = ?
+//       Not Applicable         = -
+//      )
+//
+//    Memory access type is not encoded as it can be derived from the 
+//    technology employed. The memory technology is important since it 
+//    shows how many early machines borrowed components from each other 
+//    Example encoding PC indicates that the primary memory technology used 
+//    was ferrite core
+//
+P [ shape="plaintext" label="W = Williams-Kilbun Tube\nS = Selectron\nC = Ferrite-Core\nH = Mercury Delay Line\nD = Drum\nI = Disc\nT = Tape\nM = Mechanical\n? = Unknown\n- = Not Applicable\n", group="Legend"];
+{ rank=same; Memory_Technology; P;}
+//
+//    Input Technology    = I
+//    ----------------
+//     Data Input         Position One
+//     Program Input      Position Two
+//     ( Card             = C    Discrete punched cards
+//       Tape             = T    Continuous punched tape
+//       Switchboard      = S    Like a telephone switch board
+//       Keyboard         = K	 Includes teletypes
+//       Mechanical       = M	 Indicators, pulleys (eg Differential Analyzer) 
+//       Reconfiguration  = R    Physical reconfiguration of the machine
+//       Unknown          = ?
+//       Not Applicable   = -
+//     )
+//
+//    For example ICS indicates that data was input via cards but the program
+//    was entered via a switchboard
+//
+I [ shape="plaintext" label="C = Card\nT = Tape\nS = Switchboard\nK = Keyboard\nM = Mechanical\nR = Reconfiguration\n? = Unknown\n- = Not Applicable", group="Legend"];
+{ rank=same; Input_Technology; I;}
+//
+//    Secondary Storage Technology  = S
+//    ----------------------------
+//     ( Drum                       = D
+//       Disk                       = I
+//       Tape                       = T
+//       Unknown                    = ?
+//       Not Applicable             = -
+//     )
+//    For example ST indicates that secondary storage was via tape.
+//
+S [ shape="plaintext" label="D = Drum\nI = Disk\nT = Tape\n? = Unknown\n- = Not Applicable", group="Legend"];
+{ rank=same; Secondary_Storage; S;}
+//
+//    Output Technology    = O
+//    ----------------
+//     ( Card             = C 
+//       Tape             = T
+//       Mechanical       = M
+//       Printer          = P Including teletypes
+//       Unknown          = ?
+//       Not Applicable   = -
+//     )
+//     For example OP indicates that output was via a printer
+//
+O [ shape="plaintext" label="C = Card\nT = Tape\nM = Mechanical\nP = Printer\n? = Unknown\n- = Not Applicable", group="Legend"];
+{ rank=same; Output_Technology; O;}
+//
+//
+//    Turing Complete  = T
+//    ---------------
+//     ( Yes           = Y  
+//       No            = N
+//       Unproven      = !  It is possible that some early machines were 
+//                          Turing complete but no proof has yet been produced 
+//       Unknown       = ?
+//     ) 
+//     
+T [ shape="plaintext" label="Y = Yes\nN = No\nU = Unproven\n? = Unknown", group="Legend"];
+{ rank=same; Turing_Complete; T;}
+//
+//    Conditional Branching = C
+//    ---------------------
+//     ( Yes                = Y
+//       No                 = N
+//       Unknown            = ?
+//     ) 
+//  
+C [ shape="plaintext" label="Y = Yes\nN = No\n? = Unknown", group="Legend"];
+{ rank=same; Conditional_Branching; C;}
+
+//    Memory Capability   = M
+//    -----------------
+//     Variable Memory    Position One
+//     Program Memory     Position Two 
+//     ( Read Only        = R 
+//       Read-Write       = W 
+//       Unknown          = ?
+//       Not Applicable   = -
+//     )
+//
+//     Example Memory Capability
+//     MWR  = Memory capability; variable read-write, program read only.
+//
+M [ shape="plaintext" label="R = Read Only\nW = Read-Write\n? = Unknown\n- = Not Applicable", group="Legend"];
+{ rank=same; Memory_Capability; M;}
+//
+//     The first character refers to the ability to store the value of 
+//     variables the used during calculations. The second refers to the 
+//     ability to store program commands 
+//
+//    Number Base       = B
+//    -----------
+//     ( Binary         = B
+//       Decimal        = D
+//       Unknown        = ?
+//       Not Applicable = -
+//     ) 
+//
+B [ shape="plaintext" label="B = Binary\nD = Decimal\n? = Unknown\n- = Not Applicable", group="Legend"];
+{ rank=same; Number_Base; B;}
+//
+//------------------------------------------------------------------------------
+//
+// Example Encoding 
+// ----------------
+//
+//   Manchester Baby ,SSEM, Manchester MkI Prototype
+//   AD PW I?? S- O?
+//     TY CY MWW BB
+//
+//   Undifferentiated
+//   AD P? I?? S? O?
+//     T? C? M?? B?
+//
+//   \nAD P? I?? S? O?\nT? C? M?? B?
+//
+//  This encoding is admittedly difficult to read the intention is to find 
+//  a reasonable way to encode it visually. 
+}
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//
+// Node Styles Key
+// ---------------
+// 
+// This describes the characteristics of the nodes; color, shape outline 
+// properties etc.
+//
+subgraph clusterNodeStylesLegend {
+fontname="Arial"; 
+fontsize="20"; 
+fontcolor="black";
+label = "Node Chraceristics";
+
+subgraph NodeStyles {
+    node [  shape="plaintext", 
+            fontname="Arial", fontsize="14", fontcolor="black" ];
+    Technology [label="Implimentation\nTechnology"];
+    Purpose [label="Intendedn\nPurpose"];
+    Programming [label="Programming\nMethod"];
+    edge [  style=invis ];
+        Technology -> Purpose -> Programming;
+   }
+    node [fontname="Arial", fontsize="10", fontcolor="black" ];
+// Basic Technology
+// ----------------
+//  Describes the MAIN technology used in the construction of the computer.
+//  This is indicated by the shape of the node.
+//
+Mech [shape="egg", label="Mechanical\n(Cogs and Pulleys)", group="Legend"];
+EMech [shape="house" label="Electro-Mechanical\n(Relays)", group="Legend"];
+Valve [shape="trapezium" label="Electronic\n(Valves)", group="Legend"];
+// Trans [shape="invtrapezium" label="Electronic\n(Transistors)", group="Legend"];
+// ICurc [shape="invhouse" label="Electronic\n(Integrated Curcuit)", group="Legend"];
+{ rank=same; Technology; Mech; EMech; Valve; } // Trans; ICurc; }
+//
+// Basic Capabilities
+// ------------------
+//  Describes the scope of problems that the machine was designed to solve.
+//  This is indicated by the color of the node.
+//
+Single [shape="trapezium" label="Single\nPurpose", group="Legend", 
+        color="#AF9B9B" fillcolor="#EBD7D7", style="filled" ];
+Multi [shape="trapezium" label="Multi\nPurpose", group="Legend", 
+        color="#AFAF9B" fillcolor="#EBEBD7", style="filled" ];
+General [shape="trapezium" label="General\nPurpose", group="Legend", 
+        color="#9B9BAF" fillcolor="#D7D7EB", style="filled" ];
+{ rank=same; Purpose; Single; Multi; General; }
+//
+// Programming
+// -----------
+//  Describes the method of programming physical or logical and the storage 
+//  of the program internal or external. For the purposes of this file
+//  internal stored program implies that the program was modifiable in-memory 
+//  several early computers stored instructions inside the machine but they were
+//  read only. These machines are not counted as internal stored program 
+//  machines in this file.
+//  Programming method is indicated by the style of the node outline.
+//
+//
+Physical [shape="trapezium" label="Physically\nProgramed", group="Legend", 
+        color="#9B9BAF", style="dashed" ];
+SExternal [shape="trapezium" label="Externally\nStored Program", group="Legend", 
+        color="#9B9BAF", style="solid" ];
+SInternal [shape="trapezium" label="Internally\nStored Program", group="Legend", 
+        color="#9B9BAF", style="bold" ];
+{ rank=same; Programming; Physical; SExternal; SInternal;}
+//
+}
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//
+// Relationship Key
+// ----------------
+//
+subgraph clusterRelationshipLegend {
+fontname="Arial"; 
+fontsize="20"; 
+fontcolor="black";
+label = "Relationship Types";
+
+subgraph RelationshipLegend {
+    node [shape="plaintext" fontname="Arial" fontsize="14", fontcolor="black" ];
+    AA [label="Concept"];
+    BB [label="Design"];
+    CC [label="Design"];
+    DD [label="Operation"];
+    EE [label=""];
+    FF [label=""];
+
+    edge [ fontname="Arial", fontsize="14", fontcolor="black" ];
+// Design and Construction Phase
+    edge [ style="solid"];
+     AA -> BB [label="Design\nPhase"];
+     CC -> DD [label="Construction\nPhase"];
+// Inter Machine Influence
+    edge [ style="dashed"];
+     EE -> FF [label="Influence or\nInspiration"];     
+    }
+}
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//  General References
+//  ------------------
+//
+//  Alan Turing: The Enigma. By Andrew Hodges
+//  http://www.turing.org.uk/turing/
+//
+//  Early British Computers. The Story of Vintage Computers and the People 
+//  who Built them. By Simon H. Lavington 
+//  http://ed-thelen.org/comp-hist/EarlyBritish.html
+//
+//  Highlights from the Computer Museum Report Winter/1983
+//  http://ed-thelen.org/comp-hist/TheCompMusRep/TCMR-V03.html
+//
+//  History of Computing Curriculum Appendix A3 1940 to 1949
+//  http://www.hofstra.edu/pdf/CompHist_9812tla3.PDF
+//
+//  A Survey of Domestic Electronic Digital Computing Systems
+//  Report No. 971 December 1955 By Martin H. Weik 
+//  http://www.computerhistory.org/collections/DocumentArchive/Documents/Books/Ballistic%20Research%20Lab%20surveys%20of%20computers/BRL%20Weik%20Report%201955/BRL.html
+//
+//  Third Survey of Domestic Electronic Digital Computing Systems  
+//  BRL Report N0. 1115 March 1961 By Martin H. Weik 
+//  http://ed-thelen.org/comp-hist/BRL61.html#TOC
+//
+//  http://ed-thelen.org/comp-hist/on-line-docs.html
+//
+//  Report by Huskey of NPL written 1947 describing the general state of 
+//  various projects around the world 
+//  http://www.alanturing.net/turing_archive/archive/l/l01/L01-012.htmlO
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//  The Machines
+//  ------------
+//
+//  This section contains a series of subgraphs. Each subgraph contains
+//  all the events associated with development at a particular location or
+//  by a particular person or team.  By grouping associated event nodes 
+//  together in this way and by using a common "group" vizgraph will attempt
+//  to keep associated nodes close together on the output graph. 
+//
+//  Computers designed before 1934 are not included in this file an exception 
+//  is made for the works of Charles Babbage.
+//  Computers designed after 1950 are not included in this file 
+//
+//  Excluded Machines
+//  -----------------
+//  To avoid confusion below is a list of early machines deliberately left out 
+//  of the file and the reason for the exclusion
+//
+//  Vannevar Bush Differential Analyzers - DAs were not computers (a bit harsh?)
+//
+//  IAS derivatives ( MISTIC WEIZAC SILLIAC) - Designed too late - after 1953
+//
+//------------------------------------------------------------------------------
+node [fontname="Arial", fontsize="10", fontcolor="black" ];
+//------------------------------------------------------------------------------
+subgraph CharlesBabbage {
+//
+//  Charles Babbage (1791-1871) is widely regarded as one of the first computer 
+//  pioneers.
+//
+//  References
+//  ----------
+//  http://www.sciencemuseum.org.uk/on-line/babbage/index.asp
+//  http://www.fourmilab.ch/babbage/
+//  http://ei.cs.vt.edu/~history/Babbage.html
+//  The Difference Engine. Charles Babbage and the quest to build the 
+//  first computer by Doron Swade
+//
+// Concepts
+DEIc    [label="Difference Engine I\nConcept\n1822-07", 
+        group="Babbage", shape="egg", 
+        color="#AFAF9B", fillcolor="white", style="filled, dashed"]; 
+    //  Letter to the president of the Royal Society
+DEIIc   [label="Difference Engine II\nConcept\n1847", 
+        group="Babbage" shape="egg", 
+        color="#AFAF9B", fillcolor="white", style="filled, dashed"]; 
+AEc     [label="Analytical Engine\nConcept\n1833", 
+        group="Babbage" shape="egg", 
+        color="#9B9BAF", fillcolor="white", style="filled, solid"]; 
+// Designs
+DEId    [label="Difference Engine I\nDesign\n1823-07",
+        group="Babbage" shape="egg", 
+        color="#AFAF9B", fillcolor="white", style="filled, dashed" ];
+    //  One month after meeting with the Chancellor of the Exchequer who granted
+    //  Babbage money for calculating and printing mathematical tables by machine 
+DEIId   [label="Difference Engine II\nDesign\n1849",
+        group="Babbage" shape="egg", 
+        color="#AFAF9B", fillcolor="white", style="filled, dashed" ];
+AEd     [label="Analytical Engine\nDesign\n1840\nAD PM ICC S- OP\nT! CY MW- BD",
+        group="Babbage" shape="egg", 
+        color="#9B9BAF", fillcolor="white", style="filled, solid"]; 
+    //  Babbage delivered a talk on the Analytical engine in 1840 in
+    //  Turin, Italy, that formed the basis for the only publication about the 
+    //  Analytical engine. This document was published 2 years after the talk 
+    //  and then Translated into English by Ada Lovelace.
+    //  The Sketch of the Analytical Engine Invented by Charles Babbage By
+    //  L. F. Menabrea of Turin, Officer of Military Engineers 
+    //  From the Bibliothèque Universelle de Genève, 
+    //  October, 1842,  No. 82 
+    //  With notes upon the Memoir by the Translator
+    //  Ada Augusta, Countess of Lovelace  
+// Operational Machines
+DEI [label="Difference Engine I\nConstruction Abandoned\n1830\nAD P- IMR S- OM\nTN CN M-- BD",
+    group="Babbage" shape="egg", 
+    color="#AFAF9B", fillcolor="white", style="filled, dashed" ];
+    //  An argument with Clement over money caused Clement to cease work.
+    //  Shape not filled because the machine was never operational.
+DEII [label="Difference Engine II\nOperation\n1991-11-29\nAD P- IMR S- OP\nTN CN M-- BD",
+     group="Babbage" shape="egg", 
+     color="#AFAF9B", fillcolor="#EBEBD7", style="filled, dashed" ];
+// Design Phase
+edge [ style=solid, ];
+DEIc -> DEId;
+DEIIc -> DEIId;
+AEc -> AEd;
+// Construction Phase
+DEId -> DEI;
+DEIId -> DEII;
+// Evolution and Influence
+edge [ style=dashed, ];
+DEId -> AEc; 
+DEI -> DEIIc;
+AEd -> DEIIc;
+}
+//------------------------------------------------------------------------------
+subgraph KonradZuse {
+//
+//  Konrad Zuse  
+//  Born: 22 June 1910 in Berlin-Wilmersdorf, Germany
+//  Died: 18 Dec 1995 in Hünfeld (near Fulda), Germany
+//  Konrad Zuse built several electromechanical machines in the 1930s
+//  and 40s.
+//
+//  References
+//  ----------
+//  http://www.epemag.com/zuse/
+//  http://www.zib.de/zuse/Inhalt/Kommentare/Html/0684/universal2.html
+//  http://irb.cs.tu-berlin.de/~zuse/Konrad_Zuse/en/index.html
+//  
+// Concepts 
+Z1c [ label="Z1\nConcept\n1934", 
+    group="Zuse", shape="egg", 
+    color="#AFAF9B", fillcolor="white", style="filled, solid"]; 
+    //
+    //  The Z2 was a prototype for the Z3 to prove the feasibility of 
+    //  relays. As such it did not have a concept separate from the Z3
+    //
+Z3c [ label="Z3\nConcept\n1938", 
+    group="Zuse", shape="house", 
+    color="#5F5F73", fillcolor="white", style="filled, solid"]; 
+Z4c [ label="Z4\nConcept\n1942", 
+    group="Zuse", shape="house", 
+    color="#5F5F73", fillcolor="white", style="filled, solid"]; 
+// Designs 
+Z1d [ label="Z1\nDesign\n1936", 
+    group="Zuse", shape="egg", 
+    color="#AFAF9B", fillcolor="white", style="filled, solid"]; 
+Z2d [ label="Z2\nDesign\n1939", 
+    group="Zuse", shape="house", 
+    color="#AFAF9B", fillcolor="white", style="filled, solid"]; 
+Z3d [ label="Z3\nDesign\n1939", 
+    group="Zuse", shape="house", 
+    color="#5F5F73", fillcolor="white", style="filled, solid"]; 
+Z4d [ label="Z4\nDesign\n1945", 
+    group="Zuse", shape="house", 
+    color="#5F5F73", fillcolor="white", style="filled, solid"]; 
+// Operational Machines 
+Z1  [ label="Z1\nOperation\n1938\nAD PM IKT S- O?\nTN CN MW- B?",
+    group="Zuse", shape="egg", 
+    color="#AFAF9B", fillcolor="#EBEBD7", style="filled, solid"]; 
+Z2  [ label="Z2\nOperation\n1940\nAD PM IKT S- O?\nTN CN MW- B?",
+    group="Zuse", shape="house", 
+    color="#AFAF9B", fillcolor="#EBEBD7", style="filled, solid"]; 
+Z3  [ label="Z3\nOperation\n1941-12-05\nAD PM IKT S- O?\nTY CN MW- B?",
+    group="Zuse", shape="house", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, solid"]; 
+Z4  [ label="Z4\nOperation\n1948\nAD PM IKT S- OP\nTY CN MW- B?",
+    group="Zuse", shape="house", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, solid"]; 
+    //
+    //  Zuse's eldest son explains (http://www.epemag.com/zuse/) that 
+    //  although virtually finished in 1945 the Z4 was not finally
+    //  operational until 1948  as the defeat of Nazi Germany made it 
+    //  impossible for him to continue his work.
+    //
+// Design Phase
+edge [ style=solid ];
+Z1c -> Z1d;
+Z3c -> Z2d;
+Z3c -> Z3d;
+Z4c -> Z4d;
+// Construction Phase
+Z1d -> Z1;
+Z2d -> Z2;
+Z3d -> Z3;
+Z4d -> Z4;
+// Evolution and Influence
+edge [ style=dashed ];
+Z1 -> Z3c;
+Z2 -> Z3;
+Z3 -> Z4c;
+}
+//------------------------------------------------------------------------------
+subgraph AtanasoffBerry {
+//
+//  The ABC was built in 1937-1942 at Iowa State University by 
+//  John V. Atanasoff and Clifford Berry
+//
+//  References
+//  ----------
+//  http://www.scl.ameslab.gov/ABC/ABC.html
+//  http://www.library.upenn.edu/exhibits/rbm/mauchly/jwm7.html
+//  http://www.cs.iastate.edu/jva/jva-archive.shtml
+//
+// Concepts
+ABCc [ label="ABC\nConcept\n1937", 
+    group="IowaState", shape="house", 
+    color="#AFAF9B", fillcolor="white", style="filled, dashed"]; 
+// Designs 
+ABCd [ label="ABC\nDesign\n1939", 
+    group="IowaState", shape="house", 
+    color="#AFAF9B", fillcolor="white", style="filled, dashed"]; 
+// Operational Machines
+ABC [ label="ABC\nOperation ?\n1942\nAD PD ICR S- OC\nTN CN MW- BB",
+    group="IowaState", shape="house", 
+    color="#AFAF9B", fillcolor="#EBEBD7", style="filled, dashed"]; 
+    //  -TODO-
+    //  It is not clear if the ABC was ever fully operational. Work stopped 
+    //  on the machine in Dec 1942 when the US joined the War and it was 
+    //  later dismantled 
+// Design Phase
+edge [ style=solid ];
+ABCc -> ABCd;
+// Construction Phase
+ABCd -> ABC;
+// Evolution and Influence
+edge [ style=dashed ];
+}
+//------------------------------------------------------------------------------
+subgraph BletchleyPark {
+//
+//  Bletchley Park code, named Station X, was the center of British efforts
+//  to decrypt German communications traffic during World War II
+//
+//  References
+//  ----------
+//  http://www.codesandciphers.org.uk/index.htm
+//  http://www.connected-earth.com/Journeys/Frombuttonstobytes/Intothedigitalera/Thecomputeragedawns/Firstelectroniccomputer/firstelectroniccomputer(08.12.1943).htm
+//
+// Concepts 
+HRc [ label="Heath Robinson\nConcept\n1942", 
+    group="StationX", shape="house", 
+    color="#AF9B9B", fillcolor="white", style="filled, dashed"]; 
+ColMkIc [ label="Colossus Mk I\nConcept & Design\n1943 ", 
+    group="StationX", shape="trapezium", 
+    color="#AFAF9B", fillcolor="white", style="filled, dashed"]; 
+ColMkIIc [ label="Colossus Mk II\nConcept & Design\n1944", 
+    group="StationX", shape="trapezium", 
+    color="#AFAF9B", fillcolor="white", style="filled, dashed"]; 
+// Designs 
+HRd [ label="Heath Robinson\nDesign\n1943", 
+    group="StationX", shape="house", 
+    color="#AF9B9B", fillcolor="white", style="filled, dashed"]; 
+    //
+    //  There was no distinct concept and design for the Colossi to speak of 
+    //  they were so secret and urgent that little was written down and only 
+    //  a handful of people new their purpose . The concept flowed directly 
+    //  into the design
+    //
+// Operational Machines
+HR [ label="Heath Robinson\nOperation\n1943-06\nAD P? IT? S- O?\nTN CN M?? BD",
+    group="StationX", shape="house", 
+    color="#AF9B9B", fillcolor="#EBD7D7", style="filled, dashed"]; 
+ColMkI [ label="Colossus MkI\nOperation\n1944-01\nAD P? ITR S- O?\nT? CN M?? BD",
+    group="StationX", shape="trapezium", 
+    color="#AFAF9B", fillcolor="#EBEBD7", style="filled, dashed"]; 
+ColMkII [ label="Colossus MkII\nOperation\n1944-05-31\nAD P? ITS S- O?\nTU CY MW- BD",
+    group="StationX", shape="trapezium", 
+    color="#AFAF9B", fillcolor="#EBEBD7", style="filled, dashed"]; 
+    //
+    //  9 MkII Colossi were built and the original MkI was converted to a MkII
+    //  making 10 in all. In 1945 Bletchley Park was the global center of 
+    //  computing.
+    //
+// Design Phase
+edge [ style=solid ];
+HRc -> HRd;
+// Construction Phase
+HRd -> HR;
+ColMkIc -> ColMkI;
+ColMkIIc -> ColMkII;
+// Evolution and Influence
+edge [ style=dashed ];
+HR -> ColMkIc;
+ColMkI -> ColMkIIc;
+}
+//------------------------------------------------------------------------------
+subgraph MooreSchool {
+//
+//  At the outbreak of the Second World War the US Army Ordnance Ballistic 
+//  Research Laboratories, Aberdeen Proving Ground facility need more computing
+//  capacity. The Moore School of Electrical Engineering of the University of 
+//  Pennsylvania had a Bush differential analyzer. The University was awarded 
+//  a contract by the Ordnance Department for the utilization of this device.  
+//  This was the beginning of a close relationship between the Ordnance 
+//  Department and the University that would last many years.
+//
+//  References
+//  ----------
+//  http://www.library.upenn.edu/exhibits/rbm/mauchly/jwmintro.html
+//
+// Concepts
+ENIACc [ label="ENIAC\nConcept\n1942", 
+    group="MooreSchool", shape="trapezium", 
+    color="#9B9BAF", fillcolor="white", style="filled, dashed"]; 
+    //  Mauchlys memo written in the summer of 1942
+    //  http://www.library.upenn.edu/exhibits/rbm/mauchly/jwm6.html
+EDVACc [ label="EDVAC\nConcept\n1945-06-30", 
+    group="MooreSchool", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+    //  First Draft of a Report on the EDVAC by John von Neumann June 30 1945
+MSL [label="Moore School Lectures\n 1946-07-08 to 1946-08-31"
+         group="MooreSchool", shape="plaintext" ];
+    //  A series of 48 lectures held at the Moore School of Electrical 
+    //  Engineering in response to the interest generated by ENIAC and 
+    //  The First Draft. 
+// Designs
+ENIACd [ label="ENIAC\nDesign\n1944-06", 
+    group="MooreSchool", shape="trapezium", 
+    color="#9B9BAF", fillcolor="white", style="filled, dashed"]; 
+    //  Construction began in June 1944
+    //  http://ftp.arl.mil/~mike/comphist/96summary/
+EDVACd [ label="EDVAC\nDesign", 
+    group="MooreSchool", shape="trapezium", 
+    color="#5f5f73", fillcolor="white", style="filled, bold"]; 
+    //
+// Operational Machines
+ENIAC [ label="ENIAC\nOperation\n1946-02-15\nAD P- ICS S? O?\nTU CY MW- BD",
+    group="MooreSchool", shape="trapezium", 
+    color="#9B9BAF", fillcolor="#D7D7EB", style="filled, dashed"]; 
+    // Formal dedication at Moore School. Accepted by US Army 1946-07
+EDVAC [ label="EDVAC\nOperation\n1951-10\nAD P? I?? S? O?\nT? C? M?? B?",
+    group="MooreSchool", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+    //  Although completed in August 1949 EDVAC did not run its first
+    //  program until October 1951
+    //  ftp.arl.mil/~mike/comphist/96summary/
+// Design Phase
+edge [ style=solid ];
+ENIACc -> ENIACd;
+EDVACc -> EDVACd;
+EDVACc -> MSL;
+// Construction Phase
+ENIACd -> ENIAC;
+EDVACd -> EDVAC;
+// Evolution and Influence
+edge [ style=dashed ];
+ABCd -> ENIACc;
+    //
+    //  Mauchly visited Atanasoff during the summer of 1941 and had a close 
+    //  look at the ABC machine under construction.
+    //  http://www.library.upenn.edu/exhibits/rbm/mauchly/jwm7.html
+    //
+ACEPd -> MSL; 
+// The design for ACE was published and considered essential reading for the 
+// series of lectures at the Moore School
+HarMkI -> MSL;
+// Howard Aiken of Harvard spoke at the Moore School lectures
+ColMkII -> MSL;
+// Through David Rees  of Manchester University who attended the lectures as 
+// a "Student". He had been at Bletchley Park during the War with Max Neuman 
+// who had taken him to Manchester with him after the war.
+ModelI -> MSL;
+// George Stibititz was an invited lecturer at at the Moore School Lectures
+IASc -> MSL
+// The concept for the IAS machine was published  just before the Moore School 
+// Lectures
+UTMc -> EDVACc;
+// John von Neumann asked Turing to come to Princeton before the Second World 
+// War but just after he had written Computable Numbers. The assumption is that 
+// von Neumann  had read and was influenced by Computable Numbers.
+ENIACd -> EDVACc;
+}
+//------------------------------------------------------------------------------
+subgraph Manchester {
+//
+//  References
+//  ----------
+//  http://www.computer50.org/
+//
+// Concepts
+ManMkIPc [ label="Baby \n Concept", 
+    group="Manchester", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+FerMkIc [ label="Ferranti Mk I\n Concept", 
+    group="Manchester", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+    // Contract awarded to Ferranti November 1948 
+// Designs
+ManMkIPd [ label="Baby \n Design", 
+    group="Manchester", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+ManMkId [ label="Manchester Mk I \n Design", 
+    group="Manchester", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+FerMkId [ label="Ferranti Mk I \n Design", 
+    group="Manchester", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Operational Machines
+ManMkIP [ label="Baby\nOperation\n1948-06-21\nAD PW ISS S- O?\nTY CY MWW BB",
+    group="Manchester", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+ManMkI [ label="Manchester Mk I \n Operation\n\nAD PW I?? S- O?\nTY CY MWW BB",
+    group="Manchester", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+FerMkI [ label="Ferranti Mk I\nOperation\n1951-02\nAD PW I?? S- O?\nTY CY MWW BB",
+    group="Manchester", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase
+edge [ style=solid ];
+ManMkIPc -> ManMkIPd
+ManMkIP -> ManMkId
+FerMkIc -> FerMkId
+// Construction Phase
+ManMkIPd -> ManMkIP
+ManMkId -> ManMkI
+FerMkId -> FerMkI
+// Evolution and Influence
+edge [ style=dashed ];
+ColMkII -> ManMkIPc
+// Through Max Neumann and David Recs
+EDVACc -> ManMkIPc
+MSL -> ManMkIPc
+// Through David Recs and Douglas Hartree
+ACEPd -> ManMkId
+// Through Alan Turing
+IASc -> ManMkIPc
+// 
+ManMkId -> FerMkIc 
+ManMkI -> FerMkId
+}
+//------------------------------------------------------------------------------
+subgraph Harvard {
+// Concepts
+    HarMkIc [ label="Harvard MkI\n Concept", 
+    group="Harvard", 
+        shape="house", 
+        color="#AFAF9B", fillcolor="white", style="filled, dashed"]; 
+//
+//  -TODO-
+//  HarMkIId  Harvard Mk II
+//  HarMkIIId Harvard Mk III
+//
+// Designs
+    HarMkId [ label="Harvard MkI\n Design", 
+    group="Harvard", shape="house", 
+        color="#AFAF9B", fillcolor="white", style="filled, dashed"]; 
+//
+//  -TODO-
+//  HarvMkIId  Harvard Mk II
+//  HarvMkIIId Harvard Mk III
+//
+// Operational Machines
+    HarMkI [ label="Harvard Mk I\nOperation\n1944-08\nAD P? ITS S- OC\nT? C? M?? B?",
+    group="Harvard", shape="house", 
+        color="#AFAF9B", fillcolor="#EBEBD7", style="filled, dashed"]; 
+    HarMkII [ label="Harvard Mk II\nOperation\n1947-0 \nAD P? I?? S? O?\nT? C? M?? B?",
+    group="Harvard", shape="house", 
+        color="#AFAF9B", fillcolor="#EBEBD7", style="filled, dashed"]; 
+    HarMkIII [ label="Harvard Mk III ADEC\nOperation\n1949-10\nAD P? I?? S? O?\nT? C? M?? B?",
+    group="Harvard", shape="house", 
+        color="#AFAF9B", fillcolor="#EBEBD7", style="filled, dashed"]; 
+//  Also known as ADEC
+// Designs
+// Design Phase
+    edge [ style=solid ];
+    HarMkIc -> HarMkId
+// Construction Phase
+    HarMkId -> HarMkI   
+// Evolution and Influence
+    edge [ style=dashed ];
+    AEd -> HarMkIc
+    HarMkI -> HarMkII -> HarMkIII
+//  -TODO- correct this series to include design and construction phases
+// Howard Aiken cited Babbage as a direct influence on his work 
+}
+//------------------------------------------------------------------------------
+subgraph Cambridge {
+//
+// Cambridge University
+//
+// References
+// ----------
+// http://www.cl.cam.ac.uk/UoCCL/misc/EDSAC99/reminiscences/
+//
+// Concepts
+UTMc [ label="Universal Turing Machine\nConcept (On Computable Numbers)\n1936-11-12",
+         group="Cambridge", shape="plaintext" ];
+    //  On Computable Numbers, with an Application to the Entscheidungsproblem. 
+    //  By A. M. Turing
+EDSACc [ label="EDSAC\nConcept", 
+    group="Cambridge", shape="trapezium", 
+         color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Designs
+EDSACd [ label="EDSAC\nDesign\n1946-08", 
+    group="Cambridge", shape="trapezium", 
+         color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Operational Machines
+EDSAC [ label="EDSAC\nOperation\n1949-05-06\nAD PH I?? S? O?\nTY CY MWW BB",
+    group="Cambridge", shape="trapezium", 
+        color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase
+edge [ style=solid ];
+EDSACc -> EDSACd
+// Construction Phase
+EDSACd -> EDSAC
+// Evolution and Influence
+edge [ style=dashed ];
+EDVACc -> EDSACc
+MSL -> EDSACc
+}
+//------------------------------------------------------------------------------
+subgraph Lyons {
+//
+// J. Lyons & Company, a British catering company famous for its teashops.
+// (A 1940s British Starbucks) 
+//
+// References
+// ----------
+// http://www.leo-computers.org.uk/
+//
+// Concepts
+LEOc [ label="LEO\nConcept", 
+    group="Lyons", shape="trapezium", 
+       color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Designs 
+LEOd [ label="LEO\nDesign\n1949-08", 
+    group="Lyons", shape="trapezium", 
+       color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Operational Machines
+LEO [ label="LEO\nOperation\n1951-11\nAD PH I?? S? O?\nTY CY MWW BB",
+    group="Lyons", shape="trapezium", 
+      color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase   
+edge [ style=solid ];
+LEOc -> LEOd
+EDSACd -> LEOc
+    // The LEO 1 was a direct copy of the EDSAC machine
+// Construction Phase
+LEOd -> LEO
+// Evolution and Influence
+edge [ style=dashed ];
+    //
+    // There is very little information on why the board of directors of a chain 
+    // of tea shops chose to build a computer in 1947! 
+}
+//------------------------------------------------------------------------------
+subgraph NPL {
+//
+//  References
+//  ----------
+//  http://www.alanturing.net/turing_archive/archive/infopages/london1st.html
+//  A.C.E. Project origin and early history
+//  http://www.alanturing.net/turing_archive/archive/p/p17/P17-001.html
+//
+// Concepts
+ACEPc [ label="ACE Pilot\nConcept\n1945", 
+    group="NPL", shape="trapezium", 
+        color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Designs
+ACEPd [ label="ACE Pilot\nDesign\n1946", 
+    group="NPL", shape="trapezium", 
+        color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Operational Machines
+ACEP [ label="ACE Pilot\nOperation\n1950-05-10\nAD PH I?? S? O?\nTY CY MWW BB",
+    group="NPL", shape="trapezium", 
+       color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase
+edge [ style=solid ];
+ACEPc -> ACEPd
+// Construction Phase
+ACEPd -> ACEP
+// Evolution and Influence
+edge [ style=dashed ];
+ColMkII -> ACEPc
+UTMc -> ACEPc
+EDVACc -> ACEPc
+//  Alan Turing references The EDVAC first draft in his 1945 design
+//  http://www.alanturing.net/turing_archive/archive/p/p01/P01-002.html
+}
+//------------------------------------------------------------------------------
+subgraph IAS {
+//
+//  Jon von Neumann went to the Institute for advanced Study when the War ended
+//  and produced the design for the IAS 
+//
+//  References
+//  ----------
+//
+// Concepts
+IASc [ label="IAS\nConcept\n1946-06-28", 
+    group="NPL", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+    // Preliminary Consideration of the Logical Design of an Electronic 
+    // Computing Instrument. by Burks, Goldstine and von Neumann 
+    // Institute for Advanced Study 1946-06-28
+// Designs
+IASd [ label="IAS\nDesign", 
+    group="NPL", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+    //  Institute for Advanced Study
+    //  -TODO- date needs to be determined
+    //  1948 is a speculative date for the completion of the IAS design
+    //  In 1948 the IAS team abandoned the Selectron in favor of the 
+    //  Williams-Kilburn tube but this may have been an implementation decision
+// Operational Machines
+IAS [ label="IAS\nOperation\n1952\nAD PW I?? S? O?\nTY CY MWW BB",
+    group="NPL", shape="trapezium", 
+      color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase
+edge [ style=solid ];
+IASc -> IASd
+// Construction Phase
+IASd -> IAS
+// Evolution and Influence
+edge [ style=dashed ];
+EDVACc -> IASc
+ManMkIP -> IASd
+  //  The Selectron was abandoned and the Williams-Kilburn Tube adopted to 
+  //  implement the memory.
+}
+//------------------------------------------------------------------------------
+subgraph RAND {
+//
+//  Rand Corporation
+//
+//  References
+//  ----------
+//
+// Concepts
+// Designs
+JOHNNIACd [ label="JOHNNIAC\nDesign\RAND", 
+    group="RAND", shape="trapezium", 
+            color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+        //  RAND. The JOHNNIAC used Selectron memory
+        //  http://ed-thelen.org/comp-hist/BRL61-j.html
+// Operational Machines
+JOHNNIAC [ label="JOHNNIAC\nOperation\n1954\nAD PS I?? S? O?\nTY CY MWW BB",
+    group="RAND", shape="trapezium", 
+           color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+        //  Passed acceptance tests in 1954 
+        //  Shutdown Aug 54 to replace selectron memory with core memory
+        //  http://www.computerhistory.org/collections/DocumentArchive/Documents/Books/Ballistic%20Research%20Lab%20surveys%20of%20computers/BRL%20Weik%20Report%201955/BRL-j-n.html#JOHNNIAC
+// Design Phase*/
+edge [ style=solid ];
+IASd -> JOHNNIACd
+// Construction Phase
+JOHNNIACd -> JOHNNIAC
+// Evolution and Influence
+edge [ style=dashed ];
+}
+//------------------------------------------------------------------------------
+subgraph LosAlamos {
+//
+//  Los Alamos Laboratory
+//
+//  References
+//  ----------
+//
+// Concepts
+// Designs
+MANIACd [ label="MANIAC\nDesign\nLos Alamos", 
+    group="LosAlamos", shape="trapezium", 
+          color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+        //  Los Alamos
+// Operational Machines
+MANIAC [ label="MANIAC\nOperation\n1952-03\nAD P? I?? S? O?\nTY CY MWW BB",
+    group="LosAlamos", shape="trapezium", 
+         color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase*/
+edge [ style=solid ];
+IASd -> MANIACd
+// Construction Phase
+MANIACd -> MANIAC
+// Evolution and Influence
+edge [ style=dashed ];
+}
+//------------------------------------------------------------------------------
+subgraph UIllinois {
+//
+//  University of Illinois
+//
+//  References
+//  ----------
+//
+// Concepts
+// Designs
+ORDVACd [ label="ORDVAC\nDesign\nAberdeen\n1949-04-15", 
+    group="UIll", shape="trapezium", 
+          color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+        //  Built by University of Illinois for Aberdeen Prooving ground
+        //  ftp.arl.mil/~mike/comphist/61ordnance/chap4.html    
+ILLIACd [ label="ILLIAC\nDesign\nIllinois", 
+    group="UIll", shape="trapezium", 
+          color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+        //  University of Illinois
+// Operational Machines
+ORDVAC [ label="ORDVAC\nOperation\n1951-11-15\nAD P? I?? S? O?\nTY CY MWW BB",
+    group="UIll", shape="trapezium", 
+         color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+        //  ftp.arl.mil/~mike/comphist/61ordnance/chap4.html
+ILLIAC [ label="ILLIAC\nOperation\n1952\nAD P? I?? S? O?\nTY CY MWW BB",
+    group="UIll", shape="trapezium", 
+         color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase*/
+IASc -> ORDVACd
+IASd -> ORDVACd
+IASd -> ILLIACd
+// Construction Phase
+ORDVACd -> ORDVAC
+ILLIACd -> ILLIAC
+// Evolution and Influence
+edge [ style=dashed ];
+ManMkId -> ORDVACd
+    // ORDVAC used Williams-Kilburn Tubes
+}
+//------------------------------------------------------------------------------
+subgraph Argonne {
+//
+//  Argonne
+//
+//  References
+//  ----------
+//
+// Concepts
+// Designs
+ORACLEd [ label="ORACLE\nDesign\nOak Ridge\n1950", 
+    group="Argo", shape="trapezium", 
+          color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+        //  Built at Argonne for Oak Ridge
+AVIDACd [ label="AVIDAC\nDesign\nArgonne\n1949 ", 
+    group="Argo", shape="trapezium", 
+          color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+        //Argonne
+// Operational Machines
+ORACLE [ label="ORACLE\nOperation\n1953-06\nAD P? I?? S? O?\nTY CY MWW BB",
+    group="Argo", shape="trapezium", 
+         color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+        //Passed acceptance tests June 1953
+AVIDAC [ label="AVIDAC\nOperation\n1953-01-28\nAD P? I?? S? O?\nTY CY MWW BB",
+    group="Argo", shape="trapezium", 
+         color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+        //  http://www.anl.gov/OPA/history/avidaccap.html
+// Design Phase*/
+edge [ style=solid ];
+IASd -> AVIDACd
+AVIDACd ->  ORACLEd
+// Construction Phase
+ORACLEd -> ORACLE
+AVIDACd -> AVIDAC
+// Evolution and Influence
+edge [ style=dashed ];
+}
+//------------------------------------------------------------------------------
+subgraph  CSIR {
+//
+//  Australia's first computer
+//  CSIR - Council for Scientific and Industrial Research
+//
+//  References
+//  ----------
+//  http://www.cs.mu.oz.au/csirac/csirac.html
+//  http://www.austehc.unimelb.edu.au/tia/590.html
+//  http://www.tip.csiro.au/History/CSIRAC1.htm
+//
+// Concepts
+CSIRMkIc [ label="CSIR Mk I\nConcept\n1947", 
+    group="Sydney", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Designs
+CSIRMkId [ label="CSIR Mk I\nDesign\n1948", 
+    group="Sydney", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+    //  The Logical Basis of High Speed Computer Design
+    //  by Trevor Pearcey and Maston Beard
+// Operational Machines
+CSIRMkI [ label="CSIR Mk I\nOperation\n1949-11\nAD PH I?? S? O?\nTY CY MWW BB",
+    group="Sydney", shape="trapezium", 
+color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase
+edge [ style=solid ];
+CSIRMkIc -> CSIRMkId
+// Construction Phase
+CSIRMkId -> CSIRMkI
+// Evolution and Influence */
+edge [ style=dashed ];
+HarMkI -> CSIRMkIc
+ManMkIP -> CSIRMkId
+EDSACd -> CSIRMkId
+ACEPd -> CSIRMkId
+    //  In 1948 Pearcey  Visited England and confirmed the soundness off his 
+    //  design
+    //  http://www.tip.csiro.au/History/CSIRAC1.htm
+    //
+    //  -TODO-
+    //  Speculation
+    //  EDVACc -> CSIRMkIc // This is speculative !!
+    //  MSL -> CSIRMkIc // This is speculative !!
+    //  Trevor Pearcey was English and had moved to Australia in 1945.  
+    //  During the war he was involved in RADAR development at TRE.
+    //  he moved to Australia via The US where he saw the Harvard MkI.
+    //  It seems unlikely that he developed the idea of a stored program in 
+    //  isolation. However I can find no information on where he got the 
+    //  idea. It would be interesting to see the reference section of
+    //  his design report. Many of the other English Pioneers had also worked 
+    //  at TRE Malvern so he may have been in communication with them.
+}
+//------------------------------------------------------------------------------
+subgraph EMCC {
+//
+//  In 1946 the Eckertr-Mauchly Computer Corporation was launched
+//
+//  References
+//  ----------
+//  http://www.palosverdes.com/lasthurrah/binac-description.html
+//  http://ei.cs.vt.edu/~history/UNIVAC.Weston.html
+//
+// Concepts
+BINIACc [ label="BINIAC\nConcept\n1946", 
+    group="EMCC", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+UNIVACc [ label="UNIVAC\nConcept\n1946-04", 
+    group="EMCC", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+    //  In April 1946, $300,000 was transferred to the  Census Bureau from 
+    //  the Army Ordnance Department to support the development  of the 
+    //  UNIVAC computer
+// Designs
+BINIACd [ label="BINIAC\nDesign\n1946", 
+    group="EMCC", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+UNIVACd [ label="UNIVAC\nDesign\n1948", 
+    group="EMCC", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Operational Machines
+BINIAC [ label="BINIAC\nOperation\n1949-04 or 1949-08\nAD P? I?? S? O?\nTY CY MWW BB",
+    group="EMCC", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"];
+//
+//  This date needs to be confirmed. I found it in a review of the book 
+//  ENIAC: The Triumphs and Tragedies of the World's First Computer by Scott 
+//  McCartney. The review was written on July 22 nd in 1999 by jbartik@ibm.net 
+//  who claimed to have worked as a one of the first ENIAC programmers and 
+//  published his review on Amazon. If the earlier date is correct it means i
+//  BINIAC was operational before EDSAC. The BINIAC was dismantled shipped to 
+//  Northrup in California and never reconstructed.
+// 
+UNIVAC [ label="UNIVAC\nOperation\n1951-03-31\nAD P? I?? S? O?\nTY CY MWW BB",
+    group="EMCC", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+    // Accepted by the Census Bureau March 31 1951
+// Design Phase
+edge [ style=solid ];
+BINIACc -> BINIACd
+UNIVACc -> UNIVACd
+// Construction Phase
+BINIACd -> BINIAC
+UNIVACd -> UNIVAC
+// Evolution and Influence
+edge [ style=dashed ];
+EDVACc -> BINIACc
+EDVACc -> UNIVACc
+}
+//------------------------------------------------------------------------------
+subgraph NBS {
+//
+//  National Bureau of Standards
+//
+//  References
+//  ----------
+//  Computer Development and the National Bureau of Standards
+//  http://nvl.nist.gov/pub/nistpubs/sp958-lide/086-089.pdf
+//
+// Concepts
+SEACc [ label="SEAC\nConcept\n1948-06", 
+    group="NBS", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+    // It became clear during 1948 that unexpected technical difficulties would 
+    // delay completion of the Univacs.  George Dantzig, urged the Air Force to 
+    // contract with NBS for the development of an interim machine which would 
+    // serve multiple purposes.
+    //
+SWACc [ label="SWAC\nConcept\n1949-01", 
+    group="NBS", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Designs
+SEACd [ label="SEAC\nDesign\n1948", 
+    group="NBS", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+    //
+SWACd [ label="SWAC\nDesign\n", 
+    group="NBS", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Operational Machines
+SEAC [ label="SEAC\nOperation\n1950-05-09\nAD PH I?? S? O?\nTY CY MWW BB",
+    group="NBS", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+    // Tracing Optical rays through lenses for NBS optics division
+    // http://www.wap.org/journal/best/bestoftimesseac.html
+SWAC [ label="SWAC\nOperation\n1950-07\nAD PW I?? S? O?\nTY CY MWW BB",
+    group="NBS", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase
+    edge [ style=solid ];
+SEACc -> SEACd
+SWACc -> SWACd
+// Construction Phase
+SEACd -> SEAC
+SWACd -> SWAC
+// Inter Machine Influence
+    edge [ style=dashed ];
+UNIVACd -> SEACc
+UNIVACd -> SWACc
+Whirlwindd -> SWACd
+ManMkId -> SWACd
+// Hightlights from the Computer Museum Report Winter/1983
+}
+//------------------------------------------------------------------------------
+subgraph BellLabs {
+//
+// George Stibitz at Bell Labs 
+//
+//  References
+//  ----------
+//
+//  http://www.aconit.org/hbp/CCC/index.php
+//
+// Concepts
+ModelIc [ label="Model I CNC\nConcept\n1938", 
+    group="BellLabs", shape="house", 
+    color="#AF9B9B", fillcolor="white", style="filled, dashed"]; 
+//
+//   -TODO- 
+//
+//   Model II
+//   Model III
+//   Model IV
+//   Model V
+//
+// Designs
+
+ModelId [ label="Model I CNC\nDesign\n1939-04", 
+    group="BellLabs", shape="house", 
+    color="#AF9B9B", fillcolor="white", style="filled, dashed"]; 
+//
+//   -TODO- 
+//
+//   Model II
+//   Model III
+//   Model IV
+//   Model V
+//
+// Operational Machines
+ModelK [ label="Model K\nOperation\n1937\nAD P- IM- S- O-\nTN CN M-- BB",
+    group="BellLabs", shape="house", 
+    color="#AF9B9B", fillcolor="#EBD7D7", style="filled, dashed"]; 
+    // The Model K was so small that the first operational version\
+    // was the concept
+ModelI [ label="Model I CNC\nOperation\n1940-01-08\nAD P- IK- S- OP\nTN CN M?- B?",
+    group="BellLabs", shape="house", 
+    color="#AF9B9B", fillcolor="#EBD7D7", style="filled, dashed"]; 
+    //  Relay Calculator
+ModelII [ label="Model II\nOperation\n1942-10\nAD P- ITT S- O?\nTN CN M?- B?",
+    group="BellLabs", shape="house", 
+    color="#AF9B9B", fillcolor="#EBD7D7", style="filled, dashed"]; 
+    //  Relay Interpolator
+ModelIII [ label="Model III\nOperation\n1944-06\nAD P? I?? S? O?\nT? C? M?? B?",
+    group="BellLabs", shape="house", 
+    color="#AF9B9B", fillcolor="#EBD7D7", style="filled, dashed"]; 
+ModelIV [ label="Model IV\nOperation\n1945-03\nAD P? I?? S? O?\nT? C? M?? B?",
+    group="BellLabs", shape="house", 
+    color="#AF9B9B", fillcolor="#EBD7D7", style="filled, dashed"]; 
+ModelV [ label="Model V\nOperation\n1946-07\nAD P? I?? S? O?\nT? C? M?? B?",
+    group="BellLabs", shape="house", 
+    color="#AF9B9B", fillcolor="#EBD7D7", style="filled, dashed"]; 
+//
+// Design Phase
+    edge [ style=solid ];
+ModelIc -> ModelId
+// Construction Phase
+ModelId -> ModelI
+ModelI -> ModelII -> ModelIII -> ModelIV -> ModelV;
+// -TODO- Add Design and construction phases for 
+// Inter Machine Influence
+    edge [ style=dashed ];
+ModelK -> ModelIc
+}
+//------------------------------------------------------------------------------
+subgraph MIT {
+//
+//
+//
+// References
+// ----------
+//  http://www.nap.edu/readingroom/books/far/ch4_b1.html
+//
+// Concepts
+Whirlwindc1 [ label="Whirlwind\nConcept\n1944", 
+    group="MIT", shape="egg", 
+    color="#AFAF9B", fillcolor="white", style="filled, solid"]; 
+//
+// The Navy specified an analog multi purpose  flight simulator
+//
+Whirlwindc [ label="Whirlwind\nConcept\n1946", group="MIT", 
+    shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+    // Even though the Whirlwind project began in 1944 it was not 
+    // until 1946 that the Navy approved construction of a digital general 
+    // purpose computer. Prior to that the intention had been to build an
+    // analog machine
+// Designs
+Whirlwindd [ label="Whirlwind\nDesign\n", 
+    group="MIT", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Operational Machines
+Whirlwind [ label="Whirlwind\nOperation\n1951-04-20\nAD PW I?? S? O?\nTY CY MWW BB",
+    group="MIT", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Prototype ferrite-core memory !
+// Design Phase
+    edge [ style=solid ];
+Whirlwindc1 -> Whirlwindc
+Whirlwindc -> Whirlwindd
+// Construction Phase
+Whirlwindd -> Whirlwind
+// Inter Machine Influence
+    edge [ style=dashed ];
+ENIAC -> Whirlwindc
+MSL -> Whirlwindc
+}
+//------------------------------------------------------------------------------
+subgraph ERA {
+//
+// Engineering Research Associates
+// Formed by a group from the US Navy's Communications Supplementary Activity -
+// Ashington (CSAW) led by  Howard Engstrom and William Norris
+//
+// Machines Code names: 
+// Omalley
+// Hecate
+// Warlock
+// Demon (Built between March and October 1948)
+// Goldberg Operational 1947
+// Goldberg II Operational 1951
+//
+// References
+// ----------
+//
+// http://www.cc.gatech.edu/gvu/people/randy.carpenter/folklore/v3n3.html
+//
+// Concepts
+Atlasc [ label="Atlas\nConcept\n1947-08", 
+    group="ERA", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+  // Work began on Task 13 after Pendergrass of CSAW returned from the Moore
+  // school Lectures
+// Designs
+Atlasd [ label="Atlas\nDesign\n1948", 
+    group="ERA", shape="trapezium", 
+    color="#5F5F73", fillcolor="white", style="filled, bold"]; 
+// Operational Machines
+Atlas [ label="Atlas\nOperation\n1950-12\nAD P? I?? S? O?\nTY CY MWW BB",
+    group="ERA", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+ERA1101 [ label="ERA 1101\nOperation\n1951-12\nAD P? I?? S? O?\nTY CY MWW BB",
+    group="ERA", shape="trapezium", 
+    color="#5F5F73", fillcolor="#D7D7EB", style="filled, bold"]; 
+// Design Phase
+    edge [ style=solid ];
+Atlasc -> Atlasd
+// Construction Phase
+Atlasd -> Atlas
+Atlasd -> ERA1101
+// Inter Machine Influence
+    edge [ style=dashed ];
+MSL -> Atlasc
+}
+//------------------------------------------------------------------------------
+subgraph x {
+//
+//
+// References
+// ----------
+//
+//
+// Concepts
+
+// Designs
+
+// Operational Machines
+
+// Design Phase
+    edge [ style=solid ];
+
+// Construction Phase
+
+// Inter Machine Influence
+    edge [ style=dashed ];
+}
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// Missing Machines
+// ----------------
+// The following data is highly speculative and must be confirmed before
+// being added to the file
+//
+// -TODO-
+// Elliot 152 1947
+// Elliot 153 1947
+//
+// IBM SSEC 1949
+// IBM CPC 1949-12
+//
+// Imperial College ICCE 1950
+// A special purpose computer built at the Royal Aircraft Establishment 
+// Farnborough  1945 - 1946. Provided inspiration for the ICCE machine at 
+// Imperial College
+//
+// University of Toronto UTEC
+//
+// Birbeck ARC 1948 (Relay Computer)
+//
+// Fairchild (USAF) 1950-06
+//
+// GE 100 ERMA 1951
+//
+// Burroughs Lab Calculator  1951-01
+//
+// Bull Gamma 2 1951-10
+//
+// TREAC 
+//
+// MOSAIC
+// -TODO-
+//
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// Time-Line 
+// ---------
+//
+subgraph TimeLine {
+    node [  shape=plaintext, 
+            fontname="Arial", fontsize="20", fontcolor="black" ];
+    edge [  style=invis ];
+        1822 -> 1823 -> 1830 -> 1833 -> 1840 -> 1847 -> 1849 -> 
+        1934 -> 1935 -> 1936 -> 1937 -> 1938 -> 1939 -> 1940 -> 1941 ->
+        1942 -> 1943 -> 1944 -> 1945 -> 1946 -> 1947 -> 1948 -> 1949 ->
+        1950 -> 1951 -> 1952 -> 1953 -> 1954 -> 1955 -> 1956 -> 1957;
+}
+//------------------------------------------------------------------------------
+//  Chronology
+//  ----------
+//
+//  The Pre-History of Computing Pre-1934
+//  ----------------------------------
+    { rank=same; 1822; DEIc; }
+    { rank=same; 1823; DEId; }
+    { rank=same; 1830; DEI; }
+    { rank=same; 1833; AEc; }
+    { rank=same; 1840; AEd; }
+    { rank=same; 1847; DEIIc; }
+    { rank=same; 1849; DEIId; }
+//
+//  The Birth of the Modern Computer 1934 to 1950
+//  ---------------------------------------------
+    { rank=same; 1934; Z1c; }
+    { rank=same; 1935; }
+    { rank=same; 1936; UTMc; Z1d; }
+    { rank=same; 1937; ModelK; HarMkIc; ABCc; }
+    { rank=same; 1938; ModelIc; Z1; Z3c; }
+    { rank=same; 1939; ModelId; HarMkId; Z2d; Z3d; ABCd; }
+    { rank=same; 1940; ModelI; Z2;  }
+    { rank=same; 1941; Z3;  }
+    { rank=same; 1942; ENIACc; HRc; Z4c; ABC; }
+    { rank=same; 1943; ModelII; HRd; HR; ColMkIc; }
+    { rank=same; 1944; ModelIII; Whirlwindc1; HarMkI; ColMkI; ENIACd; 
+                       ColMkIIc; ColMkII; }
+    { rank=same; 1945; ModelIV; ACEPc; EDVACc; Z4d; }
+    { rank=same; 1946; ModelV; Whirlwindc; UNIVACc; BINIACc; MSL; IASc; ACEPd; 
+                       ENIAC; EDVACd; EDSACc; }
+    { rank=same; 1947; HarMkII; Atlasc; LEOc; CSIRMkIc; ManMkIPc; ManMkIPd; 
+                       EDSACd; }
+    { rank=same; 1948; Atlasd; SEACc; SEACd; UNIVACd; IASd; CSIRMkId; FerMkIc; 
+                       Z4; ManMkIP; ManMkId; }
+    { rank=same; 1949; Whirlwindd; AVIDACd BINIAC; CSIRMkI; ORDVACd; LEOd; 
+                       HarMkIII; SWACc; SWACd; FerMkId; EDSAC; ManMkI; }
+    { rank=same; 1950; Atlas; SWAC; SEAC; ORACLEd; ACEP; }
+//
+//  Commercialization of Computing 1951 to 1957 
+//  -------------------------------------------
+//  Computers designed after 1950 are not included in this file 
+//
+    { rank=same; 1951; ERA1101; Whirlwind; UNIVAC; ORDVAC; LEO; FerMkI; EDVAC; }
+    { rank=same; 1952; IAS; }
+    { rank=same; 1952; MANIAC; ILLIAC; }
+    { rank=same; 1953; AVIDAC; ORACLE;}
+    { rank=same; 1954; JOHNNIAC; }
+    { rank=same; 1955; }
+    { rank=same; 1956; }
+    { rank=same; 1957; }
+}
+//-----------------------------------END----------------------------------------

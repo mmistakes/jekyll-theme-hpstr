@@ -1,0 +1,140 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "State Transition Excluded"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S176827"><Font size=4 color="b22222">
+Activity State Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;State Type&quot; being one of the permissible states for &quot;Activity State&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S176834"><Font size=4 color="b22222">
+activity state type from (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Excluded&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Excluded&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S176832"><Font size=4 color="b22222">
+activity state type to (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>Number: <B>
+0
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Excluded&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Excluded&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S176830"><Font size=4 color="b22222">
+agent for (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>Redefines: <B>
+Agent.&quot;Agent's Activity Type&quot;.&quot;agent for&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S176829"><Font size=4 color="b22222">
+Authorised Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Agent&quot; whose actions are subject to another's authority and control.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+The type of control would include permissions (may do), obligations (must do) and interdictions
+(must not do).
+<BR>
+
+<BR>
+An &quot;Agent&quot; who invests authority in another shares some liability for the actions of those to whom
+it gives authority.
+<BR>
+
+<BR>
+An example of an &quot;Authorised Agent &quot; would be Dr. Smithers given the authority by the NHS XYZ Trust
+to run the Medical Clinical Directorate.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S176828"><Font size=4 color="b22222">
+Authorised Agent Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity Type for Agent&quot; that is subject to some type of authorisation or external control.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Such control can be interdictions, permissions and exceptions (including &quot;Activity State Types&quot;) to
+one or many Activity Types.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S176826"><Font size=4 color="b22222">
+State Transition Excluded (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;State Transition&quot; that  may not be performed for this &quot;Authorised Agent Activity&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+For example, whilst an &quot;Agent&quot; may be permitted to perform some activity or group of activities,
+s&#47;he may not be allowed to authorise it.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S176831"><Font size=4 color="b22222">
+subject to constraint (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Excluded&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Authorised Agent Activity&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Transition Permission&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

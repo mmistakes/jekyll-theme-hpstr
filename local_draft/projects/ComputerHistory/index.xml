@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:admin="http://webns.net/mvcb/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<channel>
+<title>Virtual Travelog | Computer Evolution Project (1934 to 1950)</title>
+<link>http://www.virtualtravelog.net/projects/ComputerHistory/</link>
+<description>A graphical, open source, history of the evolution of the modern computer from 1934 to 1950</description>
+<dc:language>en-us</dc:language>
+<dc:creator> foobar@bigfoot.com</dc:creator>
+<dc:date>2004-07-28T23:24:58-08:00</dc:date>
+<admin:generatorAgent rdf:resource="http://www.movabletype.org/?v=3.14" />
+<sy:updatePeriod>daily</sy:updatePeriod>
+<sy:updateFrequency>1</sy:updateFrequency>
+<sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+
+<item>
+<title>Wikipedia Article for the term Computer</title>
+<link>http://www.virtualtravelog.net/entries/2004/07/wikipedia_article_for_the_term_computer.html</link>
+<description>I just re-wrote the first four sections of the Wikipedia article for the term Computer. The Current page is here. This link to the change history page for the article currently shows one change on line 6. This was a...</description>
+<guid isPermaLink="false">63@http://www.virtualtravelog.net/</guid>
+<dc:subject>Technology</dc:subject>
+<dc:date>2004-07-28T23:24:58-08:00</dc:date>
+</item>
+<item>
+<title>Charles Babbage and Howard Aiken. How the Analytical Engine influenced the IBM Automatic Sequence Controlled Calculator aka The Harvard Mk I</title>
+<link>http://www.virtualtravelog.net/entries/2004/03/charles_babbage_and_howard_aiken_how_the_analytical_engine_influenced_the_ibm_automatic_sequence_controlled_calculator_aka_the_harvard_mk_i.html</link>
+<description> In 1936, [Howard] Aiken had proposed his idea [to build a giant calculating machine] to the [Harvard University] Physics Department, ... He was told by the chairman, Frederick Saunders, that a lab technician, Carmelo Lanza, had told him about...</description>
+<guid isPermaLink="false">61@http://www.virtualtravelog.net/</guid>
+<dc:subject>Computer History</dc:subject>
+<dc:date>2004-03-30T23:03:36-08:00</dc:date>
+</item>
+<item>
+<title>Vannevar Bush and The Limits of Prescience</title>
+<link>http://www.virtualtravelog.net/entries/2004/02/vannevar_bush_and_the_limits_of_prescience.html</link>
+<description><![CDATA[<p>If anyone should ever have been capable of predicting the future it was Vannevar Bush in 1945. Unlike almost anyone else before or since Bush was actually in possession of ALL the facts - as only the head of technology research in a country at war could be...</p>]]></description>
+<guid isPermaLink="false">59@http://www.virtualtravelog.net/</guid>
+<dc:subject>Computer History</dc:subject>
+<dc:date>2004-02-11T14:17:28-08:00</dc:date>
+</item>
+<item>
+<title>Source Code as History</title>
+<link>http://www.virtualtravelog.net/entries/2003/12/source_code_as_history.html</link>
+<description><![CDATA[<p>When the history of early software development is written it will be a travesty. Few historians will have the ability, and even fewer the inclination, to learn long dead programming languages. History will be derived from the documentation not the source code.</p>]]></description>
+<guid isPermaLink="false">56@http://www.virtualtravelog.net/</guid>
+<dc:subject>Technology</dc:subject>
+<dc:date>2003-12-29T23:33:33-08:00</dc:date>
+</item>
+<item>
+<title>The Evolution of the Modern Computer (1934 to 1950): An Open Source Graphical History</title>
+<link>http://www.virtualtravelog.net/entries/2003/11/the_evolution_of_the_modern_computer_1934_to_1950_an_open_source_graphical_history.html</link>
+<description><![CDATA[<p>Some time between 1934 and 1950 the first  modern computer was created.  Pinning down exactly when that event occured is not easy. It  depends on how you define the term computer and what you think is more important: The concept, the design, the first succesful test, or the first time the machine solved a real problem. This is the first release of an open source graphical representation of the evolution of the modern computer.</p>
+]]></description>
+<guid isPermaLink="false">50@http://www.virtualtravelog.net/</guid>
+<dc:subject>Technology</dc:subject>
+<dc:date>2003-11-27T15:40:00-08:00</dc:date>
+</item>
+<item>
+<title>The Moore School Lectures and the British Lead in Stored Program Computer Development (1946 -1953)</title>
+<link>http://www.virtualtravelog.net/entries/2003/10/the_moore_school_lectures_and_the_british_lead_in_stored_program_computer_development_1946_1953.html</link>
+<description><![CDATA[<p>In 1946 the British were able to take the lead in computer development from America. The main challenge had become the rapid construction of a machine while solving the one remaining major technical problem - storing a program in memory. This problem was well understood in concept but the practical solution was more challenging than it appeared. As a result of their experience in the war the British were approximately 2 to 3 years in advance of the Americans in the crucial area of rapid prototyping and evolution of complex electronic devices. It was this ability that enabled them to take the lead in computer development from America.</p> ]]></description>
+<guid isPermaLink="false">47@http://www.virtualtravelog.net/</guid>
+<dc:subject>Technology</dc:subject>
+<dc:date>2003-10-19T22:08:33-08:00</dc:date>
+</item>
+<item>
+<title>Misinformation and the Evolution of Early Computers</title>
+<link>http://www.virtualtravelog.net/entries/2003/09/misinformation_and_the_evolution_of_early_computers.html</link>
+<description><![CDATA[<p>It's difficult to know where to start in cataloging the faults with this diagram. So rather than waste my time trying I've started collating information to produce a better version. I'll publish it here when I'm done.</p> ]]></description>
+<guid isPermaLink="false">43@http://www.virtualtravelog.net/</guid>
+<dc:subject>Technology</dc:subject>
+<dc:date>2003-09-09T22:32:23-08:00</dc:date>
+</item>
+<item>
+<title>The First Railway Station: Unlikely Home for the First Computer</title>
+<link>http://www.virtualtravelog.net/entries/2003/09/the_first_railway_station_unlikely_home_for_the_first_computer.html</link>
+<description><![CDATA[<p>The Liverpool Street Station in Manchester, England is now part of The museum of Science and Technology. The Station was built in 1830 and is the oldest railway station in the world. On the opposite side of the tracks to the ticketing hall is the world's first railway warehouse.  In this building is a working replica of the worlds first stored program computer, Baby, the Manchester Mk I Prototype. </p>]]></description>
+<guid isPermaLink="false">42@http://www.virtualtravelog.net/</guid>
+<dc:subject>Technology</dc:subject>
+<dc:date>2003-09-04T23:13:29-08:00</dc:date>
+</item>
+<item>
+<title>The Art of Turing Completion</title>
+<link>http://www.virtualtravelog.net/entries/2003/08/the_art_of_turing_completion.html</link>
+<description><![CDATA[<p>As I was researching <a href="http://www.virtualtravelog.net/entries/000040.html">the invention of the computer</a> I found a few sites that while only tangentially related to the subject at hand were definitely worthy of note.</p>
+ ]]></description>
+<guid isPermaLink="false">41@http://www.virtualtravelog.net/</guid>
+<dc:subject>Complexity</dc:subject>
+<dc:date>2003-08-25T15:44:53-08:00</dc:date>
+</item>
+<item>
+<title>The First Modern Computer - The Case for Baby, the Manchester Mk I Prototype</title>
+<link>http://www.virtualtravelog.net/entries/2003/08/the_first_modern_computer_the_case_for_baby_the_manchester_mk_i_prototype.html</link>
+<description>Finding an authoritative history of the Computer&apos;s invention is almost impossible. There are several reasons for this problem: People disagree on the meaning of the word &quot;invent&quot;, they also disagree on the meaning of the word &quot;computer&quot;. Finally significant parts...</description>
+<guid isPermaLink="false">40@http://www.virtualtravelog.net/</guid>
+<dc:subject>Technology</dc:subject>
+<dc:date>2003-08-24T21:29:39-08:00</dc:date>
+</item>
+<item>
+<title>The Meaning of Invention</title>
+<link>http://www.virtualtravelog.net/entries/2003/08/the_meaning_of_invention.html</link>
+<description>I &apos;ve been trying to understand what it means to invent something and found this site very useful Wright Brothers History: The Tale of the Airplane A Brief Account of the Invention of the Airplane researched, written, and designed by...</description>
+<guid isPermaLink="false">39@http://www.virtualtravelog.net/</guid>
+<dc:subject>Technology</dc:subject>
+<dc:date>2003-08-22T00:45:08-08:00</dc:date>
+</item>
+<item>
+<title>Ada Lovelace - The Enchantress of Number or the most Overrated Figure in the History of Computing?</title>
+<link>http://www.virtualtravelog.net/entries/2003/06/ada_lovelace_the_enchantress_of_number_or_the_most_overrated_figure_in_the_history_of_computing.html</link>
+<description>Augusta Ada, Countess of Lovelace (1815 to 1852), also known as Ada Lovelace, was the only legitimate daughter of the poet Lord Byron. Raised by her mother she was given private instruction in mathematics and sciences, When she was 17...</description>
+<guid isPermaLink="false">15@http://www.virtualtravelog.net/</guid>
+<dc:subject>Technology</dc:subject>
+<dc:date>2003-06-07T13:00:00-08:00</dc:date>
+</item>
+<item>
+<title>Internet Cartography - Maps of the World Wide Web and other Cyber Geography</title>
+<link>http://www.virtualtravelog.net/entries/2003/01/internet_cartography_maps_of_the_world_wide_web_and_other_cyber_geography.html</link>
+<description>In the Beginning there was one.... This is the first map of The Internet. It shows the first node on the ARPANET at the University California Los Angeles (UCLA) on the 2nd September 1969. The diagram is taken from Casting...</description>
+<guid isPermaLink="false">29@http://www.virtualtravelog.net/</guid>
+<dc:subject>Complexity</dc:subject>
+<dc:date>2003-01-06T23:47:00-08:00</dc:date>
+</item>
+
+
+</channel>
+</rss>

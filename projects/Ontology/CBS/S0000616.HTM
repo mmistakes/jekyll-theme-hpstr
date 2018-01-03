@@ -1,0 +1,314 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for ".Agent and Subject Creation"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S172268"><Font size=4 color="b22222">
+Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Purposeful and intentional &quot;Event&quot;
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous documented definitions providing the source for the above are:
+<BR>
+
+<BR>
+An exertion of energy initiated by an &quot;Agent&quot; (CBS v2) - this definition is followed by a definition
+of its subtypes.
+<BR>
+
+<BR>
+Conscious, directed and purposeful exertion of energy.
+<BR>
+
+<BR>
+&quot;Event&quot; occurring through the volition of an &quot;Agent&quot;.
+<BR>
+</B></font><BR>
+<BR>
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5155.htm#D73981" target="SADETAILTARGET"><Font size=2 color="b22222">
+Quantity (Class Attribute)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172281"><Font size=4 color="b22222">
+activity for (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Activity
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Activity
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172263"><Font size=4 color="b22222">
+Activity State (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; in a state which it is currently or has been previously.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that there are both subtypes (comprising all the possible states) and a &quot;power type&quot; of
+&quot;Activity State Type&quot;. The latter's contents are identical to the subtypes; it exists in order to
+control topics such as access and permission to amend.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172262"><Font size=4 color="b22222">
+Activity State Change (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; changing the state of another &quot;Activity&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172271"><Font size=4 color="b22222">
+Activity&#47;direction (Generalization Node)</font></A><BR>
+<DL>
+</DL>
+<center><hr></center>
+<A NAME="S172267"><Font size=4 color="b22222">
+Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+Role of a subject enabling it to act purposefully.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+CBS V2: - A role of a &quot;Subject&quot; which indicates that it has power to act
+<BR>
+
+<BR>
+This is a role which may be played by a &quot;Subject&quot;. Sometimes, an &quot;Agent&quot; may be created in order to
+assemble a set of responsibilities and authorities prior to a specific &quot;Subject&quot; being identified
+and allocated to it.
+<BR>
+
+<BR>
+For purposes of creating an &quot;Authorising Act&quot;, an &quot;Agent&quot; may actually be a group of individuals -
+for example when joint responsibility is being taken for some decision, as in a clinical case
+conference.  In such a case the details of the group are taken care of by &quot;Subject&quot; and &quot;Inter
+Subject Relationship&quot;.
+<BR>
+
+<BR>
+Examples of &quot;Agent&quot;:
+<BR>
+Dr Smithers within NHS XYZ Trust, 
+<BR>
+Ms J.Doe in the HXT Pathology laboratory.
+<BR>
+
+<BR>
+A better understanding of the types of &quot;Agent&quot; can be gained from examination of its subtypes.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172279"><Font size=4 color="b22222">
+completion timepoint (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Change Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Change Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172276"><Font size=4 color="b22222">
+created subject (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Subject
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172275"><Font size=4 color="b22222">
+creating event (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Event
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Event
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172264"><Font size=4 color="b22222">
+Event (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Something which happens.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172272"><Font size=4 color="b22222">
+Event&#47;Essential Type (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+Event
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4556.htm#D58" target="SADETAILTARGET"><Font size=2 color="b22222">
+Event (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172274"><Font size=4 color="b22222">
+observer (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Subject Creation&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172284"><Font size=4 color="b22222">
+responsible for (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State Change&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Activity State Change&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172280"><Font size=4 color="b22222">
+responsible for performance of (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Change Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;State Change Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172270"><Font size=4 color="b22222">
+SCA&#47;Direction (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;State Change Activity&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5354.htm#D154385" target="SADETAILTARGET"><Font size=2 color="b22222">
+State Change Activity (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172269"><Font size=4 color="b22222">
+State Change Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which changes the state of an &quot;Object&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+The &quot;to&quot; state is deemed to take effect simultaneously with the completion of the state change
+activity. There will of course be occasions when the decision to make a state change is made well in
+advance of this and that this decision may be communicated to interested parties.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172261"><Font size=4 color="b22222">
+Subject (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Percept&quot; consisting of one or more persistent physical objects.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+The definition above, as for others, has been distilled from what has been suggested in the past,
+including:
+<BR>
+
+<BR>
+The &quot;Object&quot; of interest to an &quot;Agent&quot; (CBS v2).
+<BR>
+One or a collection of physical objects.
+<BR>
+&quot;Percept&quot; which is a physical object and &#47; or a collection of physical objects.
+<BR>
+Persistent perceivable object.
+<BR>
+Extension of one or more &quot;Concepts&quot; which is perceived or inferred to exist in the universe.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172265"><Font size=4 color="b22222">
+Subject Creation (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Deduction by an &quot;Agent&quot; that a &quot;Subject&quot; was created by an &quot;Event&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172266"><Font size=4 color="b22222">
+Timepoint (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Reference Point&quot; being a point or period in time.
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

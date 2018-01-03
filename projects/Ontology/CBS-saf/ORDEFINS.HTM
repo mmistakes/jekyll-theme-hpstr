@@ -1,0 +1,62 @@
+<html>
+<head>
+</head>
+<body bgcolor=FFFFD6>
+<A NAME="D154812"<Font size=3><STRONG>Ordered Classification Element</Font size></STRONG><A HREF="D0000747.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Classification Element" whose species have an ordered relation one to another.</Font size>
+<BR>
+<Font size=2><STRONG>Examples:</Font size></STRONG>
+<BR>
+<Font size=2><EM>The Glasgow coma scale.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Attributes:</Font size></STRONG>
+<BR>
+<Font size=2>Duplicates allowed  (M)  (Boolean)</Font size>
+<BR>
+<Font size=2><EM>If "True", duplicate values of "Order" in the associated "Ordered Species Relations" are allowed.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">genus</td>
+<td valign="top" width="0%"><font size="2">Many</td>
+<td valign="top" width="0%"><font size="2">Ordered Species Relation</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Classification Element</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D154816"<Font size=3><STRONG>Ordered Species Relation</Font size></STRONG><A HREF="D0000748.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Species Relation" which has an ordinal relation with others in the same "Ordered Classification Element"</Font size>
+<BR>
+<Font size=2><STRONG>Examples:</Font size></STRONG>
+<BR>
+<Font size=2><EM>CIN1, CIN2, CIN3 etc used in cytology; staging of diseases.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Attributes:</Font size></STRONG>
+<BR>
+<Font size=2>Order  (M)  (Integer)</Font size>
+<BR>
+<Font size=2><EM>Position held by an "Ordered Species Relation" within an "Ordered Classification Element". Note that duplicates are not illegal.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Many</td>
+<td valign="top" width="0%"><font size="2">genus</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Ordered Classification Element</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Species Relation</Font size></EM>
+<BR>
+</body>

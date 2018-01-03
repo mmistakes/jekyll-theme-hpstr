@@ -1,0 +1,190 @@
+<html>
+<head>
+</head>
+<body bgcolor=FFFFD6>
+<A NAME="D78156"<Font size=3><STRONG>Authorised Activity Type</Font size></STRONG><A HREF="D0000670.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity Type" that an "Agent" has been authorised to perform by another "Agent".</Font size>
+<BR>
+<Font size=2><EM>This could be very broad: 'General Surgical Duties', or narrower:  'Cardiac Surgical Duties'.  </Font size></EM>
+<BR>
+<Font size=2><EM>It could be a hospital's authorisation to a clinician that, although generally authorised to perform all surgical duties, the hospital only authorises the clinician to perform cardiac surgical procedures.</Font size></EM>
+<BR>
+<Font size=2><EM>The relationship to "Activity Type" via "Activity Type Permission" and its subtypes, allows for selective inclusion and exclusion of Authorise Activities.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Authorised Agent Activity</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D77793"<Font size=3><STRONG>Authorised Agent</Font size></STRONG><A HREF="D0000671.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Agent" whose actions are subject to another's authority and control.</Font size>
+<BR>
+<Font size=2><EM>The type of control would include permissions (may do), obligations (must do) and interdictions (must not do).</Font size></EM>
+<BR>
+<Font size=2><EM>An "Agent" who invests authority in another shares some liability for the actions of those to whom it gives authority.</Font size></EM>
+<BR>
+<Font size=2><EM>An example of an "Authorised Agent " would be Dr. Smithers given the authority by the NHS XYZ Trust to run the Medical Clinical Directorate.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">agent for</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Authorised Agent Activity</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">at some specified</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Location</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">authority</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Agent</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">for some</td>
+<td valign="top" width="0%"><font size="2">One or Many</td>
+<td valign="top" width="0%"><font size="2">Subject Characteristic Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">for some</td>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">Subject Characteristic Type</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">from</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">to</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Agent</Font size></EM>
+<BR>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>AA/nature</Font size>
+<BR>
+<Font size=2><EM>Agent By Devolvement</Font size></EM>
+<BR>
+<Font size=2><EM>Agent By Licence</Font size></EM>
+<BR>
+<Font size=2>AA/origin</Font size>
+<BR>
+<Font size=2><EM>Derived Agent</Font size></EM>
+<BR>
+<Font size=2><EM>Principal Agent</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D78303"<Font size=3><STRONG>Authorised Agent Activity</Font size></STRONG><A HREF="D0000672.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>"Activity Type for Agent" that is subject to some type of authorisation or external control.</Font size>
+<BR>
+<Font size=2><EM>Such control can be interdictions, permissions and exceptions (including "Activity State Types") to one or many Activity Types.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Associations From:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">specified by</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Activity Specification</td>
+</tr>
+</table>
+<Font size=2><STRONG>Associations To:</Font size></STRONG>
+<BR>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">agent for</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Authorised Agent</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">end</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">end</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">start</td>
+<td valign="top" width="0%"><font size="2">Only One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<table border="0" cellpadding="7" cellspacing="0" width="500"color="000000"
+<tr>
+<td valign="top" width="0%"><font size="2">Zero, One or Many</td>
+<td valign="top" width="0%"><font size="2">start</td>
+<td valign="top" width="0%"><font size="2">Zero or One</td>
+<td valign="top" width="0%"><font size="2">Timepoint</td>
+</tr>
+</table>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Agent's Activity Type</Font size></EM>
+<BR>
+<Font size=2><STRONG>Subtype Partitions:</Font size></STRONG>
+<BR>
+<Font size=2>AAA/essential type</Font size>
+<BR>
+<Font size=2><EM>Authorised Activity Type</Font size></EM>
+<BR>
+<Font size=2><EM>Authority To Authorise</Font size></EM>
+<BR>
+<center><hr></center>
+<A NAME="D77847"<Font size=3><STRONG>Authority To Authorise</Font size></STRONG><A HREF="D0000673.htm" target="_top"> Defining Diagram</A>
+<BR>
+<Font size=2>Authority held by one "Agent" to authorise other "Agents" to perform certain "Activity Types".</Font size>
+<BR>
+<Font size=2><EM>The General Medical Council has the "Authority to Authorise" medical staff to perform various kinds of medical duties.  It does not have the authority to perform these duties itself.</Font size></EM>
+<BR>
+<Font size=2><STRONG>Supertypes:</Font size></STRONG>
+<BR>
+<Font size=2><EM>Authorised Agent Activity</Font size></EM>
+<BR>
+</body>

@@ -1,0 +1,118 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Physical Resource"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S73959"><Font size=4 color="b22222">
+Physical Resource (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Resource Held&quot; available for use as one or more physical objects.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+There are two types of this:
+<BR>
+Consumables (eg drugs, foodstuffs, fuels)
+<BR>
+Assets (eg computers, vehicles, beds).
+<BR>
+</B></font><BR>
+<BR>
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5155.htm#D73942" target="SADETAILTARGET"><Font size=2 color="b22222">
+Quantity (Class Attribute)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73955"><Font size=4 color="b22222">
+Physical Resource For Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Resource For Activity&quot; using a specific &quot;Physical Resource&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73957"><Font size=4 color="b22222">
+Resource Held (Class)</font></A><BR>
+<DL>
+<BR>
+</B></font><BR>
+<DT><Font size=3>Description: <B>
+Availability of a &quot;Subject&quot; as a resource for use by an &quot;Agent&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Carried over from CBS V2.
+<BR>
+Note that the same &quot;Subject&quot; may act as both a &quot;Temporal Resource Held&quot; and a &quot;Physical Resource
+Held&quot;. For example, a computer may be treated as a physical resource in the sense that it may be
+bought and sold as a commodity. It may also have a role as one (or more) temporal resources in cases
+where it is actually in use.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73960"><Font size=4 color="b22222">
+RH&#47;Temporality (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Resource Held&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5245.htm#D73800" target="SADETAILTARGET"><Font size=2 color="b22222">
+Resource Held (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73961"><Font size=4 color="b22222">
+source (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Physical Resource&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Physical Resource For Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Physical Resource&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Physical Resource For Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S73958"><Font size=4 color="b22222">
+Temporal Resource (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Resource Held&quot; whose availability may be expressed as a rate.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Temporal Resources are available only through the &quot;Resource Activities&quot; in which they are used.
+Examples of these are:
+<BR>
+Shift rotas (for people)
+<BR>
+Booking rotas for buildings, rooms etc.
+<BR>
+
+<BR>
+Temporal Resources may be composed of other Temporal Resources.
+<BR>
+</B></font><BR>
+<BR>
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs5241.htm#D73978" target="SADETAILTARGET"><Font size=2 color="b22222">
+Rate Of Availability (Class Attribute)</font></A><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

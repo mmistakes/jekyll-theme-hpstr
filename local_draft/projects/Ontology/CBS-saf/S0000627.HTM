@@ -1,0 +1,127 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Access Group For Object"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S172663"><Font size=4 color="b22222">
+Access Group For Object (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Describes the access an &quot;Agent Access Group&quot; has to an &quot;Object&quot;.
+</B></font><BR>
+<DT><Font size=3>Examples: <B>
+For example, if a patient says to a GP, &quot;Don't tell anyone about this but another doctor in the
+practice&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172666"><Font size=4 color="b22222">
+Access Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Level&quot; specifying the extents to which access to information may be granted.
+</B></font><BR>
+<DT><Font size=3>Examples: 
+<DD><B>
+Examples which may be considered include:
+<BR>
+Read only
+<BR>
+Copy
+<BR>
+Forward to others
+<BR>
+Absolute.
+<BR>
+Each level would be deemed to include all lower levels.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172665"><Font size=4 color="b22222">
+Agent Access Group (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Method of allowing one or more &quot;Agents&quot; to gain access to &quot;Subjects&quot; or information about them.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172667"><Font size=4 color="b22222">
+group (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Agent Access Group&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Object&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Agent Access Group&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Object&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172669"><Font size=4 color="b22222">
+maximum access (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Access Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Object&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Access Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Object&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172668"><Font size=4 color="b22222">
+object (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Object
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Object&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Object
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Access Group For Object&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S172664"><Font size=4 color="b22222">
+Object (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+Part of the perceivable or conceivable universe.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous documented definitions providing the source for the above are:
+<BR>
+
+<BR>
+Something that exists (CBS v2).
+<BR>
+</B></font><BR>
+<BR>
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4944.htm#D155047" target="SADETAILTARGET"><Font size=2 color="b22222">
+Identifier (Class Attribute)</font></A><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

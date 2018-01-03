@@ -1,0 +1,208 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Performance Rejected Activity"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S174970"><Font size=4 color="b22222">
+Abandoned Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has ended abnormally and for which no further work is intended.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174982"><Font size=4 color="b22222">
+Activity State (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; in a state which it is currently or has been previously.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that there are both subtypes (comprising all the possible states) and a &quot;power type&quot; of
+&quot;Activity State Type&quot;. The latter's contents are identical to the subtypes; it exists in order to
+control topics such as access and permission to amend.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174968"><Font size=4 color="b22222">
+Activity To Be Done (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; required to be undertaken.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Required activities are those which an Agent has made a specific decision to take forward.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174980"><Font size=4 color="b22222">
+Activity Under Consideration (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which is considered appropriate by an &quot;Agent&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that there is not necessarily any intention to perform the Activity at this stage - indeed a
+set of conflicting Activities may all be simultaneously under consideration.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174983"><Font size=4 color="b22222">
+Activity&#47;State (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Activity State&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4143.htm#D34412" target="SADETAILTARGET"><Font size=2 color="b22222">
+Activity State (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174971"><Font size=4 color="b22222">
+Completed Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has ended normally and for which no further work is intended.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+An end state.
+<BR>
+Note that a repetitive activity may be deemed complete even though not all its actual or potential
+components have been identified.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174977"><Font size=4 color="b22222">
+Decomposed Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has been wholly or partially decomposed into other &quot;Activities&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174979"><Font size=4 color="b22222">
+Instantiated Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Repetitive Activity&quot; which has had some or all of its instances created.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174973"><Font size=4 color="b22222">
+Not Required Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot;  which is no longer required.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Like Completed, this is an end state.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174975"><Font size=4 color="b22222">
+Performance Rejected Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; whose performance has been curtailed prior to re-scheduling or abandoning by the same
+Performer.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174967"><Font size=4 color="b22222">
+Performance Suspended Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has started but whose performance has been temporarily stopped.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+The Activity will recommence at the point at which it was suspended. It may of course immediately
+then be abandoned or deemed not required.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174969"><Font size=4 color="b22222">
+Performer Accepted Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; for which the responsibility for performance has been taken by an &quot;Agent&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174976"><Font size=4 color="b22222">
+Performer Rejected Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which the identified performer does not intend to perform.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174972"><Font size=4 color="b22222">
+Performer Selected Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; where the preferred &quot;Agent&quot; who will take responsibility for performance has been
+identified.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+May be requested or if the originator wants to do it.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174984"><Font size=4 color="b22222">
+reason for (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Reason For Rejection&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Performance Rejected Activity&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Reason For Rejection&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Performance Rejected Activity&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174981"><Font size=4 color="b22222">
+Reason For Rejection (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Category&quot; capable of classifying rejected &quot;Activities&quot;, &quot;Foci&quot; and &quot;Intentions&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Attribute in CBS v2.
+<BR>
+Extended to cover foci &amp; intentions as well as activities.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174974"><Font size=4 color="b22222">
+Scheduled Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; where the &quot;Agent&quot; responsible for its performance considers that sufficient &quot;Resources&quot;
+have been allocated, a start &quot;Location&quot; has been stipulated and a specific &quot;Timepoint&quot; for its start
+has been set.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S174978"><Font size=4 color="b22222">
+Started Activity (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Activity&quot; which has commenced.
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>

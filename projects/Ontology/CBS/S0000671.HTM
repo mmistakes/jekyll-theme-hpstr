@@ -1,0 +1,340 @@
+<HTML>
+<HEADER>
+<TITLE>
+System Architect Symbol details for "Authorised Agent"
+</TITLE>
+</HEADER>
+<BODY bgcolor=FFFFD6>
+<font size=4>
+<A NAME="S173457"><Font size=4 color="b22222">
+AA&#47;nature (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Base Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4155.htm#D77793" target="SADETAILTARGET"><Font size=2 color="b22222">
+Authorised Agent (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173456"><Font size=4 color="b22222">
+AA&#47;origin (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Number: <B>
+0
+</B></font><BR>
+<DT><Font size=3>Base Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4155.htm#D77793" target="SADETAILTARGET"><Font size=2 color="b22222">
+Authorised Agent (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173455"><Font size=4 color="b22222">
+Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+Role of a subject enabling it to act purposefully.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+CBS V2: - A role of a &quot;Subject&quot; which indicates that it has power to act
+<BR>
+
+<BR>
+This is a role which may be played by a &quot;Subject&quot;. Sometimes, an &quot;Agent&quot; may be created in order to
+assemble a set of responsibilities and authorities prior to a specific &quot;Subject&quot; being identified
+and allocated to it.
+<BR>
+
+<BR>
+For purposes of creating an &quot;Authorising Act&quot;, an &quot;Agent&quot; may actually be a group of individuals -
+for example when joint responsibility is being taken for some decision, as in a clinical case
+conference.  In such a case the details of the group are taken care of by &quot;Subject&quot; and &quot;Inter
+Subject Relationship&quot;.
+<BR>
+
+<BR>
+Examples of &quot;Agent&quot;:
+<BR>
+Dr Smithers within NHS XYZ Trust, 
+<BR>
+Ms J.Doe in the HXT Pathology laboratory.
+<BR>
+
+<BR>
+A better understanding of the types of &quot;Agent&quot; can be gained from examination of its subtypes.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173449"><Font size=4 color="b22222">
+Agent By Devolvement (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000656.htm" target="_top"><Font size=2><B>Agent By Devolvement</A> (
+UML Class)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+&quot;Agent&quot; whose authority derives from the devolvement of the authority of another.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+A hospital registrar acts through the devolved authority of the consultant.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173450"><Font size=4 color="b22222">
+Agent By Licence (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000657.htm" target="_top"><Font size=2><B>Agent By Licence</A> (
+UML Class)</B></Font><BR>
+<DT><Font size=3>Description: <B>
+&quot;Agent&quot; who has permission to perform some activity or activities.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Example: driving licence.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173458"><Font size=4 color="b22222">
+Agent&#47;authorisation (Generalization Node)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: 
+<DD><B>
+Identifies whether the &quot;Agent&quot; is authorised to undertake specific activities or whether they are
+acting under their own volition.
+<BR>
+
+<BR>
+Problem: In practical terms, it is likely that an implementation will not know whether an &quot;Agent&quot; is
+authorised or not. Similarly, because &quot;Agent&quot; is a join between a &quot;Person&quot; and another authorising
+&quot;Agent&quot;, then in order to establish the appropriate &quot;Agent&quot; it is necessary to know both the
+&quot;Person&quot; and the authorising &quot;Agent&quot;. What if only the &quot;Person&quot; is known?
+<BR>
+</B></font><BR>
+<DT><Font size=3>Base Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>Definitions Used:</font><BR>
+<DD>
+<A HREF="defs4147.htm#D77790" target="SADETAILTARGET"><Font size=2 color="b22222">
+Agent (Class)</font></A><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173461"><Font size=4 color="b22222">
+at some specified (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Location
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Location
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173453"><Font size=4 color="b22222">
+Authorised Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Agent&quot; whose actions are subject to another's authority and control.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+The type of control would include permissions (may do), obligations (must do) and interdictions
+(must not do).
+<BR>
+
+<BR>
+An &quot;Agent&quot; who invests authority in another shares some liability for the actions of those to whom
+it gives authority.
+<BR>
+
+<BR>
+An example of an &quot;Authorised Agent &quot; would be Dr. Smithers given the authority by the NHS XYZ Trust
+to run the Medical Clinical Directorate.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173462"><Font size=4 color="b22222">
+authority (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Agent
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173451"><Font size=4 color="b22222">
+Derived Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+&quot;Authorised Agent&quot; derived from another (the origin).
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+A professional person (&quot;Authorised Agent&quot; through professional licence) becomes an employee of a
+hospital, a &quot;Derived Agent&quot;.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173459"><Font size=4 color="b22222">
+for some (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+&quot;Subject Characteristic Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+&quot;Subject Characteristic Type&quot;
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173454"><Font size=4 color="b22222">
+Free Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Agent&quot; whose actions are not subject to another's control.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+&quot;Authorised Agents&quot; operate within the bounds of their authority. However, the model needs to
+account for the possibility of actions being undertaken outside these limits. Patients, for example,
+where they perform activities, would normally do so as Free Agents.
+<BR>
+
+<BR>
+An example of acting outside the bounds set would be where a person working for an NHS Trust
+operates an illicit sideline selling confectionery. In this case the person is operating as a &quot;Free
+Agent&quot; relative to the NHS Trust. 
+<BR>
+
+<BR>
+See &quot;Authorised Agent&quot; to gain an overall view.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173460"><Font size=4 color="b22222">
+from (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173448"><Font size=4 color="b22222">
+Location (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Reference Point&quot; being a point or set of contiguous points in space.
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Previous documented definitions providing the source for the above are:
+<BR>
+
+<BR>
+Point or set of contiguous points in space.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173452"><Font size=4 color="b22222">
+Principal Agent (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Child Diagrams:</font><BR>
+<DD>
+<A HREF="D0000769.htm" target="_top"><Font size=2><B>Principal Agent</A> (
+UML Class)</B></Font><BR>
+<DT><Font size=3>Description: 
+<DD><B>
+&quot;Authorised Agent&quot; derived directly from a &quot;Subject&quot; not from another &quot;Agent&quot;.
+<BR>
+</B></font><BR>
+<DT><Font size=3>Comment: 
+<DD><B>
+Typically these will be organisations created by others (the authority) with specific powers.  For
+example, an NHS Trust is not a change&#47;extension in the authority of another organisation.
+<BR>
+
+<BR>
+All &quot;Principal Agents&quot; are the result of decree as agreements cannot be made by Subjects.
+<BR>
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173446"><Font size=4 color="b22222">
+Subject Characteristic Type (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Descriptive Category&quot; capable of classifying a &quot;Subject Characteristic&quot;.
+</B></font><BR>
+<DT><Font size=3>Comment: <B>
+Note that Subject Characteristic is the only type of Subject Property which is descriptive, ie not
+associative.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173447"><Font size=4 color="b22222">
+Timepoint (Class)</font></A><BR>
+<DL>
+<DT><Font size=3>Description: <B>
+&quot;Reference Point&quot; being a point or period in time.
+</B></font><BR>
+</DL>
+<center><hr></center>
+<A NAME="S173463"><Font size=4 color="b22222">
+to (Association)</font></A><BR>
+<DL>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+<DT><Font size=3>From Class: <B>
+Timepoint
+</B></font><BR>
+<DT><Font size=3>To Class: <B>
+&quot;Authorised Agent&quot;
+</B></font><BR>
+</DL>
+<center><hr></center>
+</BODY>
+</HTML>
