@@ -7,13 +7,13 @@ categories: Scala, Functional_Programming
 mathjax: true
 ---
 
-Purely functional languages (like Haskell), and purely functional libraries for non purely functional languages (like scalaz or cats for Scala) aim at building Referential Transparent programs. 
-The benefit of this constraint might not be immediately visible, so in this post I wan to expose my thoughts on this, and see what building programs that are RT can buy us.
+One foundation of Functional Programming is Referential Transparency (RT). Purely functional languages (like Haskell), and purely functional libraries for non purely functional languages (like scalaz or cats for Scala) aim at building Referential Transparent programs. 
+The benefit of this constraint might not be immediately visible, so in this post I want to expose my thoughts on this, and see what Referential Transparency can buy us.
 
 # Reasoning and modeling
 
-What is the benefit of equational reasoning? The benefit is that it allows us to focus on something we can handle, draw some conclusions, and drag this conclusion in a broader context where we focus again. 
-In this broader context we don't need to think about the whole process that allowed us to reach our conclusion, but to take this conclusion as a guarantee and proceed further with our reasoning.
+The benefit of RT is that it allows us to focus on something we can handle in our head, draw some conclusions, and drag this conclusion in a different context where we focus again. 
+In this different context we don't need to think about the whole process that allowed us to reach our conclusion, as we can just take this conclusion as a given and proceed further with our reasoning.
 
 For example, when we study calculus we define what a limit of a function \\(f(x)\\) in a point \\(x_0\\) is. Then we define the derivative of a function in \\(x_0\\) as \\(f\\):
 
@@ -43,11 +43,10 @@ Referential transparency is exactly what we just exposed. A definition is RT if 
 When we write a program, we describe a process that performs some logical steps. 
 The approach of functional programming is to model the program in terms of mathematical functions and expressions, so that we can apply reductions or expansions in our reasoning, 
 making our implementation more robust from the logical point of view.
-
-
+Let's see how we can apply this in Scala.
 
 ## Pure functions
-A function that adhere to the RT rule `f: A => B` takes a value `a: A` and produce a `b: B`, and _does nothing else_. 
+A function that adheres to the RT rule `f: A => B` takes a value `a: A`, produces a `b: B`, and _does nothing else_. 
 
 This brings along a few _advantages_:
 - We can reason _locally_ about our code. When implementing the function, I can just think about how to transform `a: A` into a `b: B`. 
@@ -57,10 +56,10 @@ because _there is no context_.
 - Testing becomes easier as there is no need to setup any context
 
 ## Breaking RT: mutable state
-In math when we write \\(x = 1\\) it means that the value assigned to \\(x\\) is \\(1\\) and it will not change.
+In Maths when we write \\(x = 1\\) it means that the value assigned to \\(x\\) is \\(1\\) and it will not change.
 Also, for any function \\(f(x)\\), for any given input we will have always the same output, on multiple computations.
 
-Scala is a hybrid language, in that it allows to do FP, but we can mix in non-functional code, so if for example we want to model an `Account` object we could do
+Scala is a hybrid language, in that it allows to do FP, but we can mix in non-functional code, so if e.g. we want to model an `Account` object we could do
 
 ```scala
 scala> case class Account(var balance: BigDecimal = 0) {
@@ -114,9 +113,9 @@ res3: Account = Account(900)
 ```
 
 ## Breaking RT: Exceptions
-When we define a function `f: A => B` we expect this function to return an output `b: B` for every input `a: A`. 
+When we define a function `f: A => B`, we expect this function to return an output `b: B` for every input `a: A`. 
 If in the implementation of `f` we introduce a `throw` or an `assert`, or rely on `null`, we end up with our computation breaking the contract we established when we defined `f`.
-The behavior of code throwing exceptions is not referential transparent, as you can see from the following example
+The behavior of code throwing exceptions is not Referentially Transparent, as you can see from the following example
 
 
 
@@ -167,18 +166,18 @@ scala> wealthyAccountFromDb("Very very very personal", 1500)
 res6: Option[Account] = None
 ```
 
-Does this yield the same result? No, so this code is not Referential Transparent.
+Does this yield the same result? No, so this code is not Referentially Transparent.
 
 Throwing exceptions has also a few specific drawbacks:
 
 - It breaks totality of `f: A => B`, as exceptions could be thrown for some `a` in our domain
-- It forces us to think consider, every time we invoke a function, that it might throw an exception, so it makes our style very defensive and repetitive
+- It forces us to think, every time we invoke a function, that it might throw an exception, so it makes our style very defensive and repetitive
 
 The alternative is to make code that might fail, be explicit about it in the output type. Use an `Option[B]` or `Either[E, B]` to convey the fact that computation can fail. 
 If the type is simply `B` it means that the function is total and guarantees to work (excluding pathological situations).
 
 ## Breaking RT: Scala Future
-Scala `scala.concurrent.Future` provides the way to handle asynchronous execution in Scala. 
+Scala `scala.concurrent.Future` provides the way to handle asynchronous execution. 
 In order for `Future` to run the basic operations, we need an `ExecutionContext` available (typically it is provided implicitly). 
 When a `Future` is created, it does not only create a value, but it runs immediately on the provided `ExecutionContext`.
 
@@ -190,30 +189,30 @@ import scala.concurrent.Future
 
 ```scala
 scala> val x = Future({println("Future is running!"); "result"})
-Future is running!x: scala.concurrent.Future[String] = Future(<not completed>)
-
+x: scala.concurrent.Future[String] = Future(<not completed>)
+Future is running!
 ```
 
-The fact that `Future` executes eagerly as soon as it is created, is a violation of referential transparency, as you can see from this simple case
+The fact that `Future` executes eagerly as soon as it is created, is a violation of RT, as you can see from this simple case
  
 ```scala
 scala> val x = Future({println("running"); "result"})
-running
-x: scala.concurrent.Future[String] = Future(<not completed>)
+runningx: scala.concurrent.Future[String] = Future(<not completed>)
+
 
 scala> x flatMap(_ => x)
-res7: scala.concurrent.Future[String] = Future(Success(result))
+res7: scala.concurrent.Future[String] = Future(<not completed>)
 ```
 is different than
 ```scala
 scala> Future({println("running"); "result"}) flatMap{_ => Future({println("running"); "result"})}
 running
 res8: scala.concurrent.Future[String] = Future(<not completed>)
-running
 ```
 because one prints `"running"` once, another one prints it twice.
+running
 
-Alternative libraries such as Monix, cats-effects or scalaz8 provide alternatives to `Future` that separate declaration from execution, giving us back referential transparency.
+Alternative libraries such as Monix, cats-effects or scalaz8 provide alternatives to `Future` that separate declaration from execution, giving us back RT.
 
 Let's do the same as above with Monix `Task`.
 Defining a `Task`just creates a value that describes how things will be executed, it doesn't trigger any execution.
@@ -226,7 +225,7 @@ scala> import monix.eval.Task
 import monix.eval.Task
 
 scala> val task = Task({println("Task is running!"); "result"})
-task: monix.eval.Task[String] = Task.FlatMap$759997966
+task: monix.eval.Task[String] = Task.FlatMap$850376584
 ```
 
 Execution must be explicitly invoked _at the end of the world_
@@ -240,10 +239,10 @@ Now let's verify that this property guarantees RT
 
 ```scala
 scala> val t1 = task flatMap(_ => task)
-t1: monix.eval.Task[String] = Task.FlatMap$755073394
+t1: monix.eval.Task[String] = Task.FlatMap$980921363
 
 scala> val t2 = Task({println("Task is running!"); "result"}) flatMap {_ => Task({println("Task is running!"); "result"})}
-t2: monix.eval.Task[String] = Task.FlatMap$1242266874
+t2: monix.eval.Task[String] = Task.FlatMap$1536181213
 
 scala> t1.runAsync.foreach(println)
 Task is running!
@@ -259,4 +258,4 @@ result
 # Conclusions
 I hope the examples exposed above give a good idea of the benefit of Referential Transparency. 
 One way to see Functional programming is as a programming style that is rigorous and explicit about expectations and guarantees (typically modeled through typeclasses and laws). 
-Referential transparency plays a fundamental role in this and by striving for it we make our code easier to reason about, improving its maintainability and becoming ultimately more productive.
+RT plays a fundamental role in this and by using it we make our code easier to reason about, improving its maintainability and becoming ultimately more productive.
