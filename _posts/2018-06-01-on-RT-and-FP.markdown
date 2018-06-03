@@ -37,7 +37,7 @@ $$ E_k = \frac{1}{2}m\Big(\frac{d x}{d t}\Big )^2 $$
 
 Being able to replace definitions into variables and viceversa, allows us to simplify our reasoning and limit or broaden the scope of deductions.
 
-# Referential transparency 
+# Referential Transparency 
 Referential transparency is exactly what we just exposed. A definition is RT if we can exchange reference for definition without mutating the effect of my reasoning. 
 
 When we write a program, we describe a process that performs some logical steps. 
@@ -173,8 +173,8 @@ Throwing exceptions has also a few specific drawbacks:
 - It breaks totality of `f: A => B`, as exceptions could be thrown for some `a` in our domain
 - It forces us to think, every time we invoke a function, that it might throw an exception, so it makes our style very defensive and repetitive
 
-The alternative is to make code that might fail, be explicit about it in the output type. Use an `Option[B]` or `Either[E, B]` to convey the fact that computation can fail. 
-If the type is simply `B` it means that the function is total and guarantees to work (excluding pathological situations).
+The alternative is to convey the fact that some code can fail, explicitly in the output type. Use an `Option[B]` or `Either[E, B]` to express the fact that computation can fail. Rather that `require` we could rather use a [smart constructor](https://www.cakesolutions.net/teamblogs/enforcing-invariants-in-scala-datatypes).
+If the type is simply `B` it means that the function is total and guarantees to work and provide a `b :B`.
 
 ## Breaking RT: Scala Future
 Scala `scala.concurrent.Future` provides the way to handle asynchronous execution. 
@@ -197,8 +197,8 @@ The fact that `Future` executes eagerly as soon as it is created, is a violation
  
 ```scala
 scala> val x = Future({println("running"); "result"})
-runningx: scala.concurrent.Future[String] = Future(<not completed>)
-
+running
+x: scala.concurrent.Future[String] = Future(<not completed>)
 
 scala> x flatMap(_ => x)
 res7: scala.concurrent.Future[String] = Future(<not completed>)
@@ -225,7 +225,7 @@ scala> import monix.eval.Task
 import monix.eval.Task
 
 scala> val task = Task({println("Task is running!"); "result"})
-task: monix.eval.Task[String] = Task.FlatMap$850376584
+task: monix.eval.Task[String] = Task.FlatMap$1855446670
 ```
 
 Execution must be explicitly invoked _at the end of the world_
@@ -239,10 +239,10 @@ Now let's verify that this property guarantees RT
 
 ```scala
 scala> val t1 = task flatMap(_ => task)
-t1: monix.eval.Task[String] = Task.FlatMap$980921363
+t1: monix.eval.Task[String] = Task.FlatMap$1362502256
 
 scala> val t2 = Task({println("Task is running!"); "result"}) flatMap {_ => Task({println("Task is running!"); "result"})}
-t2: monix.eval.Task[String] = Task.FlatMap$1536181213
+t2: monix.eval.Task[String] = Task.FlatMap$446650376
 
 scala> t1.runAsync.foreach(println)
 Task is running!
@@ -252,10 +252,16 @@ result
 scala> t2.runAsync.foreach(println)
 Task is running!
 Task is running!
-result
 ```
 
+As you can see `t1` and `t2` produce the same result, so they respect RT.
+
+
 # Conclusions
-I hope the examples exposed above give a good idea of the benefit of Referential Transparency. 
-One way to see Functional programming is as a programming style that is rigorous and explicit about expectations and guarantees (typically modeled through typeclasses and laws). 
-RT plays a fundamental role in this and by using it we make our code easier to reason about, improving its maintainability and becoming ultimately more productive.
+I hope the examples exposed above give a good idea of the benefits of Referential Transparency. 
+
+The same concepts we have explored here apply when we develop our business application, when we are dealing with a DB call, or building an object out of a DB row, or performing a call to an API.
+
+What we want is to apply one of the principles of Functional programming, i.e. being pure, rigorous and explicit about expectations and guarantees. This allows us to _think in the little_ to _compose in the big_ context, without juggling with too many concepts in our head. 
+
+RT plays a fundamental role in this and by using it we make our code easier to reason about, improving its maintainability and becoming ultimately more productive as developers.
