@@ -189,8 +189,8 @@ import scala.concurrent.Future
 
 ```scala
 scala> val x = Future({println("Future is running!"); "result"})
-x: scala.concurrent.Future[String] = Future(<not completed>)
 Future is running!
+x: scala.concurrent.Future[String] = Future(Success(result))
 ```
 
 The fact that `Future` executes eagerly as soon as it is created, is a violation of RT, as you can see from this simple case
@@ -198,24 +198,27 @@ The fact that `Future` executes eagerly as soon as it is created, is a violation
 ```scala
 scala> val x = Future({println("running"); "result"})
 running
-x: scala.concurrent.Future[String] = Future(<not completed>)
+x: scala.concurrent.Future[String] = Future(Success(result))
 
 scala> x flatMap(_ => x)
 res7: scala.concurrent.Future[String] = Future(<not completed>)
+running
 ```
+
 is different than
+
 ```scala
 scala> Future({println("running"); "result"}) flatMap{_ => Future({println("running"); "result"})}
 running
+running
 res8: scala.concurrent.Future[String] = Future(<not completed>)
 ```
-because one prints `"running"` once, another one prints it twice.
-running
+because one never prints `"running"` (as it was printed when we created the `Future` in first place), another one prints it twice.
 
 Alternative libraries such as Monix, cats-effects or scalaz8 provide alternatives to `Future` that separate declaration from execution, giving us back RT.
 
 Let's do the same as above with Monix `Task`.
-Defining a `Task`just creates a value that describes how things will be executed, it doesn't trigger any execution.
+Defining a `Task` just creates a value that describes how things will be executed, it doesn't trigger any execution.
 
 ```scala
 scala> import monix.execution.Scheduler.Implicits.global
