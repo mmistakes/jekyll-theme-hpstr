@@ -254,9 +254,75 @@ result
 scala> t2.runAsync.foreach(println)
 Task is running!
 Task is running!
+result
 ```
 
 As you can see `t1` and `t2` produce the same result, so they respect RT.
+
+## Laws and Referential Transparency
+When we define an abstraction in FP (typically by means of a typeclass), we provide also the laws that this abstraction must abide to.
+
+For example, for every (covariant) `Functor` it is required that it respects the _composition law_:
+
+```scala
+fa.map(f).map(g) <-> fa.map(f andThen g)
+```
+
+It is pretty obvious that this law makes sense only as long as `f` and `g` are referentially transparent. 
+
+If e.g. `fa` is a `List[A]`, the `map` function could be defined considering the recursive nature of the List ADT:
+
+```scala
+def map[A, B](xs: List[A])(f: A => B): List[B] = xs match {
+    case Nil => Nil
+    case x :: xs => f(x) :: map(xs)(f)
+}
+```
+
+By inspecting this simple definition, it is apparent that the functor law can hold only as long as executions of `f` on previous elements of the list don't influence execution on subsequent elements. Clearly shared mutable state breaks this condition.
+
+Let's prove this with a simple example
+
+```scala
+scala> var state = 0
+state: Int = 0
+
+scala> val add: Int => Int => Int = x => y => {
+     |   state = state + 1
+     |   x + y + state
+     | }
+add: Int => (Int => Int) = $$Lambda$15566/1963356770@abe0b99
+
+scala> val xs = List(1,2,3,4)
+xs: List[Int] = List(1, 2, 3, 4)
+
+scala> xs.map(add(4)).map(add(5))
+res0: List[Int] = List(16, 19, 22, 25)
+
+scala> state = 0
+state: Int = 0
+
+scala> val xs = List(1,2,3,4)
+xs: List[Int] = List(1, 2, 3, 4)
+
+scala> xs.map(add(4) andThen add(5))
+res1: List[Int] = List(13, 18, 23, 28)
+```
+
+We can see that the 2 executions provide different results, even if we reset the state between one execution and the next one. 
+
+A simple pure version is instead a law abiding citizes of the functional world
+
+```scala
+scala> val add: Int => Int => Int = x => y => x + y
+add: Int => (Int => Int) = $$Lambda$10651/883633605@50b6ae4e
+
+scala> xs.map(add(4)).map(add(5))
+res2: List[Int] = List(10, 11, 12, 13)
+
+scala> xs.map(add(4) andThen add(5))
+res3: List[Int] = List(10, 11, 12, 13)
+```
 
 
 # Conclusions
@@ -264,6 +330,6 @@ I hope the examples exposed above give a good idea of the benefits of Referentia
 
 The same concepts we have explored here apply when we develop our business application, when we are dealing with a DB call, or building an object out of a DB row, or performing a call to an API.
 
-What we want is to apply one of the principles of Functional programming, i.e. being pure, rigorous and explicit about expectations and guarantees. This allows us to _think in the little_ to _compose in the big_ context, without juggling with too many concepts in our head. 
+What we want to do is to apply one of the principles of Functional programming, i.e. being pure, rigorous and explicit about expectations and guarantees. This allows us to _think in the little_ to _compose in the big_ context, without juggling with too many concepts in our head. Remember that [Constraints Liberate, Liberties Constrain](https://www.youtube.com/watch?v=GqmsQeSzMdw). 
 
 RT plays a fundamental role in this and by using it we make our code easier to reason about, improving its maintainability and becoming ultimately more productive as developers.
