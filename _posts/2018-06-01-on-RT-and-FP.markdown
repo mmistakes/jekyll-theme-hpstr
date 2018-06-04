@@ -201,8 +201,7 @@ running
 x: scala.concurrent.Future[String] = Future(Success(result))
 
 scala> x flatMap(_ => x)
-res7: scala.concurrent.Future[String] = Future(<not completed>)
-running
+res7: scala.concurrent.Future[String] = Future(Success(result))
 ```
 
 is different than
