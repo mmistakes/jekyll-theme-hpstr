@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+      @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+      body { font-family: 'Noto Sans'; }
+      h1, h2, h3, h4, h5, h6, strong {
+        font-family: 'Fjalla One';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content {
+        background-color: #045279;
+        color: #FFFFFF;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# FP patterns 101
+
+### Pierangelo Cecchetto (@pierangelocecc)
+
+### Reactive Amsterdam Meetup
+
+---
+
+# Agenda
+- FP definition
+
+- Typeclasses
+
+- FP patterns with examples
+
+- Further path
+
+---
+
+# What is FP?
+
+- Is it programming with `map`, `flatMap`, `filter`?
+
+--
+
+- Pure functions
+
+--
+
+- Referential transparency
+
+--
+
+  - Replace equals for equals
+
+--
+
+  - Equational reasoning
+
+---
+
+# Referential Transparency
+
+- ~~Shared Mutable State~~
+
+--
+
+- ~~Exceptions~~
+
+--
+
+- ~~Partial functions~~
+
+---
+
+# Typeclasses
+
+???
+Let's talk about typeclasses. If we want to program with functions, and we have a strongly typed language at hand, it is natural to define to which objects these functions can be applied
+
+Typeclasses are a supreme way to model separation of concerns, and yet make sure we take care of all the necessary concerns, at compile time
+
+--
+
+- Separation of concerns
+
+--
+
+- Widespread in FP
+
+--
+
+- _Ad hoc inheritance_
+
+--
+
+- Declare properties
+
+- Declare Laws (TCK)
+
+--
+
+- Specify which types enjoy these properties
+
+  - Or have the compiler deriving them for you
+
+--
+
+- Compile-time check
+
+---
+
+# Typeclasses
+
+```scala
+trait Show[A] {
+  def show(a: A): String
+}
+```
+???
+
+A very simple example of a typeclass is `Show`
+
+String representation of a class.
+
+We have already `toString` but if we forget to override it we end up having strange @ClassName#hashCode, and compiler says nothing!
+
+We need stronger guarantees!
+
+--
+
+```scala
+case class Dog(name: String)
+```
+
+--
+
+```scala
+implicit val show: Show[Dog] = new Show[Dog] {
+  def show(d: Dog) = s"a dog named ${d.name}"
+}
+```
+
+--
+
+```scala
+val charlie = Dog("Charlie")
+// charlie: Dog = Dog(Charlie)
+
+implicitly[Show[Dog]].show(charlie)
+// res0: String = a dog named Charlie
+```
+---
+
+# Typeclasses
+
+Having to type every time `implicitly[Show[Dog]]` is a bit noisy noisy
+
+--
+
+Summoner
+```scala
+object Show {
+  def apply[A: Show]: Show[A] = implicitly
+}
+```
+--
+
+```scala
+Show[Dog].show(charlie)
+// res1: String = a dog named Charlie
+```
+
+--
+
+Rich Syntax
+
+```scala
+implicit class ShowSyntax[A: Show](a: A) {
+  def show: String = Show[A].show(a)
+}
+```
+
+```scala
+val charlie = Dog("Charlie")
+// charlie: Dog = Dog(Charlie)
+
+charlie.show
+// res2: String = a dog named Charlie
+```
+
+???
+In the next slides we will talk about specific type classes using the std version and the syntax enrichment version in an equivalent manner
+
+---
+# Typeclasses
+
+```scala
+def log[A: Show](a: A): String = s"I am logging about [${Show[A].show(a)}]"
+// log: [A](a: A)(implicit evidence$1: Show[A])String
+```
+--
+
+???
+
+What we can do with Show?  Explicitly declare  how it should behave for a type
+
+Without forcing any inheritance
+
+All checked by the compiler
+
+--
+
+```scala
+val jack = Dog("Jack")
+// jack: Dog = Dog(Jack)
+
+log(jack)
+// res3: String = I am logging about [a dog named Jack]
+```
+--
+
+```scala
+case class Cat(name: String)
+// defined class Cat
+
+val oscar = Cat("Oscar")
+// oscar: Cat = Cat(Oscar)
+
+log(oscar)
+// <console>:17: error: could not find implicit value for evidence parameter of type Show[Cat]
+//        log(oscar)
+//           ^
+```
+--
+
+## Compilation errors FTW!!!
+
+???
+Compiler is your friend, make use of it!
+
+---
+
+# Semigroup
+
+???
+
+Semigroup is math term to express the fact that I can take 2 things of 1 type and produce another thing of the same type (internal, binary operation)
+TODO: make picture
+--
+
+- Append
+
+```scala
+trait Semigroup[A] {
+  def combine(a: A, b: A): A
+}
+```
+--
+
+
+
+
+```scala
+Semigroup[Int].combine(100, 10)
+// res0: Int = 110
+```
+--
+
+```scala
+Semigroup[List[Int]].combine(List(1,2,3), List(4,5,6))
+// res1: List[Int] = List(1, 2, 3, 4, 5, 6)
+```
+
+---
+
+# Semigroup
+
+- `|+|` operator
+
+???
+As we have seen, it is frequent practice to enrich the syntax of a type that has a type class with an operator that delegates to the typeclass definition
+--
+
+```scala
+100 |+| 10
+// res2: Int = 110
+
+List(1,2,3) |+| List(4,5,6)
+// res3: List[Int] = List(1, 2, 3, 4, 5, 6)
+```
+
+---
+# Semigroup
+
+Derived instances
+
+- If `A` is a Semigroup, `Map[K, A]` is a Semigroup
+
+```scala
+val m1 = Map("cat" -> List(1,2,3), "dog" -> List(4,5,6))
+// m1: scala.collection.immutable.Map[String,List[Int]] = Map(cat -> List(1, 2, 3), dog -> List(4, 5, 6))
+
+val m2 = Map("cat" -> List(10), "cow" -> List(40))
+// m2: scala.collection.immutable.Map[String,List[Int]] = Map(cat -> List(10), cow -> List(40))
+```
+
+???
+`Map[K, V]` is a semigroup if V is a semigroup, therefore we have a semigroup in maps induced by the semigroup in Values
+
+--
+
+```scala
+m1 |+| m2
+// res4: Map[String,List[Int]] = Map(cat -> List(1, 2, 3, 10), cow -> List(40), dog -> List(4, 5, 6))
+```
+
+- If `A` is a semigroup, `Option[A]` is a semigroup
+
+```scala
+1.some |+| 2.some
+// res5: Option[Int] = Some(3)
+
+1.some |+| None
+// res6: Option[Int] = Some(1)
+```
+
+---
+# Semigroup
+
+```scala
+def twice[A: Semigroup](a: A) = a |+| a
+// twice: [A](a: A)(implicit evidence$1: cats.Semigroup[A])A
+```
+
+???
+We can derive functions in terms of base operations, e.g. a function that combines an element with itself
+
+--
+
+```scala
+scala> twice(List(1,2,3))
+res7: List[Int] = List(1, 2, 3, 1, 2, 3)
+```
+--
+```scala
+twice(Map("cat" -> List(1,2,3), "dog" -> List(4,5,6)))
+// res8: scala.collection.immutable.Map[String,List[Int]] = Map(cat -> List(1, 2, 3, 1, 2, 3), dog -> List(4, 5, 6, 4, 5, 6))
+```
+---
+
+# Monoid
+- combine 2 things
+
+???
+
+If we enrich a semigroup by providing a neutral element, we get a Monoid
+
+--
+
+- has neutral element
+--
+
+
+```scala
+trait Monoid[A] {
+  def combine(a: A, b: A): A
+  def empty: A
+}
+```
+--
+
+- Monoid Laws
+
+```scala
+(a |+| b) |+| c === a |+| (b |+| c)
+```
+--
+
+```scala
+a |+| empty === empty |+| a === a
+```
+--
+
+Grouping is irrelevant
+```scala
+scala> List(1,2,3) |+| List(3,4,5) |+| List(7,8,9)
+res9: List[Int] = List(1, 2, 3, 3, 4, 5, 7, 8, 9)
+```
+
+???
+
+This simple property is fundamental when designing distributed systems
+
+---
+
+# Monoid
+
+```scala
+def fold[A: Monoid](xs: List[A]) = xs.foldLeft(Monoid[A].empty)(Monoid[A].combine)
+// fold: [A](xs: List[A])(implicit evidence$1: cats.Monoid[A])A
+```
+???
+
+Again, we can derive operations totally generic on monoids that work for _any_ monoid
+
+--
+
+```scala
+scala> List(1,2,3,4).combineAll
+res10: Int = 10
+```
+--
+
+```scala
+scala> List(Some(1), Some(2), None).combineAll
+res11: Option[Int] = Some(3)
+```
+
+???
+Here we used the fact that given a `Monoid[A]`, we have for free a `Monoid[Option[A]]`
+--
+```scala
+case class Features(x: Double, y: Double)
+implicit val monoid: Monoid[Features] = new Monoid[Features] {
+  def combine(a: Features, b: Features): Features = Features(a.x + b.x, a.y + b.y)
+  def empty: Features = Features(0, 0)
+}
+val samples = List(Features(50, 50), Features(40,30), Features(10, 20))
+val added = samples.combineAll
+```
+
+???
+We will see in the section about applicative a natural application of these concepts
+
+---
+
+# Monoid
+
+Why should I care?
+
+- Addition of homogeneous quantities
+- Error accumulation (form validation)
+- Log accumulation
+- (Map) Reduce, parallel processing, scatter-gather
+
+???
+
+Reverse proxy
+
+---
+
+# Functor
+
+???
+
+What is a functor?  It is a type constructor equipped with a mapping operation, that changes just the content inside the box,without altering the box itself
+//TODO: make picture
+--
+
+```scala
+trait Functor[F[_]] {
+  def map[A, B](fa: F[A])(f: A => B): F[B]
+  //CT definition
+  def lift[A, B](f: A => B): F[A] => F[B] = map(_)(f)
+}
+```
+---
+
+# Functor
+
+
+
+```scala
+Functor[Option].map(Some(5))(_ * 2)
+// res0: Option[Int] = Some(10)
+
+Functor[List].map(List(1,2,3))(_ * 10)
+// res1: List[Int] = List(10, 20, 30)
+```
+
+???
+
+From this it seems there is nothing really compelling about a functor.
+
+But it is one of the most underrated functional concepts, yet being a foundational one from the CT point of view
+
+E.g. let's consider the case of a JSON tree
+
+---
+
+# Functor
+
+
+#### Json Decoder
+
+```scala
+sealed trait Json
+
+case class JsonObject(fields: List[(String, Json)]) extends Json
+
+case class JsonArray(items: List[Json]) extends Json
+
+case class JsonString(value: String) extends Json
+
+case class JsonNumber(value: Double) extends Json
+
+case class JsonBoolean(value: Boolean) extends Json
+
+case object JsonNull extends Json
+```
+
+--
+
+This is a classic JSON tree (Circe, Argonaut, Spray-Json)
+
+---
+# Functor
+
+#### Json Decoder
+
+```scala
+type DecodeResult[A] = Either[String, A]
+
+trait JsonDecoder[A] {
+  def decode(json: Json): DecodeResult[A]
+}
+```
+
+???
+
+Let's define the JsonDecoder typeclass, specified by the `decode` method.
+--
+
+
+
+--
+
+```scala
+implicit val doubleDecoder: JsonDecoder[Double] = new JsonDecoder[Double] {
+  def decode(json: Json): DecodeResult[Double] = json match {
+    case JsonNumber(value) => Right(value)
+    case _ => Left("this is not a double")
+  }
+}
+
+implicit val stringDecoder: JsonDecoder[String] = new JsonDecoder[String] {
+  def decode(json: Json): DecodeResult[String] = json match {
+    case JsonString(value) => Right(value)
+    case _ => Left("this is not a string")
+  }
+}
+```
+
+???
+
+We define the `JsonDecoder` for simple types
+
+---
+# Functor
+
+#### Json Decoder
+
+```scala
+def decode[A: JsonDecoder](json: Json): DecodeResult[A] =
+  JsonDecoder[A].decode(json)
+```
+
+???
+
+And let's define a convenience method do decode a Json to a specific type `A`
+
+--
+
+```scala
+val jsonDouble: Json = JsonNumber(50)
+// jsonDouble: Json = JsonNumber(50.0)
+
+decode[Double](jsonDouble)
+// res3: DecodeResult[Double] = Right(50.0)
+```
+
+???
+
+We decode a JsonNumber as a Double
+--
+
+```scala
+val jsonString: Json = JsonString("Ferrari")
+// jsonString: Json = JsonString(Ferrari)
+
+decode[String](jsonString)
+// res4: DecodeResult[String] = Right(Ferrari)
+
+decode[Double](jsonString)
+// res5: DecodeResult[Double] = Left(this is not a double)
+```
+
+???
+
+And then we decode a Json as a String
+
+---
+
+# Functor
+
+#### Json Decoder
+
+```scala
+case class Price(euros: Double) extends AnyVal
+case class Car(name: String) extends AnyVal
+```
+
+???
+What do we do if we want to decode our Json object into a case class that wraps a double. Wrapping base types into case classes is a best practice to avoid passing wrong parameters, e.g. a port number in a place that is expecting a timeout in milliseconds.
+
+- If I want to decode a JsonString into a `Price`  `Car` case class I could write my specific decoders for each of them, implicit jso.
+
+- This is a repetitive pattern
+
+- And where there is repetition there is room for abstraction
+
+--
+
+```scala
+trait JsonDecoder[A] { self =>
+  def decode(json: Json): DecodeResult[A]
+  def map[B](f: A => B): JsonDecoder[B] = new JsonDecoder[B] {
+    def decode(json: Json): DecodeResult[B] = self.decode(json).map(f)
+  }
+}
+```
+--
+
+
+
+
+```scala
+implicit val priceDecoder: JsonDecoder[Price] =
+      JsonDecoder[Double].map(Price.apply)
+
+implicit val carDecoder: JsonDecoder[Car] =
+      JsonDecoder[String].map(Car.apply)
+```
+---
+
+# Functor
+
+#### Json Decoder
+
+```scala
+decode[Car](jsonString)
+// res7: DecodeResult[Car] = Right(Car(Ferrari))
+```
+--
+
+```scala
+decode[Price](jsonDouble)
+// res8: DecodeResult[Price] = Right(Price(50.0))
+```
+--
+
+```scala
+decode[Car](jsonDouble)
+// res9: DecodeResult[Car] = Left(this is not a string)
+```
+
+---
+
+# Functor
+
+**Json Decoder**<br/>
+<br/>
+<br/>
+```scala
+trait JsonDecoder[A] { self =>
+  def decode(json: Json): DecodeResult[A]
+  def map[B](f: A => B): JsonDecoder[B] = new JsonDecoder[B] {
+    def decode(json: Json): DecodeResult[B] = self.decode(json).map(f)
+  }
+}
+```
+
+???
+
+Let's go a bit further in the inspection of the shape of functor, by using this example.
+
+Let's have a look at the shape of the `JsonDecoder` trait
+
+
+--
+
+**Json Encoder**<br/>
+<br/>
+<br/>
+```scala
+trait JsonEncoder[A] {
+  def encode(a: A): Json
+}
+```
+
+???
+
+And let's define the opposite operation, an encoding operation where we start from `A`  and end up in `Json`
+
+---
+
+# Functor
+
+**Json Decoder**<br/>
+**`A` in covariant position**<br/>
+<br/>
+
+```scala
+trait JsonDecoder[A] { self =>
+  def decode(json: Json): DecodeResult[A]
+  def map[B](f: A => B): JsonDecoder[B] = new JsonDecoder[B] {
+    def decode(json: Json): DecodeResult[B] = self.decode(json).map(f)
+  }
+}
+```
+
+**Json Encoder**<br/>
+<br/>
+<br/>
+```scala
+trait JsonEncoder[A] {
+  def encode(a: A): Json
+}
+```
+---
+
+# Functor
+
+**Json Decoder**<br/>
+**`A` in covariant position**<br/>
+**Covariant functor**<br/>
+```scala
+trait JsonDecoder[A] { self =>
+  def decode(json: Json): DecodeResult[A]
+  def map[B](f: A => B): JsonDecoder[B] = new JsonDecoder[B] {
+    def decode(json: Json): DecodeResult[B] = self.decode(json).map(f)
+  }
+}
+```
+
+**Json Encoder**<br/>
+<br/>
+<br/>
+```scala
+trait JsonEncoder[A] {
+  def encode(a: A): Json
+}
+```
+---
+
+# Functor
+
+**Json Decoder**<br/>
+**`A` in covariant position**<br/>
+**Covariant functor**<br/>
+```scala
+trait JsonDecoder[A] { self =>
+  def decode(json: Json): DecodeResult[A]
+  def map[B](f: A => B): JsonDecoder[B] = new JsonDecoder[B] {
+    def decode(json: Json): DecodeResult[B] = self.decode(json).map(f)
+  }
+}
+```
+
+**Json Encoder**<br/>
+**`A` in a contravariant position**<br/>
+<br/>
+```scala
+trait JsonEncoder[A] {
+  def encode(a: A): Json
+}
+```
+---
+
+# Functor
+
+**Json Decoder**<br/>
+**`A` in covariant position**<br/>
+**Covariant functor**<br/>
+```scala
+trait JsonDecoder[A] { self =>
+  def decode(json: Json): DecodeResult[A]
+  def map[B](f: A => B): JsonDecoder[B] = new JsonDecoder[B] {
+    def decode(json: Json): DecodeResult[B] = self.decode(json).map(f)
+  }
+}
+```
+
+**Json Encoder**<br/>
+**`A` in a contravariant position**<br/>
+**Contravariant functor**<br/>
+```scala
+trait JsonEncoder[A] { self =>
+  def encode(a: A): Json
+  def contramap[B](f: B => A): JsonEncoder[B] = new JsonEncoder[B] {
+    def encode(b: B): Json = self.encode(f(b))
+  }
+}
+```
+
+???
+
+Here we defined a dual concept of a functor, which is the contravariant functor.
+
+We are expressing the fact that if I'm able to encode e.g. a Double to a JsonDouble, I can encode any type that is isomorphic to Double for free, as long as I know how to map that type into a double
+
+
+
+---
+
+# Functor
+
+
+
+
+```scala
+implicit val doubleEncoder: JsonEncoder[Double] = new JsonEncoder[Double] { self =>
+  def encode(value: Double): Json = JsonNumber(value)
+}
+```
+
+???
+
+We can define encoders for simple types
+
+--
+
+```scala
+implicit val priceEncoder: JsonEncoder[Price] =
+  doubleEncoder.contramap(_.euros)
+```
+
+???
+
+And then derive encoders for related types
+
+--
+
+```scala
+encode(50.5)
+// res10: Json = JsonNumber(50.5)
+
+encode(Price(50.50))
+// res11: Json = JsonNumber(50.5)
+```
+---
+
+# Functor
+
+- Transformations preserving `F[_]`
+
+- Has multiple variants, make use of them!
+
+- We could go further with Invariant functors, Profunctors etc...
+---
+
+# Functions Composition
+
+
+
+
+???
+
+What are effects? Let's consider a simple example, we have a devops application that given the name of the application needs to find the location of configuraiton
+
+--
+
+```scala
+val lookupPath: String => ConfigLocation =
+  appName => ConfigLocation("application-config-point")
+```
+
+???
+
+And then read this configuration from the location
+
+--
+
+```scala
+val lookupConfig: ConfigLocation => AppConfig =
+  configLocation => AppConfig(port = 80, rootUrl = "reactive-ams")
+```
+--
+
+Composition
+
+```scala
+val bootstrap: String => AppConfig = lookupPath andThen lookupConfig
+```
+
+???
+
+Then we can compose these 2 functions together
+
+--
+
+```scala
+bootstrap("reactive-app")
+// res12: AppConfig = AppConfig(80,reactive-ams)
+```
+--
+
+Or
+
+```scala
+val bootstrap: String => AppConfig = lookupConfig compose lookupPath
+```
+
+--
+
+```scala
+bootstrap("reactive-app")
+// res13: AppConfig = AppConfig(80,reactive-ams)
+```
+
+---
+
+
+# Effects
+
+- Enrich our computation
+
+???
+
+Let's now introduce Effects. We call effects anything that enriches our domain to express specific, well defined behavior, e.g.
+- optionality
+- Error
+- Reading from context
+- State changes
+
+Let's see how we can enrich our functions to express the potential failure of computation
+
+--
+
+```scala
+val lookupPath: String => Either[String, ConfigLocation] = appName => {
+      if (appName == "reactive-app") Right(ConfigLocation("location"))
+      else Left(s"$appName app not found")
+    }
+
+val lookupConfig: ConfigLocation => Either[String, AppConfig] = lookupPath => {
+      if (lookupPath == ConfigLocation("location"))
+        Right(AppConfig(port = 80, rootUrl = "reactive-ams"))
+      else
+        Left(s"$lookupPath path not found")
+      }
+```
+
+--
+
+```scala
+val bootstrap: String => Either[String, AppConfig] =
+  location => lookupPath(location).flatMap(lookupConfig)
+```
+???
+
+The fact that `Either` is equipped with a `flatMap` allows us to compose 2 functions
+
+--
+```scala
+bootstrap("reactive-app")
+// res14: Either[String,AppConfig] = Right(AppConfig(80,reactive-ams))
+
+bootstrap("my-app")
+// res15: Either[String,AppConfig] = Left(my-app app not found)
+```
+
+???
+
+Let's see how far we can go with effects composition
+
+---
+# Effects
+
+```scala
+f: A => B
+```
+
+???
+
+We start with a function `A => B`
+
+--
+```scala
+f: A => F[B]
+```
+
+???
+
+And we enrich the output to an `F[B]`, in our case an Either, so we can conclude that effects...
+
+--
+```scala
+F[A] = Either[String, A]
+```
+
+- Effects express richer behaviour
+
+--
+
+- Effects != Side Effects
+
+???
+
+To quote a famous guy in the Scala sphere
+
+--
+
+> _Effects are good, side effects are bugs_ (Rob Norris)
+
+---
+# Effects Composition
+```scala
+val lookupPath: String => Either[String, ConfigLocation] = ???
+val lookupConfig: ConfigLocation => Either[String, AppConfig] = ???
+
+val bootstrap: String => Either[String, AppConfig] =
+  location => lookupPath(location).flatMap(lookupConfig)
+```
+
+???
+
+How did we compose our effects?
+
+We used `flatMap`
+
+---
+
+# Effects Composition
+```scala
+val lookupPath: String => Option[ConfigLocation] = ???
+val lookupConfig: ConfigLocation => Option[AppConfig] = ???
+
+val bootstrap: String => Option[AppConfig] =
+  location => lookupPath(location).flatMap(lookupConfig)
+```
+
+???
+
+If the effect was an `Option`, the expressions would look almost the same, just the effect we were expressing was Optionality of the output, without information about the specific error
+
+---
+
+# Effects Composition
+
+
+```scala
+val lookupPath: String => Task[ConfigLocation] = ???
+val lookupConfig: ConfigLocation => Task[AppConfig] = ???
+
+val bootstrap: String => Task[AppConfig] =
+  location => lookupPath(location).flatMap(lookupConfig)
+```
+???
+
+If the effect was an `Task`, the expressions would look almost the same, just the effect we were expressing was Asynchronicity, e.g. some api calls happening under the hood
+
+THERE MUST BE AN ABSTRACTION AROUND THIS REPETITIVE PATTERN !!!
+
+---
+
+# Monad
+```scala
+trait Monad[F[_]] {
+  def flatMap[A, B](fa: F[A])(f: A => F[B]): F[B]
+  def pure[A](a: A): F[A]
+}
+```
+
+???
+Let's formalize the fact that a type constructor is equipped with a flatMap operation
+
+And let's also require that this thing is able to put a given `a: A` in a box of shape `F[_]`
+
+---
+
+# Monad
+
+```scala
+trait Monad[F[_]] extends Functor[F]{
+  def flatMap[A, B](fa: F[A])(f: A => F[B]): F[B]
+  def pure[A](a: A): F[A]
+  def map[A, B](fa: F[A])(f: A => B) = flatMap(fa)(a => pure(f(a)))
+}
+```
+
+???
+
+Just by following the types, we can derive an implementation of map just based on the fact that we have  a `flatMap` and a `pure`
+
+--
+
+This is all that you need to have a monad
+
+--
+
+But don't forget the laws!!!
+
+--
+
+- Associativity
+
+```scala
+x.flatMap(f).flatMap(g) === x.flatMap(a => f(a).flatMap(g))
+```
+--
+
+- Identity
+
+```scala
+flatMap(x)(pure) === x
+flatMap(pure(y))(f) === f(y)
+```
+
+---
+
+# Monad
+Effects composition
+
+```scala
+val lookupPath: String => ConfigLocation = ???
+val lookupConfig: ConfigLocation => AppConfig = ???
+
+val bootstrap: String => AppConfig =
+  lookupPath andThen lookupConfig
+```
+
+???
+
+In the light of what we just said, let's have a look again at our original example
+
+--
+
+vs
+
+```scala
+def lookupPath(path:String): F[ConfigLocation] = ???
+def lookupConfig(c: ConfigLocation): F[AppConfig] = ???
+
+def bootstrap[F[_]: Monad](path: String): F[AppConfig] =
+  lookupPath(location).flatMap(lookupConfig)
+```
+
+???
+
+And let's compare it with the effectful version...
+
+Still something doesn't add up, these 2 implementations are still quite different from each other... what can we do?
+
+---
+
+# Monad
+Kleisli
+
+```scala
+val lookupPath: String => ConfigLocation = ???
+val lookupConfig: ConfigLocation => AppConfig = ???
+
+val bootstrap: String => AppConfig =
+  lookupPath andThen lookupConfig
+```
+--
+
+```scala
+case class Kleisli[F[_], A, B](run: A => F[B]) {
+  def andThen[C](g: Kleisli[F, B, C])(implicit F: Monad[F]): Kleisli[F, A, C] =
+    Kleisli(a => run(a).flatMap(g.run))
+```
+
+--
+
+```scala
+val lookupPath: Kleisli[F, String, ConfigLocation] = ???
+val lookupConfig: Kleisli[F, ConfigLocation, AppConfig] = ???
+
+val bootstrap: Kleisli[F, String, AppConfig] =
+  lookupPath andThen lookupConfig
+```
+--
+
+Now they look the same!
+
+???
+Now the expressions look really similar
+
+---
+
+# Monad
+- Kleisli and Monads
+
+```scala
+trait Monad[F[_]] {
+  def pure[A](a: A): F[A]
+  def compose[A, B, C](f: A => F[B], g: B => F[C]): A => F[C]
+}
+```
+
+???
+
+These are 2 _equivalent_  formulations of a monad
+
+---
+# Monad
+- Kleisli and Monads
+
+```scala
+trait Monad[F[_]] {
+  def pure[A](a: A): F[A]
+  def compose[A, B, C](f: A => F[B], g: B => F[C]): A => F[C]
+  def flatMap[A, B](fa: F[A])(f: A => F[B]): F[B] = compose(_:Unit => fa, f)(())
+}
+```
+--
+
+Now the associativity law is much easier!
+```scala
+compose(compose (f, g), h) === compose(f, compose(g, h))
+```
+--
+
+Just like associativity for Monoids!
+```scala
+(a |+| b) |+| c === a |+| (b |+| c)
+combine(combine(a, b), c) === combine(a, combine(b, c))
+```
+--
+
+A Monad is a monoid in the category of endofunctors!
+
+---
+
+# Monad
+
+Wherever there is sequential computation, a monad will appear
+
+- `List[A]`, `Option[A]`, `Either[Error, A]`
+
+- `Reader[R, A]`
+
+- `Writer[W, A]`
+
+- `State[S, A]`
+
+---
+
+# Monad
+
+Wherever there is sequential computation, a monad will appear
+
+- `List[A]`, `Option[A]`, `Either[Error, A]`
+
+- `Reader[R, A]` - Configuration, DI
+
+- `Writer[W, A]` - Logging, metrics
+
+- `State[S, A]` - State mutations
+
+---
+
+# Functional Patterns
+
+- Create a few, reusable and composable abstractions
+
+--
+
+- You learn them once, you use them everywhere
+
+--
+
+- Experiment with them
+
+--
+
+- Introduce them at work
+
+--
+
+- Read the Red Book _Functional Programming in Scala_
+
+--
+
+- Read _Functional and Reactive Domain Modeling_
+
+--
+
+- Try Haskell
+
+--
+
+- Keep learning!
+
+---
+class: center, middle
+
+# Questions?
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        //highlightStyle: 'dark'
+        //highlightStyle: 'arta'
+        //highlightStyle: 'ascetic'
+        // CANDIDATE highlightStyle: 'dark'
+        //highlightStyle: 'default'
+        //highlightStyle: 'far'
+        //highlightStyle: 'github'
+        //highlightStyle: 'googlecode'
+        //highlightStyle: 'idea'
+        // CANDIDATE highlightStyle: 'ir-black'
+        //highlightStyle: 'magula'
+        // CANDIDATE highlightStyle: 'monokai'
+        //highlightStyle: 'rainbow'
+        // CANDIDATE highlightStyle: 'solarized-dark'
+        //highlightStyle: 'solarized-light'
+        //highlightStyle: 'sunburst'
+        //highlightStyle: 'tomorrow'
+        //highlightStyle: 'tomorrow-night-blue'
+        //highlightStyle: 'tomorrow-night-bright'
+        //highlightStyle: 'tomorrow-night'
+        // CANDIDATE highlightStyle: 'tomorrow-night-eighties'
+        //highlightStyle: 'vs'
+        highlightStyle: 'zenburn'
+      });
+    </script>
+  </body>
+</html>
