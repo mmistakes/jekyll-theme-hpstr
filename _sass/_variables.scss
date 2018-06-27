@@ -6,20 +6,21 @@
    Page
    ========================================================================== */
 
-$feature-image-height            : 400px; // min 150px recommended
+$feature-image-height            : 250px; // min 150px recommended
 $front-page-feature-image-height : 400px; // min 150px recommended
 
 /* 
    Typography
    ========================================================================== */
 
-$base-font                       : 'Lato', Calibri, Arial, sans-serif;
+$base-font                       : 'Alegreya Sans', 'Molengo', 'Lato', Calibri, Arial, sans-serif, serif;
+
 $heading-font                    : $base-font;
 $caption-font                    : $base-font;
 $code-font                       : monospace;
 $alt-font                        : serif;
 
-$doc-font-size                   : 16;
+$doc-font-size                   : 14;
 $doc-line-height                 : 26;
 
 
@@ -29,16 +30,27 @@ body {
   font-size: 0px + $doc-font-size;
 }
 
+/* Custom colors
+   ========================================================================== */
+$bg-color                        : #fff;
+$article-bg-color                : $bg-color;
+$page-bg-color                   : $bg-color;
+$header-border-bg-color          : lighten(#102A44, 10);
+$disqus-bg-color                 : #fff;
+$readmore-bg-color               : #fff;
+
 /* 
    Colors
    ========================================================================== */
 
-$base-color                      : rgba(#222,0.8);
-$body-color                      : #e8e8e8;
+$base-color                      : #515151;
+$body-color                      : $header-border-bg-color;
 $text-color                      : rgba(#222,0.8);
 $comp-color                      : complement(#222);
 $border-color                    : lighten($base-color,60);
-$link-color                      : rgba(#222,0.8);
+$base-link-color                 : #F75940;
+$link-color                      : darken($base-link-color, 20);
+
 
 $primary                         : #222;
 $success                         : #5cb85c;

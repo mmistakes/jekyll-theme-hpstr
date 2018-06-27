@@ -1,7 +1,5 @@
 # Menu navigation links
-
-- title: Theme Setup
-  url: /theme-setup/
-
-- title: External Link
-  url: http://mademistakes.com
+presentations:
+  - reactive-amsterdam-26-06-2018:
+    title: FP patterns 101 (Reactive Meetup AMS 2018)
+    url: /presentations/2018-06-26-fp-101-reactive-ams/index.html
