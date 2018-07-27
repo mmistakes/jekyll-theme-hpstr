@@ -1,0 +1,11 @@
+version: '2'
+services:
+  site:
+    environment:
+      - JEKYLL_ENV=docker
+    command: jekyll serve --config  _config.yml,_config_docker.yml -H 0.0.0.0 -P 4000 --watch --force_polling
+    image: gh-pages:latest
+    volumes:
+      - .:/src/site
+    ports:
+      - 4000:4000
