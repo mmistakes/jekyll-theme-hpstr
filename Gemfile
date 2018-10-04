@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "json"
+gem "tzinfo-data"
 gem "jekyll", "~> 3.7"
 gem "jekyll-sitemap"
 gem "jekyll-feed"
