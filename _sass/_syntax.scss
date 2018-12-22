@@ -109,3 +109,17 @@ figure.highlight {
 	.vi { color: #f8f8f2 } /* Name.Variable.Instance */
 	.il { color: #ae81ff } /* Literal.Number.Integer.Long */
 }
+
+.reference {
+  color: #2E9AFE;
+  font-size: 13px;
+  display: block;
+  font-weight: bold;
+  margin-top: 3px;
+  text-indent: 1em;
+}
+
+.emphasis {
+  color: 	#FF7F50;
+  font-weight: bold;
+}
