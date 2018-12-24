@@ -18,7 +18,8 @@
 					<a href="https://github.com/{{ site.owner.github }}"><i class="fa fa-fw fa-github"></i> GitHub</a>
 				</li>{% endif %}
 			</ul><!-- /.dl-submenu -->
-		</li>
+    </li>
+    
 		<li>
 			<a href="#">Posts</a>
 			<ul class="dl-submenu">
@@ -26,15 +27,17 @@
 				<li><a href="{{ site.url }}/tags/">All Tags</a></li>
 			</ul>
     </li>
-    <li><a href="{{ site.url }}/ror/">RoR</a></li>
-    <li><a href="{{ site.url }}/django/">Django</a></li>
+
     <li>
-			<a href="#">Computer Science</a>
-			<ul class="dl-submenu">
-				<li><a href="{{ site.url }}/network/">Network</a></li>
-        <li><a href="{{ site.url }}/data_structure/">Data Structure</a></li>
-        <li><a href="{{ site.url }}/algoritm/">Algorithm</a></li>
-			</ul>
+			{% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "category" %}
+            <li><a class="category-link {% if page.url == node.url %} active{% endif %}"
+            href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
 		</li>
 	</ul><!-- /.dl-menu -->
 </nav><!-- /.dl-menuwrapper -->

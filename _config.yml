@@ -62,6 +62,10 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
+collections:
+  category:
+    output: true
+
 include: 
   - .htaccess
 exclude: 

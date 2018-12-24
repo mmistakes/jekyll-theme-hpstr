@@ -3,7 +3,9 @@ layout: post
 title: First Post
 description: "첫번째 포스트입니다"
 modified: 2018-12-22
-tags: [first post]
+tags: []
+categories: [Etc]
+
 image:
   path: /images/start.jpg
   feature: start.jpg

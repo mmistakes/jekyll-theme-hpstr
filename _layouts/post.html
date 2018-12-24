@@ -53,6 +53,24 @@
   </article>
 </div><!-- /#main -->
 
+{% assign post = page %}
+{% if post.tags.size > 0 %}
+  {% capture tags_content %}Tags{% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
+  {% for post_tag in post.tags %}
+    {% for data_tag in site.data.tags %}
+      {% if data_tag.slug == post_tag %}
+        {% assign tag = data_tag %}
+      {% endif %}
+    {% endfor %}
+    {% if tag %}
+      {% capture tags_content_temp %}<a href="/tags//"></a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+      {% assign tags_content = tags_content_temp %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign tags_content = '' %}
+{% endif %}
+
 <div class="footer-wrapper">
   <footer role="contentinfo">
     {% include footer.html %}
