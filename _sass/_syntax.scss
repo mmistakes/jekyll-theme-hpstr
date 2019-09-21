@@ -46,6 +46,10 @@ figure.highlight {
 
 .highlight pre { width: 100%; }
 
+/*
+  List of tokens for `rouge` are described here:
+  https://github.com/jneen/rouge/wiki/List-of-tokens
+*/
 .highlight {	
 
 	.lineno { padding-right: 24px; color: #8f908a;}
@@ -61,8 +65,18 @@ figure.highlight {
 	.cp { color: #75715e } /* Comment.Preproc */
 	.c1 { color: #75715e } /* Comment.Single */
 	.cs { color: #75715e } /* Comment.Special */
+	.g { } /* Generic */
+	.gd { color: red } /* Generic.Deleted */
 	.ge { font-style: italic } /* Generic.Emph */
+	.gr { } /* Generic.Error */
+	.gh { } /* Generic.Heading */
+	.gi { color: green } /* Generic.Inserted */
+	.go {} /* Generic.Output */
+	.gp {} /* Generic.Prompt */
 	.gs { font-weight: bold } /* Generic.Strong */
+	.gu {} /* Generic.Subheading */
+	.gt {} /* Generic.Traceback */
+	.gl {} /* Generic.Lineno */
 	.kc { color: #66d9ef } /* Keyword.Constant */
 	.kd { color: #66d9ef } /* Keyword.Declaration */
 	.kn { color: #f92672 } /* Keyword.Namespace */
