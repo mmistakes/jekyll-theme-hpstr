@@ -3,6 +3,7 @@ description:      Describe your website here.
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
+share: true # turn social share links on/off site-wide
 # Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
 # When testing locally leave blank or use http://localhost:4000
 url:
@@ -61,6 +62,14 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   enable_coderay: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      share: true # turn on social links by default
 
 include: 
   - .htaccess
