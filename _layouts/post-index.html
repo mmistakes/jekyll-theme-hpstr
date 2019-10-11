@@ -16,7 +16,11 @@
   {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
   {% if page.image.feature %}
     <div class="entry-image">
-      <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
+      {% if page.image.feature contains '://' %}
+        <img src="{{ page.image.feature }}" alt="{{ page.title }}">
+      {% else %}
+        <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
+      {% endif %} 
     </div><!-- /.entry-image -->
   {% endif %}
   <div class="header-title">
