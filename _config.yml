@@ -28,6 +28,9 @@ owner:
 # Background image to be tiled on all pages
 background: 
 
+# Open Graph image to be used as a fallback when there are no images specified for a page/post
+open_graph_image: avatar.jpg
+
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
 google_verify:      

@@ -19,6 +19,9 @@
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.title }}">
+{% if page.image.facebook %}<meta property="og:image" content="{{ site.url }}/images/{{ page.image.facebook }}">{% endif %}
+{% if page.image.feature %}<meta property="og:image" content="{{ site.url }}/images/{{ page.image.feature }}">{% endif %}
+{% if page.image.feature == null and page.feature.facebook == null and site.open_graph_image != null %}<meta property="og:image" content="{{ site.url }}/images/{{ site.open_graph_image }}">{% endif %}
 
 {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
 {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
