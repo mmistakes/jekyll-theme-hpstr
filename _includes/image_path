@@ -1,0 +1,11 @@
+{% comment %}
+This file will prepend the image path `{{site.url}}/images/` to any image
+that does not have two slashes `//` in the path. That way, an image url that
+points to another website won't automatically have this website mistakenly
+added to the front of the url.
+
+A string beginning with a single slash will be prepended with {{ site.url }}
+
+This file must NOT have an extra carriage return at the end.
+
+{% endcomment %}{% capture first %}{{ include.image | truncate: 1, '' }}{% endcapture %}{% if include.image contains '//' %}{{ include.image }}{% elsif first == '/' %}{{ site.url }}{{ include.image }}{% else %}{{ site.url }}/images/{{ include.image }}{% endif %}
